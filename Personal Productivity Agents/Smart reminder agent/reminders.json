@@ -1,0 +1,106 @@
+[
+  {
+    "task": "Prepare quarterly report",
+    "context": "work",
+    "priority": "high",
+    "deadline": "2026-03-25",
+    "remind_on": "2026-03-18",
+    "message": "Reminder: 'Prepare quarterly report' is due on 2026-03-25."
+  },
+  {
+    "task": "Follow up with vendor",
+    "context": "work",
+    "priority": "medium",
+    "deadline": "2026-03-22",
+    "remind_on": "2026-03-19",
+    "message": "Reminder: 'Follow up with vendor' is due on 2026-03-22."
+  },
+  {
+    "task": "Follow up with vendor",
+    "context": "work",
+    "priority": "medium",
+    "deadline": "2026-03-22",
+    "remind_on": "2026-03-21",
+    "message": "Reminder: 'Follow up with vendor' is due on 2026-03-22."
+  },
+  {
+    "task": "Prepare quarterly report",
+    "context": "work",
+    "priority": "high",
+    "deadline": "2026-03-25",
+    "remind_on": "2026-03-22",
+    "message": "Reminder: 'Prepare quarterly report' is due on 2026-03-25."
+  },
+  {
+    "task": "Prepare quarterly report",
+    "context": "work",
+    "priority": "high",
+    "deadline": "2026-03-25",
+    "remind_on": "2026-03-24",
+    "message": "Reminder: 'Prepare quarterly report' is due on 2026-03-25."
+  },
+  {
+    "task": "Prepare quarterly report",
+    "context": "work",
+    "priority": "high",
+    "deadline": "2026-03-25",
+    "remind_on": "2026-03-25",
+    "message": "Reminder: 'Prepare quarterly report' is due on 2026-03-25."
+  },
+  {
+    "task": "Book car service",
+    "context": "personal",
+    "priority": "medium",
+    "deadline": "2026-03-30",
+    "remind_on": "2026-03-27",
+    "message": "Reminder: 'Book car service' is due on 2026-03-30."
+  },
+  {
+    "task": "Buy birthday gift",
+    "context": "personal",
+    "priority": "low",
+    "deadline": "2026-03-28",
+    "remind_on": "2026-03-27",
+    "message": "Reminder: 'Buy birthday gift' is due on 2026-03-28."
+  },
+  {
+    "task": "Book car service",
+    "context": "personal",
+    "priority": "medium",
+    "deadline": "2026-03-30",
+    "remind_on": "2026-03-29",
+    "message": "Reminder: 'Book car service' is due on 2026-03-30."
+  },
+  {
+    "task": "Submit tax documents",
+    "context": "personal",
+    "priority": "high",
+    "deadline": "2026-04-15",
+    "remind_on": "2026-04-08",
+    "message": "Reminder: 'Submit tax documents' is due on 2026-04-15."
+  },
+  {
+    "task": "Submit tax documents",
+    "context": "personal",
+    "priority": "high",
+    "deadline": "2026-04-15",
+    "remind_on": "2026-04-12",
+    "message": "Reminder: 'Submit tax documents' is due on 2026-04-15."
+  },
+  {
+    "task": "Submit tax documents",
+    "context": "personal",
+    "priority": "high",
+    "deadline": "2026-04-15",
+    "remind_on": "2026-04-14",
+    "message": "Reminder: 'Submit tax documents' is due on 2026-04-15."
+  },
+  {
+    "task": "Submit tax documents",
+    "context": "personal",
+    "priority": "high",
+    "deadline": "2026-04-15",
+    "remind_on": "2026-04-15",
+    "message": "Reminder: 'Submit tax documents' is due on 2026-04-15."
+  }
+]

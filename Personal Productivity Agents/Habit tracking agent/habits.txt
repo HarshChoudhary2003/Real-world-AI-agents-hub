@@ -1,0 +1,17 @@
+Habit Tracking Summary
+========================================
+
+Habit: Morning walk
+Consistency: 80.0%
+Current Streak: 2 days
+Missed Days: 2026-03-03
+Insight: Strong habit consistency.
+Recommendation: Keep the habit as-is.
+
+Habit: Read 20 pages
+Consistency: 60.0%
+Current Streak: 2 days
+Missed Days: 2026-03-02, 2026-03-03
+Insight: Habit needs reinforcement.
+Recommendation: Reduce difficulty or change timing.
+

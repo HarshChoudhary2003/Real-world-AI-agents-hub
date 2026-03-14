@@ -1,0 +1,79 @@
+{
+  "Morning walk": {
+    "total_days": 5,
+    "completed_days": 4,
+    "consistency_percent": 80.0,
+    "current_streak": 2,
+    "missed_days": [
+      "2026-03-03"
+    ],
+    "insight": "Strong habit consistency.",
+    "recommendation": "Keep the habit as-is.",
+    "entries_log": [
+      {
+        "date": "2026-03-01",
+        "completed": true,
+        "notes": "Felt energized"
+      },
+      {
+        "date": "2026-03-02",
+        "completed": true,
+        "notes": ""
+      },
+      {
+        "date": "2026-03-03",
+        "completed": false,
+        "notes": "Too busy"
+      },
+      {
+        "date": "2026-03-04",
+        "completed": true,
+        "notes": ""
+      },
+      {
+        "date": "2026-03-05",
+        "completed": true,
+        "notes": ""
+      }
+    ]
+  },
+  "Read 20 pages": {
+    "total_days": 5,
+    "completed_days": 3,
+    "consistency_percent": 60.0,
+    "current_streak": 2,
+    "missed_days": [
+      "2026-03-02",
+      "2026-03-03"
+    ],
+    "insight": "Habit needs reinforcement.",
+    "recommendation": "Reduce difficulty or change timing.",
+    "entries_log": [
+      {
+        "date": "2026-03-01",
+        "completed": true,
+        "notes": ""
+      },
+      {
+        "date": "2026-03-02",
+        "completed": false,
+        "notes": "Tired"
+      },
+      {
+        "date": "2026-03-03",
+        "completed": false,
+        "notes": ""
+      },
+      {
+        "date": "2026-03-04",
+        "completed": true,
+        "notes": ""
+      },
+      {
+        "date": "2026-03-05",
+        "completed": true,
+        "notes": ""
+      }
+    ]
+  }
+}

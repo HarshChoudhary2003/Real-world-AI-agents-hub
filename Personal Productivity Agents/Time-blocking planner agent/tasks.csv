@@ -1,0 +1,7 @@
+task,effort_minutes,priority
+Write project proposal,90,high
+Review pull requests,45,medium
+Email follow-ups,30,medium
+Team meeting,60,high
+Learning session,45,low
+Admin cleanup,30,low

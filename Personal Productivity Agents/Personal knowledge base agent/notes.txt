@@ -1,0 +1,9 @@
+AI agents are autonomous systems that can plan, reason, and act toward goals.
+ 
+Vector databases allow semantic search by storing embeddings instead of keywords.
+ 
+RAG systems combine retrieval with generation to produce grounded responses.
+ 
+Meetings are more effective when agendas are outcome-driven and time-boxed.
+ 
+Daily prioritization improves productivity by focusing on high-impact work.

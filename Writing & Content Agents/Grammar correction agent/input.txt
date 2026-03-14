@@ -1,0 +1,3 @@
+This agent help user fix grammar mistakes. 
+It dont change meaning but improve clarity.
+Writing look more professional after correction.

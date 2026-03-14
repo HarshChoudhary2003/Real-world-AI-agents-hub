@@ -1,0 +1,5 @@
+Background:
+- 5 years experience building backend systems
+- Improved system performance and reliability
+- Worked closely with product and design teams
+- Strong Python and cloud experience

@@ -1,0 +1,9 @@
+Target Role: Senior Software Engineer
+
+Responsibilities:
+- Design scalable backend services
+- Improve system performance and reliability
+- Collaborate across product and engineering teams
+
+Required Skills:
+Python, distributed systems, cloud infrastructure

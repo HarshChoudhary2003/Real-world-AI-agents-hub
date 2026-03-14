@@ -1,0 +1,7 @@
+Experience:
+- Worked on backend systems for customer platform.
+- Responsible for improving system performance.
+- Collaborated with cross-functional teams.
+
+Skills:
+Python, APIs, SQL, Cloud

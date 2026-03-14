@@ -1,0 +1,6 @@
+Meeting Title: Q1 Product Planning
+Objective: Decide priorities for Q1 roadmap and align teams
+Duration: 60 minutes
+Meeting Type: decision
+Participants: Product, Engineering, Marketing
+Constraints: Must decide top 3 features

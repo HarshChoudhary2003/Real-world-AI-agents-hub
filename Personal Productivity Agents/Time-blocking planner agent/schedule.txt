@@ -1,0 +1,9 @@
+Daily Time-Blocked Schedule
+========================================
+
+09:00-10:30: Write project proposal
+10:40-11:40: Team meeting
+11:50-12:35: Review pull requests
+12:45-13:15: Email follow-ups
+13:25-14:10: Learning session
+14:20-14:50: Admin cleanup

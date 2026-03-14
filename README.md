@@ -22,26 +22,26 @@ The hub is organized into modular suites. Below are the currently active suites:
 
 A master suite of a **10-Agent Neural Architecture** to automate your entire operational day. Includes a highly polished `Master_Dashboard.py` to launch any tool in your local ecosystem seamlessly.
 
--   **🧠 TaskBrain AI**: Daily Priority App. NLP task ingestion, sub-task breakdowns, and urgency sorting.
--   **📧 MailMind AI**: Intelligently summarize long email threads, extract logic maps, and generate action items.
--   **📅 SyncGuard AI**: Calendar Conflict Resolver. Detect logic overlaps and gracefully resolve double-bookings.
--   **📋 AgendaCraft AI**: Engineered meeting timelines. Drop in loose ideas; get structured calendar blocks out.
--   **🗄️ BrainVault AI**: Local Knowledge RAG vector space. Ask questions against your private text arrays.
--   **🧘 Reflect AI**: Daily Goal Reflection. Algorithmically parse why you succeeded or failed your targets today.
--   **🔔 PingCraft AI**: Smart Notification Engine. Mathematically space out deadline alerts to prevent fatigue.
--   **⚡ ActionForge AI**: Neural Task Extractor. Rip strict actionable deliverables out of chaotic unstructured text.
--   **⏳ ChronoBlock AI**: Mathematical continuous task packing. Eliminate empty space in your operational blocks.
--   **🔥 StreakForge AI**: Algorithmic Habit Tracking. Plotly heatmaps and persistence density metrics.
+-   **🧠 [TaskBrain AI](./Personal%20Productivity%20Agents/daily-priority-agent) (Daily Priority Agent)**: NLP task ingestion, sub-task breakdowns, and urgency sorting.
+-   **📧 [MailMind AI](./Personal%20Productivity%20Agents/Email%20summarization%20agent) (Email Summarization Agent)**: Intelligently summarize long email threads, extract logic maps, and generate action items.
+-   **📅 [SyncGuard AI](./Personal%20Productivity%20Agents/Calendar%20conflict%20resolver%20agent) (Calendar Conflict Resolver Agent)**: Detect logic overlaps and gracefully resolve double-bookings.
+-   **📋 [AgendaCraft AI](./Personal%20Productivity%20Agents/Meeting%20agenda%20generator%20agent) (Meeting Agenda Generator Agent)**: Engineered meeting timelines. Drop in loose ideas; get structured calendar blocks out.
+-   **🗄️ [BrainVault AI](./Personal%20Productivity%20Agents/Personal%20knowledge%20base%20agent) (Personal Knowledge Base Agent)**: Local Knowledge RAG vector space. Ask questions against your private text arrays.
+-   **🧘 [Reflect AI](./Personal%20Productivity%20Agents/Daily%20goal%20reflection%20agent) (Daily Goal Reflection Agent)**: Algorithmically parse why you succeeded or failed your targets today.
+-   **🔔 [PingCraft AI](./Personal%20Productivity%20Agents/Smart%20reminder%20agent) (Smart Reminder Agent)**: Mathematically space out deadline alerts to prevent fatigue.
+-   **⚡ [ActionForge AI](./Personal%20Productivity%20Agents/Note-to-action%20item%20agent) (Note-to-Action Item Agent)**: Neural Task Extractor. Rip strict actionable deliverables out of chaotic unstructured text.
+-   **⏳ [ChronoBlock AI](./Personal%20Productivity%20Agents/Time-blocking%20planner%20agent) (Time-Blocking Planner Agent)**: Mathematical continuous task packing. Eliminate empty space in your operational blocks.
+-   **🔥 [StreakForge AI](./Personal%20Productivity%20Agents/Habit%20tracking%20agent) (Habit Tracking Agent)**: Algorithmic Habit Tracking. Plotly heatmaps and persistence density metrics.
 
 ### 2. ✍️ Writing & Content Studio
 
 A robust suite of agents dedicated to generating, optimizing, and polishing professional written content.
 
--   **📝 Blog Post Generator**: Multi-stage pipeline to research, outline, and write SEO-optimized blog posts.
--   **💼 Cover Letter Architect**: Tailors a professional cover letter specifically to your background and the target job description.
--   **✨ Grammar Correction Engine**: Deep semantic editing and tone correction beyond standard spell checks.
--   **🔗 LinkedIn Post Ideation**: Formulate high-engagement, viral-ready LinkedIn hooks and posts.
--   **📄 Resume Optimization Agent**: Algorithmic parsing and enhancement of your resume based on specific job roles and ATS metrics.
+-   **📝 [Blog Post Generator](./Writing%20%26%20Content%20Agents/Blog%20post%20generator%20agent) (Blog Post Generator Agent)**: Multi-stage pipeline to research, outline, and write SEO-optimized blog posts.
+-   **💼 [Cover Letter Architect](./Writing%20%26%20Content%20Agents/Cover%20letter%20writing%20agent) (Cover Letter Writing Agent)**: Tailors a professional cover letter specifically to your background and the target job description.
+-   **✨ [Grammar Correction Engine](./Writing%20%26%20Content%20Agents/Grammar%20correction%20agent) (Grammar Correction Agent)**: Deep semantic editing and tone correction beyond standard spell checks.
+-   **🔗 [LinkedIn Post Ideation](./Writing%20%26%20Content%20Agents/LinkedIn%20post%20ideation%20agent) (LinkedIn Post Ideation Agent)**: Formulate high-engagement, viral-ready LinkedIn hooks and posts.
+-   **📄 [Resume Optimization Agent](./Writing%20%26%20Content%20Agents/Resume%20optimization%20agent)**: Algorithmic parsing and enhancement of your resume based on specific job roles and ATS metrics.
 
 ---
 

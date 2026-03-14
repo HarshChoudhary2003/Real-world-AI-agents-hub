@@ -1,6 +1,6 @@
 <div align="center">
   <img src="https://img.shields.io/badge/AI-Agents%20Hub-38BDF8?style=for-the-badge&logo=openai&logoColor=white" alt="AI Agents Hub" />
-  <h1>🤖 100 Real-world AI Agents Hub</h1>
+  <h1>🤖 Real-world AI Agents Hub</h1>
   <p><strong>A centralized repository for enterprise-grade, high-performance AI Agents built for immediate impact.</strong></p>
 </div>
 

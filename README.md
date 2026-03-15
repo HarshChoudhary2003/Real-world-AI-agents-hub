@@ -12,6 +12,13 @@ Welcome to the **Real-world AI Agents Hub**. This project aims to design, develo
 
 Unlike simple wrapper scripts, every agent here provides a complete, robust **Streamlit** user interface complete with dark modes, responsive layouts, data handling, and sophisticated AI logic under the hood.
 
+## ✨ Key Highlights
+
+-   **🧠 Multi-Model Intelligence**: Native support for GPT-4o, Claude 3.5, Llama 3 (via Groq), and Google Gemini.
+-   **🎨 Premium UI/UX**: Custom-engineered Streamlit dashboards with advanced CSS, glassmorphism, and responsive layouts.
+-   **🛡️ Enterprise Ready**: Specialized prompts and JSON-enforced output schemas for reliable, structured data.
+-   **📈 Tactical Insights**: Agents don't just "talk"—they research, analyze, and produce actionable deliverables.
+
 ---
 
 ## 📁 Agent Ecosystem
@@ -53,6 +60,7 @@ A robust suite of agents dedicated to generating, optimizing, and polishing prof
 A sophisticated collection of agents specialized in deep data gathering, fact-checking, and comprehensive market analysis.
 
 -   **🌐 [Web Research Agent](./Research%20&%20Analysis%20Agents/Web%20research%20agent)**: An elite, autonomous intelligence engine designed to synthesize complex informational topics into actionable executive summaries, key findings, and market trends. Supports multi-model switching (OpenAI, Anthropic, Gemini, Groq).
+-   **📊 [Competitive Analysis Agent](./Research%20&%20Analysis%20Agents/Competitive%20analysis%20agent)**: A strategic intelligence tool focused on deconstructing competitor DNA, identifying market gaps, and positioning strategy. Includes full multi-model support.
 
 ---
 

@@ -1,0 +1,8 @@
+Product: AI Agent Productivity Course
+Audience: Professionals new to AI
+Stage: Pre-purchase
+Tone: Clear and professional
+Known Concerns:
+- Do I need prior AI experience?
+- How much time does it take?
+- Is this theoretical or practical?

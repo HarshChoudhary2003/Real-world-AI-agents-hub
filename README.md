@@ -45,6 +45,7 @@ A robust suite of agents dedicated to generating, optimizing, and polishing prof
 -   **🎭 [Tone Alchemist Pro](./Writing%20%26%20Content%20Agents/Tone%20rewriting%20agent)**: Flawlessly rewrite and calibrate text into any desired persona while guaranteeing semantic fidelity.
 -   **🔎 [SEO Architect Pro](./Writing%20%26%20Content%20Agents/SEO%20keyword%20expansion%20agent)**: Transform seed queries into massive, high-intent SEO keyword clusters with estimated predictive metrics.
 -   **🛍️ [Product Copywriter Pro](./Writing%20%26%20Content%20Agents/Product%20description%20agent)**: An elite engine that perfectly maps technical features to tangible real-world outcomes for explosive conversions.
+-   **💬 [AI FAQ Generator Pro](./Writing%20%26%20Content%20Agents/FAQ%20generation%20agent)**: Extract core objections and friction points to synthesize highly credible, honest answers that build immense trust.
 
 ---
 

@@ -1,0 +1,6 @@
+Topic: Introduction to AI Agents
+
+AI agents are autonomous systems that can plan, reason, and act toward goals.
+Unlike traditional software, they can adapt to changing conditions.
+In this presentation, we will explore what AI agents are, how they work,
+and why they are becoming important across industries.

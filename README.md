@@ -48,6 +48,13 @@ A robust suite of agents dedicated to generating, optimizing, and polishing prof
 -   **💬 [AI FAQ Generator Pro](./Writing%20%26%20Content%20Agents/FAQ%20generation%20agent)**: Extract core objections and friction points to synthesize highly credible, honest answers that build immense trust.
 -   **📽️ [Presentation Architect Pro](./Writing%20%26%20Content%20Agents/Script-to-slide%20outline%20agent)**: Convert chaotic, long-form scripts into beautifully paced, visually striking slide decks designed to prevent cognitive overload.
 
+### 3. 🔍 Research & Analysis Studio
+
+Deep-dive intelligence agents that synthesize market signals and competitive landscapes.
+
+-   **💹 [TrendSynthetix AI](./Research%20&%20Analysis%20Agents/Market%20trend%20summarization) (Market Trend Summarization Agent)**: Synthesize complex market data into structured, actionable insights and directional trends.
+-   **⚔️ [CompeteIntel AI](./Research%20&%20Analysis%20Agents/Competitive%20analysis%20agent) (Competitive Analysis Agent)**: Map the competitive landscape, audit competitor strategies, and identify market white spaces.
+
 ---
 
 ## 🛠️ Tech Stack
@@ -55,7 +62,7 @@ A robust suite of agents dedicated to generating, optimizing, and polishing prof
 This framework leverages modern Python ecosystem tools to deliver state-of-the-art AI interactions.
 
 -   **Frontend**: Streamlit (with custom CSS injection for premium UIs, glassmorphism, and dynamic animations)
--   **AI Engines**: Integration with advanced LLMs (OpenAI, Anthropic, Google Gemini, etc.)
+-   **AI Orchestration**: **LiteLLM** (Enabling 100+ LLM providers including OpenAI, Anthropic, Google, Mistral, and Groq)
 -   **Data Processing**: Pandas, Plotly (for analytics pipelines)
 -   **Architecture**: Modular Python scripts, LangChain/CrewAI logic models.
 

@@ -248,13 +248,13 @@ def main():
         
         if provider == "OpenAI":
             api_key = st.text_input("OpenAI API Key", type="password", placeholder="sk-...")
-            available_models = ["gpt-4o", "gpt-4o-mini", "gpt-3.5-turbo"]
+            available_models = ["gpt-4o-mini", "gpt-4o", "gpt-3.5-turbo"]
         elif provider == "Anthropic (Claude)":
             api_key = st.text_input("Anthropic API Key", type="password", placeholder="sk-ant-...")
-            available_models = ["claude-3-5-sonnet-20240620", "claude-3-5-haiku-20241022", "claude-3-opus-20240229"]
+            available_models = ["claude-3-5-haiku-20241022", "claude-3-5-sonnet-20240620", "claude-3-opus-20240229"]
         else:
             api_key = st.text_input("Google AI API Key", type="password", placeholder="AIza...")
-            available_models = ["gemini-1.5-pro", "gemini-1.5-flash", "gemini-2.0-flash-exp"]
+            available_models = ["gemini-1.5-flash", "gemini-1.5-pro", "gemini-2.0-flash-exp"]
             
         st.markdown("---")
         st.markdown("### 🧠 Neural Processor")

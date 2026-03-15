@@ -48,6 +48,12 @@ A robust suite of agents dedicated to generating, optimizing, and polishing prof
 -   **💬 [AI FAQ Generator Pro](./Writing%20%26%20Content%20Agents/FAQ%20generation%20agent)**: Extract core objections and friction points to synthesize highly credible, honest answers that build immense trust.
 -   **📽️ [Presentation Architect Pro](./Writing%20%26%20Content%20Agents/Script-to-slide%20outline%20agent)**: Convert chaotic, long-form scripts into beautifully paced, visually striking slide decks designed to prevent cognitive overload.
 
+### 3. 🔍 Research & Analysis Suite
+
+A sophisticated collection of agents specialized in deep data gathering, fact-checking, and comprehensive market analysis.
+
+-   **🌐 [Web Research Agent](./Research%20&%20Analysis%20Agents/Web%20research%20agent)**: An elite, autonomous intelligence engine designed to synthesize complex informational topics into actionable executive summaries, key findings, and market trends. Supports multi-model switching (OpenAI, Anthropic, Gemini, Groq).
+
 ---
 
 ## 🛠️ Tech Stack

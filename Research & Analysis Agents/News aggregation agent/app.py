@@ -183,7 +183,7 @@ with st.sidebar:
     - **Neutral Intelligence**
     - **Cross-Model Support**
     """)
-    st.caption("Developed by Antigravity Agent Lab")
+   
 
 # Main UI
 st.title("📰 NewsFlow: Intelligence Aggregator")

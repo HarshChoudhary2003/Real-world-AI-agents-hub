@@ -59,6 +59,7 @@ A robust suite of agents dedicated to generating, optimizing, and polishing prof
 
 A sophisticated collection of agents specialized in deep data gathering, fact-checking, and comprehensive market analysis.
 
+-   **📊 [Survey Insight Pro](./Research%20&%20Analysis%20Agents/Survey%20insight%20extraction%20agent) (Survey Insight Extraction Agent)**: An elite, multi-model engine (OpenAI, Anthropic, Gemini, Groq) that deconstructs raw survey feedback into structured neural themes, sentiment patterns, and actionable executive insights.
 -   **🌐 [Web Research Agent](./Research%20&%20Analysis%20Agents/Web%20research%20agent)**: An elite, autonomous intelligence engine designed to synthesize complex informational topics into actionable executive summaries, key findings, and market trends. Supports multi-model switching (OpenAI, Anthropic, Gemini, Groq).
 -   **📊 [Competitive Analysis Agent](./Research%20&%20Analysis%20Agents/Competitive%20analysis%20agent)**: A strategic intelligence tool focused on deconstructing competitor DNA, identifying market gaps, and positioning strategy. Includes full multi-model support.
 

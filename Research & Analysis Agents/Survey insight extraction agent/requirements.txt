@@ -1,0 +1,6 @@
+openai
+streamlit
+python-dotenv
+anthropic
+google-generativeai
+groq

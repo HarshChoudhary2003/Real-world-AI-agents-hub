@@ -65,9 +65,6 @@ Deep-dive intelligence agents that synthesize market signals, scientific researc
 -   **🎓 [ScholarAI](./Research%20&%20Analysis%20Agents/Academic%20paper%20explainer%20agent) (Academic Paper Explainer Agent)**: Deconstruct complex scientific literature into plain-language summaries and structured insights.
 -   **🎬 [StreamBrief](./Research%20&%20Analysis%20Agents/YouTube%20video%20summary%20agent) (YouTube Video Summary Agent)**: Transform dense video transcripts into structured intelligence, key takeaways, and insights.
 
-
----
-
 ## 🛠️ Tech Stack
 
 This framework leverages modern Python ecosystem tools to deliver state-of-the-art AI interactions.

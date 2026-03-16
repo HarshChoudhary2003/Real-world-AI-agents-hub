@@ -64,6 +64,7 @@ Deep-dive intelligence agents that synthesize market signals, scientific researc
 -   **⚔️ [CompeteIntel AI](./Research%20&%20Analysis%20Agents/Competitive%20analysis%20agent) (Competitive Analysis Agent)**: Map the competitive landscape, audit competitor strategies, and identify market white spaces with strategic DNA deconstruction.
 -   **🎓 [ScholarAI](./Research%20&%20Analysis%20Agents/Academic%20paper%20explainer%20agent) (Academic Paper Explainer Agent)**: Deconstruct complex scientific literature into plain-language summaries and structured insights.
 -   **🎬 [StreamBrief](./Research%20&%20Analysis%20Agents/YouTube%20video%20summary%20agent) (YouTube Video Summary Agent)**: Transform dense video transcripts into structured intelligence, key takeaways, and insights.
+-   **📰 [NewsFlow](./Research%20&%20Analysis%20Agents/News%20aggregation%20agent) (News Aggregation Agent)**: Distill complex global news cycles into thematic, structured intelligence and executive digests.
 
 ## 🛠️ Tech Stack
 

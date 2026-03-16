@@ -1,0 +1,5 @@
+Video Title: Introduction to AI Agents
+Transcript:
+AI agents are systems that can act autonomously toward goals.
+They are increasingly used in productivity, research, and automation.
+This video explains what AI agents are, how they work, and why they matter.

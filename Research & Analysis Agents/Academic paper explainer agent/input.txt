@@ -1,4 +1,0 @@
-Paper Title: Example Research on AI Agents
-Abstract:
-This paper investigates the use of autonomous AI agents in enterprise workflows,
-analyzing efficiency gains and governance challenges across multiple industries.

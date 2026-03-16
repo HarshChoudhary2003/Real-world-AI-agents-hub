@@ -54,6 +54,7 @@ Deep-dive intelligence agents that synthesize market signals and competitive lan
 
 -   **💹 [TrendSynthetix AI](./Research%20&%20Analysis%20Agents/Market%20trend%20summarization) (Market Trend Summarization Agent)**: Synthesize complex market data into structured, actionable insights and directional trends.
 -   **⚔️ [CompeteIntel AI](./Research%20&%20Analysis%20Agents/Competitive%20analysis%20agent) (Competitive Analysis Agent)**: Map the competitive landscape, audit competitor strategies, and identify market white spaces.
+-   **🎓 [ScholarAI](./Research%20&%20Analysis%20Agents/Academic%20paper%20explainer%20agent) (Academic Paper Explainer Agent)**: Deconstruct complex scientific literature into plain-language summaries and structured insights.
 
 ---
 

@@ -381,3 +381,8 @@ with page_tabs[1]:
             st.markdown("<span class='diff-add'>Additions</span>", unsafe_allow_html=True)
     else:
         st.info("⚠️ Process a raw text block first to visualize the algorithmic diff.")
+
+
+with st.sidebar:
+    st.markdown("---")
+    st.caption("Developed by Harsh")

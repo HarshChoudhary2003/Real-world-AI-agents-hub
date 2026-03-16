@@ -78,3 +78,8 @@ Outputs will instantly compile into `blog.json` and `blog.txt`.
 The **Elite Auto-SEO Blog Post Generator Agent** is highly optimized for scale. The raw JSON structuring returned by the generative engine makes it incredibly easy to pipe these generated posts directly into a Headless CMS, WordPress REST API, or any automated newsletter distribution pipeline. 
 
 > *Build complete content marketing empires autonomously.*
+
+
+---
+
+Developed with ❤️ by [Harsh Choudhary](https://github.com/HarshChoudhary2003) | *Building the future of Agentic Intelligence.*

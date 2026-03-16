@@ -83,3 +83,8 @@ python -m streamlit run app.py
 - **Frontend / UI:** Streamlit (Custom Premium CSS injection)
 - **Data Parsing:** Native Python `csv`, `json`, `datetime`
 - **Analytics:** Pandas DataFrames, Plotly Express Bar Clustering
+
+
+---
+
+Developed with ❤️ by [Harsh Choudhary](https://github.com/HarshChoudhary2003) | *Building the future of Agentic Intelligence.*

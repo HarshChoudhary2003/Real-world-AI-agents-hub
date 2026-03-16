@@ -269,3 +269,8 @@ with tab_dashboard:
                 st.markdown(f"- 🛑 <span style='color:#EF4444;'>{g}</span>", unsafe_allow_html=True)
     else:
         st.info("Execute a reflection in the 'Daily Input' tab first to see quantified analytics.")
+
+
+with st.sidebar:
+    st.markdown("---")
+    st.caption("Developed by Harsh")

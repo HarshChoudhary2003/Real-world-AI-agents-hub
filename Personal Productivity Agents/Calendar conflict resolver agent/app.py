@@ -244,3 +244,8 @@ with tab_export:
             txt_out += f"  Suggested Action: {c['suggestion']}\n\n"
             
         st.download_button("Download conflicts.txt", data=txt_out, file_name="conflicts.txt", mime="text/plain")
+
+
+with st.sidebar:
+    st.markdown("---")
+    st.caption("Developed by Harsh")

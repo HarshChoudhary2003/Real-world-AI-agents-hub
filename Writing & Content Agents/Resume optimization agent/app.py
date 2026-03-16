@@ -411,3 +411,8 @@ with page_tabs[1]:
         </p>
     </div>
     """, unsafe_allow_html=True)
+
+
+with st.sidebar:
+    st.markdown("---")
+    st.caption("Developed by Harsh")

@@ -212,3 +212,8 @@ with tab_data:
         with st.expander("Preview Plain Text"):
             st.code(txt_out, language='text')
 
+
+
+with st.sidebar:
+    st.markdown("---")
+    st.caption("Developed by Harsh")

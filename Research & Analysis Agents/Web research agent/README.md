@@ -66,3 +66,8 @@ An enterprise-grade autonomous intelligence gathering agent built to comprehensi
 
 ---
 *Built with precision for enterprise productivity and advanced insights validation.*
+
+
+---
+
+Developed with ❤️ by [Harsh Choudhary](https://github.com/HarshChoudhary2003) | *Building the future of Agentic Intelligence.*

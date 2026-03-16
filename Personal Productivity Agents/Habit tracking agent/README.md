@@ -54,3 +54,8 @@ python -m streamlit run app.py
 - **Mathematical Processing:** Native Python `collections.defaultdict` mapping
 - **Data Rendering:** Pandas DataFrames
 - **Charting Engine:** Plotly Express (Bar and Scatter Plot)
+
+
+---
+
+Developed with ❤️ by [Harsh Choudhary](https://github.com/HarshChoudhary2003) | *Building the future of Agentic Intelligence.*

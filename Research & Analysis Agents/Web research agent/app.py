@@ -331,3 +331,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+with st.sidebar:
+    st.markdown("---")
+    st.caption("Developed by Harsh")

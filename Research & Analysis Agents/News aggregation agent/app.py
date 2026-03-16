@@ -262,3 +262,8 @@ with col2:
             <p>Intelligence digest will appear here after synthesis.</p>
         </div>
         """, unsafe_allow_html=True)
+
+
+with st.sidebar:
+    st.markdown("---")
+    st.caption("Developed by Harsh")

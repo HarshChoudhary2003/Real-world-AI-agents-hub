@@ -32,3 +32,8 @@ Run the headless CLI Pipeline:
 ```bash
 python agent.py
 ```
+
+
+---
+
+Developed with ❤️ by [Harsh Choudhary](https://github.com/HarshChoudhary2003) | *Building the future of Agentic Intelligence.*

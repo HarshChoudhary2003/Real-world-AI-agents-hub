@@ -70,3 +70,8 @@ news-aggregation-agent/
 ## 🤝 Part of the AI Agents Hub
 Developed by [Harsh Choudhary](https://github.com/HarshChoudhary2003). 
 *Distilling the world's signals into actionable intelligence.*
+
+
+---
+
+Developed with ❤️ by [Harsh Choudhary](https://github.com/HarshChoudhary2003) | *Building the future of Agentic Intelligence.*

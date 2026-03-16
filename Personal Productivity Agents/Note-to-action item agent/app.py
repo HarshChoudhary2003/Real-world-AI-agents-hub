@@ -224,3 +224,8 @@ with tab_board:
              st.warning("No actionable tasks detected in the specific text block. Try dumping more notes.")
     else:
         st.info("Ingest notes from the parent tab first to view compiled board analytics.")
+
+
+with st.sidebar:
+    st.markdown("---")
+    st.caption("Developed by Harsh")

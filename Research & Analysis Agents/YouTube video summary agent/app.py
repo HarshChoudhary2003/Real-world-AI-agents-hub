@@ -258,3 +258,8 @@ with col2:
             <p>Video intelligence will appear here.</p>
         </div>
         """, unsafe_allow_html=True)
+
+
+with st.sidebar:
+    st.markdown("---")
+    st.caption("Developed by Harsh")

@@ -92,3 +92,8 @@ python -m streamlit run app.py
 - **Analytics:** Pandas DataFrames, Plotly Express Gantt Charts
 
 Take control of your time proactively. With **SyncGuard AI**, your calendar is computationally protected.
+
+
+---
+
+Developed with ❤️ by [Harsh Choudhary](https://github.com/HarshChoudhary2003) | *Building the future of Agentic Intelligence.*

@@ -56,3 +56,8 @@ The editing space is massive. GrammarPro is positioned to compete directly with 
 
 ---
 *Built with modern Streamlit, Inline Diff Logic, and the LiteLLM Gateway.*
+
+
+---
+
+Developed with ❤️ by [Harsh Choudhary](https://github.com/HarshChoudhary2003) | *Building the future of Agentic Intelligence.*

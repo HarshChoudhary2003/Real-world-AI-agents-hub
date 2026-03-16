@@ -58,3 +58,8 @@ python -m streamlit run app.py
 - **Neural Routing:** `litellm` (LLM-Agnostic Processing)
 - **Core Intelligence:** Base GPT Prompting Schema
 - **Data Rendering:** Pandas DataFrames, Plotly Express
+
+
+---
+
+Developed with ❤️ by [Harsh Choudhary](https://github.com/HarshChoudhary2003) | *Building the future of Agentic Intelligence.*

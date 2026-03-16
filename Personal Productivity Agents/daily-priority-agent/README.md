@@ -81,3 +81,8 @@ streamlit run app.py
 ---
 
 **Designed for high-performers.** Stop organizing your work, and start executing it.
+
+
+---
+
+Developed with ❤️ by [Harsh Choudhary](https://github.com/HarshChoudhary2003) | *Building the future of Agentic Intelligence.*

@@ -219,3 +219,8 @@ with tab_db:
         st.info("No compiled knowledge.json file found. The datastore is pristine.")
     except Exception as e:
         st.error(f"Failed to load datastore: {e}")
+
+
+with st.sidebar:
+    st.markdown("---")
+    st.caption("Developed by Harsh")

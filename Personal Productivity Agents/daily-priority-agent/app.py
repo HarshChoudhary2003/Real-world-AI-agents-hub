@@ -444,3 +444,8 @@ with tab_nlp:
 
                 except Exception as e:
                     st.error(f"Neural processing failed. Is your prompt clear? System Error: {e}")
+
+
+with st.sidebar:
+    st.markdown("---")
+    st.caption("Developed by Harsh")

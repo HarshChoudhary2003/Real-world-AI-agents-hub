@@ -19,3 +19,8 @@ An enterprise-grade strategic intelligence tool designed to objectively analyze 
    ```bash
    python agent.py --provider openai --model gpt-4o
    ```
+
+
+---
+
+Developed with ❤️ by [Harsh Choudhary](https://github.com/HarshChoudhary2003) | *Building the future of Agentic Intelligence.*

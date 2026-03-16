@@ -325,3 +325,8 @@ with tab_analytics:
             st.warning("No agenda topics generated to analyze.")
     else:
         st.info("Execute a meeting generation in the 'Builder Canvas' first to view structural analytics.")
+
+
+with st.sidebar:
+    st.markdown("---")
+    st.caption("Developed by Harsh")

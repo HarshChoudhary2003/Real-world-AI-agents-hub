@@ -210,7 +210,8 @@ research_agents = [
     {"name": "TrendSynthetix AI", "icon": "💹", "desc": "Synthesize market signals into structured actionable insights and trends.", "category": "Market", "badge_class": "badge-green", "url": "http://localhost:8523"},
     {"name": "NewsFlow", "icon": "📰", "desc": "Distill global news cycles into thematic, structured intelligence digests.", "category": "News", "badge_class": "badge-blue", "url": "http://localhost:8524"},
     {"name": "WebScout AI", "icon": "🌐", "desc": "Autonomous intelligence engine designed to synthesize complex web topics.", "category": "Deep Web", "badge_class": "badge-purple", "url": "http://localhost:8525"},
-    {"name": "StreamBrief", "icon": "🎬", "desc": "Transform dense video transcripts into structured intelligence and insights.", "category": "Media", "badge_class": "badge-green", "url": "http://localhost:8526"}
+    {"name": "StreamBrief", "icon": "🎬", "desc": "Transform dense video transcripts into structured intelligence and insights.", "category": "Media", "badge_class": "badge-green", "url": "http://localhost:8526"},
+    {"name": "SWOT Horizon AI", "icon": "🎯", "desc": "Advanced SWOT-to-TOWS matrix generator with multi-model strategic analysis.", "category": "Strategy", "badge_class": "badge-purple", "url": "http://localhost:8527"}
 ]
 
 with tab_productivity:
@@ -233,7 +234,7 @@ st.markdown("""
         Developed with ❤️ by <a href='https://github.com/HarshChoudhary2003' style='color:#38BDF8; text-decoration:none;'>Harsh Choudhary</a>
     </p>
     <p style='color:#475569; font-size: 0.8rem;'>
-        System Operational • 26 Neural Agents Online • Engineered for Enterprise Automation
+        System Operational • 27 Neural Agents Online • Engineered for Enterprise Automation
     </p>
 </div>
 """, unsafe_allow_html=True)

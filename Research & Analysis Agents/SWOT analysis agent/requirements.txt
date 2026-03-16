@@ -1,0 +1,8 @@
+openai
+streamlit
+python-dotenv
+pandas
+plotly
+anthropic
+google-generativeai
+groq

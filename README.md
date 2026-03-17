@@ -66,6 +66,7 @@ Deep-dive intelligence agents that synthesize market signals, scientific researc
 -   **🎬 [StreamBrief](./Research%20&%20Analysis%20Agents/YouTube%20video%20summary%20agent) (YouTube Video Summary Agent)**: Transform dense video transcripts into structured intelligence, key takeaways, and insights.
 -   **🔬 [SWOT Horizon AI](./Research%20&%20Analysis%20Agents/SWOT%20analysis%20agent) (SWOT Analysis Agent)**: Advanced SWOT-to-TOWS matrix generator with multi-model strategic analysis. Transform organizational context into actionable defensive and offensive strategies.
 -   **📰 [NewsFlow](./Research%20&%20Analysis%20Agents/News%20aggregation%20agent) (News Aggregation Agent)**: Distill complex global news cycles into thematic, structured intelligence and executive digests.
+-   **⚖️ [PolicyGuard AI](./Research%20&%20Analysis%20Agents/Policy%20document%20summarizer%20agent) (Policy Document Summarizer Agent)**: Precise thematic synthesis for enterprise policies and regulatory frameworks, preserving legal intent.
 
 ## 🛠️ Tech Stack
 

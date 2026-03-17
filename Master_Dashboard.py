@@ -211,7 +211,8 @@ research_agents = [
     {"name": "NewsFlow", "icon": "📰", "desc": "Distill global news cycles into thematic, structured intelligence digests.", "category": "News", "badge_class": "badge-blue", "url": "http://localhost:8524"},
     {"name": "WebScout AI", "icon": "🌐", "desc": "Autonomous intelligence engine designed to synthesize complex web topics.", "category": "Deep Web", "badge_class": "badge-purple", "url": "http://localhost:8525"},
     {"name": "StreamBrief", "icon": "🎬", "desc": "Transform dense video transcripts into structured intelligence and insights.", "category": "Media", "badge_class": "badge-green", "url": "http://localhost:8526"},
-    {"name": "SWOT Horizon AI", "icon": "🎯", "desc": "Advanced SWOT-to-TOWS matrix generator with multi-model strategic analysis.", "category": "Strategy", "badge_class": "badge-purple", "url": "http://localhost:8527"}
+    {"name": "SWOT Horizon AI", "icon": "🎯", "desc": "Advanced SWOT-to-TOWS matrix generator with multi-model strategic analysis.", "category": "Strategy", "badge_class": "badge-purple", "url": "http://localhost:8527"},
+    {"name": "PolicyGuard AI", "icon": "⚖️", "desc": "Precise thematic synthesis for enterprise policies and regulatory frameworks.", "category": "Compliance", "badge_class": "badge-green", "url": "http://localhost:8528"}
 ]
 
 with tab_productivity:
@@ -234,7 +235,7 @@ st.markdown("""
         Developed with ❤️ by <a href='https://github.com/HarshChoudhary2003' style='color:#38BDF8; text-decoration:none;'>Harsh Choudhary</a>
     </p>
     <p style='color:#475569; font-size: 0.8rem;'>
-        System Operational • 27 Neural Agents Online • Engineered for Enterprise Automation
+        System Operational • 28 Neural Agents Online • Engineered for Enterprise Automation
     </p>
 </div>
 """, unsafe_allow_html=True)

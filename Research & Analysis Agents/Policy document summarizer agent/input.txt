@@ -1,0 +1,8 @@
+Policy Title: Data Privacy Policy
+Jurisdiction: Organization-wide
+Text:
+This policy outlines how personal data is collected, processed, stored,
+and protected across the organization, including employee and customer data.
+It applies to all departments and third-party contractors handling internal data.
+Failure to comply with these guidelines may result in disciplinary action or
+legal consequences as per local data protection laws.

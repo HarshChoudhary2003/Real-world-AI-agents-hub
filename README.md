@@ -69,6 +69,12 @@ Deep-dive intelligence agents that synthesize market signals, scientific researc
 -   **⚖️ [PolicyGuard AI](./Research%20&%20Analysis%20Agents/Policy%20document%20summarizer%20agent) (Policy Document Summarizer Agent)**: Precise thematic synthesis for enterprise policies and regulatory frameworks, preserving legal intent.
 -   **💰 [CapitalMind AI](./Research%20&%20Analysis%20Agents/Investment%20thesis%20generator%20agent) (Investment Thesis Generator Agent)**: Architect rigorous, evidence-driven investment theses, mapping catalysts and risks.
 
+### 4. 💼 Business Operations Studio
+
+A suite of agents designed to streamline corporate workflows, financial processing, and operational logistics.
+
+-   **🧾 [Invoice Intel Pro](./Business%20Operations%20Agents/Invoice%20processing%20agent) (Invoice Processing Agent)**: Automated data extraction from unstructured invoices with built-in validation and inconsistency flagging.
+
 ## 🛠️ Tech Stack
 
 This framework leverages modern Python ecosystem tools to deliver state-of-the-art AI interactions.

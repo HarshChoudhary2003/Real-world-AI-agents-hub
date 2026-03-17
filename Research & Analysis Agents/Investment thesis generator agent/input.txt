@@ -1,0 +1,9 @@
+Asset: AI Infrastructure Company
+Sector: Artificial Intelligence
+Investment Horizon: 3–5 years
+Risk Tolerance: Moderate
+Assumptions:
+- Continued enterprise AI adoption
+- Increasing demand for scalable compute
+- Maturation of AI software ecosystem
+- Stable regulatory environment for data center expansion

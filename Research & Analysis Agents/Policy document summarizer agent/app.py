@@ -4,248 +4,289 @@ from openai import OpenAI
 from datetime import date
 import os
 from dotenv import load_dotenv
+import plotly.express as px
+import plotly.graph_objects as go
 
 # Load environment variables
 load_dotenv()
 
 # Page Configuration
 st.set_page_config(
-    page_title="PolicyGuard | AI Policy Summarizer",
+    page_title="PolicyGuard Ultra | Advanced Regulatory Intelligence",
     page_icon="⚖️",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
-# Custom CSS for Premium Look
+# Custom CSS for Hyper-Premium Look
 st.markdown("""
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@300;400;600;700&display=swap');
     
+    :root {
+        --primary-emerald: #10b981;
+        --deep-forest: #064e3b;
+        --glass-bg: rgba(255, 255, 255, 0.03);
+        --glass-border: rgba(255, 255, 255, 0.1);
+    }
+
     html, body, [class*="css"] {
         font-family: 'Outfit', sans-serif;
     }
     
-    .main {
-        background: linear-gradient(135deg, #064e3b 0%, #022c22 100%);
-        color: #f0fdf4;
+    .stApp {
+        background: radial-gradient(circle at 0% 0%, #064e3b 0%, #022c22 100%);
+        color: #ecfdf5;
     }
-    
+
+    h1, h2, h3 {
+        font-family: 'Space Grotesk', sans-serif !important;
+        background: linear-gradient(90deg, #34d399 0%, #a7f3d0 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 700 !important;
+    }
+
     .stButton>button {
-        background: linear-gradient(90deg, #10b981 0%, #059669 100%);
+        background: linear-gradient(135deg, #10b981 0%, #047857 100%);
         color: white;
         border: none;
-        padding: 0.75rem 1.5rem;
-        border-radius: 12px;
+        padding: 0.8rem 1.6rem;
+        border-radius: 14px;
         font-weight: 600;
-        transition: all 0.3s ease;
+        letter-spacing: 0.02em;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         width: 100%;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2);
     }
-    
+
     .stButton>button:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.4);
+        transform: translateY(-4px) scale(1.02);
+        box-shadow: 0 12px 25px rgba(16, 185, 129, 0.4);
+        color: white;
     }
-    
+
     .glass-card {
-        background: rgba(255, 255, 255, 0.03);
-        backdrop-filter: blur(16px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 24px;
+        background: var(--glass-bg);
+        backdrop-filter: blur(20px);
+        border: 1px solid var(--glass-border);
+        border-radius: 28px;
         padding: 2.5rem;
         margin-bottom: 2rem;
-        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        transition: border 0.3s ease;
     }
     
-    .policy-box {
-        background: rgba(16, 185, 129, 0.05);
+    .glass-card:hover {
+        border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .obligation-box {
+        background: rgba(16, 185, 129, 0.08);
         border-left: 5px solid #10b981;
-        padding: 1.5rem;
-        border-radius: 16px;
-        margin-bottom: 1.5rem;
+        padding: 1.2rem;
+        border-radius: 12px;
+        margin-bottom: 1rem;
+        font-size: 0.95rem;
     }
-    
-    h1, h2, h3 {
-        color: #ecfdf5 !important;
-        letter-spacing: -0.02em;
+
+    .metric-badge {
+        background: rgba(16, 185, 129, 0.15);
+        color: #34d399;
+        padding: 0.4rem 1rem;
+        border-radius: 100px;
+        font-weight: 600;
+        font-size: 0.8rem;
+        border: 1px solid rgba(16, 185, 129, 0.2);
     }
-    
+
+    .risk-high { color: #ef4444; font-weight: 700; }
+    .risk-medium { color: #f59e0b; font-weight: 700; }
+    .risk-low { color: #10b981; font-weight: 700; }
+
     .stTextArea textarea {
-        background: rgba(0, 0, 0, 0.2) !important;
+        background: rgba(0, 0, 0, 0.3) !important;
         color: #ecfdf5 !important;
-        border-radius: 16px !important;
-        border: 1px solid rgba(255, 255, 255, 0.1) !important;
-        font-size: 1rem;
+        border-radius: 18px !important;
+        border: 1px solid var(--glass-border) !important;
+        padding: 1rem !important;
     }
-    
-    .metric-label {
-        color: #a7f3d0;
-        font-size: 0.875rem;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
+
+    .sidebar-brand {
+        text-align: center;
+        margin-bottom: 2rem;
     }
 </style>
 """, unsafe_allow_html=True)
 
-# Global client initialization
+# Global Client
 client = None
 
 # Sidebar Content
 with st.sidebar:
-    st.image("https://img.icons8.com/clouds/200/law.png", width=120)
-    st.title("Admin Console")
+    st.markdown("""
+    <div class='sidebar-brand'>
+        <img src='https://img.icons8.com/clouds/200/law.png' width='120'/>
+        <h2 style='font-size: 1.5rem;'>PolicyGuard Ultra</h2>
+    </div>
+    """, unsafe_allow_html=True)
     
-    provider = st.selectbox("Intelligence Engine", ["OpenAI", "Groq", "OpenRouter", "DeepSeek", "Local (Ollama)"])
+    st.title("Neural Engine")
+    provider = st.selectbox("Intelligence Vector", ["OpenAI", "Groq", "OpenRouter", "DeepSeek", "Ollama"])
+    model_id = st.text_input("Intelligence Signature", value="gpt-4o")
+    api_key_input = st.text_input("Neural Access Key", type="password", value=os.getenv("OPENAI_API_KEY", ""))
     
-    base_urls = {
-        "OpenAI": "https://api.openai.com/v1",
-        "Groq": "https://api.groq.com/openai/v1",
-        "OpenRouter": "https://openrouter.ai/api/v1",
-        "DeepSeek": "https://api.deepseek.com",
-        "Local (Ollama)": "http://localhost:11434/v1"
-    }
-    
-    default_models = {
-        "OpenAI": "gpt-4o-mini",
-        "Groq": "mixtral-8x7b-32768",
-        "OpenRouter": "anthropic/claude-3-haiku",
-        "DeepSeek": "deepseek-chat",
-        "Local (Ollama)": "llama3"
-    }
-
-    selected_base_url = base_urls.get(provider)
-    model_id = st.text_input("Model Signature", value=default_models.get(provider, "gpt-4o-mini"))
-    api_key_input = st.text_input("Access Secret", type="password", value=os.getenv("OPENAI_API_KEY", ""))
-    
-    if api_key_input or provider == "Local (Ollama)":
-        client = OpenAI(
-            api_key=api_key_input if api_key_input else "nothing",
-            base_url=selected_base_url
-        )
+    if api_key_input:
+        client = OpenAI(api_key=api_key_input)
+        if provider == "Groq": client.base_url = "https://api.groq.com/openai/v1"
+        if provider == "OpenRouter": client.base_url = "https://openrouter.ai/api/v1"
     
     st.markdown("---")
+    st.markdown("### 🧬 Advanced Capabilities")
     st.info("""
-    **PolicyGuard Features:**
-    - Legal-Intent Preservation
-    - Objective Summarization
-    - Ambiguity Detection
-    - Stakeholder Mapping
+    - **Deep Risk Quantification**
+    - **Strategic Impact Mapping**
+    - **Stakeholder DNA Audit**
+    - **Ambiguity Indexing**
     """)
 
-# Helper Function
-def summarize_policy_ai(text):
+def analyze_policy_ultra(text):
     SYSTEM_PROMPT = """
-    You are a Policy Document Summarizer Agent.
-    Rules:
-    - Summarize clearly and neutrally.
-    - Preserve regulatory intent.
-    - Avoid advice or subjective interpretation.
-    - Highlight scope and obligations.
-    - Return JSON ONLY.
-    """
-    
-    schema = {
-        "overview": "Brief summary of purpose",
-        "scope": "Target entities and data types",
-        "key_requirements": ["list", "of", "obligations"],
-        "implications": ["list", "of", "consequences"],
-        "limitations_or_ambiguities": ["unclear", "sections"]
+    You are an Advanced Policy Intelligence Agent. Deconstruct documents into structured intelligence.
+    Schema:
+    {
+      "metadata": {"title": "", "jurisdiction": "", "date": "", "issuer": ""},
+      "summary": {"overview": "", "scope": ""},
+      "framework": {"obligations": [], "stakeholders": [], "deadlines": []},
+      "risk": {"level": "High|Medium|Low", "score": 0-100, "threats": [], "ambiguities": []},
+      "strategy": ["Impact 1", "Impact 2"]
     }
-
+    Rules: Objective, Neutral, JSON ONLY.
+    """
     try:
         response = client.chat.completions.create(
             model=model_id,
             messages=[
-                {"role": "system", "content": f"{SYSTEM_PROMPT}\nReturn only valid JSON matching this schema: {json.dumps(schema)}"},
+                {"role": "system", "content": SYSTEM_PROMPT},
                 {"role": "user", "content": text}
             ],
-            temperature=0.25,
+            temperature=0.2,
             response_format={"type": "json_object"}
         )
         return json.loads(response.choices[0].message.content)
     except Exception as e:
-        st.error(f"Engine Fault: {str(e)}")
+        st.error(f"Engine Failure: {str(e)}")
         return None
 
-# Main UI Integration
-st.title("⚖️ PolicyGuard: Regulatory Intelligence")
-st.markdown("<p style='font-size:1.2rem; color:#a7f3d0; opacity:0.8;'>Precise thematic synthesis for enterprise policies and regulatory frameworks.</p>", unsafe_allow_html=True)
+# Main UI
+st.title("⚖️ PolicyGuard Ultra: Advanced Synthesis")
+st.markdown("<p style='font-size:1.2rem; color:#a7f3d0; opacity:0.7;'>High-fidelity neural deconstruction of regulatory frameworks and enterprise policies.</p>", unsafe_allow_html=True)
 
-col1, col2 = st.columns([0.45, 0.55], gap="large")
+col1, col2 = st.columns([0.4, 0.6], gap="large")
 
 with col1:
     st.markdown("<div class='glass-card'>", unsafe_allow_html=True)
-    st.subheader("📜 Document Input")
+    st.subheader("📡 Intelligence Ingestion")
     
-    input_mode = st.radio("Input Vector", ["Manual Text Entry", "Sample Framework"])
-    
-    default_text = ""
-    if input_mode == "Sample Framework":
-        default_text = """Policy Title: Global Remote Work Policy
-Jurisdiction: International Operations
-Text: This policy governs the terms of remote work for all full-time employees. Employees must maintain a core availability window of 10 AM to 4 PM EST. Secure VPN usage is mandatory. The company reserves the right to terminate remote arrangements with 30 days' notice. Home office expenses are reimbursed up to $500 annually upon submission of valid receipts."""
+    sample_text = """Policy Title: Enterprise Data Governance Framework
+Jurisdiction: United States & European Union (GDPR overlap)
+Effective Date: Q3 2026
+Issuer: Global Security & Compliance Office
 
-    policy_input = st.text_area("Policy Context / Regulation Text", value=default_text, height=350, placeholder="Paste policy text here...")
+Text: This framework mandates the classification of all internal and external data. 'Level 4' datasets (highly sensitive) must be encrypted using AES-256 and stored exclusively on sovereign clouds within their jurisdiction. Employees must undergo biannual training. Non-compliance results in a temporary suspension of access and potential audits. The definition of 'highly sensitive' remains subject to the CISO's discretion, which may change quarterly based on the threat landscape."""
+
+    policy_input = st.text_area("Regulatory Source / Policy Text", value=sample_text, height=450)
     
-    if st.button("🔍 Synthesize Policy"):
+    if st.button("🧠 Synthesize Intelligence"):
         if not policy_input.strip():
-            st.warning("Input required for synthesis.")
+            st.warning("Input required.")
         elif not client:
-            st.error("API Key required to initialize engine.")
+            st.error("Neural Access Key missing.")
         else:
-            with st.spinner("Decoding regulatory intent..."):
-                result = summarize_policy_ai(policy_input)
-                if result:
-                    st.session_state['policy_result'] = result
+            with st.spinner("Executing deep neural synthesis..."):
+                intel = analyze_policy_ultra(policy_input)
+                if intel:
+                    st.session_state['intel'] = intel
     st.markdown("</div>", unsafe_allow_html=True)
 
 with col2:
-    if 'policy_result' in st.session_state:
-        data = st.session_state['policy_result']
+    if 'intel' in st.session_state:
+        data = st.session_state['intel']
         st.markdown("<div class='glass-card'>", unsafe_allow_html=True)
-        st.subheader("📊 Synthesis Report")
         
-        st.markdown("<p class='metric-label'>CORE PURPOSE</p>", unsafe_allow_html=True)
-        st.write(data.get("overview", "N/A"))
+        # Metadata Header
+        m = data['metadata']
+        st.subheader(f"🛡️ Report: {m.get('title', 'Unknown Policy')}")
+        st.markdown(f"<span class='metric-badge'>{m.get('issuer')}</span> <span class='metric-badge'>{m.get('jurisdiction')}</span>", unsafe_allow_html=True)
         
-        st.markdown("<p class='metric-label'>APPLICABLE SCOPE</p>", unsafe_allow_html=True)
-        st.info(data.get("scope", "N/A"))
+        # Summary
+        st.markdown("#### 📝 Executive Digest")
+        st.write(data['summary']['overview'])
         
-        tab1, tab2, tab3 = st.tabs(["📋 Obligations", "⚖️ Implications", "🚩 Risks/Gaps"])
+        # Risk Visualization
+        st.markdown("---")
+        risk_col, score_col = st.columns(2)
+        with risk_col:
+            risk_level = data['risk']['level']
+            color = "#ef4444" if risk_level == "High" else "#f59e0b" if risk_level == "Medium" else "#10b981"
+            st.markdown(f"#### Risk Profile: <span style='color:{color}'>{risk_level}</span>", unsafe_allow_html=True)
+            for threat in data['risk']['threats']:
+                st.markdown(f"• {threat}")
+        
+        with score_col:
+            score = data['risk']['score']
+            fig = go.Figure(go.Indicator(
+                mode = "gauge+number",
+                value = score,
+                title = {'text': "Compliance Risk Score", 'font': {'color': "#34d399", 'size': 16}},
+                gauge = {
+                    'axis': {'range': [None, 100], 'tickcolor': "#34d399"},
+                    'bar': {'color': "#10b981"},
+                    'bgcolor': "rgba(0,0,0,0)",
+                    'borderwidth': 2,
+                    'bordercolor': "rgba(255,255,255,0.1)",
+                    'steps': [
+                        {'range': [0, 40], 'color': "rgba(16, 185, 129, 0.1)"},
+                        {'range': [40, 70], 'color': "rgba(245, 158, 11, 0.1)"},
+                        {'range': [70, 100], 'color': "rgba(239, 68, 68, 0.1)"}]
+                }
+            ))
+            fig.update_layout(height=200, margin=dict(l=20, r=20, t=40, b=20), paper_bgcolor='rgba(0,0,0,0)')
+            st.plotly_chart(fig, use_container_width=True)
+
+        # Tabs for Deep Dive
+        tab1, tab2, tab3 = st.tabs(["📋 Obligations", "👥 Stakeholders", "🚩 Ambiguities"])
         
         with tab1:
-            for req in data.get("key_requirements", []):
-                st.markdown(f"<div class='policy-box'>• {req}</div>", unsafe_allow_html=True)
+            for obs in data['framework']['obligations']:
+                st.markdown(f"<div class='obligation-box'>{obs}</div>", unsafe_allow_html=True)
         
         with tab2:
-            for impl in data.get("implications", []):
-                st.markdown(f"• {impl}")
+            st.write("Applicable Entities & Roles")
+            for person in data['framework']['stakeholders']:
+                st.info(person)
         
         with tab3:
-            for limit in data.get("limitations_or_ambiguities", []):
-                st.warning(limit)
-        
+            if data['risk']['ambiguities']:
+                for amb in data['risk']['ambiguities']:
+                    st.warning(amb)
+            else:
+                st.write("No major ambiguities detected.")
+
         st.markdown("---")
-        st.markdown("### 📥 Extract Intelligence")
-        e_col1, e_col2 = st.columns(2)
+        st.markdown("### 📥 Intelligence Export")
+        e1, e2 = st.columns(2)
+        e1.download_button("Export JSON Intelligence", json.dumps(data, indent=2), "policy_ultra.json")
+        e2.download_button("Export Final Report", f"POLICY REPORT\n{json.dumps(data, indent=2)}", "policy_report.txt")
         
-        json_dump = json.dumps(data, indent=2)
-        e_col1.download_button("Download JSON", json_dump, "policy_summary.json")
-        
-        txt_output = f"Policy Intelligence Report - {date.today()}\n" + "="*50 + "\n\n"
-        txt_output += f"Overview: {data.get('overview')}\n\nScope: {data.get('scope')}\n\nRequirements:\n"
-        txt_output += "\n".join([f"- {r}" for r in data.get('key_requirements', [])])
-        
-        e_col2.download_button("Download Report", txt_output, "policy_summary.txt")
         st.markdown("</div>", unsafe_allow_html=True)
     else:
-        st.markdown(f"""
-        <div style='display: flex; flex-direction: column; align-items: center; justify-content: center; height: 500px; color: #a7f3d0; border: 2px dashed rgba(16,185,129,0.2); border-radius: 24px;'>
-            <img src='https://img.icons8.com/clouds/200/law.png' width='100' style='opacity: 0.3;'/>
-            <p style='margin-top: 20px; font-weight: 300;'>Analytic report will be rendered upon synthesis.</p>
+        st.markdown("""
+        <div style='display: flex; flex-direction: column; align-items: center; justify-content: center; height: 600px; color: #a7f3d0; border: 2px dashed rgba(16,185,129,0.1); border-radius: 30px;'>
+            <img src='https://img.icons8.com/clouds/200/law.png' width='120' style='opacity: 0.2;'/>
+            <p style='margin-top: 20px; font-weight: 300;'>Analytic report will be rendered upon architectural synthesis.</p>
         </div>
         """, unsafe_allow_html=True)
 
 with st.sidebar:
     st.markdown("---")
-    st.caption("Engineered by Harsh")
+    st.caption("Engineered by Harsh Choudhary | V2.0 Ultra")

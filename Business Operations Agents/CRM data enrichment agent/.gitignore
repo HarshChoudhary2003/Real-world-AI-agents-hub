@@ -1,0 +1,10 @@
+# generated runtime files
+crm_enriched.json
+crm_enriched.txt
+crm_batch_results.json
+crm_batch_results.csv
+crm_batch_report.txt
+crm_history.json
+__pycache__/
+*.pyc
+.env

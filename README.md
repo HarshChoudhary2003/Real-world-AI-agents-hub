@@ -76,6 +76,7 @@ A suite of agents designed to streamline corporate workflows, financial processi
 -   **🧾 [Invoice Intel Pro](./Business%20Operations%20Agents/Invoice%20processing%20agent) (Invoice Processing Agent)**: Automated data extraction from unstructured invoices with built-in validation and inconsistency flagging.
 -   **💳 [ExpenseIQ AI](./Business%20Operations%20Agents/Expense%20categorization%20agent) (Expense Categorization Agent)**: Neural expense categorization engine that assigns business categories to transactions with confidence ratings, justifications, and policy-sensitive flagging.
 -   **🎧 [SupportIQ AI](./Business%20Operations%20Agents/Customer%20support%20response%20agent) (Customer Support Response Agent)**: Enterprise empathy engine that generates professional, tone-matched support responses with sentiment analysis, frustration scoring, escalation detection, and quality self-assessment.
+-   **🧬 [CRMPulse AI](./Business%20Operations%20Agents/CRM%20data%20enrichment%20agent) (CRM Data Enrichment Agent)**: Intelligent B2B contact enrichment engine that infers missing CRM fields — industry, company size, funding stage, tech stack, LinkedIn, and more — with per-field confidence scoring, lead scoring, and dedup detection.
 
 ## 🛠️ Tech Stack
 

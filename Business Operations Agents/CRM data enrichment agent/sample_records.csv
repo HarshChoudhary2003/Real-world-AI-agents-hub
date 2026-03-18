@@ -1,0 +1,7 @@
+name,email,company,role,location,missing_fields
+Jane Doe,jane.doe@techstartup.com,TechStartup Inc.,Product Manager,"San Francisco, CA","industry,company_size,account_segment,funding_stage"
+John Smith,john.smith@retailco.com,RetailCo Ltd.,VP of Sales,"New York, NY","industry,annual_revenue,technologies_used,linkedin_url"
+Priya Mehta,priya@fintech.io,FinTech Solutions,CTO,"Austin, TX","company_size,funding_stage,annual_revenue,account_segment"
+Carlos Rivera,carlos@healthcorp.org,HealthCorp,Director of IT,"Chicago, IL","industry,technologies_used,company_size,annual_revenue"
+Sarah Kim,sarah.kim@edtech.co,EduTech Co.,CMO,"Seattle, WA","account_segment,funding_stage,linkedin_url,technologies_used"
+David Chen,d.chen@logistics.net,Global Logistics Inc.,Operations Manager,"Los Angeles, CA","industry,annual_revenue,company_size,account_segment"

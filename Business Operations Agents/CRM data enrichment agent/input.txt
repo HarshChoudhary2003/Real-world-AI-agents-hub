@@ -1,0 +1,14 @@
+Name: Jane Doe
+Email: jane.doe@techstartupgmail.com
+Company: TechStartup Inc.
+Known Fields:
+- Role: Product Manager
+- Location: San Francisco, CA
+Missing Fields:
+- Industry
+- Company Size
+- Annual Revenue
+- Account Segment
+- LinkedIn URL
+- Technologies Used
+- Funding Stage

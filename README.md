@@ -1,10 +1,26 @@
 <div align="center">
-  <img src="https://img.shields.io/badge/AI-Agents%20Hub-38BDF8?style=for-the-badge&logo=openai&logoColor=white" alt="AI Agents Hub" />
-  <h1>🤖 Real-world AI Agents Hub</h1>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0ea5e9&height=200&section=header&text=Real-world%20AI%20Agents%20Hub&fontSize=50&fontAlign=50&fontAlignY=40&desc=100%20Enterprise-Grade%20AI%20Agents&descAlign=50&descAlignY=65" width="100%" />
+
+  <br>
+  
+  <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=800&size=24&pause=1000&color=38BDF8&center=true&vCenter=true&width=800&lines=🤖+Master+Your+Workflows;🚀+Automate+Operations;⚡+Scale+with+Intelligence" alt="Typing SVG" />
+
+  <br><br>
+
+  <img src="https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" />
+  <img src="https://img.shields.io/badge/LiteLLM-000000?style=for-the-badge&logo=openai&logoColor=white" />
+  <img src="https://img.shields.io/badge/Status-100%20Agents%20in%20Progress-0ea5e9?style=for-the-badge&logo=rocket&logoColor=white" />
+
   <p><strong>A centralized repository for enterprise-grade, high-performance AI Agents built for immediate impact.</strong></p>
 </div>
 
----
+<div align="center">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" width="80%">
+</div>
+<div align="center">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" width="60%">
+</div>
 
 ## 🌌 Overview
 

@@ -77,6 +77,7 @@ Enterprise-grade agents that automate core business workflows — from CRM intel
 -   **🛡️ [SupportCraft AI](./Business%20Operations%20Agents/Customer%20support%20response%20agent) (Customer Support Response Agent)**: Analyze support tickets, assess sentiment and urgency, and craft empathetic, professional responses with escalation intelligence.
 -   **💸 [ExpenseIQ AI](./Business%20Operations%20Agents/Expense%20categorization%20agent) (Expense Categorization Agent)**: Intelligently categorize expenses, detect anomalies and duplicate charges, flag policy violations, and generate spending intelligence reports.
 -   **🎯 [LeadScore AI](./Business%20Operations%20Agents/Lead%20qualification%20agent) (Lead Qualification Agent)**: Qualify sales leads using BANT analysis with precision scoring, flag detection, and tailored next-action recommendations.
+-   **🤝 [SalesFollowAI Pro](./Business%20Operations%20Agents/Sales%20follow-up%20agent) (Sales Follow-up Agent)**: Generate consultative, high-converting sales follow-up messages tailored to prospect roles and meeting context.
 
 ---
 

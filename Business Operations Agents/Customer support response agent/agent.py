@@ -208,7 +208,7 @@ def _call_groq(prompt: str, model: str, api_key: Optional[str]) -> dict:
 PROVIDER_MAP = {
     "OpenAI":    (_call_openai,    "gpt-4.1-mini"),
     "Anthropic": (_call_anthropic, "claude-3-5-sonnet-20240620"),
-    "Gemini":    (_call_gemini,    "gemini-1.5-flash"),
+    "Gemini":    (_call_gemini,    "gemini-2.0-flash"),
     "Groq":      (_call_groq,      "llama-3.3-70b-versatile"),
 }
 
@@ -296,8 +296,17 @@ def save_batch_outputs(results: list, base_path: str = ""):
         fieldnames = [
             "customer_name", "issue_category", "urgency", "detected_sentiment",
             "frustration_score", "tone_used", "recommended_channel",
-            "escalation_required", "estimated_resolution_time", "processed_at",
+            "escalation_required", "estimated_resolution_time",
+            "empathy_score", "clarity_score", "professionalism_score", "overall_score",
+            "processed_at",
         ]
+        # Flatten quality scores for CSV export
+        for r in results:
+            q = r.get("response_quality", {})
+            r["empathy_score"]        = q.get("empathy_score", "")
+            r["clarity_score"]        = q.get("clarity_score", "")
+            r["professionalism_score"] = q.get("professionalism_score", "")
+            r["overall_score"]        = q.get("overall_score", "")
         with open(csv_path, "w", encoding="utf-8", newline="") as f:
             writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore")
             writer.writeheader()

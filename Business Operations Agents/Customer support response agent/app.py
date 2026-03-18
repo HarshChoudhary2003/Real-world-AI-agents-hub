@@ -166,6 +166,26 @@ html,body,[class*="css"]{font-family:'Inter',sans-serif;}
 .stTabs [data-baseweb="tab"]{color:#64748b !important;font-weight:500;}
 .stTabs [aria-selected="true"]{color:#22d3ee !important;border-bottom-color:#22d3ee !important;}
 
+/* primary button glow */
+.stButton > button[kind="primary"]{
+    background:linear-gradient(135deg,#0891b2,#1d4ed8) !important;
+    border:none !important;border-radius:10px !important;
+    font-weight:700 !important;letter-spacing:.3px !important;
+    transition:all .25s ease !important;
+}
+.stButton > button[kind="primary"]:hover{
+    transform:translateY(-2px) !important;
+    box-shadow:0 6px 24px rgba(6,182,212,.35) !important;
+    background:linear-gradient(135deg,#06b6d4,#2563eb) !important;
+}
+
+/* escalation pulse */
+@keyframes escalationPulse{
+    0%,100%{box-shadow:0 0 0 0 rgba(239,68,68,.4);}
+    50%{box-shadow:0 0 0 8px rgba(239,68,68,0);}
+}
+.esc-yes{animation:escalationPulse 2s infinite;}
+
 h1,h2,h3,h4{color:#f1f5f9 !important;}
 p,li{color:#cbd5e1;}
 </style>

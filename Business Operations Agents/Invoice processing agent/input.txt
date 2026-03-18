@@ -1,0 +1,8 @@
+Vendor: ABC Software Ltd.
+Invoice Number: INV-2045
+Invoice Date: 2025-06-01
+Line Items:
+- SaaS Subscription (June): $500
+- Support Add-on: $150
+Tax: $65
+Total: $715

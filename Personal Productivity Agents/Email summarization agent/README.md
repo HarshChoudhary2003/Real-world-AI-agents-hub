@@ -69,3 +69,8 @@ streamlit run app.py
 
 ## 🧠 Why we built this
 Modern professionals spend over 28% of their day reading and processing email. **MailMind AI** is designed to slice that workload precisely in half. Instead of hunting through long chains for that single date or to-do list, this tool acts as your personal Chief of Staff—serving only what matters.
+
+
+---
+
+Developed with ❤️ by [Harsh Choudhary](https://github.com/HarshChoudhary2003) | *Building the future of Agentic Intelligence.*

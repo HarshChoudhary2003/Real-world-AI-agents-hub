@@ -1,0 +1,10 @@
+# generated runtime files
+support_response.json
+support_response.txt
+support_batch_results.json
+support_batch_results.csv
+support_batch_report.txt
+support_history.json
+__pycache__/
+*.pyc
+.env

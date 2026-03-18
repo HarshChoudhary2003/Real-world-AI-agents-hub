@@ -73,3 +73,8 @@ streamlit run app.py
 ---
 
 **Meetings cost time and money. AgendaCraft AI ensures you never waste either.**
+
+
+---
+
+Developed with ❤️ by [Harsh Choudhary](https://github.com/HarshChoudhary2003) | *Building the future of Agentic Intelligence.*

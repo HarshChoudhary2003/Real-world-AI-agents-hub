@@ -1,0 +1,11 @@
+# ExpenseIQ AI — generated runtime files (do not commit)
+expense_categorization.json
+expense_categorization.txt
+expense_batch_results.json
+expense_batch_results.csv
+expense_batch_report.txt
+expense_history.json
+expense_dedup_db.json
+__pycache__/
+*.pyc
+.env

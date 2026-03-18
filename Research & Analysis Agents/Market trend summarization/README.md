@@ -48,3 +48,8 @@ python agent.py
 
 ---
 *Built with ❤️ by Antigravity AI Agent*
+
+
+---
+
+Developed with ❤️ by [Harsh Choudhary](https://github.com/HarshChoudhary2003) | *Building the future of Agentic Intelligence.*

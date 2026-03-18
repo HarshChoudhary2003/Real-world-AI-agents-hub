@@ -61,3 +61,8 @@ The raw `ideas.json` (perfect for programmatic pipelines) and human-readable `id
 Whether you are distributing content as a Founder looking to establish thought leadership or scaling a Social Media Agency managing 50 cross-niche accounts—the Elite LinkedIn Architect delivers consistent, powerful, platform-native copy. 
 
 Input your parameters once, extract **Frameworks, Hooks, Formats, and Final Copy**, and dominate the feed.
+
+
+---
+
+Developed with ❤️ by [Harsh Choudhary](https://github.com/HarshChoudhary2003) | *Building the future of Agentic Intelligence.*

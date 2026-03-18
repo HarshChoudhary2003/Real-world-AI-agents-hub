@@ -236,3 +236,8 @@ with col2:
 
 st.markdown("---")
 st.caption(f"Connected to {selected_model} via LiteLLM Relay")
+
+
+with st.sidebar:
+    st.markdown("---")
+    st.caption("Developed by Harsh")

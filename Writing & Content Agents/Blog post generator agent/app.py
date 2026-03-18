@@ -162,3 +162,7 @@ with col2:
             st.info(f"📱 **Social Media Promo:**\n\n{blog.get('socialMediaPost', '')}")
     else:
         st.info("Your generated blog post will appear here.")
+
+
+st.markdown("---")
+st.caption("Developed by Harsh")

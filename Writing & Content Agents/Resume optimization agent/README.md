@@ -70,3 +70,8 @@ Because of its polished UI and highly valuable output, **ResumeAI Pro** is prime
 
 ---
 *Built with modern Streamlit, Python, and OpenAI's GPT models.*
+
+
+---
+
+Developed with ❤️ by [Harsh Choudhary](https://github.com/HarshChoudhary2003) | *Building the future of Agentic Intelligence.*

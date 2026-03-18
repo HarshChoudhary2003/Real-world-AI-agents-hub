@@ -268,3 +268,8 @@ with tab_export:
              txt_out += f"Recommendation: {r['recommendation']}\n\n"
              
         st.download_button("Download Blueprint (TXT)", data=txt_out, file_name="habits_summary.txt", mime="text/plain", use_container_width=True)
+
+
+with st.sidebar:
+    st.markdown("---")
+    st.caption("Developed by Harsh")

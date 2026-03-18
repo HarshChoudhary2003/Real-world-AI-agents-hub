@@ -12,6 +12,13 @@ Welcome to the **Real-world AI Agents Hub**. This project aims to design, develo
 
 Unlike simple wrapper scripts, every agent here provides a complete, robust **Streamlit** user interface complete with dark modes, responsive layouts, data handling, and sophisticated AI logic under the hood.
 
+## ✨ Key Highlights
+
+-   **🧠 Multi-Model Intelligence**: Native support for GPT-4o, Claude 3.5, Llama 3 (via Groq), and Google Gemini.
+-   **🎨 Premium UI/UX**: Custom-engineered Streamlit dashboards with advanced CSS, glassmorphism, and responsive layouts.
+-   **🛡️ Enterprise Ready**: Specialized prompts and JSON-enforced output schemas for reliable, structured data.
+-   **📈 Tactical Insights**: Agents don't just "talk"—they research, analyze, and produce actionable deliverables.
+
 ---
 
 ## 📁 Agent Ecosystem
@@ -50,11 +57,17 @@ A robust suite of agents dedicated to generating, optimizing, and polishing prof
 
 ### 3. 🔍 Research & Analysis Studio
 
-Deep-dive intelligence agents that synthesize market signals and competitive landscapes.
+Deep-dive intelligence agents that synthesize market signals, scientific research, and competitive landscapes.
 
 -   **💹 [TrendSynthetix AI](./Research%20&%20Analysis%20Agents/Market%20trend%20summarization) (Market Trend Summarization Agent)**: Synthesize complex market data into structured, actionable insights and directional trends.
--   **⚔️ [CompeteIntel AI](./Research%20&%20Analysis%20Agents/Competitive%20analysis%20agent) (Competitive Analysis Agent)**: Map the competitive landscape, audit competitor strategies, and identify market white spaces.
+-   **🌐 [Web Research Agent](./Research%20&%20Analysis%20Agents/Web%20research%20agent)**: An elite, autonomous intelligence engine designed to synthesize complex informational topics into actionable executive summaries and market trends. Supports multi-model switching.
+-   **⚔️ [CompeteIntel AI](./Research%20&%20Analysis%20Agents/Competitive%20analysis%20agent) (Competitive Analysis Agent)**: Map the competitive landscape, audit competitor strategies, and identify market white spaces with strategic DNA deconstruction.
 -   **🎓 [ScholarAI](./Research%20&%20Analysis%20Agents/Academic%20paper%20explainer%20agent) (Academic Paper Explainer Agent)**: Deconstruct complex scientific literature into plain-language summaries and structured insights.
+-   **🎬 [StreamBrief](./Research%20&%20Analysis%20Agents/YouTube%20video%20summary%20agent) (YouTube Video Summary Agent)**: Transform dense video transcripts into structured intelligence, key takeaways, and insights.
+-   **🔬 [SWOT Horizon AI](./Research%20&%20Analysis%20Agents/SWOT%20analysis%20agent) (SWOT Analysis Agent)**: Advanced SWOT-to-TOWS matrix generator with multi-model strategic analysis. Transform organizational context into actionable defensive and offensive strategies.
+-   **📰 [NewsFlow](./Research%20&%20Analysis%20Agents/News%20aggregation%20agent) (News Aggregation Agent)**: Distill complex global news cycles into thematic, structured intelligence and executive digests.
+-   **⚖️ [PolicyGuard AI](./Research%20&%20Analysis%20Agents/Policy%20document%20summarizer%20agent) (Policy Document Summarizer Agent)**: Precise thematic synthesis for enterprise policies and regulatory frameworks, preserving legal intent.
+-   **💰 [CapitalMind AI](./Research%20&%20Analysis%20Agents/Investment%20thesis%20generator%20agent) (Investment Thesis Generator Agent)**: Architect rigorous, evidence-driven investment theses, mapping catalysts and risks.
 
 ### 4. 💼 Business Operations Suite
 
@@ -121,3 +134,8 @@ This repository is available under the standard MIT License. See the [LICENSE](L
 ---
 
 *System Operational • Engineered for Enterprise Automation*
+
+
+---
+
+Developed with ❤️ by [Harsh Choudhary](https://github.com/HarshChoudhary2003)

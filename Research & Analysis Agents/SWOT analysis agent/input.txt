@@ -1,0 +1,9 @@
+Entity: AI Agent Productivity Course
+Industry: Online education
+Objective: Differentiate in a crowded AI learning market
+Time Horizon: 2 years
+Context Notes:
+- Rapid growth of AI courses
+- Increasing learner demand for hands-on content
+- High competition from established platforms
+- Emerging tech like autonomous agents could disrupt current course models

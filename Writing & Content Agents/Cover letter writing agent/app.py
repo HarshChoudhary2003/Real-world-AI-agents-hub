@@ -412,3 +412,8 @@ with page_tabs[1]:
                 st.write("Perfect alignment! No missing concepts detected.")
     else:
         st.info("⚠️ Generate a cover letter first to view the semantic analysis.")
+
+
+with st.sidebar:
+    st.markdown("---")
+    st.caption("Developed by Harsh")

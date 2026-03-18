@@ -4,15 +4,14 @@ from openai import OpenAI
 from datetime import date
 import os
 from dotenv import load_dotenv
-import io
 
 # Load environment variables
 load_dotenv()
 
 # Page Configuration
 st.set_page_config(
-    page_title="ScholarAI | Academic Paper Explainer",
-    page_icon="🎓",
+    page_title="StreamBrief | YouTube Summary Agent",
+    page_icon="🎬",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -32,7 +31,7 @@ st.markdown("""
     }
     
     .stButton>button {
-        background: linear-gradient(90deg, #3b82f6 0%, #2563eb 100%);
+        background: linear-gradient(90deg, #ef4444 0%, #dc2626 100%);
         color: white;
         border: none;
         padding: 0.6rem 1.5rem;
@@ -45,7 +44,7 @@ st.markdown("""
     
     .stButton>button:hover {
         transform: translateY(-2px);
-        box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.4);
+        box-shadow: 0 10px 15px -3px rgba(239, 68, 68, 0.4);
     }
     
     .glass-card {
@@ -59,7 +58,7 @@ st.markdown("""
     
     .metric-card {
         background: rgba(255, 255, 255, 0.03);
-        border-left: 4px solid #3b82f6;
+        border-left: 4px solid #ef4444;
         padding: 1rem;
         border-radius: 8px;
     }
@@ -76,19 +75,15 @@ st.markdown("""
         border: 1px solid rgba(255, 255, 255, 0.1) !important;
     }
     
-    .sidebar .sidebar-content {
-        background: #0f172a;
-    }
-    
     .status-badge {
         display: inline-block;
         padding: 0.25rem 0.75rem;
         border-radius: 9999px;
         font-size: 0.875rem;
         font-weight: 600;
-        background: rgba(59, 130, 246, 0.1);
-        color: #60a5fa;
-        border: 1px solid rgba(59, 130, 246, 0.2);
+        background: rgba(239, 68, 68, 0.1);
+        color: #f87171;
+        border: 1px solid rgba(239, 68, 68, 0.2);
     }
     </style>
 """, unsafe_allow_html=True)
@@ -99,30 +94,27 @@ if os.getenv("OPENAI_API_KEY"):
     client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 SYSTEM_PROMPT = """
-You are an Academic Paper Explainer Agent.
+You are a YouTube Video Summary Agent.
 
 Rules:
-- Explain academic research clearly and accurately for a non-expert audience.
-- Preserve technical meaning, nuance, and critical limitations.
-- Avoid speculation, exaggeration, or marketing "fluff".
-- Structure the response with clear headings.
+- Summarize video content clearly and faithfully
+- Remove filler and repetition
+- Preserve key ideas and structure
+- Avoid personal interpretation
 
 Return ONLY valid JSON with this schema:
 {
-  "summary": "High-level plain-English summary",
-  "research_question": "What specifically is being studied?",
-  "methodology": "How was the research conducted?",
-  "key_findings": ["Finding 1", "Finding 2"],
-  "implications": ["Impact 1", "Impact 2"],
-  "limitations": ["Limitation 1", "Limitation 2"]
+  "overview": "Concise high-level summary",
+  "key_points": ["Point 1", "Point 2"],
+  "examples_or_insights": ["Insight 1", "Insight 2"],
+  "final_takeaway": "Actionable conclusion or main message"
 }
 """
 
-def explain_paper(text):
+def summarize_video(text):
     model = st.session_state.get('model_id', 'gpt-4o-mini')
-    
     if client is None:
-        st.error("AI Client is not initialized. Please provide an API key or check your settings in the sidebar.")
+        st.error("AI Client is not initialized. Please check settings in the sidebar.")
         return None
     try:
         response = client.chat.completions.create(
@@ -141,12 +133,11 @@ def explain_paper(text):
 
 # Sidebar Content
 with st.sidebar:
-    st.image("https://img.icons8.com/clouds/200/education.png", width=120)
+    st.image("https://img.icons8.com/clouds/200/youtube-play--v1.png", width=120)
     st.title("Settings")
     
     provider = st.selectbox("Select Provider", ["OpenAI", "Groq", "OpenRouter", "DeepSeek", "Local (Ollama/LM Studio)", "Custom"])
     
-    # Provider-specific configurations
     base_urls = {
         "OpenAI": "https://api.openai.com/v1",
         "Groq": "https://api.groq.com/openai/v1",
@@ -183,110 +174,92 @@ with st.sidebar:
     st.markdown("---")
     st.markdown("### 🚀 Capabilities")
     st.info("""
-    - **Plain Language Translation**
-    - **Methodology Extraction**
-    - **Critical Findings Recap**
-    - **Implication Analysis**
+    - **Transcript Synthesis**
+    - **Filler Extraction**
+    - **Key-Insight Mapping**
+    - **Multi-Model Support**
     """)
-    st.markdown("---")
     st.caption("Developed by Antigravity Agent Lab")
 
 # Main UI
-st.title("🎓 ScholarAI: Research Explainer")
-st.markdown("<p style='font-size:1.2rem; color:#94a3b8;'>Transform complex academic papers into crystal-clear insights in seconds.</p>", unsafe_allow_html=True)
+st.title("🎬 StreamBrief: Video Summarizer")
+st.markdown("<p style='font-size:1.2rem; color:#94a3b8;'>Turn long videos into structured intelligence in seconds.</p>", unsafe_allow_html=True)
 
 col1, col2 = st.columns([1, 1], gap="large")
 
 with col1:
     st.markdown("<div class='glass-card'>", unsafe_allow_html=True)
-    st.subheader("📄 Input Paper Content")
+    st.subheader("📝 Input Transcript")
     
-    input_method = st.radio("Choose Input Method", ["Paste Text", "Sample Text"])
+    input_method = st.radio("Input Source", ["Paste Transcript", "Sample Text"])
     
-    if input_method == "Paste Text":
-        input_text = st.text_area("Paste the abstract or full paper text here:", height=300, placeholder="Title: ... \nAbstract: ...")
+    if input_method == "Paste Transcript":
+        input_text = st.text_area("Paste video transcript or notes:", height=300, placeholder="Title: ... \n[00:00] Intro...")
     else:
-        sample = """Paper Title: Attention Is All You Need
-Abstract:
-The dominant sequence transduction models are based on complex recurrent or convolutional neural networks in an encoder-decoder configuration. The best performing models also connect the encoder and decoder through an attention mechanism. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely."""
+        sample = """Video Title: How AI Agents are Changing Software
+Transcript:
+In this video, we explore the shift from passive software to agentic systems. 
+AI agents are no longer just responding to prompts; they are planning, using tools, and achieving goals.
+We look at examples like AutoGPT and specialized coding agents. 
+The main takeaway is that developers need to think about 'handing off' agency to these models safely."""
         input_text = st.text_area("Sample Input:", value=sample, height=300)
 
-    if st.button("✨ Generate AI Explanation"):
+    if st.button("⚡ Synthesize Summary"):
         if not input_text.strip():
-            st.warning("Please provide some text to analyze.")
-        elif not os.getenv("OPENAI_API_KEY"):
-            st.error("API Key is required. Please set it in the sidebar.")
+            st.warning("Please provide a transcript.")
+        elif client is None:
+            st.error("API Key is required in the sidebar.")
         else:
-            with st.spinner("Decoding complex research..."):
-                explanation = explain_paper(input_text)
-                if explanation:
-                    st.session_state['explanation'] = explanation
+            with st.spinner("Parsing video logic..."):
+                summary = summarize_video(input_text)
+                if summary:
+                    st.session_state['video_summary'] = summary
     st.markdown("</div>", unsafe_allow_html=True)
 
 with col2:
-    if 'explanation' in st.session_state:
-        data = st.session_state['explanation']
+    if 'video_summary' in st.session_state:
+        data = st.session_state['video_summary']
         st.markdown("<div class='glass-card'>", unsafe_allow_html=True)
-        st.subheader("💡 AI Insights")
-        
+        st.subheader("📊 Structured Summary")
         st.markdown(f"<div class='status-badge'>Generated on {date.today()}</div>", unsafe_allow_html=True)
         
-        with st.expander("📝 Summary", expanded=True):
-            st.write(data.get("summary", ""))
-            
-        with st.expander("🔍 Research Question", expanded=True):
-            st.write(data.get("research_question", ""))
-            
-        with st.expander("🛠 Methodology", expanded=True):
-            st.write(data.get("methodology", ""))
-            
-        tabs = st.tabs(["🎯 Key Findings", "🌍 Implications", "⚠️ Limitations"])
+        st.markdown("#### 📖 Overview")
+        st.write(data.get("overview", ""))
         
-        with tabs[0]:
-            for item in data.get("key_findings", []):
-                st.markdown(f"• {item}")
+        st.markdown("#### 🎯 Key Points")
+        for point in data.get("key_points", []):
+            st.markdown(f"• {point}")
+            
+        if data.get("examples_or_insights"):
+            st.markdown("#### 💡 Insights")
+            for insight in data.get("examples_or_insights", []):
+                st.markdown(f"- {insight}")
                 
-        with tabs[1]:
-            for item in data.get("implications", []):
-                st.markdown(f"• {item}")
-                
-        with tabs[2]:
-            for item in data.get("limitations", []):
-                st.markdown(f"• {item}")
-                
+        st.markdown("#### 🏁 Final Takeaway")
+        st.success(data.get("final_takeaway", ""))
+        
         st.markdown("---")
-        
-        # Output options
-        st.markdown("### 📥 Export Results")
+        st.markdown("### 📥 Export Details")
         col_ex1, col_ex2 = st.columns(2)
         
         json_str = json.dumps(data, indent=2)
-        col_ex1.download_button(
-            label="Download JSON",
-            data=json_str,
-            file_name="paper_explanation.json",
-            mime="application/json"
-        )
+        col_ex1.download_button("Download JSON", data=json_str, file_name="video_summary.json")
         
-        txt_output = f"Academic Paper Explanation ({date.today()})\n" + "="*55 + "\n\n"
-        txt_output += f"Summary:\n{data['summary']}\n\n"
-        txt_output += f"Research Question:\n{data['research_question']}\n\n"
-        txt_output += f"Methodology:\n{data['methodology']}\n\n"
-        txt_output += "Key Findings:\n" + "\n".join([f"- {k}" for k in data['key_findings']]) + "\n\n"
-        txt_output += "Implications:\n" + "\n".join([f"- {i}" for i in data['implications']]) + "\n\n"
-        txt_output += "Limitations:\n" + "\n".join([f"- {l}" for l in data['limitations']])
-        
-        col_ex2.download_button(
-            label="Download Text",
-            data=txt_output,
-            file_name="paper_explanation.txt",
-            mime="text/plain"
-        )
+        txt_out = f"YouTube Summary ({date.today()})\n" + "="*50 + "\n\n"
+        txt_out += f"Overview:\n{data['overview']}\n\nPoints:\n"
+        txt_out += "\n".join([f"- {p}" for p in data['key_points']])
+        txt_out += f"\n\nTakeaway: {data['final_takeaway']}"
+        col_ex2.download_button("Download Text", data=txt_out, file_name="video_summary.txt")
         st.markdown("</div>", unsafe_allow_html=True)
     else:
         st.markdown("""
         <div style='display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; color: #64748b; border: 2px dashed rgba(255,255,255,0.1); border-radius: 20px; padding: 4rem;'>
-            <img src='https://img.icons8.com/fluency/96/brain--v1.png' width='80' style='opacity: 0.5; margin-bottom: 20px;'/>
-            <p>Intelligence results will appear here after generation.</p>
+            <img src='https://img.icons8.com/fluency/96/youtube-play--v1.png' width='80' style='opacity: 0.5; margin-bottom: 20px;'/>
+            <p>Video intelligence will appear here.</p>
         </div>
         """, unsafe_allow_html=True)
+
+
+with st.sidebar:
+    st.markdown("---")
+    st.caption("Developed by Harsh")

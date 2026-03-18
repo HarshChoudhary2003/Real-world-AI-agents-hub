@@ -56,3 +56,8 @@ python -m streamlit run app.py
 - **Mathematical Processing:** Native Python dictionaries, lists, and `datetime` manipulation.
 - **Data Rendering:** Pandas DataFrames
 - **Charting Engine:** Plotly Express Timeline / Gantt
+
+
+---
+
+Developed with ❤️ by [Harsh Choudhary](https://github.com/HarshChoudhary2003) | *Building the future of Agentic Intelligence.*

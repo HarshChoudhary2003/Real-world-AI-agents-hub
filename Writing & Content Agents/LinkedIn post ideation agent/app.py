@@ -178,3 +178,7 @@ with col2:
             st.markdown('</div>', unsafe_allow_html=True)
     else:
         st.info("Your AI-generated post ideas will appear here.")
+
+
+st.markdown("---")
+st.caption("Developed by Harsh")

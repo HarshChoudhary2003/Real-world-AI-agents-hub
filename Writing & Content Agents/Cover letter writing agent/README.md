@@ -68,3 +68,8 @@ The app will open automatically in your browser at `http://localhost:8501`.
 
 ---
 *Built with modern Streamlit, Python, and the LiteLLM Universal Gateway.*
+
+
+---
+
+Developed with ❤️ by [Harsh Choudhary](https://github.com/HarshChoudhary2003) | *Building the future of Agentic Intelligence.*

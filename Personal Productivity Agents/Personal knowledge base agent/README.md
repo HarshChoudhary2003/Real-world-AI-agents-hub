@@ -58,3 +58,8 @@ python -m streamlit run app.py
 - **Vector Embedding:** `text-embedding-3-small`
 - **Core Intelligence:** `gpt-4o-mini`
 - **Datastore Logic:** Native `.json`, `numpy` Cosine Similarity calculations
+
+
+---
+
+Developed with ❤️ by [Harsh Choudhary](https://github.com/HarshChoudhary2003) | *Building the future of Agentic Intelligence.*

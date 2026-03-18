@@ -1,0 +1,9 @@
+Lead: Sarah Chen, Director of Operations
+Company: GrowthTech Solutions (Series B, 150 employees)
+Source: Demo Request Form
+Budget: Mentioned they have $50K-$100K allocated for automation tools this fiscal year
+Authority: Director-level, reports to COO. Has signing authority up to $75K.
+Need: Urgently looking to reduce manual data entry across 25 operations staff. Currently spending 15 hours/week on manual processes.
+Timeline: Decision expected within 6 weeks. Currently evaluating 3 vendors.
+Current Tools: Legacy spreadsheet-based system, some Zapier automations
+Previous Contact: Attended product webinar last month, downloaded whitepaper

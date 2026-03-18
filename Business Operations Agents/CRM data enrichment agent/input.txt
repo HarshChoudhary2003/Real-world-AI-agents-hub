@@ -1,0 +1,5 @@
+Company: Acme Corp
+Website: acmecorp.io
+Contact: Jane Doe, VP of Engineering
+Source: LinkedIn Inbound
+Notes: Expressed interest in AI automation tools for their engineering pipeline. Currently using legacy workflow systems. Team size approximately 200 engineers.

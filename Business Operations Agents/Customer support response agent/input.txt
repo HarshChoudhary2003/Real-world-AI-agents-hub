@@ -1,0 +1,7 @@
+Customer: John Smith
+Email: john@example.com
+Subject: Billing issue — charged twice for subscription
+Message: Hi, I noticed I was charged twice for my monthly subscription. I've been a loyal customer for 2 years and this is really frustrating. Can you please fix this ASAP? I need a refund for the duplicate charge. My account ID is ENT-4892.
+Product: Premium SaaS Platform
+Account Tier: Enterprise
+Previous Interactions: None recently — last contacted support 8 months ago for onboarding.

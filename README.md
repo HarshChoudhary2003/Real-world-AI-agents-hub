@@ -56,6 +56,15 @@ Deep-dive intelligence agents that synthesize market signals and competitive lan
 -   **⚔️ [CompeteIntel AI](./Research%20&%20Analysis%20Agents/Competitive%20analysis%20agent) (Competitive Analysis Agent)**: Map the competitive landscape, audit competitor strategies, and identify market white spaces.
 -   **🎓 [ScholarAI](./Research%20&%20Analysis%20Agents/Academic%20paper%20explainer%20agent) (Academic Paper Explainer Agent)**: Deconstruct complex scientific literature into plain-language summaries and structured insights.
 
+### 4. 💼 Business Operations Suite
+
+Enterprise-grade agents that automate core business workflows — from CRM intelligence to financial operations.
+
+-   **🧬 [CRM DataForge AI](./Business%20Operations%20Agents/CRM%20data%20enrichment%20agent) (CRM Data Enrichment Agent)**: Transform raw CRM records into rich, actionable intelligence with AI-powered lead profiling, tech stack detection, and decision-maker mapping.
+-   **🛡️ [SupportCraft AI](./Business%20Operations%20Agents/Customer%20support%20response%20agent) (Customer Support Response Agent)**: Analyze support tickets, assess sentiment and urgency, and craft empathetic, professional responses with escalation intelligence.
+-   **💸 [ExpenseIQ AI](./Business%20Operations%20Agents/Expense%20categorization%20agent) (Expense Categorization Agent)**: Intelligently categorize expenses, detect anomalies and duplicate charges, flag policy violations, and generate spending intelligence reports.
+-   **🎯 [LeadScore AI](./Business%20Operations%20Agents/Lead%20qualification%20agent) (Lead Qualification Agent)**: Qualify sales leads using BANT analysis with precision scoring, flag detection, and tailored next-action recommendations.
+
 ---
 
 ## 🛠️ Tech Stack

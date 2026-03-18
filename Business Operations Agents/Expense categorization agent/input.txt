@@ -1,0 +1,16 @@
+Expenses to categorize:
+1. Uber ride to client meeting — $45.00
+2. AWS monthly hosting — $892.50
+3. Team lunch at Olive Garden — $127.30
+4. Adobe Creative Cloud subscription — $54.99
+5. Office printer paper (bulk) — $89.00
+6. Google Ads campaign — $2,500.00
+7. Uber ride to client meeting — $45.00
+8. Conference ticket (TechCrunch Disrupt) — $1,200.00
+9. Slack Enterprise annual renewal — $3,400.00
+10. DoorDash team dinner — $215.80
+
+Company: TechStart Inc.
+Department: Engineering
+Period: March 2026
+Budget Limit: $10,000/month

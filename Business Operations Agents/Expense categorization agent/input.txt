@@ -1,0 +1,10 @@
+Transaction Description: Zoom Video Communications Monthly Subscription
+Vendor: Zoom
+Amount: $149.99
+Date: 2025-06-05
+Available Categories:
+- Software
+- Travel
+- Marketing
+- Office Supplies
+- Professional Services

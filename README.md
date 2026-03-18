@@ -74,6 +74,7 @@ Deep-dive intelligence agents that synthesize market signals, scientific researc
 A suite of agents designed to streamline corporate workflows, financial processing, and operational logistics.
 
 -   **🧾 [Invoice Intel Pro](./Business%20Operations%20Agents/Invoice%20processing%20agent) (Invoice Processing Agent)**: Automated data extraction from unstructured invoices with built-in validation and inconsistency flagging.
+-   **💳 [ExpenseIQ AI](./Business%20Operations%20Agents/Expense%20categorization%20agent) (Expense Categorization Agent)**: Neural expense categorization engine that assigns business categories to transactions with confidence ratings, justifications, and policy-sensitive flagging.
 
 ## 🛠️ Tech Stack
 

@@ -1,8 +1,0 @@
-Primary Company: AI Agent Productivity Course
-Industry: Online education
-Competitors:
-- Generic AI courses
-- No-code automation courses
-- Traditional productivity coaching
-Focus:
-Differentiation and positioning

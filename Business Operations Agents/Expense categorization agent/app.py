@@ -1,6 +1,7 @@
 """
-ExpenseIQ AI — Premium Streamlit Dashboard
+ExpenseIQ AI v2.0.0 — Premium Streamlit Dashboard
 """
+__version__ = "2.0.0"
 import streamlit as st
 import json, os, io, re
 import pandas as pd
@@ -46,6 +47,17 @@ html,body,[class*="css"]{font-family:'Inter',sans-serif;}
 
 .stApp{background:linear-gradient(135deg,#060d1f 0%,#0d1535 45%,#110825 100%);}
 
+/* ── subtle animated grid overlay ── */
+.stApp::before{
+    content:'';
+    position:fixed;top:0;left:0;right:0;bottom:0;
+    background-image:
+        linear-gradient(rgba(99,102,241,.03) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(99,102,241,.03) 1px,transparent 1px);
+    background-size:60px 60px;
+    pointer-events:none;z-index:0;
+}
+
 [data-testid="stSidebar"]{
     background:linear-gradient(180deg,#0a0f20 0%,#0e1428 100%);
     border-right:1px solid rgba(99,102,241,.25);
@@ -57,7 +69,9 @@ html,body,[class*="css"]{font-family:'Inter',sans-serif;}
     border:1px solid rgba(99,102,241,.22);
     border-radius:24px;padding:34px 42px;margin-bottom:28px;
     position:relative;overflow:hidden;
+    animation:heroFade .6s ease-out;
 }
+@keyframes heroFade{from{opacity:0;transform:translateY(-10px);}to{opacity:1;transform:translateY(0);}}
 .hero::before{
     content:'';position:absolute;top:-60px;right:-60px;
     width:240px;height:240px;
@@ -88,9 +102,11 @@ html,body,[class*="css"]{font-family:'Inter',sans-serif;}
 .mbox{
     background:linear-gradient(135deg,rgba(99,102,241,.09),rgba(168,85,247,.05));
     border:1px solid rgba(99,102,241,.22);border-radius:16px;
-    padding:18px;text-align:center;transition:transform .2s,border-color .2s;
+    padding:18px;text-align:center;transition:transform .2s,border-color .2s,box-shadow .2s;
+    animation:cardIn .5s ease-out;
 }
-.mbox:hover{transform:translateY(-3px);border-color:rgba(99,102,241,.45);}
+@keyframes cardIn{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);}}
+.mbox:hover{transform:translateY(-4px);border-color:rgba(99,102,241,.5);box-shadow:0 8px 30px rgba(99,102,241,.15);}
 .mval{
     font-size:1.9rem;font-weight:800;
     background:linear-gradient(135deg,#818cf8,#c084fc);
@@ -155,8 +171,8 @@ BUDGET_DEFAULTS = {
 MODELS = {
     "OpenAI":    ["gpt-4.1-mini","gpt-4o","gpt-4o-mini","gpt-4-turbo"],
     "Anthropic": ["claude-3-5-sonnet-20240620","claude-3-opus-20240229","claude-3-haiku-20240307"],
-    "Gemini":    ["gemini-1.5-flash","gemini-1.5-pro","gemini-2.0-flash"],
-    "Groq":      ["llama-3.1-70b-versatile","mixtral-8x7b-32768","llama3-70b-8192"],
+    "Gemini":    ["gemini-2.0-flash","gemini-1.5-flash","gemini-1.5-pro"],
+    "Groq":      ["llama-3.3-70b-versatile","llama-3.1-70b-versatile","mixtral-8x7b-32768"],
 }
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
@@ -242,6 +258,12 @@ def main():
     # ── Sidebar ───────────────────────────────────────────────────────────────
     with st.sidebar:
         st.markdown("### ⚙️ Engine Control")
+        # Version badge
+        st.markdown(f"""
+        <div style="background:rgba(99,102,241,.1);border:1px solid rgba(99,102,241,.25);
+             border-radius:8px;padding:6px 12px;margin-bottom:12px;text-align:center;">
+            <span style="color:#a5b4fc;font-size:.75rem;font-weight:600;">💳 ExpenseIQ AI v{__version__}</span>
+        </div>""", unsafe_allow_html=True)
         provider = st.selectbox("AI Provider", list(MODELS.keys()), key="provider")
         model    = st.selectbox("Model", MODELS[provider], key="model")
         api_key  = st.text_input(f"{provider} API Key", type="password", key="api_key")
@@ -292,6 +314,18 @@ def main():
                 budgets[cat] = st.number_input(f"{CATEGORY_ICONS.get(cat,'')} {cat}", value=BUDGET_DEFAULTS.get(cat,500), min_value=0, step=50, key=f"bgt_{cat}")
         st.session_state["budgets"] = budgets
 
+        st.divider()
+        # Sample CSV download
+        sample_csv = (
+            "description,vendor,amount,date\n"
+            "Monthly Zoom subscription,Zoom,$149.99,2025-06-05\n"
+            "AWS cloud services,Amazon Web Services,$1240.00,2025-06-01\n"
+            "Team lunch at Capital Grille,The Capital Grille,$320.00,2025-06-03\n"
+            "Flight NYC client meeting,Delta Airlines,$580.00,2025-06-07\n"
+            "Office printer paper,Staples,$89.50,2025-06-02\n"
+        )
+        st.download_button("⬇️ Sample Batch CSV", sample_csv,
+                           "sample_batch.csv", "text/csv", use_container_width=True)
         st.divider()
         process_btn = st.button("🚀 Run ExpenseIQ", use_container_width=True, type="primary")
 

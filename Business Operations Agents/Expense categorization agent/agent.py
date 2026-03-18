@@ -1,15 +1,21 @@
 """
 ExpenseIQ AI — Advanced Expense Categorization Agent
 =====================================================
-Multi-provider, enterprise-grade expense categorization with:
-  - AI categorization (OpenAI / Anthropic / Gemini / Groq)
-  - Tax deductibility estimation
-  - Policy compliance checks
-  - Duplicate detection
-  - Retry logic with exponential backoff
-  - Batch processing from CSV or multi-transaction TXT
-  - Detailed structured output (JSON + TXT + CSV)
+Version : 2.0.0
+Author  : Real-world AI Agents Hub
+
+Capabilities:
+  - AI categorization  : OpenAI / Anthropic / Gemini / Groq
+  - Tax deductibility  : Estimated % + deductible amount
+  - Policy engine      : Approved / Review Required / Flagged
+  - Duplicate detection: MD5-hash dedup across all runs
+  - Retry logic        : Exponential backoff (3 retries)
+  - Batch processing   : CSV input → JSON + CSV + TXT outputs
+  - GL code suggestion : Accounting-ready general ledger codes
+  - Risk scoring       : 0–10 risk score per transaction
 """
+
+__version__ = "2.0.0"
 
 import json
 import os
@@ -131,13 +137,19 @@ def register_transaction(vendor: str, amount: str, txn_date: str):
 
 # ─── JSON Extraction ──────────────────────────────────────────────────────────
 def _extract_json(text: str) -> dict:
-    """Robustly extract JSON from model response (handles code fences)."""
+    """Robustly extract JSON from model response.
+    Handles: bare JSON, ```json fences, ```...``` fences, mixed text around {}.
+    """
     text = text.strip()
-    # Strip ```json ... ``` fences
-    match = re.search(r"```(?:json)?\s*([\s\S]+?)```", text)
-    if match:
-        text = match.group(1).strip()
-    # Try direct parse
+    # 1. Strip markdown code fences
+    fence_match = re.search(r"```(?:json)?\s*([\s\S]+?)```", text)
+    if fence_match:
+        text = fence_match.group(1).strip()
+    else:
+        # 2. Extract the outermost {...} block if surrounded by prose
+        brace_match = re.search(r"(\{[\s\S]+\})", text)
+        if brace_match:
+            text = brace_match.group(1).strip()
     return json.loads(text)
 
 # ─── Retry Logic ─────────────────────────────────────────────────────────────
@@ -417,14 +429,20 @@ def _save_txt(data: dict, path: str):
 # ─── CLI Entry Point ──────────────────────────────────────────────────────────
 def main():
     parser = argparse.ArgumentParser(
-        description="ExpenseIQ AI — Advanced Expense Categorization Agent"
+        description=f"ExpenseIQ AI v{__version__} — Advanced Expense Categorization Agent",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="Examples:\n"
+               "  python agent.py\n"
+               "  python agent.py --provider Gemini --model gemini-1.5-flash\n"
+               "  python agent.py --csv sample_batch.csv --provider OpenAI"
     )
-    parser.add_argument("--input",    default="input.txt",   help="Input TXT file (default: input.txt)")
-    parser.add_argument("--csv",      default=None,          help="Batch CSV input file")
-    parser.add_argument("--provider", default="OpenAI",      help="AI provider: OpenAI, Anthropic, Gemini, Groq")
-    parser.add_argument("--model",    default=None,          help="Model name (uses provider default if omitted)")
-    parser.add_argument("--api-key",  default=None,          help="API key (uses .env if omitted)")
+    parser.add_argument("--input",      default="input.txt", help="Input TXT file (default: input.txt)")
+    parser.add_argument("--csv",        default=None,        help="Batch CSV input file")
+    parser.add_argument("--provider",   default="OpenAI",    help="AI provider: OpenAI, Anthropic, Gemini, Groq")
+    parser.add_argument("--model",      default=None,        help="Model name (uses provider default if omitted)")
+    parser.add_argument("--api-key",    default=None,        dest="api_key", help="API key (uses .env if omitted)")
     parser.add_argument("--categories", default=None,        help="Comma-separated categories (for CSV mode)")
+    parser.add_argument("--version",    action="version",    version=f"ExpenseIQ AI v{__version__}")
     args = parser.parse_args()
 
     log.info(f"ExpenseIQ AI starting | Provider: {args.provider}")
@@ -436,7 +454,8 @@ def main():
             return
         default_cats = ["Software", "Travel", "Marketing", "Office Supplies",
                         "Professional Services", "Meals & Entertainment",
-                        "Utilities", "Hardware", "Training & Education"]
+                        "Utilities", "Hardware", "Training & Education",
+                        "Facilities", "Legal & Compliance", "Insurance", "Other"]
         cats = [c.strip() for c in args.categories.split(",")] if args.categories else default_cats
         prompts = parse_csv_to_prompts(args.csv, cats)
         log.info(f"Processing {len(prompts)} transactions from CSV...")
@@ -462,7 +481,7 @@ def main():
             log.error(f"Input file not found: {args.input}")
             return
         prompt_text = read_input(args.input)
-        log.info("Analyzing expense transaction...")
+        log.info(f"Analyzing expense | Provider: {args.provider} | Model: {args.model or 'default'}")
         result = categorize_expense(prompt_text, args.provider, args.model, args.api_key)
         save_outputs(result)
 

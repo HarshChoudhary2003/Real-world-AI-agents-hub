@@ -7,8 +7,6 @@ import os
 # Load environment variables (e.g., from ../../.env)
 load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), "..", "..", ".env"))
 
-client = OpenAI()  # requires OPENAI_API_KEY
- 
 SYSTEM_PROMPT = """
 You are a Contract Clause Explanation Agent.
  
@@ -33,6 +31,7 @@ def read_input(path="input.txt"):
         return f.read()
  
 def explain_clause(prompt_text):
+    client = OpenAI()  # requires OPENAI_API_KEY to be set in os.environ by this time
     response = client.chat.completions.create(
         model="gpt-4o-mini",
         messages=[

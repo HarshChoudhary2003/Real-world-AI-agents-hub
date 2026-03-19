@@ -9,26 +9,35 @@ import litellm
 load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), "..", "..", ".env"))
 
 SYSTEM_PROMPT = """
-You are a highly creative and strategic Ad Copy Generator Agent.
+You are a highly sophisticated, multi-dimensional Ad Copy Strategy Agent (AdForge AI v2.0).
  
 Rules:
-- Focus on tangible benefits and outcomes, not just technical features
-- Match the copy specifically to the target platform (e.g., character limits, tone) and audience persona
-- Provide multiple high-impact variations (A/B testing ready)
-- Include clear, compelling calls-to-action (CTAs)
-- Ensure the tone remains consistent with the brand's voice
+- Generate copy that leverages deep consumer psychology (e.g., Loss Aversion, Social Proof, Curiosity Gaps)
+- Tailor copy specifically for the stated platform's technical constraints and cultural nuances
+- Provide multiple strategic variations ranging from "Direct Response" to "Story-Driven"
+- Perform "Buyer Persona Simulations": predict how specific target roles will react to the copy
+- Include high-impact Viral Hooks and clear, multi-stage CTAs
  
-Return ONLY valid JSON with this schema. No markdown wrapping, no extra text:
+Return ONLY valid JSON with this schema. No markdown wrapping:
  
 {
-  "headlines": ["List of 3-5 punchy headlines"],
+  "headlines": ["3-5 high-engagement headlines"],
   "primary_copy_variations": [
     {
-      "variation_name": "e.g., Benefit-Driven, Problem-Solution, Social Proof",
-      "text": "The full ad copy text"
+      "variation_name": "Strategic Angle (e.g., Problem-Agitate-Solve)",
+      "text": "Full ad text",
+      "viral_hook": "The specific opening hook meant to stop the scroll"
     }
   ],
-  "calls_to_action": ["List of 3-5 distinct CTAs"]
+  "persona_simulations": [
+    {
+      "persona": "Target Role/Persona Name",
+      "likely_reaction": "How they might perceive the ad",
+      "perceived_value": "The specific core benefit they will latch onto"
+    }
+  ],
+  "calls_to_action": ["List of 3-5 distinct CTAs"],
+  "image_text_overlays": ["Text ideas for accompanying visuals"]
 }
 """
  
@@ -59,14 +68,14 @@ def extract_json(response_content):
     raise ValueError("Failed to extract valid JSON from the model's response.")
 
 def generate_ad_copy(prompt_text, model_name="gpt-4o-mini", api_key=None):
-    """Generates ad copy variations using LiteLLM."""
+    """Generates advanced ad copy strategy using LiteLLM."""
     kwargs = {
         "model": model_name,
         "messages": [
             {"role": "system", "content": SYSTEM_PROMPT},
             {"role": "user", "content": prompt_text}
         ],
-        "temperature": 0.5
+        "temperature": 0.6
     }
     
     if api_key:
@@ -81,26 +90,34 @@ def save_outputs(data):
         json.dump(data, f, indent=2)
  
     with open("ad_copy.txt", "w", encoding="utf-8") as f:
-        f.write(f"Ad Copy Variations ({date.today()})\n")
-        f.write("=" * 50 + "\n\n")
+        f.write(f"Advanced Ad Identity Strategy ({date.today()})\n")
+        f.write("=" * 60 + "\n\n")
  
         f.write("Headlines:\n")
         for h in data.get("headlines", []):
             f.write(f"- {h}\n")
  
-        f.write("\nPrimary Copy Variations:\n")
+        f.write("\nStrategic Identity Variants:\n")
         for p in data.get("primary_copy_variations", []):
-            f.write(f"[{p.get('variation_name')}]\n{p.get('text')}\n\n")
+            f.write(f"[{p.get('variation_name')}]\nHook: {p.get('viral_hook')}\n{p.get('text')}\n\n")
  
-        f.write("Calls to Action:\n")
+        f.write("Persona Feedback Simulations:\n")
+        for ps in data.get("persona_simulations", []):
+            f.write(f"- {ps.get('persona')}: {ps.get('likely_reaction')} (Value: {ps.get('perceived_value')})\n")
+            
+        f.write("\nCalls to Action:\n")
         for c in data.get("calls_to_action", []):
             f.write(f"- {c}\n")
+        
+        f.write("\nVisual Overlays:\n")
+        for v in data.get("image_text_overlays", []):
+            f.write(f"- {v}\n")
  
 def main():
     prompt_text = read_input()
     ad_copy = generate_ad_copy(prompt_text)
     save_outputs(ad_copy)
-    print("Ad copy generated successfully.")
+    print("Advanced ad copy architecture completed successfully.")
  
 if __name__ == "__main__":
     main()

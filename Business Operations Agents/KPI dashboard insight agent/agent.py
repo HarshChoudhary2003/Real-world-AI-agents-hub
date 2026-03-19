@@ -9,23 +9,26 @@ import litellm
 load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), "..", "..", ".env"))
 
 SYSTEM_PROMPT = """
-You are a highly sophisticated KPI Dashboard Insight Agent.
+You are a highly sophisticated, multi-dimensional KPI Dashboard Insight Agent (InsightCore AI).
  
 Rules:
 - Interpret raw KPIs within the provided business context
-- Deconstruct performance into meaningful trends and anomalies
-- Distinguish between correlated events and causal signals
-- Highlight risks and opportunities without prescribing prescriptive decisions
-- Maintain a balanced, objective, and executive tone
+- Deconstruct performance into meaningful trends, anomalies, and underlying causality
+- Explicitly look for correlations: e.g., how an increase in support tickets might correlate with recent product updates
+- Identify "Silent Risks": things that look okay but might indicate future friction
+- Identify "Untapped Growth Levers": based on current momentum
+- Maintain a balanced, high-impact executive tone
  
-Return ONLY valid JSON with this schema. No markdown wrapping, no extra text:
+Return ONLY valid JSON with this schema. No markdown wrapping:
  
 {
-  "executive_summary": "High-level strategic takeaway",
+  "executive_summary": "High-level strategic takeaway (1-2 sentences)",
+  "detailed_analysis": "Deep dive into the narrative behind the numbers",
   "key_trends": ["List of identified directional signals"],
-  "risks": ["Potential negative outcomes identified from the data"],
-  "opportunities": ["Positive areas for growth or optimization"],
-  "focus_areas": ["Critical areas requiring management attention"]
+  "causality_mapping": ["Explanations of WHY certain metrics moved based on context"],
+  "risks": ["Potential negative outcomes or early warning signs"],
+  "opportunities": ["Growth levers or areas for optimization"],
+  "focus_areas": ["Critical areas requiring management attention for the next 30 days"]
 }
 """
  
@@ -56,7 +59,7 @@ def extract_json(response_content):
     raise ValueError("Failed to extract valid JSON from the model's response.")
 
 def generate_insights(prompt_text, model_name="gpt-4o-mini", api_key=None):
-    """Generates insights using LiteLLM."""
+    """Generates advanced insights using LiteLLM."""
     kwargs = {
         "model": model_name,
         "messages": [
@@ -81,27 +84,30 @@ def save_outputs(data):
         f.write(f"KPI Dashboard Insights ({date.today()})\n")
         f.write("=" * 55 + "\n\n")
  
-        f.write("Executive Summary:\n")
-        f.write(data.get("executive_summary", "N/A") + "\n\n")
+        f.write(f"Executive Summary: {data.get('executive_summary', 'N/A')}\n\n")
+        
+        f.write("Deep Analysis:\n")
+        f.write(data.get("detailed_analysis", "N/A") + "\n\n")
  
         f.write("Key Trends:\n")
         for t in data.get("key_trends", []):
             f.write(f"- {t}\n")
+            
+        f.write("\nCausality Mapping:\n")
+        for c in data.get("causality_mapping", []):
+            f.write(f"- {c}\n")
  
-        if data.get("risks"):
-            f.write("\nRisks:\n")
-            for r in data["risks"]:
-                f.write(f"- {r}\n")
+        f.write("\nStrategic Risks:\n")
+        for r in data.get("risks", []):
+            f.write(f"- {r}\n")
  
-        if data.get("opportunities"):
-            f.write("\nOpportunities:\n")
-            for o in data["opportunities"]:
-                f.write(f"- {o}\n")
+        f.write("\nGrowth Opportunities:\n")
+        for o in data.get("opportunities", []):
+            f.write(f"- {o}\n")
  
-        if data.get("focus_areas"):
-            f.write("\nFocus Areas:\n")
-            for f_area in data["focus_areas"]:
-                f.write(f"- {f_area}\n")
+        f.write("\nFocus Areas (30d):\n")
+        for f_area in data.get("focus_areas", []):
+            f.write(f"- {f_area}\n")
  
 def main():
     prompt_text = read_input()

@@ -9,42 +9,44 @@ import litellm
 load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), "..", "..", ".env"))
 
 SYSTEM_PROMPT = """
-You are a highly sophisticated Campaign Strategic Intelligence Engine (AdIntel AI v2.0).
+You are a high-tier Campaign Intelligence Architect (AdIntel AI v3.0).
  
 Rules:
-- Perform deep-dive attribution analysis (First-click, Last-click, and Multi-touch simulations)
-- Calculate Spend Velocity: project end-of-month spend and conversion volume based on current run-rate
-- Identity anomalies in the data (e.g., high CTR but low conversion may indicate landing page friction)
-- Provide a "Creative Fatigue Index" if ad duration or creative metrics are provided
-- Audit budget allocation: suggest rebalancing between high-performing and low-performing segments
-- Maintain an objective, high-stakes diagnostic tone
+- Perform deep-dive attribution analysis and Spend Velocity forecasting.
+- Conduct a "Creative Performance Pivot": based on the metrics, suggest specific visual or copy shifts.
+- Map "Strategic Next Actions" with urgency levels (Critical / High / Medium).
+- Provide a "Market Context Matrix": compare these metrics against estimated industry benchmarks for the platform.
+- Evaluate "Diminishing Returns": project at what spend level the CPA may start to climb.
+- Maintain a highly sophisticated, tactical, and strategic growth tone.
  
 Return ONLY valid JSON with this schema. No markdown wrapping:
  
 {
-  "executive_summary": "Diagnostic brief (1-2 sentences)",
+  "executive_summary": "High-level strategic diagnostic",
   "efficiency_score": 0-100,
-  "spend_velocity": {
+  "forecasting_projection": {
     "projected_eom_spend": "$Amt",
     "projected_eom_conversions": 0,
-    "pacing_status": "Over-pacing / Under-pacing / On-track"
+    "pacing_status": "Status"
   },
-  "attribution_insights": [
+  "creative_pivot_roadmap": [
     {
-      "model": "Model Name",
-      "interpretation": "How performance looks under this lens"
+      "dimension": "e.g., Creative Angle / Format",
+      "current_state": "What is being used",
+      "pivot_suggestion": "The suggested change",
+      "rationale": "Why this will work"
     }
   ],
-  "anomaly_detection": [
+  "strategic_next_actions": [
     {
-      "metric": "e.g., CVR",
-      "observation": "What is unusual",
-      "root_cause_hypothesis": "The most likely reason why"
+      "action": "Task description",
+      "urgency": "Priority level",
+      "expected_impact": "High/Medium/Low"
     }
   ],
-  "leaky_bucket_audit": ["Critical budget leaks"],
-  "rebalancing_suggestions": ["Where to move funds for max ROI"],
-  "benchmark_analysis": "Contextual comparison to industry norms"
+  "diminishing_returns_audit": "An analysis of current scaling limits",
+  "leaky_bucket_audit": ["Specific budget leakages"],
+  "industry_benchmark_context": "Comparative performance mapping"
 }
 """
  
@@ -74,15 +76,15 @@ def extract_json(response_content):
                 pass
     raise ValueError("Failed to extract valid JSON from the model's response.")
 
-def analyze_campaign_advanced(prompt_text, model_name="gpt-4o-mini", api_key=None):
-    """Generates advanced strategic intelligence audit using LiteLLM."""
+def analyze_campaign_v3(prompt_text, model_name="gpt-4o-mini", api_key=None):
+    """Generates next-level strategic intelligence audit using LiteLLM."""
     kwargs = {
         "model": model_name,
         "messages": [
             {"role": "system", "content": SYSTEM_PROMPT},
             {"role": "user", "content": prompt_text}
         ],
-        "temperature": 0.3
+        "temperature": 0.4
     }
     
     if api_key:
@@ -92,40 +94,39 @@ def analyze_campaign_advanced(prompt_text, model_name="gpt-4o-mini", api_key=Non
     raw_content = response.choices[0].message.content
     return extract_json(raw_content)
  
-def save_outputs_advanced(data):
+def save_outputs_v3(data):
     with open("campaign_analysis.json", "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2)
  
     with open("campaign_analysis.txt", "w", encoding="utf-8") as f:
-        f.write(f"Advanced Strategic Performance Intelligence ({date.today()})\n")
-        f.write("=" * 65 + "\n\n")
+        f.write(f"Advanced Neural Growth Intelligence Audit ({date.today()})\n")
+        f.write("=" * 70 + "\n\n")
  
         f.write(f"Executive Summary: {data.get('executive_summary', 'N/A')}\n")
         f.write(f"Efficiency Score: {data.get('efficiency_score', 'N/A')}/100\n\n")
  
-        v = data.get('spend_velocity', {})
-        f.write(f"Spend Pacing & Forecasting:\n")
-        f.write(f"- Status: {v.get('pacing_status')}\n")
+        v = data.get('forecasting_projection', {})
+        f.write(f"Neural Forecasting Matrix:\n")
+        f.write(f"- Pacing: {v.get('pacing_status')}\n")
         f.write(f"- Projected EOM Spend: {v.get('projected_eom_spend')}\n")
         f.write(f"- Projected EOM Conversions: {v.get('projected_eom_conversions')}\n\n")
  
-        f.write("Anomaly & Root Cause Analysis:\n")
-        for a in data.get("anomaly_detection", []):
-            f.write(f"- {a.get('metric')}: {a.get('observation')} (Hypothesis: {a.get('root_cause_hypothesis')})\n")
+        f.write("Creative Pivot Roadmap:\n")
+        for cp in data.get("creative_pivot_roadmap", []):
+            f.write(f"- {cp.get('dimension')}: {cp.get('pivot_suggestion')} (Why: {cp.get('rationale')})\n")
  
-        f.write("\nBudget Rebalancing Suggestions:\n")
-        for r in data.get("rebalancing_suggestions", []):
-            f.write(f"- {r}\n")
+        f.write("\nStrategic Next Actions:\n")
+        for sa in data.get("strategic_next_actions", []):
+            f.write(f"- [{sa.get('urgency')}] {sa.get('action')} (Impact: {sa.get('expected_impact')})\n")
             
-        f.write("\nLeaky Bucket Audit:\n")
-        for l in data.get("leaky_bucket_audit", []):
-            f.write(f"- {l}\n")
+        f.write(f"\nScaling & Diminishing Returns Audit:\n{data.get('diminishing_returns_audit', 'N/A')}\n\n")
+        f.write(f"Leaky Bucket Audit: {', '.join(data.get('leaky_bucket_audit', []))}\n")
  
 def main():
     prompt_text = read_input()
-    analysis = analyze_campaign_advanced(prompt_text)
-    save_outputs_advanced(analysis)
-    print("Strategic intelligence audit v2.0 finalized.")
+    analysis = analyze_campaign_v3(prompt_text)
+    save_outputs_v3(analysis)
+    print("Next-generation intelligence audit v3.0 finalized.")
  
 if __name__ == "__main__":
     main()

@@ -98,7 +98,13 @@ Enterprise-grade agents that automate core business workflows — from CRM intel
 -   **⚖️ [VendorFlow AI](./Business%20Operations%20Agents/Vendor%20comparison%20agent) (Vendor Comparison Agent)**: Strategic cross-dimensional vendor analysis focusing on cost, feature completeness, and structural trade-offs.
 -   **📋 [SOPFlow AI](./Business%20Operations%20Agents/Internal%20SOP%20generator%20agent) (Internal SOP Generator Agent)**: Effortlessly architect step-by-step Standard Operating Procedures (SOPs) based on raw process descriptions and organizational constraints.
 -   **💹 [InsightCore AI](./Business%20Operations%20Agents/KPI%20dashboard%20insight%20agent) (KPI Dashboard Insight Agent)**: Transform raw performance metrics into strategic narrative intelligence, identifying trends, risks, and growth opportunities.
-
+ 
+### 5. 🚀 Marketing & Growth Hub
+ 
+High-conversion creative engines built to accelerate brand momentum and acquisition performance.
+ 
+-   **🎨 [AdForge AI](./Marketing%20&%20Growth%20Agents/Ad%20copy%20generator%20agent) (Ad Copy Generator Agent)**: Creative growth studio that transforms campaign objectives into high-performing, psychology-driven ad copy variations.
+ 
 ---
 
 ## 🛠️ Tech Stack

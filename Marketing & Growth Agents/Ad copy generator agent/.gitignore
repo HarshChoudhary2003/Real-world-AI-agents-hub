@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.env
+ad_copy.json
+ad_copy.txt
+# (Optional) If you want to keep generated PDF outputs, comment out the line above.

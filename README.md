@@ -97,6 +97,7 @@ Enterprise-grade agents that automate core business workflows — from CRM intel
 -   **📑 [ClauseClear AI](./Business%20Operations%20Agents/Contract%20clause%20explanation%20agent) (Contract Clause Explanation Agent)**: Advanced Omni-Model engine (GPT-4o, Claude 3.5, Gemini, Groq) for translating dense legal clauses into plain language with PDF/TXT document upload support and risk analysis.
 -   **⚖️ [VendorFlow AI](./Business%20Operations%20Agents/Vendor%20comparison%20agent) (Vendor Comparison Agent)**: Strategic cross-dimensional vendor analysis focusing on cost, feature completeness, and structural trade-offs.
 -   **📋 [SOPFlow AI](./Business%20Operations%20Agents/Internal%20SOP%20generator%20agent) (Internal SOP Generator Agent)**: Effortlessly architect step-by-step Standard Operating Procedures (SOPs) based on raw process descriptions and organizational constraints.
+-   **💹 [InsightCore AI](./Business%20Operations%20Agents/KPI%20dashboard%20insight%20agent) (KPI Dashboard Insight Agent)**: Transform raw performance metrics into strategic narrative intelligence, identifying trends, risks, and growth opportunities.
 
 ---
 

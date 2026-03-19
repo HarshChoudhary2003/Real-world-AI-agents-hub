@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.env
+kpi_insights.json
+kpi_insights.txt
+*.pdf
+# (Optional) If you want to keep generated PDF outputs, comment out the line above.

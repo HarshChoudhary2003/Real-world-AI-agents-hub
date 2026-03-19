@@ -1,0 +1,10 @@
+KPIs:
+- Monthly Active Users: 120,000 (↑ 8% MoM)
+- Churn Rate: 3.2% (↑ 0.5%)
+- Revenue Growth: 12% QoQ
+- Customer Support Tickets: 1,450 (↓ 10%)
+ 
+Targets:
+- Churn Rate Target: < 3%
+Business Context:
+Recent product update and pricing changes

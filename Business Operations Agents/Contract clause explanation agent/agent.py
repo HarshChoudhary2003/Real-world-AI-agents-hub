@@ -55,22 +55,27 @@ def extract_json(response_content):
         
     raise ValueError("Failed to extract valid JSON from the model's response.")
 
-def explain_clause(prompt_text, model_name="gpt-4o-mini"):
+def explain_clause(prompt_text, model_name="gpt-4o-mini", api_key=None):
     """
     Analyzes the contract clause using the specified LiteLLM model.
     Models supported: gpt-4o, claude-3-5-sonnet-20240620, gemini/gemini-1.5-pro, groq/llama3-70b-8192, etc.
     """
     # Use litellm.completion to dynamically route to the correct provider
     # Some providers may require strict structural prompting, so we rely on the robust JSON extractor.
-    response = litellm.completion(
-        model=model_name,
-        messages=[
+    kwargs = {
+        "model": model_name,
+        "messages": [
             {"role": "system", "content": SYSTEM_PROMPT},
             {"role": "user", "content": prompt_text}
         ],
-        temperature=0.25,
-        # response_format is supported strictly mainly on openai, so relying strictly on system prompt is better across all LLMs
-    )
+        "temperature": 0.25,
+    }
+    
+    # If explicitly passed, override the environment variables cleanly
+    if api_key:
+        kwargs["api_key"] = api_key
+        
+    response = litellm.completion(**kwargs)
     
     raw_content = response.choices[0].message.content
     return extract_json(raw_content)

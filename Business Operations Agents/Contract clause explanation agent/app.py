@@ -119,6 +119,11 @@ MODELS = {
         "id": "groq/llama3-70b-8192",
         "env_var": "GROQ_API_KEY",
         "doc": "Lightning-fast inference speed for immediate feedback."
+    },
+    "Custom (Omni-Model Support)": {
+        "id": "custom",
+        "env_var": "CUSTOM_API_KEY",
+        "doc": "Input ANY LiteLLM supported model (e.g. huggingface/..., bedrock/...) and its explicit API key."
     }
 }
 
@@ -133,11 +138,21 @@ with st.sidebar:
     
     st.caption(f"_{model_config['doc']}_")
     
+    is_custom = model_config["id"] == "custom"
+    
+    if is_custom:
+        custom_model_id = st.text_input("Custom Model String", placeholder="e.g. together_ai/mixtral-8x7b-32768")
+        actual_model_id = custom_model_id
+        api_key_required = "API Key"
+    else:
+        actual_model_id = model_config["id"]
+        api_key_required = model_config["env_var"]
+        
     # API Key Handling
-    api_key_required = model_config["env_var"]
     api_key = st.text_input(f"{api_key_required}", type="password", placeholder=f"Enter {api_key_required}...")
     
-    if api_key:
+    # Let session state or os handle the custom key gracefully, but litellm takes kwargs later
+    if not is_custom and api_key:
         os.environ[api_key_required] = api_key
         
     st.markdown("---")
@@ -171,15 +186,19 @@ with st.container():
 
 # Action Logic
 if analyze_btn:
-    if not os.environ.get(api_key_required):
+    final_api_key = api_key if api_key else (os.environ.get(api_key_required) if not is_custom else "")
+    
+    if not final_api_key:
         st.error(f"🚨 Please enter a valid {api_key_required} in the sidebar to proceed with {selected_model_label}.")
+    elif is_custom and not actual_model_id.strip():
+        st.error("🚨 Please enter a valid Custom Model String (e.g., 'anthropic/claude-3-haiku-20240307').")
     elif not clause_text.strip():
         st.warning("⚠️ Please enter a clause to analyze.")
     else:
-        with st.spinner(f"🤖 Interfacing with {selected_model_label} API... extracting semantics..."):
+        with st.spinner(f"🤖 Interfacing with {actual_model_id} API... extracting semantics..."):
             try:
                 # Call agent logic
-                results = explain_clause(clause_text, model_name=model_config["id"])
+                results = explain_clause(clause_text, model_name=actual_model_id, api_key=final_api_key)
                 
                 # Save locally as per agent design
                 save_outputs(results)
@@ -226,4 +245,4 @@ if analyze_btn:
                     st.download_button("Export as TXT", data=txt_data, file_name="clause_explanation.txt", mime="text/plain")
 
             except Exception as e:
-                st.error(f"❌ An error occurred during semantic extraction ({model_config['id']}): {str(e)}")
+                st.error(f"❌ An error occurred during semantic extraction ({actual_model_id}): {str(e)}")

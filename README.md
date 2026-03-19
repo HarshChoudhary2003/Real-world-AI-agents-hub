@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0ea5e9&height=250&section=header&text=Real-world%20AI%20Agents%20Hub&fontSize=60&fontAlign=50&fontAlignY=40&desc=100%20Advanced%20Enterprise%20AI%20Agents&descAlign=50&descAlignY=62&animation=fadeIn" width="100%" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0ea5e9&height=280&section=header&text=Real-world%20AI%20Agents%20Hub&fontSize=70&fontAlign=50&fontAlignY=38&desc=Architecting%20100%20Advanced%20Enterprise%20AI%20Agents&descAlign=50&descAlignY=62&animation=fadeIn" width="100%" />
 
   <br>
   
@@ -23,9 +23,9 @@
 
 <div align="center">
 
-| 🛠️ Neural Suites | 🤖 Deployed Agents | ⚡ Target Goal | 🟢 System Status |
-| :--- | :---: | :---: | :---: |
-| **5 Operational Hubs** | **40+ Active Agents** | **100 Agents** | **System Operational** |
+| 🛠️ Neural Suites | 🤖 Active Agents | ⚡ Roadmap Goal | 🟢 System Status | 📅 Last Update |
+| :--- | :---: | :---: | :---: | :---: |
+| **5 Core Hubs** | **40 Agents** | **100 Agents** | **Operational** | **Mar 2026** |
 
 </div>
 
@@ -37,59 +37,78 @@
 
 ---
 
-## 🌌 The Vision
+## 📁 The Neural Ecosystem
 
-Welcome to the **Real-world AI Agents Hub**. This project is a massive-scale initiative to architect, build, and deploy **100 highly specialized AI agents** that solve real problems.
-
-Unlike standard LLM wrappers, every agent in this hub is a **complete software module** featuring:
-- **🎨 Premium UI/UX**: Custom-engineered Streamlit dashboards with glassmorphism and animated dynamics.
-- **🧠 Omni-Model Engine**: Seamlessly switch between GPT-4o, Claude 3.5, Gemini 1.5 Pro, and Llama 3.
-- **🛡️ Deterministic Outputs**: Strict JSON schema enforcement for reliable data pipelines.
-- **📈 Tactical deliverables**: Every agent produces structured JSON and TXT exports for immediate use.
-
----
-
-## 📁 Neural Suite Explorer
+The hub is organized into modular suites, each containing highly specialized agents with unique Streamlit dashboards and multi-model intelligence.
 
 ### 1. 🚀 Personal Productivity OS
-*The 10-Agent Neural Architecture for automated personal mastery.*
-- 🧠 **[TaskBrain AI](./Personal%20Productivity%20Agents/daily-priority-agent)**: Urgency-sorting task ingestion.
-- 📧 **[MailMind AI](./Personal%20Productivity%20Agents/Email%20summarization%20agent)**: Neural email logic mapping.
-- 📅 **[SyncGuard AI](./Personal%20Productivity%20Agents/Calendar%20conflict%20resolver%20agent)**: Conflict resolution engine.
-- 📋 **[AgendaCraft AI](./Personal%20Productivity%20Agents/Meeting%20agenda%20generator%20agent)**: Engineered timeline synthesis.
-- 🗄️ **[BrainVault AI](./Personal%20Productivity%20Agents/Personal%20knowledge%20base%20agent)**: Local RAG vector space.
-- 🧘 **[Reflect AI](./Personal%20Productivity%20Agents/Daily%20goal%20reflection%20agent)**: Algorithmic performance review.
-- ⚡ **[ActionForge AI](./Personal%20Productivity%20Agents/Note-to-action%20item%20agent)**: Neural task extractor.
-- ⏳ **[ChronoBlock AI](./Personal%20Productivity%20Agents/Time-blocking%20planner%20agent)**: Continuous task packing log.
-- 🔥 **[StreakForge AI](./Personal%20Productivity%20Agents/Habit%20tracking%20agent)**: Persistence density metrics.
+*A 10-agent neural architecture designed to automate your entire operational day.*
 
-### ✍️ 2. Writing & Content Studio
-*Elite engines for high-engagement professional content.*
-- 📝 **[Blog Architect](./Writing%20%26%20Content%20Agents/Blog%20post%20generator%20agent)**: Multi-stage SEO pipeline.
-- 🔗 **[LinkedIn Post Genius](./Writing%20%26%20Content%20Agents/LinkedIn%20post%20ideation%20agent)**: Viral hook & post ideation.
-- 🎭 **[Tone Alchemist Pro](./Writing%20%26%20Content%20Agents/Tone%20rewriting%20agent)**: Perfect persona calibration.
-- 🛍️ **[Product Copywriter Pro](./Writing%20%26%20Content%20Agents/Product%20description%20agent)**: Explosive conversion mapping.
-- 📽️ **[Script-to-Slide AI](./Writing%20%26%20Content%20Agents/Script-to-slide%20outline%20agent)**: Visual pacing architect.
+| Agent Name | Functionality | Directory |
+| :--- | :--- | :--- |
+| 🧠 **PriorityBrain** | NLP task ingestion & urgency-sorting. | [daily-priority-agent](./Personal%20Productivity%20Agents/daily-priority-agent) |
+| 📧 **MailMind AI** | Intelligent thread logic mapping & summaries. | [Email%20summarization%20agent](./Personal%20Productivity%20Agents/Email%20summarization%20agent) |
+| 📅 **SyncGuard** | Calendar conflict detection & resolution. | [Calendar%20conflict%20resolver%20agent](./Personal%20Productivity%20Agents/Calendar%20conflict%20resolver%20agent) |
+| 📋 **AgendaCraft** | High-fidelity meeting timeline architect. | [Meeting%20agenda%20generator%20agent](./Personal%20Productivity%20Agents/Meeting%20agenda%20generator%20agent) |
+| 🗄️ **BrainVault** | Local RAG knowledge base vector space. | [Personal%20knowledge%20base%20agent](./Personal%20Productivity%20Agents/Personal%20knowledge%20base%20agent) |
+| 🧘 **Reflect AI** | Algorithmic daily target analytics. | [Daily%20goal%20reflection%20agent](./Personal%20Productivity%20Agents/Daily%20goal%20reflection%20agent) |
+| 🔔 **PingCraft** | Distributed deadline alerting engine. | [Smart%20reminder%20agent](./Personal%20Productivity%20Agents/Smart%20reminder%20agent) |
+| ⚡ **ActionForge** | Neural unstructured text-to-task extractor. | [Note-to-action%20item%20agent](./Personal%20Productivity%20Agents/Note-to-action%20item%20agent) |
+| ⏳ **ChronoBlock** | Continuous task packing logic planner. | [Time-blocking%20planner%20agent](./Personal%20Productivity%20Agents/Time-blocking%20planner%20agent) |
+| 🔥 **StreakForge** | persistence density metrics & habit tracking. | [Habit%20tracking%20agent](./Personal%20Productivity%20Agents/Habit%20tracking%20agent) |
+
+### 💼 2. Business Operations Suite
+*Enterprise-grade automation for core cross-functional workflows.*
+
+| Agent Name | Functionality | Directory |
+| :--- | :--- | :--- |
+| 🧬 **DataForge AI** | CRM record enrichment & decision mapping. | [CRM%20data%20enrichment%20agent](./Business%20Operations%20Agents/CRM%20data%20enrichment%20agent) |
+| 📑 **ClauseClear** | Advanced legal plain-language engine & risk auditor. | [Contract%20clause%20explanation%20agent](./Business%20Operations%20Agents/Contract%20clause%20explanation%20agent) |
+| 🛡️ **SupportCraft** | Empathetic support ticket intelligence & response. | [Customer%20support%20response%20agent](./Business%20Operations%20Agents/Customer%20support%20response%20agent) |
+| 💸 **ExpenseIQ** | Intelligent category detection & anomaly audit. | [Expense%20categorization%20agent](./Business%20Operations%20Agents/Expense%20categorization%20agent) |
+| 📋 **SOPFlow AI** | Operations procedure & standardizer architect. | [Internal%20SOP%20generator%20agent](./Business%20Operations%20Agents/Internal%20SOP%20generator%20agent) |
+| 📄 **InvoiceIntel** | Multi-model financial document extraction. | [Invoice%20processing%20agent](./Business%20Operations%20Agents/Invoice%20processing%20agent) |
+| 💹 **InsightCore** | Strategic KPI narrative & causality diagnostic. | [KPI%20dashboard%20insight%20agent](./Business%20Operations%20Agents/KPI%20dashboard%20insight%20agent) |
+| 🎯 **LeadScore AI** | BANT-based lead qualification & precision scoring. | [Lead%20qualification%20agent](./Business%20Operations%20Agents/Lead%20qualification%20agent) |
+| 🤝 **SalesFollowAI** | Professional meeting follow-up generator. | [Sales%20follow-up%20agent](./Business%20Operations%20Agents/Sales%20follow-up%20agent) |
+| ⚖️ **VendorFlow AI** | Strategic vendor comparative analysis grid. | [Vendor%20comparison%20agent](./Business%20Operations%20Agents/Vendor%20comparison%20agent) |
 
 ### 🔍 3. Research & Analysis Studio
-*Deep-dive intelligence for market and academic synthesis.*
-- 🌐 **[Web Research Agent](./Research%20&%20Analysis%20Agents/Web%20research%20agent)**: Autonomous executive research engine.
-- 🔬 **[SWOT Horizon AI](./Research%20&%20Analysis%20Agents/SWOT%20analysis%20agent)**: TOWS matrix & strategic deconstruction.
-- 🎬 **[StreamBrief](./Research%20&%20Analysis%20Agents/YouTube%20video%20summary%20agent)**: Neural transcript distiller.
-- 📰 **[NewsFlow](./Research%20&%20Analysis%20Agents/News%20aggregation%20agent)**: Global thematic news digests.
-- ⚖️ **[PolicyGuard AI](./Research%20&%20Analysis%20Agents/Policy%20document%20summarizer%20agent)**: Legal thematic synthesis.
+*Scientific intelligence engines for synthesizing information signals.*
 
-### 💼 4. Business Operations Suite
-*Enterprise-grade automation for core business workflows.*
-- 🧬 **[CRM DataForge](./Business%20Operations%20Agents/CRM%20data%20enrichment%20agent)**: Intelligence-driven lead profiling.
-- 📑 **[ClauseClear AI](./Business%20Operations%20Agents/Contract%20clause%20explanation%20agent)**: Advanced legal plain-language engine.
-- 📋 **[SOPFlow AI](./Business%20Operations%20Agents/Internal%20SOP%20generator%20agent)**: Step-by-step procedure architect.
-- 💹 **[InsightCore AI](./Business%20Operations%20Agents/KPI%20dashboard%20insight%20agent)**: Strategic narrative diagnostic.
+| Agent Name | Functionality | Directory |
+| :--- | :--- | :--- |
+| 💰 **CapitalMind** | Evidence-driven investment thesis architect. | [Investment%20thesis%20generator%20agent](./Research%20&%20Analysis%20Agents/Investment%20thesis%20generator%20agent) |
+| 💹 **TrendSynthetix**| Complex market context trend deconstruction. | [Market%20trend%20summarization](./Research%20&%20Analysis%20Agents/Market%20trend%20summarization) |
+| 📰 **NewsFlow** | Global thematic news intelligence digests. | [News%20aggregation%20agent](./Research%20&%20Analysis%20Agents/News%20aggregation%20agent) |
+| ⚖️ **PolicyGuard** | Thematic synthesis for regulatory frameworks. | [Policy%20document%20summarizer%20agent](./Research%20&%20Analysis%20Agents/Policy%20document%20summarizer%20agent) |
+| 🔬 **SWOT Horizon** | TOWS matrix & strategic opportunity analysis. | [SWOT%20analysis%20agent](./Research%20&%20Analysis%20Agents/SWOT%20analysis%20agent) |
+| 🌐 **Web Research** | Autonomous multi-model executive research engine. | [Web%20research%20agent](./Research%20&%20Analysis%20Agents/Web%20research%20agent) |
+| 🎬 **StreamBrief** | Neural video transcript distiller & insight mapper. | [YouTube%20video%20summary%20agent](./Research%20&%20Analysis%20Agents/YouTube%20video%20summary%20agent) |
+
+### ✍️ 4. Writing & Content Studio
+*Creative engines for high-impact professional narrative generation.*
+
+| Agent Name | Functionality | Directory |
+| :--- | :--- | :--- |
+| 📝 **Blog Architect** | Multi-stage SEO-optimized post pipeline. | [Blog%20post%20generator%20agent](./Writing%20&%20Content%20Agents/Blog%20post%20generator%20agent) |
+| 💼 **CoverCraft AI** | Job-specific tailored cover letter architect. | [Cover%20letter%20writing%20agent](./Writing%20&%20Content%20Agents/Cover%20letter%20writing%20agent) |
+| 💬 **AI FAQ Gen** | Trust-building credentialed FAQ generator. | [FAQ%20generation%20agent](./Writing%20&%20Content%20Agents/FAQ%20generation%20agent) |
+| ✨ **GrammarPlus** | Semantic deep-edit & tone correction engine. | [Grammar%20correction%20agent](./Writing%20&%20Content%20Agents/Grammar%20correction%20agent) |
+| 🔗 **HookGen Pro** | Viral LinkedIn post & hook ideation studio. | [LinkedIn%20post%20ideation%20agent](./Writing%20&%20Content%20Agents/LinkedIn%20post%20ideation%20agent) |
+| 🛍️ **ProductCopy** | Outcome-driven product description mapping. | [Product%20description%20agent](./Writing%20&%20Content%20Agents/Product%20description%20agent) |
+| 📄 **ResumeAI** | ATS-optimized resume enhancement engine. | [Resume%20optimization%20agent](./Writing%20&%20Content%20Agents/Resume%20optimization%20agent) |
+| 📽️ **SlideForge AI** | Neural script-to-slide visual architect. | [Script-to-slide%20outline%20agent](./Writing%20&%20Content%20Agents/Script-to-slide%20outline%20agent) |
+| 🔎 **SEOClusters** | Predictive SEO keyword expansion clusters. | [SEO%20keyword%20expansion%20agent](./Writing%20&%20Content%20Agents/SEO%20keyword%20expansion%20agent) |
+| 🎭 **ToneWizard** | High-fidelity multi-persona voice rewriter. | [Tone%20rewriting%20agent](./Writing%20&%20Content%20Agents/Tone%20rewriting%20agent) |
 
 ### 🚀 5. Marketing & Growth Hub
-*High-conversion creative and diagnostic growth tools.*
-- 🎨 **[AdForge AI](./Marketing%20&%20Growth%20Agents/Ad%20copy%20generator%20agent)**: Creative studio with persona simulation.
-- 📈 **[AdIntel AI](./Marketing%20&%20Growth%20Agents/Campaign%20performance%20analysis%20agent)**: Leaky bucket & budget utility auditor.
+*Performance marketing creative and diagnostic growth tools.*
+
+| Agent Name | Functionality | Directory |
+| :--- | :--- | :--- |
+| 🎨 **AdForge AI** | Growth studio with buyer persona simulations. | [Ad%20copy%20generator%20agent](./Marketing%20&%20Growth%20Agents/Ad%20copy%20generator%20agent) |
+| 📈 **AdIntel AI** | Budget utility auditor & leaky bucket detector. | [Campaign%20performance%20analysis%20agent](./Marketing%20&%20Growth%20Agents/Campaign%20performance%20analysis%20agent) |
 
 ---
 
@@ -97,12 +116,12 @@ Unlike standard LLM wrappers, every agent in this hub is a **complete software m
 
 <div align="center">
 
-| Category | Tools & Technologies |
+| Sector | High-Performance Tools |
 | :--- | :--- |
-| **Frontend** | Streamlit, Custom CSS, Glassmorphism, Plotly |
-| **Orchestration** | **LiteLLM**, Python 3.9+, Dotenv |
-| **Data** | Pandas, Regex Parsing, JSON Schemas |
-| **Models** | GPT-4o, Claude 3.5, Gemini 1.5, Llama 3 |
+| **Frontend Dynamics** | Streamlit, Glassmorphism CSS, Plotly Analytics |
+| **AI Orchestration** | **LiteLLM**, Python 3.11+, Dotenv, Regex Parsing |
+| **Model Ecosystem** | GPT-4o, Claude 3.5 Sonnet, Gemini 1.5 Pro, Llama 3 (via Groq) |
+| **Data Pipelines** | Pandas DataFrame Architect, JSON Schema Enforcement |
 
 </div>
 
@@ -110,31 +129,35 @@ Unlike standard LLM wrappers, every agent in this hub is a **complete software m
 
 ## 🗺️ Roadmap to 100 Agents
 
-- [x] **v1.0**: Personal Productivity Foundation (10/10)
-- [x] **v2.0**: Writing & Research Expansion (20/20)
-- [x] **v3.0**: Business Operations & Marketing (Ongoing)
-- [ ] **v4.0**: Engineering & Code Intelligence (Coming Soon)
-- [ ] **v5.0**: Cross-Suite Neural Orchestration
+<div align="center">
+
+| Phase | Milestone | Status |
+| :--- | :--- | :---: |
+| **v1.0** | Personal Productivity Foundation (10/10) | ✅ |
+| **v2.0** | Writing & Research Expansion (20/20) | ✅ |
+| **v3.0** | Enterprise Operations & Growth (Ongoing) | 🚧 |
+| **v4.0** | Engineering & Code Intelligence Suite | 🔜 |
+| **v5.0** | Autonomous Multi-Agent Orchestration | 🔜 |
+
+</div>
 
 ---
 
-## 🚀 Quick Launch
+## 🚀 Deployment
 
 ```bash
-# Clone the Hub
-git clone https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub.git
-
 # Set Up Environment
+git clone https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub.git
 cd Real-world-AI-agents-hub
 python -m venv venv
 source venv/bin/activate
 
-# Launch the Neural Hub
+# Quick Launch (Master Productivity OS)
 cd "Personal Productivity Agents"
 streamlit run Master_Dashboard.py
 ```
 
-*Architected for Enterprise • Engineered for Impact*
+*Architected for Enterprise • Engineered for Immediate Impact*
 
 ---
 

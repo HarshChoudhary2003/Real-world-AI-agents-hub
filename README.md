@@ -104,6 +104,7 @@ Enterprise-grade agents that automate core business workflows — from CRM intel
 High-conversion creative engines built to accelerate brand momentum and acquisition performance.
  
 -   **🎨 [AdForge AI](./Marketing%20&%20Growth%20Agents/Ad%20copy%20generator%20agent) (Ad Copy Generator Agent)**: Creative growth studio that transforms campaign objectives into high-performing, psychology-driven ad copy variations.
+-   **📈 [AdIntel AI](./Marketing%20&%20Growth%20Agents/Campaign%20performance%20analysis%20agent) (Campaign Performance Analysis Agent)**: Diagnostic growth intelligence engine that audits budget utility, detects leaky buckets, and maps strategic performance benchmarks.
  
 ---
 

@@ -1,0 +1,11 @@
+Campaign Objective: Lead generation
+Platform: Google Ads
+Metrics:
+- Impressions: 120,000
+- Clicks: 3,600
+- CTR: 3.0%
+- Conversions: 180
+- Cost per Conversion: $42
+ 
+Comparison:
+Previous period conversion rate: 2.4%

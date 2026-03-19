@@ -9,27 +9,42 @@ import litellm
 load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), "..", "..", ".env"))
 
 SYSTEM_PROMPT = """
-You are a highly analytical and strategic Campaign Performance Analysis Agent (AdIntel AI).
+You are a highly sophisticated Campaign Strategic Intelligence Engine (AdIntel AI v2.0).
  
 Rules:
-- Interpret metrics in strict relation to stated campaign goals and benchmarks
-- Deconstruct performance into meaningful trends, causal signals, and anomalies
-- Explicitly identify "Leaky Buckets" (where budget is being wasted)
-- Identify "High-Momentum Channels" or segments
-- Provide an Efficiency Score (1-100) based on conversion vs spend
-- Maintain an objective, executive-level diagnostic tone
-- Avoid making final prescriptive decisions; provide the evidence for the user
+- Perform deep-dive attribution analysis (First-click, Last-click, and Multi-touch simulations)
+- Calculate Spend Velocity: project end-of-month spend and conversion volume based on current run-rate
+- Identity anomalies in the data (e.g., high CTR but low conversion may indicate landing page friction)
+- Provide a "Creative Fatigue Index" if ad duration or creative metrics are provided
+- Audit budget allocation: suggest rebalancing between high-performing and low-performing segments
+- Maintain an objective, high-stakes diagnostic tone
  
 Return ONLY valid JSON with this schema. No markdown wrapping:
  
 {
-  "executive_summary": "High-level diagnostic overview (1-2 sentences)",
-  "efficiency_score": 85,
-  "key_performance_insights": ["List of significant data-driven observations"],
-  "budget_utilization_audit": "One paragraph auditing the spend efficiency",
-  "risks_and_leaky_buckets": ["Areas of concern or wasted spend"],
-  "strategic_opportunities": ["Areas for scaled growth or tactical pivots"],
-  "benchmark_comparison": "How this period compares to the previous period or targets"
+  "executive_summary": "Diagnostic brief (1-2 sentences)",
+  "efficiency_score": 0-100,
+  "spend_velocity": {
+    "projected_eom_spend": "$Amt",
+    "projected_eom_conversions": 0,
+    "pacing_status": "Over-pacing / Under-pacing / On-track"
+  },
+  "attribution_insights": [
+    {
+      "model": "Model Name",
+      "interpretation": "How performance looks under this lens"
+    }
+  ],
+  "anomaly_detection": [
+    {
+      "metric": "e.g., CVR",
+      "observation": "What is unusual",
+      "root_cause_hypothesis": "The most likely reason why"
+    }
+  ],
+  "leaky_bucket_audit": ["Critical budget leaks"],
+  "rebalancing_suggestions": ["Where to move funds for max ROI"],
+  "benchmark_analysis": "Contextual comparison to industry norms"
 }
 """
  
@@ -59,8 +74,8 @@ def extract_json(response_content):
                 pass
     raise ValueError("Failed to extract valid JSON from the model's response.")
 
-def analyze_campaign(prompt_text, model_name="gpt-4o-mini", api_key=None):
-    """Generates advanced campaign analysis using LiteLLM."""
+def analyze_campaign_advanced(prompt_text, model_name="gpt-4o-mini", api_key=None):
+    """Generates advanced strategic intelligence audit using LiteLLM."""
     kwargs = {
         "model": model_name,
         "messages": [
@@ -77,38 +92,40 @@ def analyze_campaign(prompt_text, model_name="gpt-4o-mini", api_key=None):
     raw_content = response.choices[0].message.content
     return extract_json(raw_content)
  
-def save_outputs(data):
+def save_outputs_advanced(data):
     with open("campaign_analysis.json", "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2)
  
     with open("campaign_analysis.txt", "w", encoding="utf-8") as f:
-        f.write(f"Campaign Strategic Intelligence ({date.today()})\n")
-        f.write("=" * 60 + "\n\n")
+        f.write(f"Advanced Strategic Performance Intelligence ({date.today()})\n")
+        f.write("=" * 65 + "\n\n")
  
         f.write(f"Executive Summary: {data.get('executive_summary', 'N/A')}\n")
         f.write(f"Efficiency Score: {data.get('efficiency_score', 'N/A')}/100\n\n")
  
-        f.write("Key Performance Insights:\n")
-        for i in data.get("key_performance_insights", []):
-            f.write(f"- {i}\n")
+        v = data.get('spend_velocity', {})
+        f.write(f"Spend Pacing & Forecasting:\n")
+        f.write(f"- Status: {v.get('pacing_status')}\n")
+        f.write(f"- Projected EOM Spend: {v.get('projected_eom_spend')}\n")
+        f.write(f"- Projected EOM Conversions: {v.get('projected_eom_conversions')}\n\n")
  
-        f.write(f"\nBudget Utilization Audit:\n{data.get('budget_utilization_audit', 'N/A')}\n\n")
+        f.write("Anomaly & Root Cause Analysis:\n")
+        for a in data.get("anomaly_detection", []):
+            f.write(f"- {a.get('metric')}: {a.get('observation')} (Hypothesis: {a.get('root_cause_hypothesis')})\n")
  
-        f.write("Risks & Leaky Buckets:\n")
-        for r in data.get("risks_and_leaky_buckets", []):
+        f.write("\nBudget Rebalancing Suggestions:\n")
+        for r in data.get("rebalancing_suggestions", []):
             f.write(f"- {r}\n")
- 
-        f.write("\nStrategic Opportunities:\n")
-        for o in data.get("strategic_opportunities", []):
-            f.write(f"- {o}\n")
             
-        f.write(f"\nBenchmark vs Previous:\n{data.get('benchmark_comparison', 'N/A')}\n")
+        f.write("\nLeaky Bucket Audit:\n")
+        for l in data.get("leaky_bucket_audit", []):
+            f.write(f"- {l}\n")
  
 def main():
     prompt_text = read_input()
-    analysis = analyze_campaign(prompt_text)
-    save_outputs(analysis)
-    print("Campaign performance analysis generated successfully.")
+    analysis = analyze_campaign_advanced(prompt_text)
+    save_outputs_advanced(analysis)
+    print("Strategic intelligence audit v2.0 finalized.")
  
 if __name__ == "__main__":
     main()

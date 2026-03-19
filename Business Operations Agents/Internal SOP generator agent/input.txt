@@ -1,0 +1,12 @@
+Process Name: New Employee IT Onboarding
+Team: IT Operations
+Purpose:
+Ensure new hires receive system access on day one.
+ 
+Steps:
+- Receive onboarding request from HR
+- Create company email account
+- Provision laptop and software
+- Grant access to internal tools
+Constraints:
+Access must be approved by manager

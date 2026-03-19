@@ -4,9 +4,18 @@ from datetime import date
 from dotenv import load_dotenv
 import os
 import litellm
+from pypdf import PdfReader
 
 # Load environment variables (e.g., from ../../.env)
 load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), "..", "..", ".env"))
+
+def extract_text_from_pdf(pdf_file):
+    """Extracts all text from a provided PDF file-like object."""
+    reader = PdfReader(pdf_file)
+    text = ""
+    for page in reader.pages:
+        text += page.extract_text() + "\n"
+    return text.strip()
 
 SYSTEM_PROMPT = """
 You are a highly advanced, enterprise-grade Contract Clause Explanation Agent.

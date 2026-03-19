@@ -1,8 +1,9 @@
 import streamlit as st
 import os
 import json
+import time
 from datetime import date
-from agent import explain_clause, save_outputs
+from agent import explain_clause, save_outputs, extract_text_from_pdf
 
 # Configure the Streamlit page
 st.set_page_config(
@@ -29,11 +30,12 @@ st.markdown("""
     }
     
     .main-header h1 {
-        font-size: 3rem;
+        font-size: 3.5rem;
         background: -webkit-linear-gradient(45deg, #38BDF8, #818CF8);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         margin-bottom: 0.5rem;
+        font-weight: 800;
     }
     
     .glass-panel {
@@ -158,30 +160,45 @@ with st.sidebar:
     st.markdown("---")
     st.markdown("### Agent Capabilities 🧠")
     st.markdown("""
-    - **Plain Language Translation**
-    - **Legal Meaning Preservation**
-    - **Obligation Mapping**
-    - **Risk & Watch-out Detection**
+    - **Omni-Model Support**
+    - **PDF & Plain Text Analysis**
+    - **High-Fidelity Legal Semantic Mapping**
+    - **Structural Outcome Forecasting**
     """)
     st.markdown("---")
-    st.caption("ClauseClear AI v2.0 • Omni-Model Enterprise Engine")
+    st.caption("ClauseClear AI v2.5 • Advanced Legal Intel")
 
 # --- UI Layout ---
 st.markdown('<div class="main-header"><h1>📑 ClauseClear AI</h1><p>Translating dense legal clauses into actionable, plain-language insights.</p></div>', unsafe_allow_html=True)
 
-# Main Input Section
+# Main Container
 with st.container():
     st.markdown('<div class="glass-panel">', unsafe_allow_html=True)
-    st.markdown("### 📝 Enter Contract Clause")
     
-    default_clause = (
-        "Either party may terminate this agreement with thirty (30) days’ written notice.\n"
-        "Termination does not relieve either party of obligations accrued prior to termination."
-    )
+    # Mode Selection
+    analysis_mode = st.radio("Choose Analysis Mode", ["Single Clause Input", "Batch Document Upload (PDF/TXT)"], horizontal=True)
     
-    clause_text = st.text_area("Legal clause text to analyze:", value=default_clause, height=150)
+    clause_text = ""
     
-    analyze_btn = st.button("🔎 Analyze Clause", use_container_width=True, type="primary")
+    if analysis_mode == "Single Clause Input":
+        default_clause = (
+            "Either party may terminate this agreement with thirty (30) days’ written notice.\n"
+            "Termination does not relieve either party of obligations accrued prior to termination."
+        )
+        clause_text = st.text_area("Legal clause text to analyze:", value=default_clause, height=150)
+    else:
+        uploaded_file = st.file_uploader("Upload Contract (PDF or TXT)", type=["pdf", "txt"])
+        if uploaded_file:
+            if uploaded_file.type == "application/pdf":
+                with st.spinner("Extracting text from PDF..."):
+                    clause_text = extract_text_from_pdf(uploaded_file)
+            else:
+                clause_text = uploaded_file.read().decode("utf-8")
+            st.info(f"📄 Successfully loaded {len(clause_text)} characters.")
+            if st.checkbox("Show extracted text"):
+                st.text_area("Extracted Content", value=clause_text, height=150)
+
+    analyze_btn = st.button("🔎 Analyze Intelligence", use_container_width=True, type="primary")
     st.markdown('</div>', unsafe_allow_html=True)
 
 # Action Logic
@@ -193,9 +210,9 @@ if analyze_btn:
     elif is_custom and not actual_model_id.strip():
         st.error("🚨 Please enter a valid Custom Model String (e.g., 'anthropic/claude-3-haiku-20240307').")
     elif not clause_text.strip():
-        st.warning("⚠️ Please enter a clause to analyze.")
+        st.warning("⚠️ Please provide a clause or document to analyze.")
     else:
-        with st.spinner(f"🤖 Interfacing with {actual_model_id} API... extracting semantics..."):
+        with st.spinner(f"🤖 Interfacing with {actual_model_id} API... performing semantic extraction..."):
             try:
                 # Call agent logic
                 results = explain_clause(clause_text, model_name=actual_model_id, api_key=final_api_key)
@@ -203,7 +220,7 @@ if analyze_btn:
                 # Save locally as per agent design
                 save_outputs(results)
                 
-                st.success("✅ Semantic Extraction & Risk Analysis Complete!")
+                st.success("✅ Deep Semantic Analysis Complete!")
                 
                 # Presentation Layer
                 col1, col2 = st.columns([1, 1])
@@ -238,11 +255,11 @@ if analyze_btn:
                 
                 dl_col1, dl_col2, _ = st.columns([1, 1, 2])
                 with dl_col1:
-                    st.download_button("Export as JSON", data=json_data, file_name="clause_explanation.json", mime="application/json")
+                    st.download_button("Export as JSON", data=json_data, file_name=f"clause_analysis_{date.today()}.json", mime="application/json")
                 with dl_col2:
                     with open("clause_explanation.txt", "r", encoding="utf-8") as txt_f:
                         txt_data = txt_f.read()
-                    st.download_button("Export as TXT", data=txt_data, file_name="clause_explanation.txt", mime="text/plain")
+                    st.download_button("Export as TXT", data=txt_data, file_name=f"clause_analysis_{date.today()}.txt", mime="text/plain")
 
             except Exception as e:
                 st.error(f"❌ An error occurred during semantic extraction ({actual_model_id}): {str(e)}")

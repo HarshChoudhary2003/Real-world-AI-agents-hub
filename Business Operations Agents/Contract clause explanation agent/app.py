@@ -98,16 +98,50 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
+# --- Define Model Providers ---
+MODELS = {
+    "OpenAI (GPT-4o)": {
+        "id": "gpt-4o",
+        "env_var": "OPENAI_API_KEY",
+        "doc": "Highest reasoning capabilities for complex clauses."
+    },
+    "Anthropic (Claude 3.5 Sonnet)": {
+        "id": "claude-3-5-sonnet-20240620",
+        "env_var": "ANTHROPIC_API_KEY",
+        "doc": "Excellent contextual window for dense legal docs."
+    },
+    "Google (Gemini 1.5 Pro)": {
+        "id": "gemini/gemini-1.5-pro",
+        "env_var": "GEMINI_API_KEY",
+        "doc": "Native ecosystem integration with extensive token context."
+    },
+    "Groq (Llama 3 70B)": {
+        "id": "groq/llama3-70b-8192",
+        "env_var": "GROQ_API_KEY",
+        "doc": "Lightning-fast inference speed for immediate feedback."
+    }
+}
+
 # --- Sidebar ---
 with st.sidebar:
     st.image("https://img.icons8.com/fluency/96/contract.png", width=64)
-    st.markdown("## Configuration")
-    api_key = st.text_input("OpenAI API Key", type="password", placeholder="sk-...")
+    st.markdown("## Configuration ⚙️")
+    
+    # Model Selection
+    selected_model_label = st.selectbox("🌐 Select AI Engine", list(MODELS.keys()))
+    model_config = MODELS[selected_model_label]
+    
+    st.caption(f"_{model_config['doc']}_")
+    
+    # API Key Handling
+    api_key_required = model_config["env_var"]
+    api_key = st.text_input(f"{api_key_required}", type="password", placeholder=f"Enter {api_key_required}...")
+    
     if api_key:
-        os.environ["OPENAI_API_KEY"] = api_key
+        os.environ[api_key_required] = api_key
         
     st.markdown("---")
-    st.markdown("### Agent Capabilities")
+    st.markdown("### Agent Capabilities 🧠")
     st.markdown("""
     - **Plain Language Translation**
     - **Legal Meaning Preservation**
@@ -115,7 +149,7 @@ with st.sidebar:
     - **Risk & Watch-out Detection**
     """)
     st.markdown("---")
-    st.caption("ClauseClear AI v1.0 • Enterprise-Grade Contract Insight")
+    st.caption("ClauseClear AI v2.0 • Omni-Model Enterprise Engine")
 
 # --- UI Layout ---
 st.markdown('<div class="main-header"><h1>📑 ClauseClear AI</h1><p>Translating dense legal clauses into actionable, plain-language insights.</p></div>', unsafe_allow_html=True)
@@ -137,20 +171,20 @@ with st.container():
 
 # Action Logic
 if analyze_btn:
-    if not os.environ.get("OPENAI_API_KEY"):
-        st.error("🚨 Please enter a valid OpenAI API Key in the sidebar to proceed.")
+    if not os.environ.get(api_key_required):
+        st.error(f"🚨 Please enter a valid {api_key_required} in the sidebar to proceed with {selected_model_label}.")
     elif not clause_text.strip():
         st.warning("⚠️ Please enter a clause to analyze.")
     else:
-        with st.spinner("🤖 ClauseClear AI is analyzing legal semantics..."):
+        with st.spinner(f"🤖 Interfacing with {selected_model_label} API... extracting semantics..."):
             try:
                 # Call agent logic
-                results = explain_clause(clause_text)
+                results = explain_clause(clause_text, model_name=model_config["id"])
                 
                 # Save locally as per agent design
                 save_outputs(results)
                 
-                st.success("✅ Analysis Complete!")
+                st.success("✅ Semantic Extraction & Risk Analysis Complete!")
                 
                 # Presentation Layer
                 col1, col2 = st.columns([1, 1])
@@ -192,4 +226,4 @@ if analyze_btn:
                     st.download_button("Export as TXT", data=txt_data, file_name="clause_explanation.txt", mime="text/plain")
 
             except Exception as e:
-                st.error(f"❌ An error occurred during analysis: {str(e)}")
+                st.error(f"❌ An error occurred during semantic extraction ({model_config['id']}): {str(e)}")

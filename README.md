@@ -95,6 +95,7 @@ Enterprise-grade agents that automate core business workflows — from CRM intel
 -   **🎯 [LeadScore AI](./Business%20Operations%20Agents/Lead%20qualification%20agent) (Lead Qualification Agent)**: Qualify sales leads using BANT analysis with precision scoring, flag detection, and tailored next-action recommendations.
 -   **🤝 [SalesFollowAI Pro](./Business%20Operations%20Agents/Sales%20follow-up%20agent) (Sales Follow-up Agent)**: Generate consultative, high-converting sales follow-up messages tailored to prospect roles and meeting context.
 -   **📑 [ClauseClear AI](./Business%20Operations%20Agents/Contract%20clause%20explanation%20agent) (Contract Clause Explanation Agent)**: Advanced Omni-Model engine (GPT-4o, Claude 3.5, Gemini, Groq) for translating dense legal clauses into plain language with PDF/TXT document upload support and risk analysis.
+-   **⚖️ [VendorFlow AI](./Business%20Operations%20Agents/Vendor%20comparison%20agent) (Vendor Comparison Agent)**: Strategic cross-dimensional vendor analysis focusing on cost, feature completeness, and structural trade-offs.
 
 ---
 

@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.env
+vendor_comparison.json
+vendor_comparison.txt
+*.pdf
+# (Optional) If you want to keep generated PDF outputs, comment out the line above.

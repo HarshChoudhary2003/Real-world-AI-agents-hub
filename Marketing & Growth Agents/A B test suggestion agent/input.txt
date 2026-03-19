@@ -1,0 +1,12 @@
+Context:
+Landing page conversion rate is lower than expected.
+ 
+Metrics:
+- Conversion Rate: 1.8%
+- Industry Benchmark: 2.5%
+ 
+Goal:
+Increase form submissions
+ 
+Constraints:
+Brand messaging must remain professional and compliant.

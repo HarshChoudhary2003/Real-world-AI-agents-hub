@@ -109,6 +109,7 @@ The hub is organized into modular suites, each containing highly specialized age
 | :--- | :--- | :--- |
 | 🎨 **AdForge AI** | Growth studio with buyer persona simulations. | [Ad%20copy%20generator%20agent](./Marketing%20&%20Growth%20Agents/Ad%20copy%20generator%20agent) |
 | 📈 **AdIntel AI** | Budget utility auditor & leaky bucket detector. | [Campaign%20performance%20analysis%20agent](./Marketing%20&%20Growth%20Agents/Campaign%20performance%20analysis%20agent) |
+| 🧪 **OptiTest AI** | Strategic A/B test architect with ICE scoring. | [A%20B%20test%20suggestion%20agent](./Marketing%20&%20Growth%20Agents/A%20B%20test%20suggestion%20agent) |
 
 ---
 

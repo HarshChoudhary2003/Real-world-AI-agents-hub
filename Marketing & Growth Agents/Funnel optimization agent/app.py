@@ -16,53 +16,75 @@ st.set_page_config(
 # Dark Glassmorphism Styling
 st.markdown("""
     <style>
+    @keyframes slideInLeft {
+        from { opacity: 0; transform: translateX(-30px); }
+        to { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.02); }
+        100% { transform: scale(1); }
+    }
     .main { background-color: #0b0e14; }
-    .stApp { background: linear-gradient(135deg, #0b0e14 0%, #151921 100%); }
+    .stApp { background: radial-gradient(circle at bottom right, #1a1e26 0%, #0b0e14 100%); }
     .metric-card {
         background: rgba(255, 255, 255, 0.03);
         border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 12px;
-        padding: 20px;
+        border-radius: 16px;
+        padding: 25px;
         text-align: center;
         margin-bottom: 20px;
+        transition: all 0.3s ease;
+        animation: slideInLeft 0.8s ease-out;
     }
-    .metric-label { color: #8892b0; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1.5px; }
-    .metric-value { color: #00d4ff; font-size: 1.8rem; font-weight: 800; }
+    .metric-card:hover {
+        background: rgba(0, 212, 255, 0.05);
+        border: 1px solid #00d4ff;
+        transform: translateY(-5px);
+    }
+    .metric-label { color: #8892b0; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; }
+    .metric-value { color: #00d4ff; font-size: 2rem; font-weight: 900; }
     .section-header {
         color: #ccd6f6;
-        border-bottom: 1px solid #00d4ff;
-        padding-bottom: 8px;
+        border-left: 4px solid #00d4ff;
+        padding-left: 15px;
         margin-top: 30px;
-        margin-bottom: 15px;
-        font-size: 1.3rem;
-        font-weight: 600;
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+        font-weight: 700;
+        animation: slideInLeft 0.6s ease-out;
     }
     .sidebar-section {
         background: rgba(255, 255, 255, 0.02);
-        border-radius: 8px;
-        padding: 15px;
-        margin-bottom: 20px;
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 24px;
         border: 1px solid rgba(255, 255, 255, 0.05);
     }
-    .stTabs [data-baseweb="tab-list"] { gap: 8px; }
+    .stTabs [data-baseweb="tab-list"] { gap: 10px; }
     .stTabs [data-baseweb="tab"] {
-        height: 50px;
-        background-color: rgba(255, 255, 255, 0.03);
-        border-radius: 8px 8px 0 0;
-        gap: 1px;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        height: 55px;
+        background-color: rgba(255, 255, 255, 0.02);
+        border-radius: 10px 10px 0 0;
+        padding: 0 20px;
+        color: #8892b0;
     }
     .stTabs [aria-selected="true"] {
         background-color: rgba(0, 212, 255, 0.1) !important;
         border-bottom: 2px solid #00d4ff !important;
+        color: #00d4ff !important;
     }
     .roadmap-card {
-        background: rgba(0, 212, 255, 0.05);
-        border-left: 4px solid #00d4ff;
-        padding: 15px;
-        border-radius: 0 8px 8px 0;
-        margin-bottom: 15px;
+        background: rgba(0, 212, 255, 0.03);
+        border-left: 5px solid #00d4ff;
+        padding: 20px;
+        border-radius: 4px 15px 15px 4px;
+        margin-bottom: 20px;
+        transition: 0.3s all ease;
+    }
+    .roadmap-card:hover {
+        background: rgba(0, 212, 255, 0.07);
+        transform: translateX(5px);
     }
     </style>
 """, unsafe_allow_html=True)

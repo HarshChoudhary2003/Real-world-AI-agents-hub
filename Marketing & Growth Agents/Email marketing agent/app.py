@@ -162,6 +162,9 @@ with col_output:
         with tab_preview:
             st.markdown('<div class="section-header">📬 Mobile Preview</div>', unsafe_allow_html=True)
             
+            # Fix: Calculate body with break lines outside the f-string for Python <3.12 compatibility
+            email_body_html = data.get('email_content', {}).get('body', 'Your content goes here.').replace('\n', '<br>')
+            
             # Simulated Email App
             with st.container():
                 st.markdown(f"""
@@ -172,7 +175,7 @@ with col_output:
                     </div>
                     <div style="padding: 40px; font-family: sans-serif; line-height: 1.6;">
                         <p>{data.get('email_content', {}).get('salutation', 'Hi there,')}</p>
-                        <p>{data.get('email_content', {}).get('body', 'Your content goes here.').replace('\n', '<br>')}</p>
+                        <p>{email_body_html}</p>
                         <div style="text-align: center; margin: 40px 0;">
                             <a href="#" style="background: #38bdf8; color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: bold;">{data.get('call_to_action', {}).get('text', 'Get Started')}</a>
                         </div>

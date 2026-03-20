@@ -25,7 +25,7 @@
 
 | 🛠️ Neural Suites | 🤖 Active Agents | ⚡ Roadmap Goal | 🟢 System Status | 📅 Last Update |
 | :--- | :---: | :---: | :---: | :---: |
-| **5 Core Hubs** | **44 Agents** | **100 Agents** | **Operational** | **Mar 2026** |
+| **5 Core Hubs** | **45 Agents** | **100 Agents** | **Operational** | **Mar 2026** |
 
 </div>
 
@@ -114,6 +114,7 @@ The hub is organized into modular suites, each containing highly specialized age
 | ⚡ **Funnel-Force AI** | Advanced performance diagnostic & conversion strategy. | [Funnel%20optimization%20agent](./Marketing%20&%20Growth%20Agents/Funnel%20optimization%20agent) |
 | 📩 **Email-Mind AI** | High-conversion multi-model copywriting engine. | [Email%20marketing%20agent](./Marketing%20&%20Growth%20Agents/Email%20marketing%20agent) |
 | 🤝 **Influence-Core AI** | Relationship-first influencer outreach engine. | [Influencer%20outreach%20agent](./Marketing%20&%20Growth%20Agents/Influencer%20outreach%20agent) |
+| 🚀 **Launch-Pad AI** | GTM operational readiness & launch architecture. | [Product%20launch%20checklist%20agent](./Marketing%20&%20Growth%20Agents/Product%20launch%20checklist%20agent) |
 
 ---
 

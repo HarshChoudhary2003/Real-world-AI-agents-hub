@@ -1,0 +1,9 @@
+Product: AI Workflow Automation Feature
+Launch Type: Public release
+Audience: Mid-sized business operations teams
+Channels:
+- Website
+- Email
+- Social media
+Timeline:
+Launch in 3 weeks

@@ -25,7 +25,7 @@
 
 | 🛠️ Neural Suites | 🤖 Active Agents | ⚡ Roadmap Goal | 🟢 System Status | 📅 Last Update |
 | :--- | :---: | :---: | :---: | :---: |
-| **5 Core Hubs** | **43 Agents** | **100 Agents** | **Operational** | **Mar 2026** |
+| **5 Core Hubs** | **44 Agents** | **100 Agents** | **Operational** | **Mar 2026** |
 
 </div>
 
@@ -113,6 +113,7 @@ The hub is organized into modular suites, each containing highly specialized age
 | 🛡️ **Persona-Forge AI** | Advanced market data synthesis & customer architect. | [Customer%20persona%20builder%20agent](./Marketing%20&%20Growth%20Agents/Customer%20persona%20builder%20agent) |
 | ⚡ **Funnel-Force AI** | Advanced performance diagnostic & conversion strategy. | [Funnel%20optimization%20agent](./Marketing%20&%20Growth%20Agents/Funnel%20optimization%20agent) |
 | 📩 **Email-Mind AI** | High-conversion multi-model copywriting engine. | [Email%20marketing%20agent](./Marketing%20&%20Growth%20Agents/Email%20marketing%20agent) |
+| 🤝 **Influence-Core AI** | Relationship-first influencer outreach engine. | [Influencer%20outreach%20agent](./Marketing%20&%20Growth%20Agents/Influencer%20outreach%20agent) |
 
 ---
 

@@ -1,0 +1,13 @@
+Platforms:
+- LinkedIn
+- Twitter
+
+Audience Timezone: EST
+Posting Frequency: 1 post per day
+
+Content:
+- Post about AI automation benefits
+- Customer success story
+- Educational thread on workflows
+Campaign:
+Product awareness

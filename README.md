@@ -25,7 +25,7 @@
 
 | 🛠️ Neural Suites | 🤖 Active Agents | ⚡ Roadmap Goal | 🟢 System Status | 📅 Last Update |
 | :--- | :---: | :---: | :---: | :---: |
-| **5 Core Hubs** | **40 Agents** | **100 Agents** | **Operational** | **Mar 2026** |
+| **5 Core Hubs** | **43 Agents** | **100 Agents** | **Operational** | **Mar 2026** |
 
 </div>
 
@@ -110,6 +110,9 @@ The hub is organized into modular suites, each containing highly specialized age
 | 🎨 **AdForge AI** | Growth studio with buyer persona simulations. | [Ad%20copy%20generator%20agent](./Marketing%20&%20Growth%20Agents/Ad%20copy%20generator%20agent) |
 | 📈 **AdIntel AI** | Budget utility auditor & leaky bucket detector. | [Campaign%20performance%20analysis%20agent](./Marketing%20&%20Growth%20Agents/Campaign%20performance%20analysis%20agent) |
 | 🧪 **OptiTest AI** | Strategic A/B test architect with ICE scoring. | [A%20B%20test%20suggestion%20agent](./Marketing%20&%20Growth%20Agents/A%20B%20test%20suggestion%20agent) |
+| 🛡️ **Persona-Forge AI** | Advanced market data synthesis & customer architect. | [Customer%20persona%20builder%20agent](./Marketing%20&%20Growth%20Agents/Customer%20persona%20builder%20agent) |
+| ⚡ **Funnel-Force AI** | Advanced performance diagnostic & conversion strategy. | [Funnel%20optimization%20agent](./Marketing%20&%20Growth%20Agents/Funnel%20optimization%20agent) |
+| 📩 **Email-Mind AI** | High-conversion multi-model copywriting engine. | [Email%20marketing%20agent](./Marketing%20&%20Growth%20Agents/Email%20marketing%20agent) |
 
 ---
 

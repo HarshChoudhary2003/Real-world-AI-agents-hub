@@ -1,0 +1,5 @@
+Campaign Goal: Re-engage inactive users
+Audience: Trial users inactive for 30 days
+Email Type: Re-engagement
+Offer: New automation templates
+Brand Tone: Friendly, professional

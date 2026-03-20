@@ -1,0 +1,11 @@
+Funnel Stages:
+- Landing Page Visit: 50,000 users
+- Sign-up Started: 12,500 users
+- Sign-up Completed: 7,500 users
+- Product Activated: 3,200 users
+
+Goal:
+Increase product activations
+
+Segment:
+Organic traffic

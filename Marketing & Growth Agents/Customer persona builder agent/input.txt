@@ -1,0 +1,12 @@
+Product: B2B Workflow Automation Tool
+Target Segment:
+Mid-level operations managers at mid-sized companies
+
+Data:
+- Responsible for efficiency improvements
+- Limited technical background
+- Measured on cost savings and process speed
+
+Challenges:
+- Manual workflows
+- Tool overload

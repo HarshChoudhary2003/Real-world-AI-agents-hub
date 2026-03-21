@@ -1,0 +1,6 @@
+{
+  "status": 400,
+  "error": "InvalidRequest",
+  "message": "Missing required field: email",
+  "request_id": "abc-123"
+}

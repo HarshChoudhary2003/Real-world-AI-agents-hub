@@ -1,148 +1,188 @@
-<!-- 
-  =============================================================================
-  REAL-WORLD-AI-AGENTS-HUB: THE $1B UNICORN ARCHITECTURE
-  =============================================================================
-  Design Language: Enterprise-Modern (Carbon, Slate, Sapphire Blue)
-  Marketing Strategy: DX-First (Developer Experience)
-  Final Form: High-Converting, Production-Ready, Industry-Definitive
-  =============================================================================
--->
-
 <div align="center">
-  
-  <!-- Massive Hero Render -->
-  <img src="https://capsule-render.vercel.app/api?type=soft&color=1e293b&height=320&section=header&text=Real-world%20AI%20Agents%20Hub&fontSize=78&fontAlign=50&fontAlignY=38&desc=The%20Industry-Standard%20for%20Autonomous%20Enterprise%20Intelligence&descAlign=50&descAlignY=62&animation=fadeIn" width="100%" />
 
-  <br />
+<!-- Hero Visual -->
+<img src="https://capsule-render.vercel.app/api?type=soft&color=0f172a&height=320&section=header&text=Real-world%20AI%20Agents%20Hub&fontSize=70&fontAlign=50&fontAlignY=38&desc=The%20Largest%20Open%20Registry%20of%20Production%20AI%20Agents&descAlign=50&descAlignY=62&animation=twinkling" width="100%" />
 
-  <!-- High-Impact Typing SVG -->
-  <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=800&size=36&pause=1000&color=2563EB&center=true&vCenter=true&width=1000&lines=🔱+Defining+the+Standard+for+Agentic+Workflows;🧠+58+Enterprise-Grade+Neural+Agents;🏢+Architected+for+Infinite+Scalability;⚡+Elite+DX%3A+Deploy+in+under+180s" alt="Typing SVG" />
+<br>
 
-  <br />
+<!-- Typing Dynamic -->
+<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=800&size=36&pause=1000&color=38BDF8&center=true&vCenter=true&width=1000&lines=🔱+Defining+the+Post-SaaS+Economy;🦾+60+Production-Ready+AI+Agents;⚡+Enterprise-Grade+Multi-Agent+Orchestration;💎+Architected+for+Infinite+Scalability" alt="Typing SVG" />
 
-  <!-- Premium Badge Wall -->
-  <p align="center">
-    <a href="https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/stargazers">
-      <img src="https://img.shields.io/github/stars/HarshChoudhary2003/Real-world-AI-agents-hub?style=for-the-badge&color=2563eb&labelColor=0f172a" alt="stars" />
-    </a>
-    <a href="https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/network/members">
-      <img src="https://img.shields.io/github/forks/HarshChoudhary2003/Real-world-AI-agents-hub?style=for-the-badge&color=2563eb&labelColor=0f172a" alt="forks" />
-    </a>
-    <a href="https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/blob/main/LICENSE">
-      <img src="https://img.shields.io/github/license/HarshChoudhary2003/Real-world-AI-agents-hub?style=for-the-badge&color=2563eb&labelColor=0f172a" alt="license" />
-    </a>
-    <a href="https://python.org">
-      <img src="https://img.shields.io/badge/Production-v1.4.2-3776AB?style=for-the-badge&logo=python&logoColor=white&labelColor=0f172a" alt="version" />
-    </a>
-  </p>
+<br>
 
-  <p align="center">
-    <strong>Architect Build Deploy Scale. The ultimate operating system for the AI-native enterprise.</strong>
-  </p>
+<!-- Premium Badge Stack -->
+[![Maintained](https://img.shields.io/badge/Maintained-Active-0ea5e9?style=for-the-badge&logo=github&logoColor=white)](https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub)
+[![Release](https://img.shields.io/badge/Release-Stable%20v1.8.0-22c55e?style=for-the-badge&logo=rocket&logoColor=white)](https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub)
+[![Stars](https://img.shields.io/github/stars/HarshChoudhary2003/Real-world-AI-agents-hub?style=for-the-badge&color=eab308&labelColor=1e293b)](https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/stargazers)
+[![License](https://img.shields.io/badge/License-MIT-818cf8?style=for-the-badge&labelColor=1e293b)](./LICENSE)
 
-  <p align="center">
-    <kbd><b><a href="#-quick-launch">Deploy Now →</a></b></kbd>
-    <kbd><b><a href="#-the-neural-ecosystem">Neural Suites →</a></b></kbd>
-    <kbd><b><a href="#-roadmap-to-v50">Roadmap →</a></b></kbd>
-  </p>
+<p align="center">
+  <strong>Build. Deploy. Scale. The ultimate operating system for the AI-native enterprise.</strong>
+</p>
+
+<p align="center">
+  <kbd><b><a href="#-the-agent-ecosystem">Explore Agents →</a></b></kbd>
+  <kbd><b><a href="#-quick-start">Deploy in 30s →</a></b></kbd>
+  <kbd><b><a href="#-contributing">Join the Alliance →</a></b></kbd>
+</p>
 
 </div>
 
 ---
 
-## 🔱 The Mission
+## 🧬 The Vision: The Autonomous Age
 
-> *"Software ate the world. Now, Agents are eating software."*
+> *"Software used to be a tool. Now, software is the worker."*
 
-The industry has moved beyond conversational AI. The new frontier is **Autonomous Intelligence**—agents that code, analyze, manage, and scale alongside human teams. 
+The industry has evolved beyond "AI as a feature." We are entering the era of the **Agentic Enterprise**—where autonomous intelligence layers manage complex systems, analyze deep data, and execute cross-functional workflows with zero human friction.
 
-**Real-world-AI-agents-hub** is the definitive, industry-standard ecosystem for **high-performance, production-ready AI Agents**. We focus on eliminating the friction between "AI vision" and "Operational reality." This is the engine room for the next generation of builders.
+**Real-world-AI-agents-hub** is not just a repository; it is a **Category-Defining Platform Blueprint**. We bridge the gap between "LLM Demos" and "Production Workflows." 
 
----
-
-## 🏗️ The DX Core (Developer Experience)
-
-We believe in a "Zero-Friction" philosophy. Every agent in this hub follows a tripartite architecture designed for deployment speed and architectural longevity.
-
-| Layer | Functionality | Technology |
-| :--- | :--- | :--- |
-| **🧠 Intelligence** | Multi-model reasoning & logic | GPT-4o, Claude 3.5, Gemini 1.5 |
-| **🎼 Orchestration** | Task decomposition & tool-use | LiteLLM, CrewAI, LangChain |
-| **🎯 Output Interface** | Premium "SaaS-Elite" Dashboards | Streamlit (Glassmorphism Core) |
+This is the largest registry of **specialized, production-hardened AI agents** designed to be the backbone of your next unicorn.
 
 ---
 
-## 🖼️ Architectural Blueprint
+## 💎 Why This Wins
 
-<div align="center">
-  <img src="https://via.placeholder.com/1200x500/0f172a/2563eb?text=Multi-Agent+Symphony+Architecture+Diagram" width="100%" alt="Architecture Workflow" />
-  <p align="center"><i>Fig 1.0: Real-time Multi-Agent Orchestration & Data-Feed Loop</i></p>
-</div>
-
----
-
-## 🚀 The Neural Ecosystem (The 58+)
-
-Our agents are categorized into specialized high-output suites, designed to function independently or as a unified "AI Employee" force.
-
-### 💼 Business Operations Suite
-*Enterprise automation for core cross-functional workflows.*
-- **🧬 DataForge AI** - Advanced CRM enrichment and decision-mapping logic.
-- **📄 InvoiceIntel** - Multi-model financial document extraction (Vision-enabled).
-- **🎯 LeadScore AI** - BANT-optimized lead qualification & automated scoring.
-- **⚖️ VendorFlow AI** - Comparative analysis grids for strategic procurement.
-
-### 🧑‍💻 Engineering & Model Ops
-*Advanced tooling for neural architecture and engineering integrity.*
-- **🧠 ModelMind AI** - Deep architectural trade-off analysis & model comparison.
-- **✨ PromptForge AI** - Neural prompt engineering & linguistic structural optimization.
-- **🛡️ Log-Sentinel AI** - System telemetry forensic & anomaly detection logic.
-- **🚑 Error-Forensics AI** - Neural SRE incident diagnosis & automated root-cause.
-
-### 📊 Data & Automation Engine
-*Mission-critical intelligence for high-scale data integrity architectures.*
-- **🧬 NeuralData AI** - Multi-cloud batch CSV cleaning & integrity auditing.
-- **🎼 Orchestra-Core** - Systems orchestration & multi-step execution architecture.
-- **🛡️ Data-Guard AI** - Neural dataset integrity & schema governance OS.
-
-### 🧠 Personal Productivity OS
-*A neural architecture designed for 10x personal operational output.*
-- **🧠 PriorityBrain** - NLP task ingestion & algorithmic urgency sorting.
-- **🗄️ BrainVault** - Local RAG knowledge base via vector space indexing.
-- **⚡ ActionForge** - Neural unstructured text-to-task extractor.
+- **System > Scripts:** Every agent is part of a unified, modular architecture.
+- **Platform > Repo:** Built for deployment, not just educational reading.
+- **Real-world > Demo:** Every directory solves a critical business or personal pain point.
 
 ---
 
-## 🧪 Featured Strategic Agents
+## 🔥 Strategic Feature Stack
 
-| Agent Identity | Core Capability | Tech Vector | Status |
-| :--- | :--- | :--- | :--- |
-| **PriorityBrain** | Urgency-Logic Mapping | NLP Architecture | `OPERATIONAL` |
-| **InvoiceIntel** | Neural OCR/Extraction | LiteLLM • Vision | `ENTERPRISE` |
-| **AdForge AI** | Growth Model Sim | Multi-Agent Swarm | `STRATEGIC` |
-| **NeuralData** | Batch integrity auditing | Pandas • AI Core | `PRODUCTION` |
-| **ModelMind** | LLM Benchmarking | Multi-Provider API | `ARCHITECT` |
+| Feature | Engineering Depth |
+| :--- | :--- |
+| **🚀 Production Polish** | Every agent features a custom-engineered "SaaS-Elite" UI via Streamlit. |
+| **🧠 Multi-Agent Core** | Native support for CrewAI and LangChain orchestration. |
+| **🔌 Provider Agnostic** | Hot-swappable intelligence (GPT-4o, Claude 3.5, Gemini 1.5, Llama 3). |
+| **🏗️ Infinite Scaling** | Modular structure allows for building anything from a simple bot to a swarm. |
 
 ---
 
-## ⚙️ The Multi-Provider Neural Stack
+## 🌍 The Agent Ecosystem (60+ Specialized Systems)
 
-We maintain a strict agnostic approach, allowing for seamless intelligence switching across all major providers.
+*Click on any agent to access its specialized core and dashboard.*
+
+### 💼 Business Operations Systems
+*Enterprise-grade automation for high-impact cross-functional logic.*
+- [🧬 **DataForge AI**](./Business%20Operations%20Agents/CRM%20data%20enrichment%20agent) – Intelligence-led CRM enrichment & decision mapping.
+- [📄 **InvoiceIntel**](./Business%20Operations%20Agents/Invoice%20processing%20agent) – Multi-model Vision layer for financial document extraction.
+- [🎯 **LeadScore AI**](./Business%20Operations%20Agents/Lead%20qualification%20agent) – Precision lead qualification via BANT/CHAMP frameworks.
+- [🤝 **SalesFollowAI**](./Business%20Operations%20Agents/Sales%20follow-up%20agent) – High-conversion post-interaction narrative generator.
+- [🛡️ **SupportCraft**](./Business%20Operations%20Agents/Customer%20support%20response%20agent) – Empathetic response intelligence & sentiment auditing.
+- [💸 **ExpenseIQ**](./Business%20Operations%20Agents/Expense%20categorization%20agent) – Algorithmic category detection & anomaly audit.
+- [📋 **SOPFlow AI**](./Business%20Operations%20Agents/Internal%20SOP%20generator%20agent) – Standardized Ops Architect for scaling procedures.
+- [💹 **InsightCore**](./Business%20Operations%20Agents/KPI%20dashboard%20insight%20agent) – Strategic KPI narrative & causality diagnostic.
+- [📑 **ClauseClear**](./Business%20Operations%20Agents/Contract%20clause%20explanation%20agent) – Advanced legal plain-language engine & risk auditor.
+- [⚖️ **VendorFlow AI**](./Business%20Operations%20Agents/Vendor%20comparison%20agent) – Strategic vendor comparative analysis grid.
+
+### 🧪 Marketing & Growth Systems
+*Performance-driven intelligence for scale and buyer persona mapping.*
+- [🎨 **AdForge AI**](./Marketing%20&%20Growth%20Agents/Ad%20copy%20generator%20agent) – Growth-studio with persona simulation logic.
+- [📈 **AdIntel AI**](./Marketing%20&%20Growth%20Agents/Campaign%20performance%20analysis%20agent) – Budget utility auditor & leaky bucket detector.
+- [🧪 **OptiTest AI**](./Marketing%20&%20Growth%20Agents/A%20B%20test%20suggestion%20agent) – Strategic A/B test architect with ICE scoring.
+- [🛡️ **Persona-Forge**](./Marketing%20&%20Growth%20Agents/Customer%20persona%20builder%20agent) – Market data synthesis & customer architect.
+- [⚡ **Funnel-Force**](./Marketing%20&%20Growth%20Agents/Funnel%20optimization%20agent) – Performance diagnostic & conversion strategy.
+- [📩 **Email-Mind**](./Marketing%20&%20Growth%20Agents/Email%20marketing%20agent) – High-conversion multi-model copywriting.
+- [🤝 **Influence-Core**](./Marketing%20&%20Growth%20Agents/Influencer%20outreach%20agent) – Relationship-first influencer outreach engine.
+- [🚀 **Launch-Pad AI**](./Marketing%20&%20Growth%20Agents/Product%20launch%20checklist%20agent) – GTM operational readiness & launch architecture.
+- [📅 **Social-Sync**](./Marketing%20&%20Growth%20Agents/Social%20media%20scheduling%20agent) – Cross-platform orchestration & scheduling.
+- [🎭 **Voice-Verify**](./Marketing%20&%20Growth%20Agents/Brand%20voice%20consistency%20agent) – Brand voice & linguistic integrity audit.
+
+### 📊 Data & Automation Systems
+*Mission-critical intelligence for pipeline integrity and forensic auditing.*
+- [🧬 **NeuralData AI**](./Data%20&%20Automation%20Agents/CSV%20data%20cleaning%20agent) – Multi-cloud batch CSV cleaning & integrity auditing.
+- [🔢 **Sheet-Logic AI**](./Data%20&%20Automation%20Agents/Spreadsheet%20formula%20generator%20agent) – Multinational spreadsheet formula & logic architect.
+- [🛡️ **Data-Guard AI**](./Data%20&%20Automation%20Agents/Data%20validation%20agent) – Neural dataset integrity & schema governance.
+- [🔌 **API-Insight**](./Data%20&%20Automation%20Agents/API%20response%20interpreter%20agent) – Neural API response forensic & interpreter.
+- [🛡️ **Log-Sentinel**](./Data%20&%20Automation%20Agents/Log%20anomaly%20detection%20agent) – System telemetry forensic & anomaly detection.
+- [🎼 **Orchestra-Core**](./Data%20&%20Automation%20Agents/Workflow%20orchestration%20agent) – Multi-step execution architecture for complex missions.
+- [💾 **Pipeline-Forge**](./Data%20&%20Automation%20Agents/ETL%20pipeline%20design%20agent) – High-performance ETL & cloud data architect.
+- [🚑 **Error-Forensics**](./Data%20&%20Automation%20Agents/Error%20classification%20agent) – SRE incident diagnosis & error classification.
+- [📊 **Alert-Insight**](./Data%20&%20Automation%20Agents/Monitoring%20alert%20explanation%20agent) – Monitoring alert translation & root-cause diagnostic.
+- [🏗️ **Auto-Strategist**](./Data%20&%20Automation%20Agents/Automation%20recommendation%20agent) – Process mining & high-ROI automation strategist.
+
+### 🧠 Personal Productivity Systems
+*A 10-agent neural architecture designed for elite operational focus.*
+- [🧠 **PriorityBrain**](./Personal%20Productivity%20Agents/daily-priority-agent) – NLP task ingestion & algorithmic urgency sorting.
+- [🗄️ **BrainVault**](./Personal%20Productivity%20Agents/Personal%20knowledge%20base%20agent) – Local RAG knowledge base via vector space.
+- [⚡ **ActionForge**](./Personal%20Productivity%20Agents/Note-to-action%20item%20agent) – Unstructured text-to-task neural extraction.
+- [📧 **MailMind AI**](./Personal%20Productivity%20Agents/Email%20summarization%20agent) – Intelligent thread logic & summary mapping.
+- [📅 **SyncGuard**](./Personal%20Productivity%20Agents/Calendar%20conflict%20resolver%20agent) – Conflict detection & resolution engine.
+- [📋 **AgendaCraft**](./Personal%20Productivity%20Agents/Meeting%20agenda%20generator%20agent) – High-fidelity meeting timeline architect.
+- [🧘 **Reflect AI**](./Personal%20Productivity%20Agents/Daily%20goal%20reflection%20agent) – Algorithmic daily target analytics.
+- [🔔 **PingCraft**](./Personal%20Productivity%20Agents/Smart%20reminder%20agent) – Distributed deadline alerting engine.
+- [⏳ **ChronoBlock**](./Personal%20Productivity%20Agents/Time-blocking%20planner%20agent) – Continuous task packing logic planner.
+- [🔥 **StreakForge**](./Personal%20Productivity%20Agents/Habit%20tracking%20agent) – Persistence density metrics & habit tracking.
+
+### 🔬 Research & Analysis Systems
+*Scientific intelligence for synthesizing complex information signals.*
+- [🔬 **SWOT Horizon**](./Research%20&%20Analysis%20Agents/SWOT%20analysis%20agent) – TOWS matrix & strategic opportunity analysis.
+- [🌐 **Web Research**](./Research%20&%20Analysis%20Agents/Web%20research%20agent) – Autonomous multi-model executive research.
+- [🎬 **StreamBrief**](./Research%20&%20Analysis%20Agents/YouTube%20video%20summary%20agent) – Neural video transcript distiller & insight mapper.
+- [💰 **CapitalMind**](./Research%20&%20Analysis%20Agents/Investment%20thesis%20generator%20agent) – Evidence-driven investment thesis architect.
+- [💹 **TrendSynthetix**](./Research%20&%20Analysis%20Agents/Market%20trend%20summarization) – Market context trend deconstruction.
+- [📰 **NewsFlow**](./Research%20&%20Analysis%20Agents/News%20aggregation%20agent) – Global thematic news intelligence digests.
+- [⚖️ **PolicyGuard**](./Research%20&%20Analysis%20Agents/Policy%20document%20summarizer%20agent) – Thematic synthesis for regulatory frameworks.
+
+### ✍️ Writing & Content Systems
+*Creative engines for high-impact professional narrative generation.*
+- [📝 **Blog Architect**](./Writing%20&%20Content%20Agents/Blog%20post%20generator%20agent) – SEO-optimized post pipeline.
+- [💼 **CoverCraft**](./Writing%20&%20Content%20Agents/Cover%20letter%20writing%20agent) – Job-specific tailored cover letter architect.
+- [💬 **AI FAQ Gen**](./Writing%20&%20Content%20Agents/FAQ%20generation%20agent) – Credentialed FAQ generator.
+- [✨ **GrammarPlus**](./Writing%20&%20Content%20Agents/Grammar%20correction%20agent) – Semantic deep-edit & tone correction.
+- [🔗 **HookGen Pro**](./Writing%20&%20Content%20Agents/LinkedIn%20post%20ideation%20agent) – LinkedIn post & hook ideation studio.
+- [🛍️ **ProductCopy**](./Writing%20&%20Content%20Agents/Product%20description%20agent) – Outcome-driven product descriptions.
+- [📄 **ResumeAI**](./Writing%20&%20Content%20Agents/Resume%20optimization%20agent) – ATS-optimized enhancement engine.
+- [🔎 **SEOClusters**](./Writing%20&%20Content%20Agents/SEO%20keyword%20expansion%20agent) – Predictive keyword expansion clusters.
+- [📽️ **SlideForge AI**](./Writing%20&%20Content%20Agents/Script-to-slide%20outline%20agent) – Script-to-slide visual architect.
+- [🎭 **ToneWizard**](./Writing%20&%20Content%20Agents/Tone%20rewriting%20agent) – Multi-persona voice rewriter.
+
+### 🛠️ AI & Engineering Systems
+*Advanced tooling for neural architecture evaluation and model benchmarking.*
+- [🧠 **ModelMind AI**](./AI%20%20&%20Engineering%20Agents/Model%20comparison%20agent) – Deep architectural trade-off analysis.
+- [✨ **PromptForge AI**](./Data%20&%20Automation%20Agents/Prompt%20optimization%20agent) – Neural prompt engineering & linguistic structure optimization.
+
+---
+
+## 🏗️ Architecture: The Agentic Core
+
+We don't just write scripts. We build **Autonomous Entities** that follow a strict industrial design pattern.
 
 ```mermaid
-graph LR
-    A[User Request] --> B{Orchestrator}
-    B --> C[OpenAI]
-    B --> D[Anthropic]
-    B --> E[DeepSeek]
-    B --> F[Gemini]
-    C & D & E & F --> G[Agent Execution]
-    G --> H[Final Insight]
+graph TD
+    A[Trigger / Ingestion] --> B{Neural Brain}
+    B -->|Reasoning| C[Tool Execution]
+    B -->|Planning| D[Memory Context]
+    C & D --> E[Structured Output]
+    E --> F[Premium Dashboard]
 ```
 
 ---
 
-## 🚀 Quick Launch (Deploy in <180s)
+## 🧪 Featured Agents (The Precision Squad)
+
+| Agent | Core Intelligence | Status | Tech Vector |
+| :--- | :--- | :--- | :--- |
+| **PriorityBrain** | Urgency-Sorting Logic | ✅ Operational | Python • NLP |
+| **InvoiceIntel** | Neural Vision Mapping | 💎 Enterprise | Vision • LiteLLM |
+| **AdForge AI** | Growth Model Swarms | 🔥 Advanced | CrewAI • OpenAI |
+| **NeuralData** | Batch integrity auditing | 🚑 Production | Pandas • AI |
+
+---
+
+## ⚙️ Tech Stack & Governance
+
+- **Intelligence Layer:** GPT-4o, Claude 3.5 Sonnet, Gemini 1.5 Pro, Llama 3.
+- **Agent Framework:** CrewAI, LangChain, LiteLLM.
+- **Frontend Stack:** Streamlit (Custom Glassmorphism CSS), Plotly.
+- **Data Engineering:** Pandas, VectorDB (Pinecone/Chroma).
+
+---
+
+## 🚀 Quick Start (Deploy in < 180s)
 
 ### 1. Initialize Runtime
 ```bash
@@ -152,13 +192,12 @@ python -m venv venv && source venv/bin/activate # Windows: .\venv\Scripts\activa
 pip install -r requirements.txt
 ```
 
-### 2. Secure Environment
+### 2. Configure Credentials
 ```bash
-cp .env.example .env
-# Inject keys: OPENAI_API_KEY, ANTHROPIC_API_KEY, etc.
+cp .env.example .env # Add your OPENAI_API_KEY, ANTHROPIC_API_KEY, etc.
 ```
 
-### 3. Execution
+### 3. Launch the Master Brain
 ```bash
 cd "Personal Productivity Agents"
 streamlit run Master_Dashboard.py
@@ -166,38 +205,57 @@ streamlit run Master_Dashboard.py
 
 ---
 
-## 🤝 The Open-Source Standard
-
-We are building a community of the top 1% of AI builders. We prioritize **Architectural Integrity** and **UI/UX Excellence**.
-
-- 💡 **Guidelines:** Read our [CONTRIBUTING.md](./CONTRIBUTING.md) for UX standards.
-- 🏗️ **Core Logic:** Focus on modularity and high-reasoning accuracy.
-- 🎨 **UX:** "Elite-SaaS" visuals are mandatory for all pull requests.
-
----
-
-## 🌟 Roadmap to v5.0 (The Scale)
-
-- [x] **v1.0** - Productivity Foundation (10 Agents)
-- [x] **v2.0** - Research & Analysis Growth (20 Agents)
-- [ ] **v3.0** - **Enterprise Ops & Growth (Active Development)**
-- [ ] **v4.0** - Engineering & Code Intelligence Suite
-- [ ] **v5.0** - Autonomous Multi-Agent Symphony (100+ Agents)
-
----
-
-## 📢 Call to Action
-
-**The era of passive LLMs is over. The era of Autonomous Agents is here.**
-
-- ⭐ **Stargate the repo:** Support our mission to build the largest open-source agentic hub.
-- 🍴 **Fork the Core:** Build your own multi-agent intelligence layer.
-- 🤝 **Join the Alliance:** Contribute your most powerful agents.
+## 📸 Visual Documentation
 
 <div align="center">
-  <br />
+  <table width="100%">
+    <tr>
+      <td width="50%">
+        <img src="https://via.placeholder.com/800x450/0f172a/38BDF8?text=Premium+Agent+Dashboard+v2.0" width="100%" />
+        <p align="center"><i>Fig 1.0: Real-time Neural Analytics Dashboard</i></p>
+      </td>
+      <td width="50%">
+        <img src="https://via.placeholder.com/800x450/0f172a/2dd4bf?text=Multi-Agent+Symphony+Preview" width="100%" />
+        <p align="center"><i>Fig 2.0: Autonomous Multi-Agent Coordination</i></p>
+      </td>
+    </tr>
+  </table>
+</div>
+
+---
+
+## 🤝 Join the Alliance (Contributing)
+
+We are building a global collective of the top 0.1% AI engineers. 
+
+1. **Review** our [CONTRIBUTING.md](./CONTRIBUTING.md) for UI/UX standards.
+2. **Claim** an issue or propose a new "Specialized System."
+3. **Draft** your PR with a high-fidelity GIF of the dashboard.
+
+---
+
+## 🌟 Visionary Roadmap
+
+- [x] **v1.0** - Foundation: Personal Productivity Suite (10 Agents)
+- [x] **v2.0** - Expansion: Writing, Research & Growth Suites (30 Agents)
+- [ ] **v3.0** - **Enterprise Ops & Engineering (Active: 60 Agents)**
+- [ ] **v4.0** - Intelligence benchmarks & Agent Marketplace
+- [ ] **v5.0** - The Multi-Agent Swarm Colony (100+ Agents)
+
+---
+
+## 🔊 Signal to Action
+
+**Don't just watch the future. Build it.**
+
+- ⭐ **Stargate the repo:** Support the mission.
+- 🍴 **Fork the Core:** Start your agentic journey.
+- 📢 **Share the Signal:** Tell the world about the future of work.
+
+<div align="center">
+  <br>
   <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" width="100%">
-  <br />
+  <br>
   <p>Architected with ❤️ by <a href="https://github.com/HarshChoudhary2003">Harsh Choudhary</a></p>
-  <p><i>Building the OS for the Autonomous Age.</i></p>
+  <p><i>The OS for the Autonomous Age.</i></p>
 </div>

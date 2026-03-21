@@ -1,0 +1,5 @@
+Alert: High Error Rate detected on service-api.
+Threshold: > 5% for 5 mins.
+Current Value: 8.42%
+Tags: env:prod, service:order-service, region:us-east-1
+Log Snippet: {"error": "ConnectionResetError", "message": "Remote host disconnected during handshake"}

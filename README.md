@@ -25,7 +25,7 @@
 
 | 🛠️ Neural Suites | 🤖 Active Agents | ⚡ Roadmap Goal | 🟢 System Status | 📅 Last Update |
 | :--- | :---: | :---: | :---: | :---: |
-| **6 Core Hubs** | **54 Agents** | **100 Agents** | **Operational** | **Mar 2026** |
+| **6 Core Hubs** | **55 Agents** | **100 Agents** | **Operational** | **Mar 2026** |
 
 </div>
 
@@ -131,6 +131,7 @@ The hub is organized into modular suites, each containing highly specialized age
 | 🎼 **Orchestra-Core AI** | Systems orchestration & multi-step execution architecture. | [Workflow%20orchestration%20agent](./Data%20&%20Automation%20Agents/Workflow%20orchestration%20agent) |
 | 💾 **Pipeline-Forge AI** | High-performance ETL pipeline & cloud data architect. | [ETL%20pipeline%20design%20agent](./Data%20&%20Automation%20Agents/ETL%20pipeline%20design%20agent) |
 | 🚑 **Error-Forensics AI** | Neural SRE incident diagnosis & error classification. | [Error%20classification%20agent](./Data%20&%20Automation%20Agents/Error%20classification%20agent) |
+| 📊 **Alert-Insight AI** | Cryptic monitoring alert translation & root-cause diagnostic. | [Monitoring%20alert%20explanation%20agent](./Data%20&%20Automation%20Agents/Monitoring%20alert%20explanation%20agent) |
 
 ---
 

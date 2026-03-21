@@ -1,7 +1,5 @@
 <div align="center">
-
-<!-- Hero Visual -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=1d4ed8&height=320&section=header&text=Real-world%20AI%20Agents%20Hub&fontSize=65&fontAlign=50&fontAlignY=38&desc=The%20Largest%20Open%20Registry%20of%20Production%20AI%20Agents&descAlign=50&descAlignY=62&animation=fadeIn&fontColor=ffffff" width="100%" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0ea5e9&height=280&section=header&text=Real-world%20AI%20Agents%20Hub&fontSize=70&fontAlign=50&fontAlignY=38&desc=Architecting%20100%20Advanced%20Enterprise%20AI%20Agents&descAlign=50&descAlignY=62&animation=fadeIn" width="100%" />
 
 <br>
 

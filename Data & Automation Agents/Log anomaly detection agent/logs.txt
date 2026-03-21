@@ -1,0 +1,6 @@
+2024-06-01 10:01 INFO Service started
+2024-06-01 10:02 INFO Request processed
+2024-06-01 10:03 ERROR Database timeout
+2024-06-01 10:03 ERROR Database timeout
+2024-06-01 10:03 ERROR Database timeout
+2024-06-01 10:04 INFO Request processed

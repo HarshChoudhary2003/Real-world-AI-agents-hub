@@ -1,0 +1,8 @@
+Source: CRM database (PostgreSQL)
+Target: Data warehouse
+Transformations:
+- Clean customer emails
+- Normalize country codes
+- Aggregate monthly activity
+Frequency: Daily
+Volume: 5 million records

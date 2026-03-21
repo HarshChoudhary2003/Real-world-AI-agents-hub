@@ -25,7 +25,7 @@
 
 | 🛠️ Neural Suites | 🤖 Active Agents | ⚡ Roadmap Goal | 🟢 System Status | 📅 Last Update |
 | :--- | :---: | :---: | :---: | :---: |
-| **6 Core Hubs** | **52 Agents** | **100 Agents** | **Operational** | **Mar 2026** |
+| **6 Core Hubs** | **53 Agents** | **100 Agents** | **Operational** | **Mar 2026** |
 
 </div>
 
@@ -129,6 +129,7 @@ The hub is organized into modular suites, each containing highly specialized age
 | 🛡️ **Log-Sentinel AI** | Advanced system telemetry forensic & anomaly detection. | [Log%20anomaly%20detection%20agent](./Data%20&%20Automation%20Agents/Log%20anomaly%20detection%20agent) |
 | 🛡️ **Data-Guard AI** | Neural dataset integrity & schema governance OS. | [Data%20validation%20agent](./Data%20&%20Automation%20Agents/Data%20validation%20agent) |
 | 🎼 **Orchestra-Core AI** | Systems orchestration & multi-step execution architecture. | [Workflow%20orchestration%20agent](./Data%20&%20Automation%20Agents/Workflow%20orchestration%20agent) |
+| 💾 **Pipeline-Forge AI** | High-performance ETL pipeline & cloud data architect. | [ETL%20pipeline%20design%20agent](./Data%20&%20Automation%20Agents/ETL%20pipeline%20design%20agent) |
 
 ---
 

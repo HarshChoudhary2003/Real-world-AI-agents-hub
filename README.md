@@ -1,12 +1,12 @@
 <div align="center">
 
 <!-- Hero Visual -->
-<img src="https://capsule-render.vercel.app/api?type=soft&color=0f172a&height=320&section=header&text=Real-world%20AI%20Agents%20Hub&fontSize=70&fontAlign=50&fontAlignY=38&desc=The%20Largest%20Open%20Registry%20of%20Production%20AI%20Agents&descAlign=50&descAlignY=62&animation=twinkling" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=1d4ed8&height=320&section=header&text=Real-world%20AI%20Agents%20Hub&fontSize=75&fontAlign=50&fontAlignY=38&desc=The%20Largest%20Open%20Registry%20of%20Production%20AI%20Agents&descAlign=50&descAlignY=62&animation=fadeIn" width="100%" />
 
 <br>
 
 <!-- Typing Dynamic -->
-<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=800&size=36&pause=1000&color=38BDF8&center=true&vCenter=true&width=1000&lines=🔱+Defining+the+Post-SaaS+Economy;🦾+60+Production-Ready+AI+Agents;⚡+Enterprise-Grade+Multi-Agent+Orchestration;💎+Architected+for+Infinite+Scalability" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=800&size=36&pause=1000&color=1d4ed8&center=true&vCenter=true&width=1000&lines=🔱+Defining+the+Post-SaaS+Economy;🦾+60+Production-Ready+AI+Agents;⚡+Enterprise-Grade+Multi-Agent+Orchestration;💎+Architected+for+Infinite+Scalability" alt="Typing SVG" />
 
 <br>
 

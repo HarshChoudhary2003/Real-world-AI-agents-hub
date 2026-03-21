@@ -1,0 +1,6 @@
+user_id,name,email,signup_date,age,membership_type
+1,Alice Johnson,alice@example.com,2024/01/10,29,Premium
+2,bob smith,bob@example.com,,34,basic
+3,Alice Johnson,alice@example.com,01-15-2024,29,PREMIUM
+4,Charlie,charlie@temp.com,2024-02-01,200,Standard
+5,Charlie Davis,charlie.davis@gmail.com,12/12/2023,150,Free

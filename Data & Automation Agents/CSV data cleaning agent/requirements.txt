@@ -1,0 +1,13 @@
+pandas
+openai
+anthropic
+google-generativeai
+groq
+streamlit
+python-dotenv
+plotly
+pydantic
+instructor
+tabulate
+fastapi
+uvicorn

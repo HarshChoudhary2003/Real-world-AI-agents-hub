@@ -25,7 +25,7 @@
 
 | 🛠️ Neural Suites | 🤖 Active Agents | ⚡ Roadmap Goal | 🟢 System Status | 📅 Last Update |
 | :--- | :---: | :---: | :---: | :---: |
-| **5 Core Hubs** | **47 Agents** | **100 Agents** | **Operational** | **Mar 2026** |
+| **6 Core Hubs** | **48 Agents** | **100 Agents** | **Operational** | **Mar 2026** |
 
 </div>
 
@@ -117,6 +117,14 @@ The hub is organized into modular suites, each containing highly specialized age
 | 🚀 **Launch-Pad AI** | GTM operational readiness & launch architecture. | [Product%20launch%20checklist%20agent](./Marketing%20&%20Growth%20Agents/Product%20launch%20checklist%20agent) |
 | 📅 **Social-Sync AI** | Cross-platform social media orchestration & scheduling. | [Social%20media%20scheduling%20agent](./Marketing%20&%20Growth%20Agents/Social%20media%20scheduling%20agent) |
 | 🎭 **Voice-Verify AI** | High-fidelity brand voice & linguistic integrity audit.  | [Brand%20voice%20consistency%20agent](./Marketing%20&%20Growth%20Agents/Brand%20voice%20consistency%20agent) |
+
+### 📊 6. Data & Automation Studio
+*Mission-critical intelligence for large-scale data integrity and pipeline architecture.*
+
+| Agent Name | Functionality | Directory |
+| :--- | :--- | :--- |
+| 🧬 **NeuralData AI** | Advanced multi-cloud batch CSV cleaning & integrity auditing. | [CSV%20data%20cleaning%20agent](./Data%20&%20Automation%20Agents/CSV%20data%20cleaning%20agent) |
+| 🔢 **Formula-Forge** | Neural spreadsheet formula architect & logic generator. | [Spreadsheet%20formula%20generator%20agent](./Data%20&%20Automation%20Agents/Spreadsheet%20formula%20generator%20agent) |
 
 ---
 

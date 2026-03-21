@@ -1,0 +1,124 @@
+{
+  "date": "2026-03-21",
+  "total_files": 3,
+  "aggregate_health_score": 91.11,
+  "files": [
+    {
+      "filename": "raw_data.csv",
+      "missing_values_before": {
+        "user_id": 0,
+        "name": 0,
+        "email": 0,
+        "signup_date": 1,
+        "age": 0,
+        "membership_type": 0
+      },
+      "duplicates_removed": 0,
+      "rule_violations": [
+        {
+          "row": 3,
+          "column": "age",
+          "value": 200,
+          "rule": "Range 0-120"
+        },
+        {
+          "row": 4,
+          "column": "age",
+          "value": 150,
+          "rule": "Range 0-120"
+        },
+        {
+          "row": 5,
+          "column": "age",
+          "value": -5,
+          "rule": "Range 0-120"
+        }
+      ],
+      "llm_refinements": [],
+      "missing_values_after": {
+        "user_id": 0,
+        "name": 0,
+        "email": 0,
+        "signup_date": 7,
+        "age": 3,
+        "membership_type": 0
+      },
+      "date_processed": "2026-03-21",
+      "health_score": 93.33
+    },
+    {
+      "filename": "raw_data_2.csv",
+      "missing_values_before": {
+        "user_id": 0,
+        "name": 0,
+        "email": 0,
+        "signup_date": 1,
+        "age": 0,
+        "membership_type": 0
+      },
+      "duplicates_removed": 0,
+      "rule_violations": [
+        {
+          "row": 3,
+          "column": "age",
+          "value": 200,
+          "rule": "Range 0-120"
+        },
+        {
+          "row": 4,
+          "column": "age",
+          "value": 150,
+          "rule": "Range 0-120"
+        }
+      ],
+      "llm_refinements": [],
+      "missing_values_after": {
+        "user_id": 0,
+        "name": 0,
+        "email": 0,
+        "signup_date": 4,
+        "age": 2,
+        "membership_type": 0
+      },
+      "date_processed": "2026-03-21",
+      "health_score": 90.0
+    },
+    {
+      "filename": "raw_data_batch_test.csv",
+      "missing_values_before": {
+        "user_id": 0,
+        "name": 0,
+        "email": 0,
+        "signup_date": 1,
+        "age": 0,
+        "membership_type": 0
+      },
+      "duplicates_removed": 0,
+      "rule_violations": [
+        {
+          "row": 3,
+          "column": "age",
+          "value": 200,
+          "rule": "Range 0-120"
+        },
+        {
+          "row": 4,
+          "column": "age",
+          "value": 150,
+          "rule": "Range 0-120"
+        }
+      ],
+      "llm_refinements": [],
+      "missing_values_after": {
+        "user_id": 0,
+        "name": 0,
+        "email": 0,
+        "signup_date": 4,
+        "age": 2,
+        "membership_type": 0
+      },
+      "date_processed": "2026-03-21",
+      "health_score": 90.0
+    }
+  ]
+}

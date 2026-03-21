@@ -1,0 +1,23 @@
+{
+  "missing_values_before": {
+    "user_id": 0,
+    "name": 1,
+    "email": 0,
+    "signup_date": 1,
+    "age": 0,
+    "membership_type": 1
+  },
+  "duplicates_removed": 0,
+  "outliers_detected": [],
+  "llm_refinements": [],
+  "missing_values_after": {
+    "user_id": 0,
+    "name": 1,
+    "email": 0,
+    "signup_date": 7,
+    "age": 0,
+    "membership_type": 1
+  },
+  "date_processed": "2026-03-21",
+  "health_score": 95.0
+}

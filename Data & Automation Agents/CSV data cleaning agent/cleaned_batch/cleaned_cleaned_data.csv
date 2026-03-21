@@ -1,0 +1,11 @@
+user_id,name,email,signup_date,age,membership_type
+1,Alice Johnson,alice@example.com,2024-01-10,29,Premium
+2,bob smith,bob@example.com,,34,basic
+3,Alice Johnson,alice@example.com,,29,PREMIUM
+4,,2024-02-01,,Standard,
+5,Charlie Davis,charlie.davis@gmail.com,,,Free
+6,Diana Prince,diana.p@outlook.com,,,Gold
+7,Eve Adams,eve@adams.com,,25,BASIC
+8,Frank Castle,frank@punisher.com,,45,Platimum
+9,George,george@llc,2021-01-01,30,standard
+10,Alice Johnson,alice@example.com,2024-01-10,29,Premium

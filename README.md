@@ -25,7 +25,7 @@
 
 | 🛠️ Neural Suites | 🤖 Active Agents | ⚡ Roadmap Goal | 🟢 System Status | 📅 Last Update |
 | :--- | :---: | :---: | :---: | :---: |
-| **6 Core Hubs** | **56 Agents** | **100 Agents** | **Operational** | **Mar 2026** |
+| **7 Core Hubs** | **58 Agents** | **100 Agents** | **Operational** | **Mar 2026** |
 
 </div>
 
@@ -133,6 +133,15 @@ The hub is organized into modular suites, each containing highly specialized age
 | 🚑 **Error-Forensics AI** | Neural SRE incident diagnosis & error classification. | [Error%20classification%20agent](./Data%20&%20Automation%20Agents/Error%20classification%20agent) |
 | 📊 **Alert-Insight AI** | Cryptic monitoring alert translation & root-cause diagnostic. | [Monitoring%20alert%20explanation%20agent](./Data%20&%20Automation%20Agents/Monitoring%20alert%20explanation%20agent) |
 | 🏗️ **Auto-Strategist AI** | Neural process mining & high-ROI automation strategist. | [Automation%20recommendation%20agent](./Data%20&%20Automation%20Agents/Automation%20recommendation%20agent) |
+| ✨ **PromptForge AI** | Neural prompt engineering & linguistic structure optimization. | [Prompt%20optimization%20agent](./Data%20&%20Automation%20Agents/Prompt%20optimization%20agent) |
+
+### 🛠️ 7. AI & Engineering Studio
+*Advanced tooling for neural architecture evaluation and engineering workflows.*
+
+| Agent Name | Functionality | Directory |
+| :--- | :--- | :--- |
+| 🧠 **ModelMind AI** | Deep architectural trade-off analysis & model comparison. | [Model%20comparison%20agent](./AI%20%20&%20Engineering%20Agents/Model%20comparison%20agent) |
+
 
 ---
 
@@ -144,7 +153,7 @@ The hub is organized into modular suites, each containing highly specialized age
 | :--- | :--- |
 | **Frontend Dynamics** | Streamlit, Glassmorphism CSS, Plotly Analytics |
 | **AI Orchestration** | **LiteLLM**, Python 3.11+, Dotenv, Regex Parsing |
-| **Model Ecosystem** | GPT-4o, Claude 3.5 Sonnet, Gemini 1.5 Pro, Llama 3 (via Groq) |
+| **Model Ecosystem** | GPT-4o, Claude 3.5 Sonnet, Gemini 1.5 Pro, DeepSeek V3, Grok-Beta, Llama 3 (via Groq/Ollama) |
 | **Data Pipelines** | Pandas DataFrame Architect, JSON Schema Enforcement |
 
 </div>

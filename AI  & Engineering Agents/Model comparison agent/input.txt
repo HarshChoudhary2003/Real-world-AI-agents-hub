@@ -1,0 +1,10 @@
+Task: Summarize customer support tickets
+Models:
+- GPT-4o-mini
+- GPT-4o
+Evaluation Criteria:
+- Summary accuracy
+- Consistency
+- Cost
+- Latency
+- Multi-language support

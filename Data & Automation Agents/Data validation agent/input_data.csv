@@ -1,0 +1,4 @@
+order_id,amount,currency,order_date
+1001,250,USD,2024-05-10
+1002,-30,USD,2024-05-12
+1003,120,EUR,invalid_date

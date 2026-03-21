@@ -1,0 +1,4 @@
+- The 'Price' column must be greater than 0.
+- 'Email' should contain an '@' symbol.
+- 'Status' must be one of ['Paid', 'Pending', 'Refunded'].
+- 'Quantity' should be an integer.

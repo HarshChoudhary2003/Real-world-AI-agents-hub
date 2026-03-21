@@ -1,0 +1,9 @@
+Process: Monthly expense reporting
+Tasks:
+- Employees manually submit spreadsheets
+- Finance reviews and corrects errors
+- Reports are consolidated manually
+Frequency: Monthly
+Pain Points:
+- High error rate
+- Time-consuming reviews

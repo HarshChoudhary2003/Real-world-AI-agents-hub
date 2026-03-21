@@ -18,19 +18,19 @@
         {
           "row": 3,
           "column": "age",
-          "value": 200,
+          "value": "200",
           "rule": "Range 0-120"
         },
         {
           "row": 4,
           "column": "age",
-          "value": 150,
+          "value": "150",
           "rule": "Range 0-120"
         },
         {
           "row": 5,
           "column": "age",
-          "value": -5,
+          "value": "-5",
           "rule": "Range 0-120"
         }
       ],
@@ -61,13 +61,13 @@
         {
           "row": 3,
           "column": "age",
-          "value": 200,
+          "value": "200",
           "rule": "Range 0-120"
         },
         {
           "row": 4,
           "column": "age",
-          "value": 150,
+          "value": "150",
           "rule": "Range 0-120"
         }
       ],
@@ -98,13 +98,13 @@
         {
           "row": 3,
           "column": "age",
-          "value": 200,
+          "value": "200",
           "rule": "Range 0-120"
         },
         {
           "row": 4,
           "column": "age",
-          "value": 150,
+          "value": "150",
           "rule": "Range 0-120"
         }
       ],

@@ -1,4 +1,6 @@
+litellm
 pandas
+numpy
 openai
 anthropic
 google-generativeai

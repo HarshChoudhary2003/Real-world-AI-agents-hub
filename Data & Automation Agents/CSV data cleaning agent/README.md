@@ -1,22 +1,23 @@
-# 🧬 NeuralData AI v2.0: Advanced CSV Batch Integrity Matrix
+# 🧬 NeuralData AI v3.0: Omni-Model Batch Integrity Matrix
 
-A powerhouse for CSV data cleaning and integrity auditing that leverages **Pandas** and **LLMs (OpenAI, Anthropic, Groq)** for deep semantic refinement.
-
----
-
-## ⚡ Features (V2.0 Matrix)
-- **📂 Neural Batch Matrix**: Upload multiple CSV files at once. Generate individual and aggregate health scores across entire datasets.
-- **🛠️ Custom Neural Rules**: Inject logic directives directly from the UI or code.
-    - **Range**: Ensure numerical values (e.g., age) fall within specific bounds.
-    - **Regex**: Enforce pattern matching for emails, phone numbers, or IDs.
-    - **Not Null**: Zero-tolerance policy for missing values in critical columns.
-- **🦾 Semantic Repair**: Beyond simple regex. Uses LLMs to fix typos, standardize inconsistent categories, and resolve logical gaps.
-- **🚨 Intelligent Anomaly Detection**: Identifies out-of-range numerical values and flags them for review.
-- **💎 Premium Dashboard v2.0**: Enhanced Glassmorphism UI with Aggregate Health Gauges, Logic Injection panels, and interactive Batch Audit matrices.
+A high-performance engine for CSV data cleaning and integrity auditing that leverages **LiteLLM** to support 100+ AI models including OpenAI, Anthropic, Gemini, Groq, and more.
 
 ---
 
-## 🛠️ Installation & Setup
+## ⚡ Features (v3.0 Omni-Engine)
+- **🦾 Omni-Model Hub**: Support for any AI model via LiteLLM. Toggle between GPT-4o, Claude 3.5 Sonnet, Gemini 1.5 Pro, and Llama 3 with ease.
+- **📂 Neural Batch Matrix**: High-velocity batch cleaning for multiple CSVs. Generate individual diagnostic logs and aggregate health metrics.
+- **🛠️ Custom Logic Injection**:
+    - **Range**: Numerical bounds enforcement.
+    - **Regex**: Pattern-based validation (email, phone, IDs).
+    - **Not Null**: Critical identity protection.
+    - **AI Directives**: Use the LLM's world knowledge to fix semantic typos and inconsistent labels.
+- **🚨 Intelligent Anomaly Detection**: Automatic detection and logging of out-of-range data.
+- **💎 Premium v3.0 UI**: Modern Glassmorphism interface with **Token Matrix** management for all major AI providers.
+
+---
+
+## 🛠️ Installation & Tech Stack
 
 1. **Clone the repository**:
    ```bash
@@ -28,24 +29,22 @@ A powerhouse for CSV data cleaning and integrity auditing that leverages **Panda
    pip install -r requirements.txt
    ```
 
-3. **Set up API Keys**:
-   Create a `.env` file or provide keys directly in the Streamlit Sidebar:
-   ```env
-   OPENAI_API_KEY=your_key_here
-   ANTHROPIC_API_KEY=your_key_here
-   ```
+3. **Core Stack**:
+    - **Orchestration**: LiteLLM + Instructor
+    - **Analysis**: Pandas + Plotly
+    - **UI**: Streamlit (Glassmorphism CSS)
 
 ---
 
 ## 🚀 Usage
 
 ### Option 1: Premium Dashboard (Recommended)
-Run the Streamlit app to access the neural interface:
+Run the Streamlit app to access the Omni-Model interface:
 ```bash
 streamlit run app.py
 ```
 
-### Option 2: CLI Batch Mode
+### Option 2: CLI Mode
 Run the core engine locally on current directory CSVs:
 ```bash
 python agent.py
@@ -53,11 +52,12 @@ python agent.py
 
 ---
 
-## 🧪 Validation Matrix
-Check the following in your audit:
-- **Duplicates**: Perfect de-duplication of similar rows across files.
-- **Rule Violations**: See exact rows and columns failing your custom logic.
-- **Aggregate Score**: Monitor the health of your entire data warehouse from one gauge.
+## 🧬 Neural Token Matrix
+Configure these in the Streamlit Sidebar or your `.env` file:
+- `OPENAI_API_KEY`
+- `ANTHROPIC_API_KEY`
+- `GEMINI_API_KEY`
+- `GROQ_API_KEY`
 
 ---
-*Built with ❤️ by the NeuralData AI Team*
+*Architected for Enterprise • Engineered for Immediate Impact*

@@ -9,188 +9,175 @@ from agent import AdvancedCSVCleaner, NeuralBatchProcessor, semantic_refine_row
 
 # --- Configure Streamlit ---
 st.set_page_config(
-    page_title="NeuralData AI v2.0 | Batch Integrity Matrix",
+    page_title="NeuralData AI v3.0 | Omni-Model Integrity Matrix",
     page_icon="🧬",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
-# --- Premium Custom CSS (Updated for V2) ---
+# --- Premium Custom CSS (V3 Omni-Style) ---
 st.markdown("""
 <style>
     .stApp {
-        background: radial-gradient(circle at top left, #050a1b, #0c1a3a, #010409);
+        background: radial-gradient(circle at top left, #010409, #0d1117, #161b22);
         color: #f8fafc;
         font-family: 'Outfit', 'Inter', sans-serif;
     }
     
     .main-header h1 {
-        font-size: 5.5rem;
-        background: linear-gradient(90deg, #38bdf8, #818cf8, #d946ef);
+        font-size: 6rem;
+        background: linear-gradient(90deg, #0ea5e9, #6366f1, #d946ef);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-weight: 900;
-        letter-spacing: -5px;
+        letter-spacing: -6px;
         text-align: center;
+        animation: fadeIn 1.5s ease;
     }
     
     .glass-panel {
-        background: rgba(30, 41, 59, 0.45);
-        backdrop-filter: blur(25px);
-        -webkit-backdrop-filter: blur(25px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 35px;
+        background: rgba(30, 41, 59, 0.4);
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 40px;
         padding: 3rem;
         margin-bottom: 2rem;
-        box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.7);
-    }
-    
-    .rule-card {
-        background: rgba(15, 23, 42, 0.85);
-        border-right: 6px solid #818cf8;
-        padding: 1rem;
-        border-radius: 12px;
-        margin-bottom: 0.75rem;
-    }
-    
-    .health-gauge-bg {
-        background: rgba(15, 23, 42, 0.9);
-        border-radius: 50%;
-        width: 15rem;
-        height: 15rem;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: 4px solid #38bdf8;
-        box-shadow: 0 0 40px rgba(56, 189, 248, 0.3);
+        box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.8);
     }
 </style>
 """, unsafe_allow_html=True)
 
-# --- Sidebar Logic ---
+# --- Universal Sidebar Logic ---
 with st.sidebar:
     st.image("https://img.icons8.com/isometric/100/data-backup.png", width=64)
-    st.markdown("## Integrity Matrix v2.0")
+    st.markdown("## Integrity Matrix v3.0")
     
-    mode = st.radio("🛠️ Operation Mode", ["Single Hub", "Neural Batch Matrix"])
-    
-    st.markdown("---")
-    st.markdown("### 🧬 AI Processing Config")
+    st.markdown("### 🌐 Omni-Model Orchestration")
     MODELS = {
-        "OpenAI (GPT-4o)": { "id": "gpt-4o", "env_var": "OPENAI_API_KEY" },
-        "Anthropic (Claude 3.5 Sonnet)": { "id": "claude-3-5-sonnet-20240620", "env_var": "ANTHROPIC_API_KEY" }
+        "OpenAI (GPT-4o)": "gpt-4o",
+        "Anthropic (Claude 3.5 Sonnet)": "claude-3-5-sonnet-20240620",
+        "Google (Gemini 1.5 Pro)": "gemini/gemini-1.5-pro",
+        "Groq (Llama 3 70B)": "groq/llama3-70b-8192",
+        "Mistral (Large)": "mistral/mistral-large-latest",
+        "Custom Neural Model": "custom"
     }
-    selected_model = st.selectbox("🌐 Engine", list(MODELS.keys()))
-    api_key = st.text_input("🔑 API Key", type="password")
+    
+    selected_label = st.selectbox("🤖 Active Neural Hub", list(MODELS.keys()))
+    selected_model_id = MODELS[selected_label]
+    
+    if selected_model_id == "custom":
+        selected_model_id = st.text_input("Enter Neural Model ID (LiteLLM)", placeholder="e.g. together_ai/mixtral...")
+
+    # Key Management
+    st.markdown("### 🔑 Token Matrix")
+    pk_openai = st.text_input("OpenAI Key", type="password")
+    pk_anthropic = st.text_input("Anthropic Key", type="password")
+    pk_gemini = st.text_input("Gemini Key", type="password")
+    pk_groq = st.text_input("Groq Key", type="password")
+    
+    # Store keys in env for LiteLLM
+    if pk_openai: os.environ["OPENAI_API_KEY"] = pk_openai
+    if pk_anthropic: os.environ["ANTHROPIC_API_KEY"] = pk_anthropic
+    if pk_gemini: os.environ["GEMINI_API_KEY"] = pk_gemini
+    if pk_groq: os.environ["GROQ_API_KEY"] = pk_groq
+    
+    current_key = ""
+    if "gpt" in selected_model_id: current_key = pk_openai
+    elif "claude" in selected_model_id: current_key = pk_anthropic
+    elif "gemini" in selected_model_id: current_key = pk_gemini
+    elif "groq" in selected_model_id: current_key = pk_groq
     
     st.markdown("---")
-    st.markdown("### 🛠️ Custom Neural Rules")
+    st.markdown("### 🧪 Rule Matrix")
     if 'rules' not in st.session_state:
         st.session_state.rules = []
 
-    with st.expander("➕ Add Logic Directive"):
-        r_col = st.text_input("Column Target", placeholder="e.g. age")
-        r_op = st.selectbox("Operator", ["range", "regex", "not_null", "custom"])
-        r_val = st.text_input("Value/Pattern", placeholder="e.g. [18, 99]")
-        r_desc = st.text_input("Rationale", placeholder="Must be adults")
+    with st.expander("➕ Inject New Logic"):
+        r_col = st.text_input("Target Column", placeholder="e.g. email")
+        r_op = st.selectbox("Logic", ["range", "regex", "not_null"])
+        r_val = st.text_input("Logic Pattern", placeholder="e.g. [0, 100]")
+        r_desc = st.text_input("Neural Directive", placeholder="Must be valid email")
         if st.button("Inject Logic"):
             try:
-                # Handle range input conversion
                 val = eval(r_val) if "[" in r_val else r_val
                 st.session_state.rules.append({"column": r_col, "operator": r_op, "value": val, "description": r_desc})
                 st.rerun()
             except:
-                st.error("Invalid range format. Use [min, max]")
-                
+                st.session_state.rules.append({"column": r_col, "operator": r_op, "value": r_val, "description": r_desc})
+                st.rerun()
+
     for i, r in enumerate(st.session_state.rules):
-        st.markdown(f"""
-        <div class="rule-card">
-            <span style="color: #818cf8; font-weight: 800;">{r['column'].upper()}</span>: {r['operator']} 
-            <br><small style="color: #94A3B8;">{r['description']}</small>
-        </div>
-        """, unsafe_allow_html=True)
-        if st.button(f"Nuke Rule {i}", key=f"del_{i}"):
+        st.markdown(f"**{r['column'].upper()}** | `{r['operator']}` | {r['description']}")
+        if st.button(f"🗑️ Delete {i}", key=f"del_{i}"):
             st.session_state.rules.pop(i)
             st.rerun()
 
-st.markdown('<div class="main-header"><h1>🧬 NeuralData v2.0</h1><p style="text-align: center;">Advanced Multi-Cloud Batch Integrity Matrix</p></div>', unsafe_allow_html=True)
+st.markdown('<div class="main-header"><h1>🧬 NeuralData v3.0</h1><p style="text-align: center;">Advanced Omni-Model Batch Integrity Pipeline</p></div>', unsafe_allow_html=True)
 
-# --- Implementation ---
-if mode == "Single Hub":
-    uploaded_file = st.file_uploader("📥 Upload CSV for Audit", type=["csv"])
-    if uploaded_file:
-        df = pd.read_csv(uploaded_file)
-        st.markdown('<div class="glass-panel">', unsafe_allow_html=True)
-        st.markdown("### 📊 Dataset Preview")
-        st.dataframe(df.head(20), use_container_width=True)
+# --- Dataset Interaction Hub ---
+uploaded_files = st.file_uploader("📥 Upload CSV Matrices (Supports Multi-Batch)", type=["csv"], accept_multiple_files=True)
+
+if uploaded_files:
+    if st.button("🚀 Execute Omni-Neural Pipeline", type="primary", use_container_width=True):
+        batch_reports = []
+        process_progress = st.progress(0)
         
-        if st.button("🚀 Execute Neural Pipeline", type="primary", use_container_width=True):
-            with st.spinner("Processing..."):
-                cleaner = AdvancedCSVCleaner(df, uploaded_file.name)
+        with st.spinner(f"Interfacing with {selected_model_id}... deconstructing attributes..."):
+            for idx, f in enumerate(uploaded_files):
+                df = pd.read_csv(f)
+                cleaner = AdvancedCSVCleaner(df, f.name)
                 for r in st.session_state.rules:
                     cleaner.add_custom_rule(r["column"], r["operator"], r["value"], r["description"])
                 
-                cleaner.final_pipeline(
-                    ai_provider=selected_model.split(" ")[0].lower() if api_key else None,
-                    ai_model=MODELS[selected_model]["id"] if api_key else None,
-                    api_key=api_key
-                )
-                report = cleaner.finalize_report()
+                cleaner.final_pipeline(ai_model=selected_model_id, api_key=current_key)
+                batch_reports.append(cleaner.finalize_report())
+                process_progress.progress((idx + 1) / len(uploaded_files))
                 
-                # --- Quick Metrics ---
-                m1, m2, m3, m4 = st.columns(4)
-                m1.metric("Integrity", f"{report['health_score']}%")
-                m2.metric("Duplicates Nuked", report["duplicates_removed"])
-                m3.metric("Rule Violations", len(report["rule_violations"]))
-                m4.metric("AI Semantic Fixes", len(report["llm_refinements"]))
-                
-                st.markdown("### 🛡️ Audit Log")
-                for v in report["rule_violations"]:
-                    st.warning(f"Row {v.get('row', 'N/A')}: {v['column']} failed '{v['rule']}'")
-                
-                st.download_button("Download Cleaned CSV", data=cleaner.df.to_csv(index=False), file_name=f"neural_v2_{uploaded_file.name}")
-        st.markdown('</div>', unsafe_allow_html=True)
-
-else:
-    uploaded_files = st.file_uploader("📥 Upload Batch (Multi-CSV)", type=["csv"], accept_multiple_files=True)
-    if uploaded_files:
-        if st.button("🚀 Execute Neural Batch Matrix", type="primary", use_container_width=True):
-            batch_reports = []
-            cleaned_zip_files = [] # For demo we just track them
+                # Save each result for UI retrieval
+                st.session_state[f"cleaned_{f.name}"] = cleaner.df.to_csv(index=False)
             
-            with st.spinner("Processing Neural Batch..."):
-                for f in uploaded_files:
-                    df = pd.read_csv(f)
-                    cleaner = AdvancedCSVCleaner(df, f.name)
-                    for r in st.session_state.rules:
-                        cleaner.add_custom_rule(r["column"], r["operator"], r["value"], r["description"])
-                    
-                    cleaner.final_pipeline(
-                        ai_provider=selected_model.split(" ")[0].lower() if api_key else None,
-                        ai_model=MODELS[selected_model]["id"] if api_key else None,
-                        api_key=api_key
-                    )
-                    report = cleaner.finalize_report()
-                    batch_reports.append(report)
-                
-                # Aggregate Review
-                avg_health = sum(r['health_score'] for r in batch_reports) / len(batch_reports)
-                
+            # Aggregate Review
+            score = sum(r['health_score'] for r in batch_reports) / len(batch_reports)
+            
+            # --- Visual Insights ---
+            st.markdown('<div class="glass-panel">', unsafe_allow_html=True)
+            col_l, col_r = st.columns([1, 1.5])
+            
+            with col_l:
                 st.markdown(f"""
-                <div class="health-gauge-bg">
-                    <div style="text-align: center;">
-                        <span style="font-size: 3.5rem; font-weight: 900; color: #38bdf8;">{avg_health:.1f}%</span>
-                        <br><span style="color: #94A3B8; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px;">Aggregate Score</span>
-                    </div>
+                <div style="text-align: center; padding: 2rem;">
+                    <div style="font-size: 5rem; font-weight: 900; color: #0ea5e9;">{score:.1f}%</div>
+                    <div style="color: #94A3B8; text-transform: uppercase;">Aggregate Health Score</div>
                 </div>
                 """, unsafe_allow_html=True)
                 
-                st.markdown("### 📂 Batch File Audit Matrix")
-                for r in batch_reports:
-                    with st.expander(f"📄 {r['filename']} | Score: {r['health_score']}%"):
-                        st.write(f"Duplicates: {r['duplicates_removed']}")
-                        st.write(f"Violations: {len(r['rule_violations'])}")
-                        st.json(r)
-                
-                st.success(f"Batch Processing Complete. Processed {len(uploaded_files)} matrices.")
+            with col_r:
+                # Dashboard comparison chart
+                comp_data = {
+                    "File": [r["filename"] for r in batch_reports],
+                    "Score": [r["health_score"] for r in batch_reports]
+                }
+                fig = px.bar(pd.DataFrame(comp_data), x="File", y="Score", color="Score", title="Batch Integrity Distribution")
+                fig.update_layout(paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', font_color="#f8fafc")
+                st.plotly_chart(fig, use_container_width=True)
+            st.markdown('</div>', unsafe_allow_html=True)
+            
+            # Detail Breakdown
+            for r in batch_reports:
+                with st.expander(f"📄 Audit Log: {r['filename']} ({r['health_score']}%)"):
+                    st.json(r)
+                    st.download_button(f"📥 Download Cleaned {r['filename']}", 
+                                     data=st.session_state[f"cleaned_{r['filename']}"], 
+                                     file_name=f"refined_{r['filename']}")
+
+else:
+    st.info("👋 Upload one or more CSV files in the sidebar and configure your Token Matrix to begin the Omni-Neural Audit.")
+    
+    # Tech Showcase
+    st.markdown('<div class="glass-panel">', unsafe_allow_html=True)
+    c1, c2, c3 = st.columns(3)
+    c1.markdown("### 🦾 Omni-Intelligence\nPowered by LiteLLM. Support for 100+ models including GPT, Claude, Gemini, and Local LLMs.")
+    c2.markdown("### 📊 Batch Matrix\nHigh-velocity batch cleaning for entire data warehouses in seconds.")
+    c3.markdown("### 🛠️ Neural Rules\nAdvanced logic directives that allow natural language constraints on structured data.")
+    st.markdown('</div>', unsafe_allow_html=True)

@@ -124,7 +124,7 @@ The hub is organized into modular suites, each containing highly specialized age
 | Agent Name | Functionality | Directory |
 | :--- | :--- | :--- |
 | 🧬 **NeuralData AI** | Advanced multi-cloud batch CSV cleaning & integrity auditing. | [CSV%20data%20cleaning%20agent](./Data%20&%20Automation%20Agents/CSV%20data%20cleaning%20agent) |
-| 🔢 **Formula-Forge** | Neural spreadsheet formula architect & logic generator. | [Spreadsheet%20formula%20generator%20agent](./Data%20&%20Automation%20Agents/Spreadsheet%20formula%20generator%20agent) |
+| 🔢 **Sheet-Logic AI** | Multi-platform spreadsheet formula & logic architect. | [Spreadsheet%20formula%20generator%20agent](./Data%20&%20Automation%20Agents/Spreadsheet%20formula%20generator%20agent) |
 
 ---
 

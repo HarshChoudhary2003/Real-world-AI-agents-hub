@@ -1,0 +1,9 @@
+{
+  "workflow_name": "User Onboarding Automation",
+  "steps": [
+    {"id": "create_user", "depends_on": [], "action": "Database Entry", "importance": "High"},
+    {"id": "send_welcome_email", "depends_on": ["create_user"], "action": "Email SMTP", "importance": "Medium"},
+    {"id": "provision_access", "depends_on": ["create_user"], "action": "Cloud IAM Provisioning", "importance": "High"},
+    {"id": "notify_slack_channel", "depends_on": ["provision_access"], "action": "Webhook Call", "importance": "Low"}
+  ]
+}

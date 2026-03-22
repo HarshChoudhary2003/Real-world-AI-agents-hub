@@ -41,10 +41,10 @@ import json
 import re
 
 st.set_page_config(
-    page_title="Agent OS | Dynamic Hub",
-    page_icon="🌈",
+    page_title="Agent OS | Elite Edition",
+    page_icon="💠",
     layout="wide",
-    initial_sidebar_state="expanded",
+    initial_sidebar_state="collapsed",
 )
 
 CATEGORIES_RAW = __CATEGORIES_DATA__
@@ -59,213 +59,231 @@ CATEGORIES = {sanitize(k): [{sanitize(key): sanitize(val) if isinstance(val, str
 def apply_styles():
     st.markdown('''
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap');
 
     :root {
-        --bg-color: #0b0c10;
-        --sidebar-bg: #14161f;
-        --card-bg: #1f2833;
-        --card-hover: #161b22;
-        --accent: #45a29e;
-        --glow: #66fcf1;
-        --text-p: #c5c6c7;
-        --text-bright: #66fcf1;
-        --border: #45a29e;
-        --font-main: 'Outfit', -apple-system, sans-serif;
+        --bg: #000000;
+        --nav-bg: rgba(0, 0, 0, 0.75);
+        --accent: #00F5FF;
+        --accent-alt: #7000FF;
+        --card-bg: #111111;
+        --text: #F5F5F7;
+        --text-dim: #86868B;
+        --border: #1D1D1F;
     }
 
     .stApp {
-        background-color: var(--bg-color);
-        color: var(--text-p);
-        font-family: var(--font-main);
+        background: var(--bg);
+        color: var(--text);
+        font-family: 'Outfit', sans-serif;
     }
 
     header, footer {visibility: hidden !important;}
     [data-testid="stToolbar"] {visibility: hidden !important;}
 
-    /* Sidebar Navigation Rail */
-    section[data-testid="stSidebar"] {
-        background-color: var(--sidebar-bg) !important;
-        border-right: 1px solid rgba(102, 252, 241, 0.1);
+    /* Elite Top Navigation Bar */
+    .elite-nav {
+        position: fixed;
+        top: 0; left: 0; right: 0;
+        height: 60px;
+        background: var(--nav-bg);
+        backdrop-filter: blur(24px) saturate(180%);
+        -webkit-backdrop-filter: blur(24px) saturate(180%);
+        border-bottom: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 60px;
+        z-index: 999999;
     }
 
-    .nav-category {
-        padding: 10px 20px;
-        color: var(--text-p);
-        font-size: 14px;
-        font-weight: 500;
-        cursor: pointer;
-        transition: all 0.3s;
-        text-decoration: none;
-        display: block;
-        margin: 4px 12px;
-        border-radius: 8px;
-    }
-
-    .nav-category:hover {
-        background: rgba(102, 252, 241, 0.05);
-        color: var(--glow);
-        transform: translateX(5px);
-    }
-
-    /* Hero Section with Animated Gradient */
-    .hero-container {
-        text-align: center;
-        padding: 60px 0 100px;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .hero-title {
-        font-size: 72px;
-        font-weight: 800;
-        background: linear-gradient(90deg, #66fcf1, #45a29e, #1f2833, #66fcf1);
-        background-size: 300% 100%;
+    .nav-logo {
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 700;
+        font-size: 22px;
+        letter-spacing: -1px;
+        background: linear-gradient(135deg, var(--accent), var(--accent-alt));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        animation: flowing-gradient 8s linear infinite;
-        margin-bottom: 20px;
-        letter-spacing: -2px;
+        text-decoration: none;
     }
 
-    @keyframes flowing-gradient {
-        0% { background-position: 0% 0%; }
-        100% { background-position: 100% 0%; }
+    .nav-links {
+        display: flex;
+        gap: 40px;
+        align-items: center;
     }
 
-    .hero-sub {
+    .nav-item {
+        color: var(--text-dim);
+        font-size: 13px;
+        font-weight: 500;
+        text-decoration: none;
+        letter-spacing: 0.02em;
+        transition: all 0.3s;
+        position: relative;
+    }
+
+    .nav-item:hover {
+        color: var(--text);
+    }
+
+    .nav-item::after {
+        content: "";
+        position: absolute;
+        bottom: -4px; left: 0; width: 0%; height: 1.5px;
+        background: var(--accent);
+        transition: width 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    .nav-item:hover::after {
+        width: 100%;
+    }
+
+    .nav-cta {
+        background: #fff;
+        color: #000;
+        padding: 8px 18px;
+        border-radius: 50px;
+        font-size: 13px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: transform 0.2s;
+    }
+
+    .nav-cta:hover {
+        transform: scale(1.05);
+    }
+
+    /* Layout & Hero */
+    .block-container {
+        padding-top: 140px !important;
+        padding-bottom: 100px !important;
+        max-width: 1300px !important;
+    }
+
+    .hero {
+        text-align: center;
+        margin-bottom: 100px;
+    }
+
+    .hero h1 {
+        font-size: 84px !important;
+        font-weight: 800;
+        line-height: 1.05;
+        letter-spacing: -3px;
+        margin-bottom: 30px;
+    }
+
+    .hero p {
         font-size: 24px;
-        color: var(--text-p);
-        opacity: 0.8;
+        color: var(--text-dim);
         max-width: 800px;
-        margin: 0 auto 40px;
-        line-height: 1.4;
+        margin: 0 auto;
     }
 
-    /* Colorful Card Styling with Hover Pop */
-    @keyframes card-fade-in {
-        from { opacity: 0; transform: translateY(20px); }
-        to { opacity: 1; transform: translateY(0); }
+    /* Registry Display */
+    .category-title {
+        font-size: 32px;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+        margin: 80px 0 40px;
+        color: var(--text);
+        scroll-margin-top: 100px;
     }
 
     .agent-card {
-        background: #14161f;
-        border: 1px solid rgba(102, 252, 241, 0.1);
-        border-radius: 12px;
-        padding: 30px;
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        padding: 32px;
         height: 100%;
-        position: relative;
-        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        animation: card-fade-in 0.6s ease-out backwards;
+        transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
     }
 
     .agent-card:hover {
-        transform: translateY(-10px) scale(1.02);
-        border-color: var(--glow);
-        box-shadow: 0 15px 35px rgba(102, 252, 241, 0.1);
-        background: #1c212b;
-    }
-
-    .agent-card::before {
-        content: "";
-        position: absolute;
-        top: 0; left: 0; right: 0; height: 3px;
-        background: linear-gradient(90deg, #66fcf1, #45a29e);
-        opacity: 0;
-        transition: opacity 0.3s;
-    }
-
-    .agent-card:hover::before {
-        opacity: 1;
+        background: #161618;
+        border-color: #323235;
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.4);
     }
 
     .agent-name {
-        color: #fff;
         font-size: 20px;
-        font-weight: 700;
+        font-weight: 600;
         margin-bottom: 12px;
+        color: #fff;
     }
 
     .agent-desc {
-        color: var(--text-p);
-        font-size: 14px;
+        color: var(--text-dim);
+        font-size: 15px;
         line-height: 1.6;
-        opacity: 0.7;
+        margin-bottom: 24px;
     }
 
-    .card-meta {
-        margin-top: 24px;
+    .card-footer {
+        margin-top: auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
-    .badge {
-        padding: 4px 12px;
-        border-radius: 50px;
-        font-size: 10px;
+    .tag {
+        font-size: 11px;
         font-weight: 700;
+        color: var(--accent);
         text-transform: uppercase;
-        background: rgba(102, 252, 241, 0.1);
-        color: var(--glow);
-        border: 1px solid rgba(102, 252, 241, 0.2);
+        letter-spacing: 0.1em;
     }
 
-    /* Category Headers */
-    .cat-title {
-        font-size: 32px;
-        font-weight: 700;
-        margin-bottom: 40px;
-        border-left: 5px solid var(--glow);
-        padding-left: 20px;
-        color: #fff;
-        scroll-margin-top: 50px;
+    .arrow {
+        color: var(--accent);
+        font-size: 18px;
+        transition: transform 0.3s;
     }
 
-    .stTextInput input {
-        background: rgba(20, 22, 31, 0.8) !important;
-        border: 1px solid rgba(102, 252, 241, 0.1) !important;
-        color: #fff !important;
-        border-radius: 50px !important;
-        padding: 15px 25px !important;
-        font-size: 18px !important;
-        transition: all 0.3s !important;
+    .agent-card:hover .arrow {
+        transform: translateX(5px);
     }
 
-    .stTextInput input:focus {
-        border-color: var(--glow) !important;
-        box-shadow: 0 0 20px rgba(102, 252, 241, 0.1) !important;
+    .search-input input {
+        background: rgba(255, 255, 255, 0.05) !important;
+        border: 1px solid var(--border) !important;
+        border-radius: 12px !important;
+        padding: 16px 20px !important;
+        color: white !important;
+        font-size: 16px !important;
     }
 
     </style>
+    
+    <div class="elite-nav">
+        <a href="#" class="nav-logo">AGENT OS</a>
+        <div class="nav-links">
+            <a href="#registry" class="nav-item">Registry</a>
+            <a href="https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub" class="nav-item">Core Repo</a>
+            <a href="#" class="nav-cta">Deploy Nodes</a>
+        </div>
+    </div>
     ''', unsafe_allow_html=True)
 
 def main():
     apply_styles()
 
-    with st.sidebar:
-        st.markdown('''
-        <div style="padding: 40px 20px; text-align: center;">
-            <h1 style="color: #66fcf1; font-weight: 900; letter-spacing: -2px; font-size: 36px;">A.O.S</h1>
-            <p style="color: #45a29e; font-size: 12px; text-transform: uppercase; font-weight: 700; letter-spacing: 2px;">Neural Registry</p>
-        </div>
-        ''', unsafe_allow_html=True)
-        
-        for cat in CATEGORIES.keys():
-            cat_id = cat.lower().replace(" ", "-").replace("&", "and")
-            clean_name = re.sub(r'[^\w\s]', '', cat).strip()
-            # If re.sub fails to clean everything for nav anchors, we use simple labels
-            if not clean_name: clean_name = "Category"
-            st.markdown(f'<a href="#{cat_id}" class="nav-category">{clean_name}</a>', unsafe_allow_html=True)
-
     st.markdown('''
-    <div class="hero-container">
-        <h1 class="hero-title">Beyond Software.</h1>
-        <p class="hero-sub">The global registry for 78 autonomous agents architected to drive the post-SaaS economy infrastructure.</p>
+    <div class="hero">
+        <h1>Autonomous Operations.</h1>
+        <p>A unified orchestration layer for 78 deterministic AI agents architected for the next-generation economic engine.</p>
     </div>
     ''', unsafe_allow_html=True)
 
-    search_q = st.text_input("", placeholder="Search the decentralized agent intelligence registry...").lower()
+    st.markdown('<div id="registry" class="search-input">', unsafe_allow_html=True)
+    search_q = st.text_input("", placeholder="Search the decentralized node registry...").lower()
+    st.markdown('</div>', unsafe_allow_html=True)
 
     if search_q:
         cols = st.columns(3)
@@ -282,9 +300,9 @@ def main():
                         <div class="agent-card">
                             <div class="agent-name">{name}</div>
                             <div class="agent-desc">{desc}</div>
-                            <div class="card-meta">
-                                <span class="badge">Operational</span>
-                                <span style="color: #66fcf1; font-size: 12px;">Explore →</span>
+                            <div class="card-footer">
+                                <span class="tag">Active</span>
+                                <span class="arrow">→</span>
                             </div>
                         </div>
                     </a>
@@ -295,7 +313,7 @@ def main():
     else:
         for idx, (cat_name, agents) in enumerate(CATEGORIES.items()):
             cat_id = cat_name.lower().replace(" ", "-").replace("&", "and")
-            st.markdown(f'<div id="{cat_id}" class="cat-title">{cat_name}</div>', unsafe_allow_html=True)
+            st.markdown(f'<div id="{cat_id}" class="category-title">{cat_name}</div>', unsafe_allow_html=True)
             
             chunk_size = 3
             for i in range(0, len(agents), chunk_size):
@@ -306,17 +324,14 @@ def main():
                     desc = agent['desc']
                     url = agent['url']
                     
-                    # Add delay for staggered animation
-                    delay = (i + j) * 0.05
-                    
                     card_html = f'''
                     <a href="{url}" target="_blank" style="text-decoration:none;">
-                        <div class="agent-card" style="animation-delay: {delay}s;">
+                        <div class="agent-card">
                             <div class="agent-name">{name}</div>
                             <div class="agent-desc">{desc}</div>
-                            <div class="card-meta">
-                                <span class="badge">v1.8</span>
-                                <span style="color: #66fcf1; font-size: 12px; font-weight: 600;">System Access →</span>
+                            <div class="card-footer">
+                                <span class="tag">Operational</span>
+                                <span class="arrow">→</span>
                             </div>
                         </div>
                     </a>
@@ -335,4 +350,4 @@ final_code = template.replace("__CATEGORIES_DATA__", json.dumps(categories_data,
 with open(output_path, "w", encoding="utf-8") as f:
     f.write(final_code)
 
-print("Dynamic Animated Hub Streamlit application generated.")
+print("Elite Edition Hub with Top Nav generated.")

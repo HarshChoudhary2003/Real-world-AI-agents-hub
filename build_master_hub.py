@@ -36,8 +36,6 @@ for line in lines:
                 })
 
 # Build the main template
-# Using raw strings or multi-line strings without f-string for the heavy parts
-
 template = r"""import streamlit as st
 import json
 import re
@@ -49,7 +47,14 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-CATEGORIES = __CATEGORIES_DATA__
+CATEGORIES_RAW = __CATEGORIES_DATA__
+
+# Sanitize data for surrogate-sensitive environments
+def sanitize(text):
+    if not isinstance(text, str): return text
+    return text.encode('utf-8', 'ignore').decode('utf-8').replace('"', '\\"').replace("'", "\\'")
+
+CATEGORIES = {sanitize(k): [{sanitize(key): sanitize(val) if isinstance(val, str) else val for key, val in a.items()} for a in v] for k, v in CATEGORIES_RAW.items()}
 
 def apply_styles():
     st.markdown('''
@@ -228,7 +233,8 @@ def main():
         
         for cat in CATEGORIES.keys():
             cat_id = cat.lower().replace(" ", "-").replace("&", "and")
-            clean_name = re.sub(r'[^\w\s]', '', cat).strip()
+            # Deeper sanitization to remove emojis that confuse Streamlit's markdown proto
+            clean_name = re.sub(r'[^\x00-\x7F]+', '', cat).strip()
             st.markdown(f'<a href="#{cat_id}" class="nav-category">{clean_name}</a>', unsafe_allow_html=True)
 
     st.markdown('''
@@ -273,7 +279,7 @@ def main():
             st.warning("Query returned zero agents.")
     else:
         for cat_name, agents in CATEGORIES.items():
-            cat_id = cat_name.lower().replace(" ", "-").replace("&", "and")
+            cat_id = cat.lower().replace(" ", "-").replace("&", "and")
             st.markdown(f'''
                 <div id="{cat_id}" class="category-section">
                     <div class="cat-head">
@@ -286,7 +292,7 @@ def main():
             chunk_size = 4
             for i in range(0, len(agents), chunk_size):
                 chunk = agents[i:i+chunk_size]
-                cols = st.columns(chunk_size)
+                cols = st.columns(4)
                 for j, agent in enumerate(chunk):
                     name = agent['name']
                     desc = agent['desc']
@@ -320,4 +326,4 @@ final_code = template.replace("__CATEGORIES_DATA__", json.dumps(categories_data,
 with open(output_path, "w", encoding="utf-8") as f:
     f.write(final_code)
 
-print("Professional Hub Streamlit application generated successfully.")
+print("Professional Hub Streamlit application generated with ASCII sanitization.")

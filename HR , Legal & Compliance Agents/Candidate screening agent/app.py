@@ -3,6 +3,8 @@ import json
 import os
 import litellm
 import pandas as pd
+import PyPDF2
+import docx
 from datetime import date
 from dotenv import load_dotenv
 
@@ -265,7 +267,26 @@ def main():
     with col_res:
         st.markdown("<div class='glass-card'>", unsafe_allow_html=True)
         st.markdown("### 👤 The Candidate (Resume / CV Data)")
-        resume_input = st.text_area("Candidate Resume", height=200, value=st.session_state['resume_input'], label_visibility="collapsed")
+        
+        up_file = st.file_uploader("Upload Resume", type=["txt", "pdf", "docx"], help="Supports .txt, .pdf, and .docx formats")
+        if up_file is not None:
+            try:
+                if up_file.name.endswith(".pdf"):
+                    reader = PyPDF2.PdfReader(up_file)
+                    text = ""
+                    for page in reader.pages:
+                        text += page.extract_text() + "\n"
+                    st.session_state['resume_input'] = text.strip()
+                elif up_file.name.endswith(".docx"):
+                    doc = docx.Document(up_file)
+                    text = "\n".join([para.text for para in doc.paragraphs])
+                    st.session_state['resume_input'] = text.strip()
+                else:
+                    st.session_state['resume_input'] = up_file.getvalue().decode("utf-8")
+            except Exception as e:
+                st.error(f"Error parsing file: {str(e)}")
+            
+        resume_input = st.text_area("Or copy-paste Candidate Resume", height=120, value=st.session_state['resume_input'])
         st.markdown("</div>", unsafe_allow_html=True)
     
     col_btn, _, _ = st.columns([1, 1, 1])

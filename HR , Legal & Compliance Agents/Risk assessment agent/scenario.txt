@@ -1,0 +1,5 @@
+Scenario: Launching a new customer data analytics feature
+Details:
+- Collects user behavior data
+- Integrates with third-party analytics tools
+- Targets EU customers

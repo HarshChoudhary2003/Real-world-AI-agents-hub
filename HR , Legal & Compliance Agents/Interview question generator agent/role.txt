@@ -1,0 +1,7 @@
+Role: Backend Software Engineer
+Seniority: Mid-level
+Key Skills:
+- Python
+- APIs
+- Databases
+- System design

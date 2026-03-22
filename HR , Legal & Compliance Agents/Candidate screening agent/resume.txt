@@ -1,0 +1,7 @@
+Experience:
+- Business analyst for 3 years
+Skills:
+- SQL
+- Excel
+- Python
+- Data visualization

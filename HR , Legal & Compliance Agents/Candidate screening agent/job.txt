@@ -1,0 +1,7 @@
+Role: Data Analyst
+Required Skills:
+- SQL
+- Data analysis
+- Python
+Experience:
+- 2+ years in analytics or related role

@@ -1,0 +1,5 @@
+AI agents automate tasks using decision logic and tools.
+Retrieval-Augmented Generation improves accuracy by grounding LLMs in documents.
+Prompt engineering affects output quality significantly.
+Vector databases are essential for high-performance retrieval in AI systems.
+Semantic search allows finding context beyond simple keyword matching.

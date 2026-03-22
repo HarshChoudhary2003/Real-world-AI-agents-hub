@@ -1,0 +1,5 @@
+Audit Type: SOC 2
+Scope: Data security and access controls
+Past Findings:
+- Incomplete access review documentation
+- Delayed incident response reporting

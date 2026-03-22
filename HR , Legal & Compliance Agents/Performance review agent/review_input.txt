@@ -1,0 +1,9 @@
+Employee Role: Software Engineer
+Review Period: Q2
+Goals:
+- Deliver authentication feature
+- Improve code quality
+Manager Notes:
+- Delivered feature on time
+- Improved test coverage
+- Occasionally missed documentation updates

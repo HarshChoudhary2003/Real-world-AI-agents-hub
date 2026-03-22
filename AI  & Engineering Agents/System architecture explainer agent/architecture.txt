@@ -1,0 +1,3 @@
+The system consists of a web frontend, an API gateway, multiple microservices, a message queue, and a relational database.
+The frontend communicates with the API gateway, which routes requests to services.
+Services publish events to the queue for asynchronous processing.

@@ -1,4 +1,5 @@
 import re
+import urllib.parse
 
 readme_path = r"h:\100 AI Agents\README.md"
 output_path = r"h:\100 AI Agents\master_hub.py"
@@ -26,11 +27,6 @@ for line in lines:
                 path_raw = agent_match.group(2).strip()
                 desc_raw = agent_match.group(3).strip()
                 
-                # Format name (remove emoji maybe or keep it clean)
-                # Let's keep the emoji for now.
-                
-                # Format path to github URL
-                # Path looks like ./HR%20,%20Legal...
                 if path_raw.startswith("./"):
                     path_raw = path_raw[2:]
                 github_url = f"https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/{path_raw}"
@@ -41,125 +37,206 @@ for line in lines:
                     "desc": desc_raw
                 })
 
+# Build navigation items for the menu bar
+nav_items_html = ""
+for cat in categories.keys():
+    cat_id = cat.lower().replace(" ", "-").replace("&", "and")
+    # Clean emoji for nav labels
+    clean_label = re.sub(r'[^\w\s]', '', cat).strip()
+    if clean_label:
+        nav_items_html += f'<a href="#{cat_id}" class="nav-link">{clean_label}</a>'
+
 # Build the Streamlit application code
-streamlit_code = """import streamlit as st
+streamlit_code = f"""import streamlit as st
 
 st.set_page_config(
-    page_title="AI Agent Hub",
+    page_title="Agent OS | Master Hub",
     page_icon="⌘",
     layout="wide",
     initial_sidebar_state="collapsed",
 )
 
-def apply_apple_design():
+def apply_styles():
     st.markdown('''
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-    /* Reset and Base typography */
-    body, .stApp {
-        background-color: #000000;
-        color: #F5F5F7;
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    }
+    /* Variables & Base */
+    :root {{
+        --bg-color: #000000;
+        --card-bg: #0A0A0A;
+        --card-hover: #121212;
+        --accent: #2997FF;
+        --text-primary: #F5F5F7;
+        --text-secondary: #86868B;
+        --border: #1D1D1F;
+        --glass-bg: rgba(0, 0, 0, 0.75);
+    }}
 
-    /* Hide heavy Streamlit UI elements */
-    header {visibility: hidden !important;}
-    footer {visibility: hidden !important;}
-    .css-1rs6os {visibility: hidden;}
-    .css-17ziqus {visibility: hidden;}
-    [data-testid="stToolbar"] {visibility: hidden !important;}
+    .stApp {{
+        background-color: var(--bg-color);
+        color: var(--text-primary);
+        font-family: 'Inter', -apple-system, sans-serif;
+    }}
 
-    /* Top Layout Spacing */
-    .block-container {
-        padding-top: 4rem !important;
-        padding-bottom: 5rem !important;
-        max-width: 1100px !important;
-    }
+    header {{visibility: hidden !important;}}
+    footer {{visibility: hidden !important;}}
+    [data-testid="stToolbar"] {{visibility: hidden !important;}}
 
-    /* Master Headings */
-    h1 {
-        font-weight: 500;
-        font-size: 3rem !important;
-        letter-spacing: -0.015em;
-        text-align: center;
-        color: #F5F5F7;
-        margin-bottom: 0.5rem;
-    }
-    
-    .stMarkdown p.sub-header {
-        text-align: center;
-        color: #86868B;
-        font-size: 1.15rem;
-        font-weight: 400;
-        letter-spacing: 0.005em;
-        margin-bottom: 4rem;
-        max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
-        line-height: 1.5;
-    }
+    /* Sticky Menu Bar */
+    .menu-bar {{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 52px;
+        background: var(--glass-bg);
+        backdrop-filter: saturate(180%) blur(20px);
+        -webkit-backdrop-filter: saturate(180%) blur(20px);
+        border-bottom: 0.5px solid var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 40px;
+        z-index: 999999;
+    }}
 
-    /* Category Headers */
-    .category-title {
-        color: #F5F5F7;
-        font-size: 1.4rem;
-        font-weight: 500;
-        letter-spacing: 0.01em;
-        margin-top: 3rem;
-        margin-bottom: 1.5rem;
-        border-bottom: 1px solid #333336;
-        padding-bottom: 0.8rem;
-    }
-
-    /* Agent Cards (Grid simulated via Streamlit columns, styled via HTML) */
-    .agent-link-wrapper {
+    .brand {{
+        font-weight: 600;
+        font-size: 19px;
+        letter-spacing: -0.01em;
+        color: var(--text-primary);
         text-decoration: none;
-    }
-    
-    .agent-card {
-        background-color: #111111;
-        border: 1px solid #222222;
-        border-radius: 14px;
-        padding: 24px;
+    }}
+
+    .nav-links {{
+        display: flex;
+        gap: 32px;
+    }}
+
+    .nav-link {{
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0.01em;
+        transition: color 0.2s ease;
+    }}
+
+    .nav-link:hover {{
+        color: var(--text-primary);
+    }}
+
+    /* Content Layout */
+    .block-container {{
+        padding-top: 100px !important;
+        padding-bottom: 100px !important;
+        max-width: 1060px !important;
+    }}
+
+    .hero-section {{
+        text-align: center;
+        margin-bottom: 80px;
+    }}
+
+    h1 {{
+        font-weight: 700;
+        font-size: 56px !important;
+        letter-spacing: -0.015em;
+        line-height: 1.07;
+        margin-bottom: 16px;
+    }}
+
+    .sub-header {{
+        color: var(--text-secondary);
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.16;
+        letter-spacing: 0.009em;
+        max-width: 700px;
+        margin: 0 auto;
+    }}
+
+    /* Category Blocks */
+    .category-block {{
+        margin-top: 48px;
+        scroll-margin-top: 80px;
+    }}
+
+    .category-title {{
+        font-size: 28px;
+        font-weight: 600;
+        letter-spacing: 0.007em;
+        margin-bottom: 24px;
+        color: var(--text-primary);
+    }}
+
+    /* Agent Cards */
+    .agent-link {{
+        text-decoration: none !important;
+        display: block;
         height: 100%;
-        min-height: 140px;
-        transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
-        cursor: pointer;
+    }}
+
+    .agent-card {{
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: 28px;
+        height: 100%;
+        transition: all 0.5s cubic-bezier(0.15, 0, 0.15, 1);
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-    }
+    }}
 
-    .agent-card:hover {
-        background-color: #1A1A1A;
+    .agent-card:hover {{
+        background: var(--card-hover);
+        transform: scale(1.02);
         border-color: #333333;
-        transform: translateY(-2px);
-    }
+    }}
 
-    .agent-name {
-        color: #F5F5F7;
-        font-size: 1.1rem;
+    .agent-name {{
+        color: var(--text-primary);
+        font-size: 19px;
         font-weight: 600;
-        margin-bottom: 0.5rem;
-        text-decoration: none;
-    }
+        margin-bottom: 8px;
+    }}
 
-    .agent-desc {
-        color: #86868B;
-        font-size: 0.85rem;
-        line-height: 1.4;
+    .agent-desc {{
+        color: var(--text-secondary);
+        font-size: 14px;
+        line-height: 1.42;
         font-weight: 400;
-    }
-    
+    }}
+
+    /* Accent Line */
+    .accent-line {{
+        width: 60px;
+        height: 2px;
+        background: var(--accent);
+        margin: 24px auto 0;
+        border-radius: 2px;
+    }}
     </style>
+    
+    <div class="menu-bar">
+        <a href="#" class="brand">Agent OS</a>
+        <div class="nav-links">
+            {nav_items_html}
+        </div>
+    </div>
     ''', unsafe_allow_html=True)
 
 def main():
-    apply_apple_design()
+    apply_styles()
 
-    st.markdown("<h1>Agent OS</h1>", unsafe_allow_html=True)
-    st.markdown("<p class='sub-header'>A curated ecosystem of autonomous enterprise intelligence. Click any agent to inspect its operational architecture.</p>", unsafe_allow_html=True)
+    st.markdown('''
+    <div class="hero-section">
+        <h1>Intelligence Unbound.</h1>
+        <p class="sub-header">78 high-fidelity autonomous agents architected for the next-generation enterprise.</p>
+        <div class="accent-line"></div>
+    </div>
+    ''', unsafe_allow_html=True)
 
 """
 
@@ -167,8 +244,9 @@ def main():
 for cat_name, agents in categories.items():
     if not agents:
         continue
-        
-    streamlit_code += f'    st.markdown("<div class=\'category-title\'>{cat_name.replace(chr(39), chr(92)+chr(39))}</div>", unsafe_allow_html=True)\n'
+    
+    cat_id = cat_name.lower().replace(" ", "-").replace("&", "and")
+    streamlit_code += f'    st.markdown("<div id=\'{cat_id}\' class=\'category-block\'><div class=\'category-title\'>{cat_name.replace(chr(39), chr(92)+chr(39))}</div></div>", unsafe_allow_html=True)\n'
     
     # Split agents into rows of 3
     chunk_size = 3
@@ -181,7 +259,7 @@ for cat_name, agents in categories.items():
             url = agent['url']
             
             card_html = f'''
-            <a href="{url}" target="_blank" class="agent-link-wrapper">
+            <a href="{url}" target="_blank" class="agent-link">
                 <div class="agent-card">
                     <div class="agent-name">{name}</div>
                     <div class="agent-desc">{desc}</div>
@@ -190,8 +268,6 @@ for cat_name, agents in categories.items():
             '''
             streamlit_code += f"    with cols[{j}]:\n"
             streamlit_code += f"        st.markdown('''{card_html}''', unsafe_allow_html=True)\n"
-            
-        streamlit_code += "    st.markdown('<br>', unsafe_allow_html=True)\n"
 
 streamlit_code += """
 if __name__ == "__main__":

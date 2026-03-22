@@ -41,8 +41,8 @@ import json
 import re
 
 st.set_page_config(
-    page_title="Agent OS | Professional Hub",
-    page_icon="💠",
+    page_title="Agent OS | Dynamic Hub",
+    page_icon="🌈",
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -59,19 +59,19 @@ CATEGORIES = {sanitize(k): [{sanitize(key): sanitize(val) if isinstance(val, str
 def apply_styles():
     st.markdown('''
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
 
     :root {
-        --bg-color: #0d1117;
-        --sidebar-bg: #161b22;
-        --card-bg: #0d1117;
-        --card-border: #30363d;
-        --card-hover: #1c212b;
-        --accent: #2f81f7;
-        --accent-glow: rgba(47, 129, 247, 0.15);
-        --text-p: #f0f6fc;
-        --text-s: #8b949e;
-        --font-main: 'Inter', -apple-system, system-ui;
+        --bg-color: #0b0c10;
+        --sidebar-bg: #14161f;
+        --card-bg: #1f2833;
+        --card-hover: #161b22;
+        --accent: #45a29e;
+        --glow: #66fcf1;
+        --text-p: #c5c6c7;
+        --text-bright: #66fcf1;
+        --border: #45a29e;
+        --font-main: 'Outfit', -apple-system, sans-serif;
     }
 
     .stApp {
@@ -83,136 +83,158 @@ def apply_styles():
     header, footer {visibility: hidden !important;}
     [data-testid="stToolbar"] {visibility: hidden !important;}
 
+    /* Sidebar Navigation Rail */
     section[data-testid="stSidebar"] {
         background-color: var(--sidebar-bg) !important;
-        border-right: 1px solid var(--card-border);
-    }
-
-    .sidebar-header {
-        padding: 32px 24px;
-        margin-bottom: 24px;
-        border-bottom: 1px solid var(--card-border);
-        text-align: center;
+        border-right: 1px solid rgba(102, 252, 241, 0.1);
     }
 
     .nav-category {
-        padding: 8px 16px;
-        border-radius: 6px;
-        color: var(--text-s);
+        padding: 10px 20px;
+        color: var(--text-p);
         font-size: 14px;
         font-weight: 500;
         cursor: pointer;
-        transition: all 0.2s;
+        transition: all 0.3s;
         text-decoration: none;
         display: block;
-        margin: 2px 12px;
+        margin: 4px 12px;
+        border-radius: 8px;
     }
 
     .nav-category:hover {
-        background: rgba(177, 186, 196, 0.12);
-        color: var(--text-p);
+        background: rgba(102, 252, 241, 0.05);
+        color: var(--glow);
+        transform: translateX(5px);
     }
 
-    .block-container {
-        padding-top: 48px !important;
-        padding-left: 64px !important;
-        padding-right: 64px !important;
-        max-width: 1440px !important;
+    /* Hero Section with Animated Gradient */
+    .hero-container {
+        text-align: center;
+        padding: 60px 0 100px;
+        position: relative;
+        overflow: hidden;
     }
 
-    .top-bar {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        margin-bottom: 48px;
-    }
-
-    .stats-badge {
-        background: var(--accent-glow);
-        color: var(--accent);
-        padding: 6px 16px;
-        border-radius: 6px;
-        font-size: 11px;
-        font-weight: 700;
-        border: 1px solid rgba(47, 129, 247, 0.4);
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-    }
-
-    .category-section {
-        margin-bottom: 48px;
-        scroll-margin-top: 48px;
-    }
-
-    .cat-head {
-        display: flex;
-        align-items: center;
-        gap: 12px;
+    .hero-title {
+        font-size: 72px;
+        font-weight: 800;
+        background: linear-gradient(90deg, #66fcf1, #45a29e, #1f2833, #66fcf1);
+        background-size: 300% 100%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: flowing-gradient 8s linear infinite;
         margin-bottom: 20px;
-        padding-bottom: 12px;
-        border-bottom: 1px solid var(--card-border);
+        letter-spacing: -2px;
     }
 
-    .cat-name {
-        font-size: 18px;
-        font-weight: 600;
+    @keyframes flowing-gradient {
+        0% { background-position: 0% 0%; }
+        100% { background-position: 100% 0%; }
+    }
+
+    .hero-sub {
+        font-size: 24px;
         color: var(--text-p);
+        opacity: 0.8;
+        max-width: 800px;
+        margin: 0 auto 40px;
+        line-height: 1.4;
+    }
+
+    /* Colorful Card Styling with Hover Pop */
+    @keyframes card-fade-in {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
     }
 
     .agent-card {
-        background: var(--card-bg);
-        border: 1px solid var(--card-border);
-        border-radius: 6px;
-        padding: 20px;
+        background: #14161f;
+        border: 1px solid rgba(102, 252, 241, 0.1);
+        border-radius: 12px;
+        padding: 30px;
         height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        transition: border-color 0.2s, background-color 0.2s;
-        cursor: pointer;
+        position: relative;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        animation: card-fade-in 0.6s ease-out backwards;
     }
 
     .agent-card:hover {
-        border-color: #8b949e;
-        background: #161b22;
+        transform: translateY(-10px) scale(1.02);
+        border-color: var(--glow);
+        box-shadow: 0 15px 35px rgba(102, 252, 241, 0.1);
+        background: #1c212b;
+    }
+
+    .agent-card::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0; right: 0; height: 3px;
+        background: linear-gradient(90deg, #66fcf1, #45a29e);
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .agent-card:hover::before {
+        opacity: 1;
     }
 
     .agent-name {
-        color: var(--accent);
-        font-size: 16px;
-        font-weight: 600;
-        margin-bottom: 8px;
-    }
-
-    .agent-desc {
-        color: var(--text-s);
-        font-size: 13.5px;
-        line-height: 1.5;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 700;
         margin-bottom: 12px;
     }
 
-    .card-footer {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        margin-top: auto;
+    .agent-desc {
+        color: var(--text-p);
+        font-size: 14px;
+        line-height: 1.6;
+        opacity: 0.7;
     }
 
-    .tag {
-        font-size: 11px;
-        color: var(--text-s);
-        padding: 2px 8px;
-        background: #161b22;
-        border: 1px solid var(--card-border);
-        border-radius: 100px;
+    .card-meta {
+        margin-top: 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .badge {
+        padding: 4px 12px;
+        border-radius: 50px;
+        font-size: 10px;
+        font-weight: 700;
+        text-transform: uppercase;
+        background: rgba(102, 252, 241, 0.1);
+        color: var(--glow);
+        border: 1px solid rgba(102, 252, 241, 0.2);
+    }
+
+    /* Category Headers */
+    .cat-title {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 40px;
+        border-left: 5px solid var(--glow);
+        padding-left: 20px;
+        color: #fff;
+        scroll-margin-top: 50px;
     }
 
     .stTextInput input {
-        background-color: #0d1117 !important;
-        border: 1px solid var(--card-border) !important;
-        color: var(--text-p) !important;
-        border-radius: 6px !important;
-        padding: 12px 16px !important;
+        background: rgba(20, 22, 31, 0.8) !important;
+        border: 1px solid rgba(102, 252, 241, 0.1) !important;
+        color: #fff !important;
+        border-radius: 50px !important;
+        padding: 15px 25px !important;
+        font-size: 18px !important;
+        transition: all 0.3s !important;
+    }
+
+    .stTextInput input:focus {
+        border-color: var(--glow) !important;
+        box-shadow: 0 0 20px rgba(102, 252, 241, 0.1) !important;
     }
 
     </style>
@@ -223,34 +245,30 @@ def main():
 
     with st.sidebar:
         st.markdown('''
-        <div class="sidebar-header">
-            <h1 style="font-size: 24px; font-weight: 800; margin: 0; color: #f0f6fc;">Agent<span style="color:#2f81f7;">Registry</span></h1>
-            <code style="font-size: 10px; color:#8b949e; background:none;">v2.4.0 OPERATIONAL</code>
+        <div style="padding: 40px 20px; text-align: center;">
+            <h1 style="color: #66fcf1; font-weight: 900; letter-spacing: -2px; font-size: 36px;">A.O.S</h1>
+            <p style="color: #45a29e; font-size: 12px; text-transform: uppercase; font-weight: 700; letter-spacing: 2px;">Neural Registry</p>
         </div>
         ''', unsafe_allow_html=True)
         
-        st.markdown("<p style='padding: 0 24px; font-size: 11px; font-weight: 600; color:#484f58; text-transform: uppercase;'>Navigation</p>", unsafe_allow_html=True)
-        
         for cat in CATEGORIES.keys():
             cat_id = cat.lower().replace(" ", "-").replace("&", "and")
-            # Deeper sanitization to remove emojis that confuse Streamlit's markdown proto
-            clean_name = re.sub(r'[^\x00-\x7F]+', '', cat).strip()
+            clean_name = re.sub(r'[^\w\s]', '', cat).strip()
+            # If re.sub fails to clean everything for nav anchors, we use simple labels
+            if not clean_name: clean_name = "Category"
             st.markdown(f'<a href="#{cat_id}" class="nav-category">{clean_name}</a>', unsafe_allow_html=True)
 
     st.markdown('''
-        <div class="top-bar">
-            <div>
-                <h2 style="font-size: 32px; font-weight: 600; margin: 0; color: #f0f6fc;">Systems Intelligence Hub</h2>
-                <p style="color:#8b949e; font-size: 16px; margin-top: 8px;">Deterministic multi-agent orchestration registry for enterprise automation.</p>
-            </div>
-            <div class="stats-badge">78 Nodes Online</div>
-        </div>
+    <div class="hero-container">
+        <h1 class="hero-title">Beyond Software.</h1>
+        <p class="hero-sub">The global registry for 78 autonomous agents architected to drive the post-SaaS economy infrastructure.</p>
+    </div>
     ''', unsafe_allow_html=True)
 
-    search_q = st.text_input("", placeholder="Search 78 specialized agents by name, capability, or department...").lower()
+    search_q = st.text_input("", placeholder="Search the decentralized agent intelligence registry...").lower()
 
     if search_q:
-        cols = st.columns(4)
+        cols = st.columns(3)
         found = 0
         for cat_name, agents in CATEGORIES.items():
             for agent in agents:
@@ -262,59 +280,50 @@ def main():
                     card_html = f'''
                     <a href="{url}" target="_blank" style="text-decoration:none;">
                         <div class="agent-card">
-                            <div>
-                                <div class="agent-name">{name}</div>
-                                <div class="agent-desc">{desc}</div>
-                            </div>
-                            <div class="card-footer">
-                                <span class="tag">Production</span>
+                            <div class="agent-name">{name}</div>
+                            <div class="agent-desc">{desc}</div>
+                            <div class="card-meta">
+                                <span class="badge">Operational</span>
+                                <span style="color: #66fcf1; font-size: 12px;">Explore →</span>
                             </div>
                         </div>
                     </a>
                     '''
-                    with cols[found % 4]:
+                    with cols[found % 3]:
                         st.markdown(card_html, unsafe_allow_html=True)
                     found += 1
-        if found == 0:
-            st.warning("Query returned zero agents.")
     else:
-        for cat_name, agents in CATEGORIES.items():
-            cat_id = cat.lower().replace(" ", "-").replace("&", "and")
-            st.markdown(f'''
-                <div id="{cat_id}" class="category-section">
-                    <div class="cat-head">
-                        <div class="cat-name">{cat_name}</div>
-                        <span style="color:#484f58; font-size: 12px; margin-left: auto;">{len(agents)} instances</span>
-                    </div>
-                </div>
-            ''', unsafe_allow_html=True)
+        for idx, (cat_name, agents) in enumerate(CATEGORIES.items()):
+            cat_id = cat_name.lower().replace(" ", "-").replace("&", "and")
+            st.markdown(f'<div id="{cat_id}" class="cat-title">{cat_name}</div>', unsafe_allow_html=True)
             
-            chunk_size = 4
+            chunk_size = 3
             for i in range(0, len(agents), chunk_size):
                 chunk = agents[i:i+chunk_size]
-                cols = st.columns(4)
+                cols = st.columns(3)
                 for j, agent in enumerate(chunk):
                     name = agent['name']
                     desc = agent['desc']
                     url = agent['url']
                     
+                    # Add delay for staggered animation
+                    delay = (i + j) * 0.05
+                    
                     card_html = f'''
                     <a href="{url}" target="_blank" style="text-decoration:none;">
-                        <div class="agent-card">
-                            <div>
-                                <div class="agent-name">{name}</div>
-                                <div class="agent-desc">{desc}</div>
-                            </div>
-                            <div class="card-footer">
-                                <span class="tag">Active</span>
-                                <span style="font-size: 12px; color: #2f81f7;">Open Hub →</span>
+                        <div class="agent-card" style="animation-delay: {delay}s;">
+                            <div class="agent-name">{name}</div>
+                            <div class="agent-desc">{desc}</div>
+                            <div class="card-meta">
+                                <span class="badge">v1.8</span>
+                                <span style="color: #66fcf1; font-size: 12px; font-weight: 600;">System Access →</span>
                             </div>
                         </div>
                     </a>
                     '''
                     with cols[j]:
                         st.markdown(card_html, unsafe_allow_html=True)
-                st.markdown('<div style="margin-bottom: 24px;"></div>', unsafe_allow_html=True)
+                st.markdown('<div style="height: 30px;"></div>', unsafe_allow_html=True)
 
 if __name__ == "__main__":
     main()
@@ -326,4 +335,4 @@ final_code = template.replace("__CATEGORIES_DATA__", json.dumps(categories_data,
 with open(output_path, "w", encoding="utf-8") as f:
     f.write(final_code)
 
-print("Professional Hub Streamlit application generated with ASCII sanitization.")
+print("Dynamic Animated Hub Streamlit application generated.")

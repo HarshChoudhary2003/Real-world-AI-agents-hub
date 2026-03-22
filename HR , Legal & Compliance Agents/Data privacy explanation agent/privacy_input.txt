@@ -1,0 +1,2 @@
+Scenario: Collecting email addresses for a marketing newsletter from EU users.
+Regulation: GDPR

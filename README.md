@@ -154,7 +154,7 @@ This is the largest registry of **specialized, production-hardened AI agents** d
 ### 🗄️ HR, Legal & Compliance Systems
 *Deterministic talent acquisition and operational risk frameworks.*
 - [💼 **TalentForge AI**](./HR%20,%20Legal%20&%20Compliance%20Agents/Job%20description%20generator%20agent) – Inclusive requisition & job description intelligence pipeline.
-- [🔎 **ScreenGenius AI**](./HR%20,%20Legal%20&%20Compliance%20Agents/Candidate%20screening%20agent) – Unbiased objective algorithmic candidate screening matrix.
+- [🔎 **ScreenGenius Pro AI**](./HR%20,%20Legal%20&%20Compliance%20Agents/Candidate%20screening%20agent) – Multi-axis algorithmic candidate screening matrix with red-flag detection & custom interview probes.
 - [🎙️ **QuestForge AI**](./HR%20,%20Legal%20&%20Compliance%20Agents/Interview%20question%20generator%20agent) – Autonomous technical interview question architect.
 
 ---

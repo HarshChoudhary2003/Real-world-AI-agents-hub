@@ -1,7 +1,7 @@
 <div align="center">
 
-# 🔎 ScreenGenius AI
-### Unbiased Algorithmic Candidate Profiling System
+# 🔎 ScreenGenius Pro AI
+### Multi-Dimensional Forensics & Algorithmic Candidate Profiling System
 
 [![Python Version](https://img.shields.io/badge/Python-3.11+-blue.svg?style=for-the-badge&logo=python)](https://www.python.org/)
 [![Litellm](https://img.shields.io/badge/Powered_by-LiteLLM-10b981.svg?style=for-the-badge&logo=openai)](https://litellm.ai/)
@@ -13,7 +13,7 @@
 
 <br>
 
-**Strips away conscious and unconscious bias, focusing strictly on hard metric matches.**
+**Perform rapid, multi-dimensional analysis bridging zero-bias metrics with critical HR red-flag insights.**
 
 </div>
 
@@ -21,27 +21,26 @@
 
 ## ⚡ Overview
 
-**ScreenGenius AI (Candidate Screening Agent)** performs highly structured, objective analysis mapping raw candidate resumes directly against formal job requisitions. It evaluates candidates explicitly on what they provide, outputting clear lists of *Matched* vs *Missing* variables along with a synthesized diagnostic score.
+**ScreenGenius Pro AI (Advanced Candidate Screening Agent)** goes far beyond simple keyword matching. This advanced system executes deep heuristic mapping against raw applicant resumes. It calculates precision, multi-axis fractional scores, automatically extracts red flags (such as suspicious job gaps), and synthesizes direct follow-up interview questions specifically tailored to interrogate the candidate's exact weaknesses.
 
-Crucially: this application acts purely as an assistant. It does not output "Hired / Rejected", but rather surfaces actionable talent intelligence for human hiring partners.
+## 🚀 Pro Features
 
-## 🚀 Key Features
-
-*   **🛡️ Bias Neutralization:** Instructed at the neural level to completely ignore protected attributes and formatting tricks.
-*   **📊 Metric Scoring:** Generates a 0-100 `qualification_score` quantifying the intersection overlap between requirements and experience.
-*   **💠 Executive HR Dashboard:** Dual-pane comparison layout mapped directly into an Emerald/Titanium UI scheme optimized for Human Resource workflows.
-*   **🧠 Provider Agnostic:** Progressive input structures allow scaling to enterprise local boundaries via Ollama/Grok/Antrhopic integrations.
+*   **📊 Multi-Axis Scoring Matrices:** Breaks down capability into `Technical Affinity`, `Experience Rating`, and `Overall Match` percentages.
+*   **⚠️ Automatic Red Flag Detection:** Warns recruiters of potential chronological anomalies, job hopping, or over/under-qualification mismatches natively.
+*   **🎤 Custom Interview Probing:** Dynamically compiles a list of tough, tailored interview questions focused *only* on the skills the candidate is reportedly missing.
+*   **💠 Executive HR Pro Dashboard:** A visually striking Emerald/Titanium UI featuring custom metric arrays, warning cards, and zero-bias data extraction.
+*   **🤖 Batch Processing Core:** The backend CLI can recursively scan a `resumes/` payload and evaluate dozens of profiles linearly against a single ATS requisition target.
 
 ## ⚙️ Quick Start
 
-### 1. Execute Headless Screen
-Feed `job.txt` and `resume.txt` inside the folder to the core parser:
+### 1. Execute Forensics Console (Batch or Single)
+Drop your targets into the folder layer and trigger the ATS:
 ```bash
 cd "HR , Legal & Compliance Agents/Candidate screening agent"
 python agent.py
 ```
 
-### 2. Enter Visual Auditing
+### 2. Enter Visual Auditing Dashboard
 ```bash
 streamlit run app.py
 ```

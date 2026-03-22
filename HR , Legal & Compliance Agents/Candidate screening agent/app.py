@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 # 1. SETUP & CONFIGURATION
 # -----------------------------------------------------------------------------
 st.set_page_config(
-    page_title="Candidate Screening Agent | ScreenGenius",
+    page_title="Advanced Candidate Screening | ScreenGenius Pro",
     page_icon="🔎",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -56,13 +56,25 @@ def local_css():
     }
     .stButton>button:hover { background: linear-gradient(135deg, #10b981 0%, #34d399 100%); }
 
-    /* Output specific */
-    .score-circle {
-        display: flex; justify-content: center; align-items: center;
-        width: 120px; height: 120px; border-radius: 50%;
-        background: #065f46; border: 4px solid #34d399;
-        font-size: 2.5rem; font-weight: 800; color: #a7f3d0;
-        margin: 0 auto 1.5rem; box-shadow: 0 0 20px rgba(52, 211, 153, 0.3);
+    /* Advanced Metrics */
+    .metric-container {
+        display: flex; gap: 1rem; align-items: center; justify-content: space-between;
+        background: rgba(2, 44, 34, 0.6); padding: 16px; border-radius: 12px;
+        border: 1px solid rgba(16, 185, 129, 0.2); margin-bottom: 1rem;
+    }
+    .metric-value {
+        font-size: 2rem; font-weight: 800; color: #34d399;
+    }
+    .metric-label {
+        font-size: 0.9rem; color: #a7f3d0; text-transform: uppercase; letter-spacing: 1px;
+    }
+    
+    .flag-box {
+        background: rgba(220, 38, 38, 0.2);
+        border-left: 4px solid #ef4444;
+        padding: 12px 16px; margin-bottom: 10px;
+        border-radius: 4px 8px 8px 4px; color: #fecaca;
+        font-size: 0.95rem;
     }
     
     .stTextArea textarea { background: #022c22 !important; border: 1px solid #065f46 !important; color: #f8fafc !important; border-radius: 12px !important; line-height: 1.6 !important; }
@@ -73,20 +85,28 @@ def local_css():
 # 3. AGENT CORE LOGIC
 # -----------------------------------------------------------------------------
 SYSTEM_PROMPT = """
-You are a Candidate Screening Agent.
+You are an Advanced Candidate Screening Agent (ATS Intelligence).
 
 Rules:
-- Screen candidates against job requirements objectively.
-- Be fair and transparent.
-- Avoid biased or protected attributes completely.
-- Do NOT make hiring decisions, merely provide matched/missing data and an objective score.
+- Conduct an objective, multi-dimensional forensic analysis of the resume against the job description.
+- Never make final hiring decisions, act purely as an analytical engine.
+- Identify both explicit skill matches and implicit trajectory matches.
+- Highlight specific "red flags" (e.g., gaps in employment, missing critical certifications, mismatched seniority).
+- Provide specific, tailored follow-up interview questions to probe the candidate's exact weaknesses.
+- Remain neutral and avoid protected attribute bias.
 
-Return ONLY valid JSON with this schema:
+Return ONLY valid JSON with this exact schema:
 {
-  "qualification_score": "Score out of 100",
-  "matched_requirements": ["list of skills candidate met"],
-  "missing_requirements": ["list of required skills candidate lacks"],
-  "screening_summary": "Objective overview of the alignment"
+  "scores": {
+    "technical_alignment": "Score out of 100",
+    "experience_alignment": "Score out of 100",
+    "overall_score": "Score out of 100"
+  },
+  "matched_requirements": ["Strong skill or experience matches"],
+  "missing_requirements": ["Critical requirements not found"],
+  "red_flags_or_concerns": ["Job gaps, overqualification, underqualification, missing degrees"],
+  "custom_interview_probes": ["Question targeting missing requirement 1", "Question targeting red flag 1"],
+  "screening_summary": "Objective 2-3 sentence executive summary"
 }
 """
 
@@ -119,18 +139,22 @@ def screen_candidate(job_text: str, resume_text: str, model: str, api_key: str |
     return extract_json(response.choices[0].message.content)
 
 def build_txt_export(data: dict) -> str:
-    export = f"Candidate Screening Results\\n{'='*55}\\n\\n"
-    export += f"Qualification Score: {data.get('qualification_score', 'N/A')}\\n\\n"
-    
-    export += "Matched Requirements:\\n"
-    for m in data.get("matched_requirements", []):
-        export += f"- {m}\\n"
-        
-    export += "\\nMissing Requirements:\\n"
-    for m in data.get("missing_requirements", []):
-        export += f"- {m}\\n"
-        
-    export += f"\\nSummary:\\n{data.get('screening_summary', '')}\\n"
+    export = f"Advanced Candidate Screening Report\\n{'='*65}\\n\\n"
+    scores = data.get("scores", {})
+    export += "--- INTELLIGENCE SCORES ---\\n"
+    export += f"Overall Match:      {scores.get('overall_score', 'N/A')}/100\\n"
+    export += f"Technical Affinity: {scores.get('technical_alignment', 'N/A')}/100\\n"
+    export += f"Experience Rating:  {scores.get('experience_alignment', 'N/A')}/100\\n\\n"
+    export += "--- EXECUTIVE SUMMARY ---\\n"
+    export += f"{data.get('screening_summary', '')}\\n\\n"
+    export += "--- MATCHED REQUIREMENTS ---\\n"
+    for m in data.get("matched_requirements", []): export += f"✅ {m}\\n"
+    export += "\\n--- MISSING REQUIREMENTS ---\\n"
+    for m in data.get("missing_requirements", []): export += f"❌ {m}\\n"
+    export += "\\n--- RED FLAGS / CONCERNS ---\\n"
+    for fg in data.get("red_flags_or_concerns", []): export += f"⚠️ {fg}\\n"
+    export += "\\n--- RECOMMENDED INTERVIEW PROBES ---\\n"
+    for q in data.get("custom_interview_probes", []): export += f"🎤 {q}\\n"
     return export
 
 # -----------------------------------------------------------------------------
@@ -166,7 +190,8 @@ def main():
 
     # ── Sidebar ───────────────────────────────────────────────
     with st.sidebar:
-        st.markdown("<h2 style='text-align:center;color:white;'>Screen<span style='color:#34d399;'>Genius</span></h2>", unsafe_allow_html=True)
+        st.markdown("<h2 style='text-align:center;color:white;'>Screen<span style='color:#34d399;'>Genius Pro</span></h2>", unsafe_allow_html=True)
+        st.markdown("<p style='text-align:center;color:#a7f3d0;font-size:0.8rem;'>Advanced Forensic Engine Active</p>", unsafe_allow_html=True)
 
         st.markdown("### 🧬 AI Orchestration")
         
@@ -217,47 +242,37 @@ def main():
             provider_name = "Ollama"
             
         if "Local" in selected_provider:
-            st.info("Local Ollama endpoint selected. No API key required (make sure your service is running).")
+            st.info("Local Ollama endpoint selected. No API key required.")
             user_api_key = None
         else:
-            user_api_key = st.text_input(f"{provider_name} API Key", type="password", help=f"Required if not pre-configured. Enter your {provider_name} API Key here.")
+            user_api_key = st.text_input(f"{provider_name} API Key", type="password", help=f"Required if not pre-configured.")
 
         st.markdown("---")
-        st.info("💡 **Tip:** AI screening strips away conscious and unconscious bias, focusing strictly on hard metric matches.")
+        st.success("✨ **Pro Capabilities Active:** Multi-axis scoring, custom red flag evaluation, and dynamic interview guidance generation.")
 
     # ── Main Content ──────────────────────────────────────────
-    st.markdown("<h1 class='main-header'>Candidate Screening Intelligence</h1>", unsafe_allow_html=True)
-    st.markdown("<p class='sub-header'>Perform rapid, unbiased forensic analysis of applicant profiles directly against required job requisitions.</p>", unsafe_allow_html=True)
+    st.markdown("<h1 class='main-header'>Advanced Candidate Forensics</h1>", unsafe_allow_html=True)
+    st.markdown("<p class='sub-header'>Perform rapid, multi-dimensional analysis. Identify red flags, calculate composite scores, and extract precision interview probes instantly.</p>", unsafe_allow_html=True)
 
     # Input Section
     col_req, col_res = st.columns(2, gap="large")
     with col_req:
         st.markdown("<div class='glass-card'>", unsafe_allow_html=True)
-        st.markdown("### 📋 The Requisition (Job.txt)")
-        job_input = st.text_area(
-            "Job Description", 
-            height=200, 
-            value=st.session_state['job_input'],
-            label_visibility="collapsed"
-        )
+        st.markdown("### 📋 The Requisition (Job Specifications)")
+        job_input = st.text_area("Job Description", height=200, value=st.session_state['job_input'], label_visibility="collapsed")
         st.markdown("</div>", unsafe_allow_html=True)
 
     with col_res:
         st.markdown("<div class='glass-card'>", unsafe_allow_html=True)
-        st.markdown("### 👤 The Candidate (Resume.txt)")
-        resume_input = st.text_area(
-            "Candidate Resume", 
-            height=200, 
-            value=st.session_state['resume_input'],
-            label_visibility="collapsed"
-        )
+        st.markdown("### 👤 The Candidate (Resume / CV Data)")
+        resume_input = st.text_area("Candidate Resume", height=200, value=st.session_state['resume_input'], label_visibility="collapsed")
         st.markdown("</div>", unsafe_allow_html=True)
     
     col_btn, _, _ = st.columns([1, 1, 1])
     with col_btn:
-        if st.button("🔎 Execute Unbiased Screen"):
+        if st.button("🔎 Execute Deep Matrix Scan"):
             if job_input.strip() and resume_input.strip():
-                with st.spinner(f"Auditing Candidate Profile via {selected_model_label}..."):
+                with st.spinner(f"Running Advanced Heuristics via {selected_model_label}..."):
                     try:
                         res = screen_candidate(job_input, resume_input, model=target_model, api_key=user_api_key if user_api_key else None)
                         st.session_state['screen_result'] = res
@@ -276,54 +291,77 @@ def main():
             st.error(f"🔴 AI Error: {res['error']}")
         else:
             st.markdown("<hr style='border:1px solid #065f46;'>", unsafe_allow_html=True)
-            col_l, col_r = st.columns([1.3, 0.7], gap="large")
+            col_l, col_r = st.columns([1.4, 0.6], gap="large")
+
+            scores = res.get("scores", {})
 
             with col_l:
                 st.markdown("<div class='glass-card'>", unsafe_allow_html=True)
                 
-                st.markdown("### 🧠 Diagnostic Summary")
+                st.markdown("### 🧠 Executive Summary")
                 st.info(f"{res.get('screening_summary', 'No summary provided.')}")
                 
                 c1, c2 = st.columns(2)
                 with c1:
                     st.markdown("#### ✅ Matched Requirements")
-                    if not res.get("matched_requirements"):
-                        st.write("None.")
-                    for m in res.get("matched_requirements", []):
-                        st.markdown(f"- **{m}**")
+                    if not res.get("matched_requirements"): st.write("None.")
+                    for m in res.get("matched_requirements", []): st.markdown(f"- **{m}**")
 
                 with c2:
-                    st.markdown("#### ❌ Missing Requirements")
-                    if not res.get("missing_requirements"):
-                        st.write("None.")
-                    for m in res.get("missing_requirements", []):
-                        st.markdown(f"- **{m}**")
+                    st.markdown("#### ❌ Critical Missing Traits")
+                    if not res.get("missing_requirements"): st.write("None.")
+                    for m in res.get("missing_requirements", []): st.markdown(f"- **{m}**")
+
+                st.markdown("<br>", unsafe_allow_html=True)
+                st.markdown("#### ⚠️ Red Flags / HR Concerns")
+                flags = res.get("red_flags_or_concerns", [])
+                if not flags:
+                    st.success("No behavioral or temporal red flags detected.")
+                else:
+                    for fg in flags:
+                        st.markdown(f"<div class='flag-box'>{fg}</div>", unsafe_allow_html=True)
+                        
+                st.markdown("#### 🎤 Custom Interview Probes")
+                st.caption("Suggested questions based on gaps and red flags:")
+                for q in res.get("custom_interview_probes", []):
+                    st.markdown(f"- {q}")
 
                 st.markdown("</div>", unsafe_allow_html=True)
 
             with col_r:
-                st.markdown("<div class='glass-card' style='text-align:center;'>", unsafe_allow_html=True)
-                st.markdown("### Match Score")
-                st.markdown(f"<div class='score-circle'>{res.get('qualification_score', 'N/A')}</div>", unsafe_allow_html=True)
-                st.markdown("<p style='color:#94a3b8; font-size:0.9rem;'>Score out of 100 based on objective skill evaluation.</p>", unsafe_allow_html=True)
+                st.markdown("<div class='glass-card'>", unsafe_allow_html=True)
+                st.markdown("### Algorithmic Scoring")
+                
+                st.markdown(f"""
+                <div class='metric-container'>
+                    <span class='metric-label'>Overall Fit</span>
+                    <span class='metric-value'>{scores.get('overall_score', 'N/A')}</span>
+                </div>
+                <div class='metric-container'>
+                    <span class='metric-label'>Technical</span>
+                    <span class='metric-value'>{scores.get('technical_alignment', 'N/A')}</span>
+                </div>
+                <div class='metric-container'>
+                    <span class='metric-label'>Experience</span>
+                    <span class='metric-value'>{scores.get('experience_alignment', 'N/A')}</span>
+                </div>
+                """, unsafe_allow_html=True)
                 st.markdown("</div>", unsafe_allow_html=True)
                 
                 st.markdown("<div class='glass-card'>", unsafe_allow_html=True)
-                st.markdown("### 📦 Export Audit")
-                
+                st.markdown("### 📦 Export Diagnostics")
                 st.download_button(
-                    label="📥 Download screening_results.json",
+                    label="📥 Download JSON Artifact",
                     data=json.dumps(res, indent=2),
-                    file_name="screening_results.json",
+                    file_name="advanced_screening_results.json",
                     mime="application/json",
                     use_container_width=True
                 )
-                
                 txt_export = build_txt_export(res)
                 st.download_button(
-                    label="📥 Download screening_results.txt",
+                    label="📥 Download TXT Dossier",
                     data=txt_export,
-                    file_name="screening_results.txt",
+                    file_name="advanced_screening_results.txt",
                     mime="text/plain",
                     use_container_width=True
                 )
@@ -331,7 +369,7 @@ def main():
 
     # Footer
     st.markdown("---")
-    st.markdown("<p style='text-align:center;color:#64748b;'>ScreenGenius AI © 2026 | Unbiased Talent Pipelines | Powered by LiteLLM</p>", unsafe_allow_html=True)
+    st.markdown("<p style='text-align:center;color:#64748b;'>ScreenGenius Pro AI © 2026 | Multi-Dimensional Candidate ATS | Powered by LiteLLM</p>", unsafe_allow_html=True)
 
 if __name__ == "__main__":
     main()

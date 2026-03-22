@@ -6,7 +6,7 @@
 <br>
 
 <!-- Typing Dynamic -->
-<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=800&size=36&pause=1000&color=1d4ed8&center=true&vCenter=true&width=1000&lines=🔱+Defining+the+Post-SaaS+Economy;🦾+61+Production-Ready+AI+Agents;⚡+Enterprise-Grade+Multi-Agent+Orchestration;💎+Architected+for+Infinite+Scalability" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=800&size=36&pause=1000&color=1d4ed8&center=true&vCenter=true&width=1000&lines=🔱+Defining+the+Post-SaaS+Economy;🦾+62+Production-Ready+AI+Agents;⚡+Enterprise-Grade+Multi-Agent+Orchestration;💎+Architected+for+Infinite+Scalability" alt="Typing SVG" />
 
 <br>
 
@@ -61,7 +61,7 @@ This is the largest registry of **specialized, production-hardened AI agents** d
 
 ---
 
-## 🌍 The Agent Ecosystem (61+ Specialized Systems)
+## 🌍 The Agent Ecosystem (62+ Specialized Systems)
 
 *Click on any agent to access its specialized core and dashboard.*
 
@@ -145,6 +145,7 @@ This is the largest registry of **specialized, production-hardened AI agents** d
 - [🧠 **ModelMind AI**](./AI%20%20&%20Engineering%20Agents/Model%20comparison%20agent) – Deep architectural trade-off analysis.
 - [✨ **PromptForge AI**](./Data%20&%20Automation%20Agents/Prompt%20optimization%20agent) – Neural prompt engineering & linguistic structure optimization.
 - [🔍 **SemanticForge AI**](./AI%20%20&%20Engineering%20Agents/RAG%20document%20retrieval%20agent) – Orchestrated RAG document & contextual semantic retrieval.
+- [⚡ **ToolForge AI**](./AI%20%20&%20Engineering%20Agents/Tool-calling%20agent) – Autonomous tool-call orchestration with multi-tool execution registry.
 
 ---
 

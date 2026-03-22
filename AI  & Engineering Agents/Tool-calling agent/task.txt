@@ -1,0 +1,1 @@
+Calculate the total cost if 3 items cost $49 each, including 8% tax.

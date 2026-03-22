@@ -1,0 +1,16 @@
+Endpoint: POST /users
+Description: Create a new user
+Authentication: Bearer token
+
+Request Body:
+- name (string, required)
+- email (string, required)
+
+Response:
+- id (string)
+- name (string)
+- email (string)
+
+Errors:
+- 400 Bad Request
+- 401 Unauthorized

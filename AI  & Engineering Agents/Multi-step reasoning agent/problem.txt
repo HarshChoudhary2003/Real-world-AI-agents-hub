@@ -1,0 +1,4 @@
+A company has a budget of $120,000.
+Marketing costs $2,500 per campaign.
+Engineering costs $8,000 per feature.
+If the company runs 20 marketing campaigns, how many features can it build?

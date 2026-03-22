@@ -1,0 +1,5 @@
+Policy: Data Privacy
+Rules:
+- No sharing of personal email addresses
+- No storage of credit card numbers
+- All user data must be anonymized

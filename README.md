@@ -4,7 +4,7 @@
 <br>
 
 <!-- Typing Dynamic -->
-<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=800&size=36&pause=1000&color=1d4ed8&center=true&vCenter=true&width=1000&lines=🔱+Defining+the+Post-SaaS+Economy;🦾+72+Production-Ready+AI+Agents;⚡+Enterprise-Grade+Multi-Agent+Orchestration;💎+Architected+for+Infinite+Scalability" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=800&size=36&pause=1000&color=1d4ed8&center=true&vCenter=true&width=1000&lines=🔱+Defining+the+Post-SaaS+Economy;🦾+73+Production-Ready+AI+Agents;⚡+Enterprise-Grade+Multi-Agent+Orchestration;💎+Architected+for+Infinite+Scalability" alt="Typing SVG" />
 
 <br>
 
@@ -59,7 +59,7 @@ This is the largest registry of **specialized, production-hardened AI agents** d
 
 ---
 
-## 🌍 The Agent Ecosystem (72+ Specialized Systems)
+## 🌍 The Agent Ecosystem (73+ Specialized Systems)
 
 *Click on any agent to access its specialized core and dashboard.*
 
@@ -157,6 +157,7 @@ This is the largest registry of **specialized, production-hardened AI agents** d
 - [🔎 **ScreenGenius Pro AI**](./HR%20,%20Legal%20&%20Compliance%20Agents/Candidate%20screening%20agent) – Multi-axis algorithmic candidate screening matrix with red-flag detection & custom interview probes.
 - [🎙️ **QuestForge AI**](./HR%20,%20Legal%20&%20Compliance%20Agents/Interview%20question%20generator%20agent) – Autonomous technical interview question architect.
 - [📈 **ReviewForge AI**](./HR%20,%20Legal%20&%20Compliance%20Agents/Performance%20review%20agent) – Professional tone synthesis and constructive performance appraisal engine.
+- [⚖️ **ComplianceGuard AI**](./HR%20,%20Legal%20&%20Compliance%20Agents/Policy%20compliance%20checker%20agent) – Automated enterprise policy enforcement & liability prevention matrix.
 
 ---
 

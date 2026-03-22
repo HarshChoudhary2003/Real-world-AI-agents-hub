@@ -4,7 +4,7 @@
 <br>
 
 <!-- Typing Dynamic -->
-<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=800&size=36&pause=1000&color=1d4ed8&center=true&vCenter=true&width=1000&lines=🔱+Defining+the+Post-SaaS+Economy;🦾+68+Production-Ready+AI+Agents;⚡+Enterprise-Grade+Multi-Agent+Orchestration;💎+Architected+for+Infinite+Scalability" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=800&size=36&pause=1000&color=1d4ed8&center=true&vCenter=true&width=1000&lines=🔱+Defining+the+Post-SaaS+Economy;🦾+69+Production-Ready+AI+Agents;⚡+Enterprise-Grade+Multi-Agent+Orchestration;💎+Architected+for+Infinite+Scalability" alt="Typing SVG" />
 
 <br>
 
@@ -59,7 +59,7 @@ This is the largest registry of **specialized, production-hardened AI agents** d
 
 ---
 
-## 🌍 The Agent Ecosystem (68+ Specialized Systems)
+## 🌍 The Agent Ecosystem (69+ Specialized Systems)
 
 *Click on any agent to access its specialized core and dashboard.*
 
@@ -150,6 +150,10 @@ This is the largest registry of **specialized, production-hardened AI agents** d
 - [📖 **DocForge AI**](./AI%20%20&%20Engineering%20Agents/API%20documentation%20agent) – Automated deterministic REST API schema documentation & contract logic compiler.
 - [🧪 **TestForge AI**](./AI%20%20&%20Engineering%20Agents/Test%20case%20generation%20agent) – Rigorous test suite & edge case regression validation framework.
 - [🏗️ **ArchForge AI**](./AI%20%20&%20Engineering%20Agents/System%20architecture%20explainer%20agent) – Topological data-flow extraction & implicitly derived trade-off analytical engine.
+
+### 🗄️ HR, Legal & Compliance Systems
+*Deterministic talent acquisition and operational risk frameworks.*
+- [💼 **TalentForge AI**](./HR%20,%20Legal%20&%20Compliance%20Agents/Job%20description%20generator%20agent) – Inclusive requisition & job description intelligence pipeline.
 
 ---
 

@@ -1,0 +1,11 @@
+Role: AI Product Manager
+Team: Enterprise AI Platform
+Seniority: Senior
+Location: Remote
+Responsibilities:
+- Define AI product roadmap
+- Collaborate with engineering and stakeholders
+- Drive product delivery
+Required Skills:
+- Product management experience
+- AI/ML fundamentals

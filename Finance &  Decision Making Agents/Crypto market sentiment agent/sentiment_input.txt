@@ -1,0 +1,10 @@
+Asset: Bitcoin (BTC)
+Time Horizon: Last 24 Hours
+Market Context: Sideways consolidation after a 5% breakout attempt.
+
+Qualitative Signals:
+- News: ETFs seeing record inflows but retail volume is thin. Regulatory noise from EU markets. Inflation data due tomorrow.
+- Social (X): Bullish sentiment among 'Influencers' but 'Fear & Greed Index' is at 62 (Greed). High liquidations on long positions.
+- Technical: RSIs are cooling off near 70. Support at $62k held twice.
+
+Goal: Synthesize a general market sentiment score and identify divergence between news and social signals.

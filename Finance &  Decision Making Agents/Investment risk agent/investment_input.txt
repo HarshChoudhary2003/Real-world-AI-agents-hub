@@ -1,0 +1,15 @@
+Investment Target: Early-stage B2B AI/SaaS startup
+Current Valuation: $15M Post-money
+Market Context: Competitive landscape with low-code/no-code incumbents.
+Time Horizon: 5-7 years for liquidity event (M&A or IPO).
+
+Hypotheses & Assumptions:
+1. Rapid customer expansion via PLG (Product-Led Growth).
+2. Continued availability of Series A/B funding at favorable terms.
+3. Retention of key technical co-founders.
+4. Moat: Proprietary dataset for fine-tuning vertical LLMs.
+
+Risk Evaluation Goals:
+- Identify concentration risks in the tech stack.
+- Assess regulatory compliance (GDPR/AI Act) impact.
+- Evaluate burn-rate sustainability vs. runway.

@@ -1,0 +1,21 @@
+Current Cash Balance: $450,000
+
+Inflows (Next 30 Days):
+- Client A Payment (Due April 5): $85,000
+- Client B Milestone (Due April 15): $120,000
+- Subscription Revenue (Recurring): $95,000
+
+Outflows (Next 30 Days):
+- Office Rent: $22,000
+- Payroll: $185,000
+- Server Hosting: $8,500
+- Marketing Spend: $15,000
+
+Projected Variable Expenses:
+- New Laptop Fleet: $12,000
+- Legal Consultation: $5,000
+
+Goals:
+- Maintain minimum cash reserve of $250,000
+- Identify potential funding gaps
+- Evaluate 3-month sustainability

@@ -77,8 +77,8 @@ def generate_budget(text, model_name="gpt-4o-mini"):
         "temperature": 0.3
     }
     
-    # Check if OpenAI and handle response_format if so
-    if "gpt-" in model_name:
+    # Use response_format only for OpenAI models that support it
+    if "gpt-" in model_name or "o1-" in model_name:
         kwargs["response_format"] = {"type": "json_object"}
     
     response = litellm.completion(**kwargs)

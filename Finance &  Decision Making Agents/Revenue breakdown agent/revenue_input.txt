@@ -1,0 +1,21 @@
+Total Revenue: $120,000
+Period: Q2 2026
+
+Product Breakdown:
+- Enterprise License (Product A): $60,000
+- SMB Analytics (Product B): $40,000
+- Professional Services (Product C): $20,000
+
+Channel Breakdown:
+- Direct Sales: $75,000
+- Online/Self-Service: $45,000
+
+Regional Breakdown:
+- North America: $85,000
+- Europe: $25,000
+- APAC: $10,000
+
+Goals:
+- Identify concentration risks.
+- Highlight growth trends by segment.
+- Suggest diversification opportunities.

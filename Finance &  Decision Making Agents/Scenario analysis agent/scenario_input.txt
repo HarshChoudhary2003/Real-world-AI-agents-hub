@@ -1,0 +1,11 @@
+Baseline Annual Revenue: $1,000,000
+Key Variable: Market demand and Competitor Entry
+Current Outlook: Cautiously optimistic, but waiting for Q3 regulatory shifts.
+
+Scenarios:
+1. Low Demand: Market contraction of 20%. Competitor X launches a price war.
+2. Expected Demand: Stable market growth (0-5%). Current marketing ROI holds.
+3. High Demand: Explosive growth of 25%. Strategic partnership with Vendor Y is finalized.
+
+Time Horizon: 12 months (Fiscal Year 2027)
+Goal: Evaluate the durability of current overhead costs under the 'Low Demand' scenario and project surplus allocation for 'High Demand'. 

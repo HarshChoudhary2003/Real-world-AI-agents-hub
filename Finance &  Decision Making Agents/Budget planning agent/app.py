@@ -69,9 +69,26 @@ st.markdown("### Generative Financial Intelligence & Strategic Allocation")
 with st.sidebar:
     st.image("https://img.icons8.com/fluency/96/money-bag.png", width=80)
     st.header("Configuration")
-    st.info("This agent uses GPT-4o-mini to analyze your income, expenses, and goals to create a strategic budget plan.")
+    
+    # Model Selection
+    model_provider = st.selectbox(
+        "Select Intelligence Provider",
+        ["OpenAI (gpt-4o-mini)", "Google (gemini/gemini-1.5-flash)", "Anthropic (claude-3-haiku-20240307)"],
+        index=0
+    )
+    
+    # Extract clean model name for litellm
+    model_mapping = {
+        "OpenAI (gpt-4o-mini)": "gpt-4o-mini",
+        "Google (gemini/gemini-1.5-flash)": "gemini/gemini-1.5-flash",
+        "Anthropic (claude-3-haiku-20240307)": "claude-3-haiku-20240307"
+    }
+    selected_model = model_mapping[model_provider]
+
+    st.info("This agent uses advanced LLMs via LiteLLM to analyze your income, expenses, and goals.")
     
     if st.button("Reset Input"):
+        st.session_state.clear()
         st.rerun()
 
 col1, col2 = st.columns([1, 1], gap="large")
@@ -102,7 +119,7 @@ with col1:
                         f.write(user_input)
                     
                     # Generate budget
-                    budget_data = generate_budget(user_input)
+                    budget_data = generate_budget(user_input, model_name=selected_model)
                     st.session_state['budget_data'] = budget_data
                     save_outputs(budget_data)
                     st.success("✅ Analysis Complete!")

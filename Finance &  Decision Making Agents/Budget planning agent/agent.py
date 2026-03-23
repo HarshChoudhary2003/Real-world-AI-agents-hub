@@ -1,14 +1,12 @@
 import os
 import json
-from openai import OpenAI
+import litellm
+import re
 from datetime import date
 from dotenv import load_dotenv
 
 # Load environment variables (e.g., from ../../.env)
 load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), "..", "..", ".env"))
-
-# Initialize OpenAI client - it will use OPENAI_API_KEY environment variable
-client = OpenAI()
 
 SYSTEM_PROMPT = """
 You are a Budget Planning Agent.
@@ -46,18 +44,46 @@ def read_input(path="budget_input.txt"):
         print(f"Error: {path} not found.")
         return None
 
-def generate_budget(text):
-    # Using gpt-4o-mini as gpt-4.1-mini is not a standard OpenAI model name
-    response = client.chat.completions.create(
-        model="gpt-4o-mini",
-        messages=[
+def extract_json(response_content):
+    """Attempts to robustly parse JSON out of an LLM response."""
+    try:
+        return json.loads(response_content)
+    except json.JSONDecodeError:
+        # Try stripping markdown blocks
+        match = re.search(r"```(?:json)?\s*([\s\S]*?)```", str(response_content))
+        if match:
+            try:
+                return json.loads(match.group(1).strip())
+            except:
+                pass
+        
+        # Try finding anything between braces
+        match = re.search(r"\{[\s\S]*\}", str(response_content))
+        if match:
+            try:
+                return json.loads(match.group(0).strip())
+            except:
+                pass
+    raise ValueError("Failed to extract valid JSON from the model's response.")
+
+def generate_budget(text, model_name="gpt-4o-mini"):
+    """Generates budget using selected provider via LiteLLM."""
+    kwargs = {
+        "model": model_name,
+        "messages": [
             {"role": "system", "content": SYSTEM_PROMPT},
             {"role": "user", "content": text}
         ],
-        temperature=0.3,
-        response_format={"type": "json_object"}
-    )
-    return json.loads(response.choices[0].message.content)
+        "temperature": 0.3
+    }
+    
+    # Check if OpenAI and handle response_format if so
+    if "gpt-" in model_name:
+        kwargs["response_format"] = {"type": "json_object"}
+    
+    response = litellm.completion(**kwargs)
+    raw_content = response.choices[0].message.content
+    return extract_json(raw_content)
 
 def save_outputs(data):
     # Save as JSON

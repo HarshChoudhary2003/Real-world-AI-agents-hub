@@ -1,0 +1,11 @@
+Monthly Expenses:
+- Cloud services (AWS/GCP): $3,500/month (heavy GPU usage)
+- Software licenses (Salesforce, Slack, Zoom): $1,200/month
+- Office rent (Co-working): $2,800/month
+- Marketing tools (Hubspot, SEMrush): $900/month
+- Professional Services (Legal, Accounting): $1,500/month
+
+Business Priority: Maintain product development velocity and high uptime. 
+Company Size: 15-20 employees.
+Recent Change: Significant increase in cloud compute costs over the last 3 months.
+Goal: Reduce monthly burn by at least 15% without impacting head count or core infrastructure reliability.

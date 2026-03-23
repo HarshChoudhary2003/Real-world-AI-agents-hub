@@ -1,0 +1,11 @@
+Report: Income Statement
+Period: Q2 2026
+Revenue: $500,000
+Expenses: $420,000
+Net Income: $80,000
+Gross Margin: 72%
+Customer Acquisition Cost (CAC): $180 (vs $145 last quarter)
+Churn Rate: 4.2% (vs 3.8% last quarter)
+
+Context: SaaS startup in high-growth phase. Scaling marketing efforts but seeing diminishing returns on paid search. Net income is positive but cash-usage for expansion is high.
+Goal: Translate the Q2 metrics into a plain-language strategic narrative for investors.

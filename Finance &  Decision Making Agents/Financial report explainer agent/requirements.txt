@@ -1,0 +1,8 @@
+litellm
+openai
+google-generativeai
+anthropic
+python-dotenv
+streamlit
+pandas
+plotly

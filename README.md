@@ -4,7 +4,7 @@
 <br>
 
 <!-- Typing Dynamic -->
-<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=800&size=36&pause=1000&color=1d4ed8&center=true&vCenter=true&width=1000&lines=🔱+Defining+the+Post-SaaS+Economy;🦾+83+Production-Ready+AI+Agents;⚡+Enterprise-Grade+Multi-Agent+Orchestration;💎+Architected+for+Infinite+Scalability" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=800&size=36&pause=1000&color=1d4ed8&center=true&vCenter=true&width=1000&lines=🔱+Defining+the+Post-SaaS+Economy;🦾+84+Production-Ready+AI+Agents;⚡+Enterprise-Grade+Multi-Agent+Orchestration;💎+Architected+for+Infinite+Scalability" alt="Typing SVG" />
 
 <br>
 
@@ -59,7 +59,7 @@ This is the largest registry of **specialized, production-hardened AI agents** d
 
 ---
 
-## 🌍 The Agent Ecosystem (83+ Specialized Systems)
+## 🌍 The Agent Ecosystem (84+ Specialized Systems)
 
 *Click on any agent to access its specialized core and dashboard.*
 
@@ -171,6 +171,7 @@ This is the largest registry of **specialized, production-hardened AI agents** d
 - [🏷️ **PriceForge AI**](./Finance%20%20&%20%20Decision%20Making%20Agents/Pricing%20strategy%20agent) – Strategic economic architect & value-based pricing optimization.
 - [📉 **OptiForge AI**](./Finance%20%20&%20%20Decision%20Making%20Agents/Cost%20optimization%20agent) – Autonomous efficiency architect & predictive cost optimization.
 - [📈 **RevForge AI**](./Finance%20%20&%20%20Decision%20Making%20Agents/Revenue%20breakdown%20agent) – Strategic revenue architect & structural performance auditor.
+- [🕵️ **FinLens AI**](./Finance%20%20&%20%20Decision%20Making%20Agents/Financial%20report%20explainer%20agent) – JARVIS-grade neural auditor & predictive report explainer.
 
 ---
 

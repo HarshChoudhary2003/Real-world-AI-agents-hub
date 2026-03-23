@@ -4,7 +4,7 @@
 <br>
 
 <!-- Typing Dynamic -->
-<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=800&size=36&pause=1000&color=1d4ed8&center=true&vCenter=true&width=1000&lines=🔱+Defining+the+Post-SaaS+Economy;🦾+87+Production-Ready+AI+Agents;⚡+Enterprise-Grade+Multi-Agent+Orchestration;💎+Architected+for+Infinite+Scalability" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=800&size=36&pause=1000&color=1d4ed8&center=true&vCenter=true&width=1000&lines=🔱+Defining+the+Post-SaaS+Economy;🦾+88+Production-Ready+AI+Agents;⚡+Enterprise-Grade+Multi-Agent+Orchestration;💎+Architected+for+Infinite+Scalability" alt="Typing SVG" />
 
 <br>
 
@@ -59,7 +59,7 @@ This is the largest registry of **specialized, production-hardened AI agents** d
 
 ---
 
-## 🌍 The Agent Ecosystem (87+ Specialized Systems)
+## 🌍 The Agent Ecosystem (88+ Specialized Systems)
 
 *Click on any agent to access its specialized core and dashboard.*
 
@@ -175,6 +175,7 @@ This is the largest registry of **specialized, production-hardened AI agents** d
 - [🔮 **SimuForge AI**](./Finance%20%20&%20%20Decision%20Making%20Agents/Scenario%20analysis%20agent) – Futuristic scenario engine & neural projection architect.
 - [🧠 **RiskVault AI**](./Finance%20%20&%20%20Decision%20Making%20Agents/Investment%20risk%20agent) – Graph-based neural auditor & predictive investment risk engine.
 - [🪙 **SentimentCore AI**](./Finance%20%20&%20%20Decision%20Making%20Agents/Crypto%20market%20sentiment%20agent) – Apple-level neural brain & predictive crypto sentiment architect.
+- [🧬 **StrategyLens AI**](./Finance%20%20&%20%20Decision%20Making%20Agents/Trading%20strategy%20explanation%20agent) – Unicorn-grade neural auditor & predictive trading logic explainer.
 
 ---
 

@@ -1,0 +1,9 @@
+Strategy: Dual Moving Average Crossover (Golden Cross / Death Cross)
+Rules:
+- Buy (Golden Cross): 50-day Simple Moving Average (SMA) crosses above the 200-day SMA.
+- Sell (Death Cross): 50-day SMA crosses below the 200-day SMA.
+Timeframe: Daily / Weekly (Swing Trading)
+Market: Major Equities (SPY, QQQ) and Forex (EUR/USD)
+Risk Assumption: Moderate volatility, large capitalization focus.
+
+Goal: Provide a comprehensive logic audit of the trend-following mechanism and identify historical fail-points during ranging markets.

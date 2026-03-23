@@ -1,0 +1,8 @@
+Income: $10,000 per month
+Expenses:
+- Rent: $3,000
+- Salaries: $4,000
+- Software: $800
+Goals:
+- Save 10%
+- Maintain emergency buffer

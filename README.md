@@ -4,7 +4,7 @@
 <br>
 
 <!-- Typing Dynamic -->
-<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=800&size=36&pause=1000&color=1d4ed8&center=true&vCenter=true&width=1000&lines=🔱+Defining+the+Post-SaaS+Economy;🦾+78+Production-Ready+AI+Agents;⚡+Enterprise-Grade+Multi-Agent+Orchestration;💎+Architected+for+Infinite+Scalability" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=800&size=36&pause=1000&color=1d4ed8&center=true&vCenter=true&width=1000&lines=🔱+Defining+the+Post-SaaS+Economy;🦾+79+Production-Ready+AI+Agents;⚡+Enterprise-Grade+Multi-Agent+Orchestration;💎+Architected+for+Infinite+Scalability" alt="Typing SVG" />
 
 <br>
 
@@ -59,7 +59,7 @@ This is the largest registry of **specialized, production-hardened AI agents** d
 
 ---
 
-## 🌍 The Agent Ecosystem (78+ Specialized Systems)
+## 🌍 The Agent Ecosystem (79+ Specialized Systems)
 
 *Click on any agent to access its specialized core and dashboard.*
 
@@ -163,6 +163,10 @@ This is the largest registry of **specialized, production-hardened AI agents** d
 - [🔐 **PrivacyForge AI**](./HR%20,%20Legal%20&%20Compliance%20Agents/Data%20privacy%20explanation%20agent) – Contextual data privacy regulation compliance matrix mapping features to legal bounds.
 - [🎓 **SkillForge AI**](./HR%20,%20Legal%20&%20Compliance%20Agents/Training%20content%20generator%20agent) – Auto-architected corporate learning & objective enablement module generator.
 - [📋 **AuditForge AI**](./HR%20,%20Legal%20&%20Compliance%20Agents/Audit%20preparation%20agent) – Pre-audit readiness scanner identifying critical evidence gaps and mandatory remediations.
+
+### 💰 Finance & Decision Making Systems
+*Strategic capital allocation and deterministic financial modeling.*
+- [📊 **BudgetForge AI**](./Finance%20%20&%20%20Decision%20Making%20Agents/Budget%20planning%20agent) – Intelligent capital allocation & goal-aligned budgeting.
 
 ---
 

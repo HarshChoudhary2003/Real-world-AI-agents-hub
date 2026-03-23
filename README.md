@@ -4,7 +4,7 @@
 <br>
 
 <!-- Typing Dynamic -->
-<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=800&size=36&pause=1000&color=1d4ed8&center=true&vCenter=true&width=1000&lines=🔱+Defining+the+Post-SaaS+Economy;🦾+80+Production-Ready+AI+Agents;⚡+Enterprise-Grade+Multi-Agent+Orchestration;💎+Architected+for+Infinite+Scalability" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=800&size=36&pause=1000&color=1d4ed8&center=true&vCenter=true&width=1000&lines=🔱+Defining+the+Post-SaaS+Economy;🦾+81+Production-Ready+AI+Agents;⚡+Enterprise-Grade+Multi-Agent+Orchestration;💎+Architected+for+Infinite+Scalability" alt="Typing SVG" />
 
 <br>
 
@@ -59,7 +59,7 @@ This is the largest registry of **specialized, production-hardened AI agents** d
 
 ---
 
-## 🌍 The Agent Ecosystem (80+ Specialized Systems)
+## 🌍 The Agent Ecosystem (81+ Specialized Systems)
 
 *Click on any agent to access its specialized core and dashboard.*
 
@@ -168,6 +168,7 @@ This is the largest registry of **specialized, production-hardened AI agents** d
 *Strategic capital allocation and deterministic financial modeling.*
 - [📊 **BudgetForge AI**](./Finance%20%20&%20%20Decision%20Making%20Agents/Budget%20planning%20agent) – Intelligent capital allocation & goal-aligned budgeting.
 - [🌊 **FlowForge AI**](./Finance%20%20&%20%20Decision%20Making%20Agents/Cash%20flow%20forecasting%20agent) – Autonomous liquidity architect & predictive cash flow modeling.
+- [🏷️ **PriceForge AI**](./Finance%20%20&%20%20Decision%20Making%20Agents/Pricing%20strategy%20agent) – Strategic economic architect & value-based pricing optimization.
 
 ---
 

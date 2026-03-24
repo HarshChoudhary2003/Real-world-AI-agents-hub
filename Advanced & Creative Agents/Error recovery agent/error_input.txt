@@ -1,0 +1,5 @@
+Error Type: Database connection timeout
+Severity: High
+Context:
+- Query execution
+- User authentication flow

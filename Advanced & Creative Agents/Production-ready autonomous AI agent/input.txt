@@ -1,0 +1,3 @@
+Mission Objective: Scale the autonomous cluster to 50 nodes and optimize resource allocation.
+Context: Financial market volatility is currently high.
+Constraints: Maintain high ethics and low risk.

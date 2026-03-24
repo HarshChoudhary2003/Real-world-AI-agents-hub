@@ -456,6 +456,11 @@ CATEGORIES_RAW = {
             "name": "\u2696\ufe0f Ethics.AI",
             "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Advanced%20&%20Creative%20Agents/Ethics%20&%20guardrails%20agent",
             "desc": "High-fidelity ethical assessment & compliance guardrail engine."
+        },
+        {
+            "name": "\ud83d\udc8e Apex.AI",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Advanced%20&%20Creative%20Agents/Production-ready%20autonomous%20AI%20agent",
+            "desc": "The 100th Agent: Ultimate autonomous production-ready neural matrix."
         }
     ],
     "1. Initialize Runtime": [],
@@ -691,7 +696,7 @@ def main():
     st.markdown('''
     <div class="hero">
         <h1>Autonomous Operations.</h1>
-        <p>A unified orchestration layer for 97 deterministic AI agents architected for the next-generation economic engine.</p>
+        <p>A unified orchestration layer for 100 deterministic AI agents architected for the next-generation economic engine.</p>
     </div>
     ''', unsafe_allow_html=True)
 

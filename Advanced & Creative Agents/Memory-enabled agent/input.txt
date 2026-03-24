@@ -1,0 +1,4 @@
+User name: Alex
+Preference: Prefers concise reports.
+Previous project: Project Alpha (Completed).
+Last interaction: Asked about progress on Project Beta.

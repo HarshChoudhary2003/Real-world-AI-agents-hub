@@ -436,6 +436,11 @@ CATEGORIES_RAW = {
             "name": "\ud83d\udca0 HealDesk.AI",
             "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Advanced%20&%20Creative%20Agents/Error%20recovery%20agent",
             "desc": "Autonomous anomaly detection & self-healing recovery engine."
+        },
+        {
+            "name": "\ud83e\udde0 Neural.AI",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Advanced%20&%20Creative%20Agents/Memory-enabled%20agent",
+            "desc": "Memory-augmented persistent intelligence swarm."
         }
     ],
     "1. Initialize Runtime": [],
@@ -671,7 +676,7 @@ def main():
     st.markdown('''
     <div class="hero">
         <h1>Autonomous Operations.</h1>
-        <p>A unified orchestration layer for 93 deterministic AI agents architected for the next-generation economic engine.</p>
+        <p>A unified orchestration layer for 94 deterministic AI agents architected for the next-generation economic engine.</p>
     </div>
     ''', unsafe_allow_html=True)
 

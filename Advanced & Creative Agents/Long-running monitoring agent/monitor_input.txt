@@ -1,0 +1,4 @@
+Metric: CPU usage
+Threshold: 80%
+Check Interval: 10 seconds
+Persistence: 3 consecutive checks

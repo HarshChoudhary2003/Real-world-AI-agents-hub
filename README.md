@@ -4,7 +4,7 @@
 <br>
 
 <!-- Typing Dynamic -->
-<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=800&size=36&pause=1000&color=1d4ed8&center=true&vCenter=true&width=1000&lines=🔱+Defining+the+Post-SaaS+Economy;🦾+89+Production-Ready+AI+Agents;⚡+Enterprise-Grade+Multi-Agent+Orchestration;💎+Architected+for+Infinite+Scalability" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=800&size=36&pause=1000&color=1d4ed8&center=true&vCenter=true&width=1000&lines=🔱+Defining+the+Post-SaaS+Economy;🦾+91+Production-Ready+AI+Agents;⚡+Enterprise-Grade+Multi-Agent+Orchestration;💎+Architected+for+Infinite+Scalability" alt="Typing SVG" />
 
 <br>
 
@@ -59,7 +59,7 @@ This is the largest registry of **specialized, production-hardened AI agents** d
 
 ---
 
-## 🌍 The Agent Ecosystem (89+ Specialized Systems)
+## 🌍 The Agent Ecosystem (91+ Specialized Systems)
 
 *Click on any agent to access its specialized core and dashboard.*
 
@@ -181,6 +181,7 @@ This is the largest registry of **specialized, production-hardened AI agents** d
 *High-level cognitive orchestration and complex interaction models.*
 - [💠 **Orchestra.AI**](./Advanced%20&%20Creative%20Agents/Multi-agent%20collaboration%20system) – Autonomous multi-agent orchestration for mission-critical collaboration.
 - [🧠 **Decision AI**](./Advanced%20&%20Creative%20Agents/Autonomous%20decision%20agent) – Neural decision-making framework with trade-off analysis.
+- [📡 **Sentinel.AI**](./Advanced%20&%20Creative%20Agents/Long-running%20monitoring%20agent) – Persistent telemetry monitor & autonomous threshold sentinel.
 
 ---
 

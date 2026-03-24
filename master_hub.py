@@ -421,6 +421,11 @@ CATEGORIES_RAW = {
             "name": "\ud83e\udde0 Decision AI",
             "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Advanced%20&%20Creative%20Agents/Autonomous%20decision%20agent",
             "desc": "Neural decision-making framework with trade-off analysis."
+        },
+        {
+            "name": "\ud83d\udce1 Sentinel.AI",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Advanced%20&%20Creative%20Agents/Long-running%20monitoring%20agent",
+            "desc": "Persistent telemetry monitor & autonomous threshold sentinel."
         }
     ],
     "1. Initialize Runtime": [],
@@ -656,7 +661,7 @@ def main():
     st.markdown('''
     <div class="hero">
         <h1>Autonomous Operations.</h1>
-        <p>A unified orchestration layer for 89 deterministic AI agents architected for the next-generation economic engine.</p>
+        <p>A unified orchestration layer for 91 deterministic AI agents architected for the next-generation economic engine.</p>
     </div>
     ''', unsafe_allow_html=True)
 

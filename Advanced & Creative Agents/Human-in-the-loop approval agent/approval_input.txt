@@ -1,0 +1,6 @@
+Proposed Action: Deploy new model to production
+Risk Level: High
+Approval Criteria:
+- Model performance validated
+- Bias checks completed
+Approver Role: AI Governance Lead

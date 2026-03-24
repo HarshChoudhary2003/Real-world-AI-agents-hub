@@ -1,0 +1,9 @@
+Context: Server CPU usage at 85%
+Goal: Maintain system stability
+Rules:
+- If CPU > 80%, scale resources
+- If CPU < 50%, reduce resources
+Available Actions:
+- Scale up
+- Scale down
+- Take no action

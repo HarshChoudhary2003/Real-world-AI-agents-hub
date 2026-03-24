@@ -1,0 +1,4 @@
+Goal: Create a short market analysis summary
+Agents:
+- Research Agent: Scans industry data and summarizes current market trends.
+- Analysis Agent: Evaluates research findings to provide strategic recommendations.

@@ -411,6 +411,18 @@ CATEGORIES_RAW = {
             "desc": "Pre-audit readiness scanner identifying critical evidence gaps and mandatory remediations."
         }
     ],
+    "\ud83c\udfa8 Advanced & Creative Systems": [
+        {
+            "name": "\ud83d\udca0 Orchestra.AI",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Advanced%20&%20Creative%20Agents/Multi-agent-collaboration-system",
+            "desc": "Autonomous multi-agent orchestration for mission-critical collaboration."
+        },
+        {
+            "name": "\ud83e\udde0 Decision AI",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Advanced%20&%20Creative%20Agents/Autonomous%20decision%20agent",
+            "desc": "Neural decision-making framework with trade-off analysis."
+        }
+    ],
     "1. Initialize Runtime": [],
     "2. Configure Credentials": [],
     "3. Launch the Master Brain": []
@@ -644,7 +656,7 @@ def main():
     st.markdown('''
     <div class="hero">
         <h1>Autonomous Operations.</h1>
-        <p>A unified orchestration layer for 78 deterministic AI agents architected for the next-generation economic engine.</p>
+        <p>A unified orchestration layer for 89 deterministic AI agents architected for the next-generation economic engine.</p>
     </div>
     ''', unsafe_allow_html=True)
 

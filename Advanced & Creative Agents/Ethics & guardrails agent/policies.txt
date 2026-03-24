@@ -1,0 +1,4 @@
+Policies:
+- No generation of harmful or illegal content
+- No disclosure of sensitive personal data
+- No autonomous actions with irreversible impact

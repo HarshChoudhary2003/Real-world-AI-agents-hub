@@ -1,0 +1,2 @@
+Proposed Action: Automatically approve a large financial transaction
+Risk Category: High

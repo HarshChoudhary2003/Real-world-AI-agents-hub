@@ -4,7 +4,7 @@
 <br>
 
 <!-- Typing Dynamic -->
-<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=800&size=36&pause=1000&color=1d4ed8&center=true&vCenter=true&width=1000&lines=🔱+Defining+the+Post-SaaS+Economy;🦾+96+Production-Ready+AI+Agents;⚡+Enterprise-Grade+Multi-Agent+Orchestration;💎+Architected+for+Infinite+Scalability" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=800&size=36&pause=1000&color=1d4ed8&center=true&vCenter=true&width=1000&lines=🔱+Defining+the+Post-SaaS+Economy;🦾+97+Production-Ready+AI+Agents;⚡+Enterprise-Grade+Multi-Agent+Orchestration;💎+Architected+for+Infinite+Scalability" alt="Typing SVG" />
 
 <br>
 
@@ -59,7 +59,7 @@ This is the largest registry of **specialized, production-hardened AI agents** d
 
 ---
 
-## 🌍 The Agent Ecosystem (96+ Specialized Systems)
+## 🌍 The Agent Ecosystem (97+ Specialized Systems)
 
 *Click on any agent to access its specialized core and dashboard.*
 
@@ -187,6 +187,7 @@ This is the largest registry of **specialized, production-hardened AI agents** d
 - [🧠 **Neural.AI**](./Advanced%20&%20Creative%20Agents/Memory-enabled%20agent) – Memory-augmented persistent intelligence swarm.
 - [🎭 **Identity.AI**](./Advanced%20&%20Creative%20Agents/Persona-driven%20agent) – Neural role-projection & authoritative persona engine.
 - [💠 **Evolver.AI**](./Advanced%20&%20Creative%20Agents/Self-improving%20agent) – Feedback-driven self-optimizing neural agent.
+- [⚖️ **Ethics.AI**](./Advanced%20&%20Creative%20Agents/Ethics%20&%20guardrails%20agent) – High-fidelity ethical assessment & compliance guardrail engine.
 
 ---
 

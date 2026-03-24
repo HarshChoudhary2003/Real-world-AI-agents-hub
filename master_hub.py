@@ -156,14 +156,21 @@ CATEGORIES_RAW = {
             "desc": "SRE incident diagnosis & error classification."
         },
         {
-            "name": "\ud83d\udcca Alert-Insight",
-            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Data%20&%20Automation%20Agents/Monitoring%20alert%20explanation%20agent",
-            "desc": "Monitoring alert translation & root-cause diagnostic."
-        },
-        {
             "name": "\ud83c\udfd7\ufe0f Auto-Strategist",
             "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Data%20&%20Automation%20Agents/Automation%20recommendation%20agent",
             "desc": "Process mining & high-ROI automation strategist."
+        }
+    ],
+    "\ud83d\udcb0 Career & Income Automation Systems": [
+        {
+            "name": "\ud83d\udcca Profit.AI",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Career%20&%20Income%20Automation%20AI%20Agents/Freelance%20Project%20Profitability%20Predictor",
+            "desc": "Predicts project profitability for freelancers based on scope, time, and expenses."
+        },
+        {
+            "name": "\ud83d\udcbc Resume Forge",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Career%20&%20Income%20Automation%20AI%20Agents/Resume%20Optimizer%20Agent",
+            "desc": "Expert ATS optimization & resume synchronization engine."
         }
     ],
     "\ud83e\udde0 Personal Productivity Systems": [
@@ -696,7 +703,7 @@ def main():
     st.markdown('''
     <div class="hero">
         <h1>Autonomous Operations.</h1>
-        <p>A unified orchestration layer for 100 deterministic AI agents architected for the next-generation economic engine.</p>
+        <p>A unified orchestration layer for 99 deterministic AI agents architected for the next-generation economic engine.</p>
     </div>
     ''', unsafe_allow_html=True)
 

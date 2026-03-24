@@ -4,7 +4,7 @@
 <br>
 
 <!-- Typing Dynamic -->
-<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=800&size=36&pause=1000&color=1d4ed8&center=true&vCenter=true&width=1000&lines=🔱+Defining+the+Post-SaaS+Economy;🦾+100+Production-Ready+AI+Agents;⚡+Enterprise-Grade+Multi-Agent+Orchestration;💎+Architected+for+Infinite+Scalability" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=800&size=36&pause=1000&color=1d4ed8&center=true&vCenter=true&width=1000&lines=🔱+Defining+the+Post-SaaS+Economy;🦾+99+Production-Ready+AI+Agents;⚡+Enterprise-Grade+Multi-Agent+Orchestration;💎+Architected+for+Infinite+Scalability" alt="Typing SVG" />
 
 <br>
 
@@ -59,7 +59,7 @@ This is the largest registry of **specialized, production-hardened AI agents** d
 
 ---
 
-## 🌍 The Agent Ecosystem (100+ Specialized Systems)
+## 🌍 The Agent Ecosystem (99+ Specialized Systems)
 
 *Click on any agent to access its specialized core and dashboard.*
 
@@ -110,6 +110,8 @@ This is the largest registry of **specialized, production-hardened AI agents** d
 - [📧 **MailMind AI**](./Personal%20Productivity%20Agents/Email%20summarization%20agent) – Intelligent thread logic & summary mapping.
 - [📅 **SyncGuard**](./Personal%20Productivity%20Agents/Calendar%20conflict%20resolver%20agent) – Conflict detection & resolution engine.
 - [📋 **AgendaCraft**](./Personal%20Productivity%20Agents/Meeting%20agenda%20generator%20agent) – High-fidelity meeting timeline architect.
+- [📊 **Profit.AI**](./Career%20&%20Income%20Automation%20AI%20Agents/Freelance%20Project%20Profitability%20Predictor) – Strategic freelance project analytics.
+- [💼 **Resume Forge**](./Career%20&%20Income%20Automation%20AI%20Agents/Resume%20Optimizer%20Agent) – Expert ATS optimization & resume synchronization engine.
 - [🧘 **Reflect AI**](./Personal%20Productivity%20Agents/Daily%20goal%20reflection%20agent) – Algorithmic daily target analytics.
 - [🔔 **PingCraft**](./Personal%20Productivity%20Agents/Smart%20reminder%20agent) – Distributed deadline alerting engine.
 - [⏳ **ChronoBlock**](./Personal%20Productivity%20Agents/Time-blocking%20planner%20agent) – Continuous task packing logic planner.

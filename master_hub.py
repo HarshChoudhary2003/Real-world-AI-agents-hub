@@ -441,6 +441,16 @@ CATEGORIES_RAW = {
             "name": "\ud83e\udde0 Neural.AI",
             "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Advanced%20&%20Creative%20Agents/Memory-enabled%20agent",
             "desc": "Memory-augmented persistent intelligence swarm."
+        },
+        {
+            "name": "\ud83c\udfad Identity.AI",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Advanced%20&%20Creative%20Agents/Persona-driven%20agent",
+            "desc": "Neural role-projection & authoritative persona engine."
+        },
+        {
+            "name": "\ud83d\udca0 Evolver.AI",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Advanced%20&%20Creative%20Agents/Self-improving%20agent",
+            "desc": "Feedback-driven self-optimizing neural agent."
         }
     ],
     "1. Initialize Runtime": [],
@@ -676,7 +686,7 @@ def main():
     st.markdown('''
     <div class="hero">
         <h1>Autonomous Operations.</h1>
-        <p>A unified orchestration layer for 94 deterministic AI agents architected for the next-generation economic engine.</p>
+        <p>A unified orchestration layer for 96 deterministic AI agents architected for the next-generation economic engine.</p>
     </div>
     ''', unsafe_allow_html=True)
 

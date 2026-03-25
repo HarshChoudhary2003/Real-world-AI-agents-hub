@@ -181,6 +181,11 @@ CATEGORIES_RAW = {
             "name": "\ud83d\udd0e Job Finder Agent",
             "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Career%20&%20Income%20Automation%20AI%20Agents/Job%20Finder%20Agent",
             "desc": "Real-time job search and AI match scoring engine for CareerOS workflow."
+        },
+        {
+            "name": "\ud83e\udd16 Auto Apply Agent",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Career%20&%20Income%20Automation%20AI%20Agents/Auto%20Apply%20Agent",
+            "desc": "Advanced multi-agent orchestrator for automated resume optimization and cover letter drafting."
         }
     ],
     "\ud83e\udde0 Personal Productivity Systems": [

@@ -226,7 +226,7 @@ else:
 # --- Footer ---
 st.markdown("""
 <div class="footer">
-    Driven by CareerOS Interview Swarm • Architected by Antigravity Agent v5.0<br>
+    Driven by CareerOS Interview Swarm • Architected by Harsh Choudhary <br>
     Universal Model Selection Powered by LiteLLM Framework
 </div>
 """, unsafe_allow_html=True)

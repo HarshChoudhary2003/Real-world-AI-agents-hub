@@ -115,6 +115,7 @@ This is the largest registry of **specialized, production-hardened AI agents** d
 - [✉️ **Cover Letter AI**](./Career%20&%20Income%20Automation%20AI%20Agents/Cover%20Letter%20Generator%20Agent) – Strategic, job-specific tailored cover letter architect.
 - [🔎 **Job Finder Agent**](./Career%20&%20Income%20Automation%20AI%20Agents/Job%20Finder%20Agent) – Real-time job extraction and AI match scoring hub.
 - [🤖 **Auto Apply Agent**](./Career%20&%20Income%20Automation%20AI%20Agents/Auto%20Apply%20Agent) – Advanced multi-agent orchestrator for automated application prep.
+- [🎙️ **Interview Simulator**](./Career%20&%20Income%20Automation%20AI%20Agents/Interview%20Simulator%20Agent) – High-fidelity interactive interview prep and evaluation hub.
 - [🧘 **Reflect AI**](./Personal%20Productivity%20Agents/Daily%20goal%20reflection%20agent) – Algorithmic daily target analytics.
 - [🔔 **PingCraft**](./Personal%20Productivity%20Agents/Smart%20reminder%20agent) – Distributed deadline alerting engine.
 - [⏳ **ChronoBlock**](./Personal%20Productivity%20Agents/Time-blocking%20planner%20agent) – Continuous task packing logic planner.

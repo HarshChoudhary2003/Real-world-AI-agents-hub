@@ -186,6 +186,11 @@ CATEGORIES_RAW = {
             "name": "\ud83e\udd16 Auto Apply Agent",
             "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Career%20&%20Income%20Automation%20AI%20Agents/Auto%20Apply%20Agent",
             "desc": "Advanced multi-agent orchestrator for automated resume optimization and cover letter drafting."
+        },
+        {
+            "name": "\ud83c\udfa4 Interview Simulator",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Career%20&%20Income%20Automation%20AI%20Agents/Interview%20Simulator%20Agent",
+            "desc": "Stateful AI interview simulator with real-time scoring, feedback loops, and ideal-answer benchmarking."
         }
     ],
     "\ud83e\udde0 Personal Productivity Systems": [

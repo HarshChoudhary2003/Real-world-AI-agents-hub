@@ -110,16 +110,19 @@ This is the largest registry of **specialized, production-hardened AI agents** d
 - [📧 **MailMind AI**](./Personal%20Productivity%20Agents/Email%20summarization%20agent) – Intelligent thread logic & summary mapping.
 - [📅 **SyncGuard**](./Personal%20Productivity%20Agents/Calendar%20conflict%20resolver%20agent) – Conflict detection & resolution engine.
 - [📋 **AgendaCraft**](./Personal%20Productivity%20Agents/Meeting%20agenda%20generator%20agent) – High-fidelity meeting timeline architect.
+- [🧘 **Reflect AI**](./Personal%20Productivity%20Agents/Daily%20goal%20reflection%20agent) – Algorithmic daily target analytics.
+- [🔔 **PingCraft**](./Personal%20Productivity%20Agents/Smart%20reminder%20agent) – Distributed deadline alerting engine.
+- [⏳ **ChronoBlock**](./Personal%20Productivity%20Agents/Time-blocking%20planner%20agent) – Continuous task packing logic planner.
+- [🔥 **StreakForge**](./Personal%20Productivity%20Agents/Habit%20tracking%20agent) – Persistence density metrics & habit tracking.
+
+### 💼 Career & Income Automation Systems
+*Advanced pipeline for job search, application, and technical preparation.*
 - [📊 **Profit.AI**](./Career%20&%20Income%20Automation%20AI%20Agents/Freelance%20Project%20Profitability%20Predictor) – Strategic freelance project analytics.
 - [💼 **Resume Forge**](./Career%20&%20Income%20Automation%20AI%20Agents/Resume%20Optimizer%20Agent) – Expert ATS optimization & resume synchronization engine.
 - [✉️ **Cover Letter AI**](./Career%20&%20Income%20Automation%20AI%20Agents/Cover%20Letter%20Generator%20Agent) – Strategic, job-specific tailored cover letter architect.
 - [🔎 **Job Finder Agent**](./Career%20&%20Income%20Automation%20AI%20Agents/Job%20Finder%20Agent) – Real-time job extraction and AI match scoring hub.
 - [🤖 **Auto Apply Agent**](./Career%20&%20Income%20Automation%20AI%20Agents/Auto%20Apply%20Agent) – Advanced multi-agent orchestrator for automated application prep.
 - [🎙️ **Interview Simulator**](./Career%20&%20Income%20Automation%20AI%20Agents/Interview%20Simulator%20Agent) – High-fidelity interactive interview prep and evaluation hub.
-- [🧘 **Reflect AI**](./Personal%20Productivity%20Agents/Daily%20goal%20reflection%20agent) – Algorithmic daily target analytics.
-- [🔔 **PingCraft**](./Personal%20Productivity%20Agents/Smart%20reminder%20agent) – Distributed deadline alerting engine.
-- [⏳ **ChronoBlock**](./Personal%20Productivity%20Agents/Time-blocking%20planner%20agent) – Continuous task packing logic planner.
-- [🔥 **StreakForge**](./Personal%20Productivity%20Agents/Habit%20tracking%20agent) – Persistence density metrics & habit tracking.
 
 ### 🔬 Research & Analysis Systems
 *Scientific intelligence for synthesizing complex information signals.*

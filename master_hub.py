@@ -171,6 +171,11 @@ CATEGORIES_RAW = {
             "name": "\ud83d\udcbc Resume Forge",
             "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Career%20&%20Income%20Automation%20AI%20Agents/Resume%20Optimizer%20Agent",
             "desc": "Expert ATS optimization & resume synchronization engine."
+        },
+        {
+            "name": "✉\ufe0f Cover Letter AI",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Career%20&%20Income%20Automation%20AI%20Agents/Cover%20Letter%20Generator%20Agent",
+            "desc": "Generates high-conversion, personalized cover letters tailored to specific job descriptions."
         }
     ],
     "\ud83e\udde0 Personal Productivity Systems": [

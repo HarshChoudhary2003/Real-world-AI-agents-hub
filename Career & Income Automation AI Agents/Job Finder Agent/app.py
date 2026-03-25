@@ -1,6 +1,6 @@
 import streamlit as st
 import time
-from agent import fetch_jobs, calculate_match_score
+from agent import fetch_jobs, calculate_match_score, SUPPORTED_MODELS
 
 # --- Page Config ---
 st.set_page_config(
@@ -11,6 +11,7 @@ st.set_page_config(
 )
 
 # --- Custom Styling (Premium Glassmorphism & Card System) ---
+# (Styles remain same)
 st.markdown("""
 <style>
 /* Gradient Background */
@@ -125,11 +126,18 @@ st.markdown("""
 with st.sidebar:
     st.markdown("### 🔐 API Keys")
     rapid_key = st.text_input("RapidAPI (JSearch) Key", type="password", help="Get from rapidapi.com/jsearch")
-    openai_key = st.text_input("OpenAI Key (For Matching)", type="password")
     
     st.markdown("---")
     st.markdown("### 🧬 AI Match Core")
-    match_model = st.selectbox("Intelligence Model", ["gpt-4o-mini", "gpt-4o", "gemini/gemini-1.5-flash"])
+    provider = st.selectbox("AI Provider", list(SUPPORTED_MODELS.keys()))
+    match_model = st.selectbox("Intelligence Model", SUPPORTED_MODELS[provider])
+    
+    user_api_key = st.text_input(
+        f"{provider} API Key", 
+        type="password", 
+        help=f"Paste your {provider} key here for AI matching."
+    )
+    
     st.info("The match score compares your resume directly with the job description.")
 
 # --- Header ---
@@ -181,7 +189,7 @@ if st.session_state.get("triggered_search") and "found_jobs" in st.session_state
         match_score = None
         match_analysis = None
         
-        if user_resume and (openai_key or st.secrets.get("OPENAI_API_KEY")):
+        if user_resume and (user_api_key or os.getenv("OPENAI_API_KEY") or os.getenv("GEMINI_API_KEY")):
             # Placeholder for premium "Compute Match" button per job 
             # Or run it automatically for top results
             if idx < 3: # Auto-calculate for top 3 to save tokens
@@ -189,7 +197,7 @@ if st.session_state.get("triggered_search") and "found_jobs" in st.session_state
                     user_resume, 
                     job["description"], 
                     model=match_model, 
-                    api_key=openai_key if openai_key else None
+                    api_key=user_api_key if user_api_key else None
                 )
         
         # Determine CSS Class for badge

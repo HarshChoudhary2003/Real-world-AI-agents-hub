@@ -211,6 +211,11 @@ CATEGORIES_RAW = {
             "name": "\ud83d\udcc8 Salary Negotiation AI",
             "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Career%20&%20Income%20Automation%20AI%20Agents/Salary%20Negotiation%20Agent",
             "desc": "High-leverage compensation coach to architect win-win negotiation scripts and market-based salary counter-offers."
+        },
+        {
+            "name": "\ud83c\udf10 Personal Brand AI",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Career%20&%20Income%20Automation%20AI%20Agents/Personal%20Branding%20Agent",
+            "desc": "Digital identity strategist to architect authority-driven LinkedIn, GitHub and Portfolio presence."
         }
     ],
     "\ud83e\udde0 Personal Productivity Systems": [

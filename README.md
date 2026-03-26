@@ -127,6 +127,7 @@ This is the largest registry of **specialized, production-hardened AI agents** d
 - [📚 **Learning Roadmap**](./Career%20&%20Income%20Automation%20AI%20Agents/Learning%20Roadmap%20Agent) – Personalized 90-day mastery blueprint for target career roles.
 - [💰 **Freelance Proposal AI**](./Career%20&%20Income%20Automation%20AI%20Agents/Freelance%20Proposal%20Agent) – Expert high-conversion proposal architect for global gig platforms.
 - [📈 **Salary Negotiation AI**](./Career%20&%20Income%20Automation%20AI%20Agents/Salary%20Negotiation%20Agent) – High-leverage compensation coach for market-based offer optimization.
+- [🌐 **Personal Brand AI**](./Career%20&%20Income%20Automation%20AI%20Agents/Personal%20Branding%20Agent) – Digital identity strategist to architect authority-driven presence.
 
 ### 🔬 Research & Analysis Systems
 *Scientific intelligence for synthesizing complex information signals.*

@@ -196,6 +196,11 @@ CATEGORIES_RAW = {
             "name": "\ud83e\udde0 Skill Gap Analyzer",
             "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Career%20&%20Income%20Automation%20AI%20Agents/Skill%20Gap%20Analyzer%20Agent",
             "desc": "Strategic AI node to identify missing skills and generate personalized career growth scripts."
+        },
+        {
+            "name": "\ud83d\udcd3 Learning Roadmap",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Career%20&%20Income%20Automation%20AI%20Agents/Learning%20Roadmap%20Agent",
+            "desc": "Personalized 90-day learning blueprint to bridge technical gaps and achieve role mastery."
         }
     ],
     "\ud83e\udde0 Personal Productivity Systems": [

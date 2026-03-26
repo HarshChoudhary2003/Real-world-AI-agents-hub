@@ -206,6 +206,11 @@ CATEGORIES_RAW = {
             "name": "\ud83d\udcb0 Freelance Proposal AI",
             "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Career%20&%20Income%20Automation%20AI%20Agents/Freelance%20Proposal%20Agent",
             "desc": "Strategic high-conversion proposal architect for Upwork, Fiverr, and global gig platforms."
+        },
+        {
+            "name": "\ud83d\udcc8 Salary Negotiation AI",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Career%20&%20Income%20Automation%20AI%20Agents/Salary%20Negotiation%20Agent",
+            "desc": "High-leverage compensation coach to architect win-win negotiation scripts and market-based salary counter-offers."
         }
     ],
     "\ud83e\udde0 Personal Productivity Systems": [

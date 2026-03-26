@@ -117,7 +117,6 @@ This is the largest registry of **specialized, production-hardened AI agents** d
 
 ### 💼 Career & Income Automation Systems
 *Advanced pipeline for job search, application, and technical preparation.*
-- [📊 **Profit.AI**](./Career%20&%20Income%20Automation%20AI%20Agents/Freelance%20Project%20Profitability%20Predictor) – Strategic freelance project analytics.
 - [💼 **Resume Forge**](./Career%20&%20Income%20Automation%20AI%20Agents/Resume%20Optimizer%20Agent) – Expert ATS optimization & resume synchronization engine.
 - [✉️ **Cover Letter AI**](./Career%20&%20Income%20Automation%20AI%20Agents/Cover%20Letter%20Generator%20Agent) – Strategic, job-specific tailored cover letter architect.
 - [🔎 **Job Finder Agent**](./Career%20&%20Income%20Automation%20AI%20Agents/Job%20Finder%20Agent) – Real-time job extraction and AI match scoring hub.

@@ -123,6 +123,7 @@ This is the largest registry of **specialized, production-hardened AI agents** d
 - [🔎 **Job Finder Agent**](./Career%20&%20Income%20Automation%20AI%20Agents/Job%20Finder%20Agent) – Real-time job extraction and AI match scoring hub.
 - [🤖 **Auto Apply Agent**](./Career%20&%20Income%20Automation%20AI%20Agents/Auto%20Apply%20Agent) – Advanced multi-agent orchestrator for automated application prep.
 - [🎙️ **Interview Simulator**](./Career%20&%20Income%20Automation%20AI%20Agents/Interview%20Simulator%20Agent) – High-fidelity interactive interview prep and evaluation hub.
+- [🧠 **Skill Gap Analyzer**](./Career%20&%20Income%20Automation%20AI%20Agents/Skill%20Gap%20Analyzer%20Agent) – Strategic AI node to identify missing skills and generate learning paths.
 
 ### 🔬 Research & Analysis Systems
 *Scientific intelligence for synthesizing complex information signals.*

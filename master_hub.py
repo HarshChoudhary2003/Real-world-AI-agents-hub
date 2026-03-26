@@ -191,6 +191,11 @@ CATEGORIES_RAW = {
             "name": "\ud83c\udfa4 Interview Simulator",
             "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Career%20&%20Income%20Automation%20AI%20Agents/Interview%20Simulator%20Agent",
             "desc": "Stateful AI interview simulator with real-time scoring, feedback loops, and ideal-answer benchmarking."
+        },
+        {
+            "name": "\ud83e\udde0 Skill Gap Analyzer",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Career%20&%20Income%20Automation%20AI%20Agents/Skill%20Gap%20Analyzer%20Agent",
+            "desc": "Strategic AI node to identify missing skills and generate personalized career growth scripts."
         }
     ],
     "\ud83e\udde0 Personal Productivity Systems": [

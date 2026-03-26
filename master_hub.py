@@ -201,6 +201,11 @@ CATEGORIES_RAW = {
             "name": "\ud83d\udcd3 Learning Roadmap",
             "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Career%20&%20Income%20Automation%20AI%20Agents/Learning%20Roadmap%20Agent",
             "desc": "Personalized 90-day learning blueprint to bridge technical gaps and achieve role mastery."
+        },
+        {
+            "name": "\ud83d\udcb0 Freelance Proposal AI",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Career%20&%20Income%20Automation%20AI%20Agents/Freelance%20Proposal%20Agent",
+            "desc": "Strategic high-conversion proposal architect for Upwork, Fiverr, and global gig platforms."
         }
     ],
     "\ud83e\udde0 Personal Productivity Systems": [

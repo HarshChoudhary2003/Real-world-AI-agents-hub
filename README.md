@@ -125,6 +125,7 @@ This is the largest registry of **specialized, production-hardened AI agents** d
 - [🎙️ **Interview Simulator**](./Career%20&%20Income%20Automation%20AI%20Agents/Interview%20Simulator%20Agent) – High-fidelity interactive interview prep and evaluation hub.
 - [🧠 **Skill Gap Analyzer**](./Career%20&%20Income%20Automation%20AI%20Agents/Skill%20Gap%20Analyzer%20Agent) – Strategic AI node to identify missing skills and generate learning paths.
 - [📚 **Learning Roadmap**](./Career%20&%20Income%20Automation%20AI%20Agents/Learning%20Roadmap%20Agent) – Personalized 90-day mastery blueprint for target career roles.
+- [💰 **Freelance Proposal AI**](./Career%20&%20Income%20Automation%20AI%20Agents/Freelance%20Proposal%20Agent) – Expert high-conversion proposal architect for global gig platforms.
 
 ### 🔬 Research & Analysis Systems
 *Scientific intelligence for synthesizing complex information signals.*

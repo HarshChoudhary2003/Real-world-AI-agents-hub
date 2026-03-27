@@ -233,6 +233,11 @@ CATEGORIES_RAW = {
             "name": "\ud83c\udfaf Focus Coach",
             "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Work%20&%20Life%20Automation%20AI%20Agents/Focus%20Coach%20Agent",
             "desc": "ProductivityOS: Flow-State Orchestration & Pomodoro Strategy."
+        },
+        {
+            "name": "\ud83d\udcdd Meeting Notes Agent",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Work%20&%20Life%20Automation%20AI%20Agents/Meeting%20Notes%20Agent",
+            "desc": "ProductivityOS: Strategic Meeting Deconstruction & Action Tracking."
         }
     ],
     "\ud83d\udcbc Career & Income Automation Systems": [],

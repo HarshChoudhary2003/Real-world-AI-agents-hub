@@ -115,18 +115,35 @@ This is the largest registry of **specialized, production-hardened AI agents** d
 - [⏳ **ChronoBlock**](./Personal%20Productivity%20Agents/Time-blocking%20planner%20agent) – Continuous task packing logic planner.
 - [🔥 **StreakForge**](./Personal%20Productivity%20Agents/Habit%20tracking%20agent) – Persistence density metrics & habit tracking.
 
+### 🤖 Work & Life Automation Systems
+*Context-aware intelligence for daily orchestration and life-design.*
+- [⚡ **Smart Task Planner**](./Work%20&%20Life%20Automation%20AI%20Agents/Smart%20Task%20Planner%20Agent) – ProductivityOS: High-Performance Daily Strategy & Time-Blocking.
+
 ### 💼 Career & Income Automation Systems
 *Advanced pipeline for job search, application, and technical preparation.*
+### 💼 CareerOS: The AI Operating System for Career & Income Automation
+*A unified 10-agent ecosystem designed to automate the entire professional lifecycle—from skill mapping to salary negotiation.*
+
+#### 🎯 Phase 1: The Career Pipeline (Search & Apply)
 - [💼 **Resume Forge**](./Career%20&%20Income%20Automation%20AI%20Agents/Resume%20Optimizer%20Agent) – Expert ATS optimization & resume synchronization engine.
 - [✉️ **Cover Letter AI**](./Career%20&%20Income%20Automation%20AI%20Agents/Cover%20Letter%20Generator%20Agent) – Strategic, job-specific tailored cover letter architect.
 - [🔎 **Job Finder Agent**](./Career%20&%20Income%20Automation%20AI%20Agents/Job%20Finder%20Agent) – Real-time job extraction and AI match scoring hub.
 - [🤖 **Auto Apply Agent**](./Career%20&%20Income%20Automation%20AI%20Agents/Auto%20Apply%20Agent) – Advanced multi-agent orchestrator for automated application prep.
+
+#### 🧠 Phase 2: The Growth System (Prep & Mastery)
 - [🎙️ **Interview Simulator**](./Career%20&%20Income%20Automation%20AI%20Agents/Interview%20Simulator%20Agent) – High-fidelity interactive interview prep and evaluation hub.
 - [🧠 **Skill Gap Analyzer**](./Career%20&%20Income%20Automation%20AI%20Agents/Skill%20Gap%20Analyzer%20Agent) – Strategic AI node to identify missing skills and generate learning paths.
 - [📚 **Learning Roadmap**](./Career%20&%20Income%20Automation%20AI%20Agents/Learning%20Roadmap%20Agent) – Personalized 90-day mastery blueprint for target career roles.
+
+#### 💰 Phase 3: The Income System (Freelance & Negotiation)
 - [💰 **Freelance Proposal AI**](./Career%20&%20Income%20Automation%20AI%20Agents/Freelance%20Proposal%20Agent) – Expert high-conversion proposal architect for global gig platforms.
 - [📈 **Salary Negotiation AI**](./Career%20&%20Income%20Automation%20AI%20Agents/Salary%20Negotiation%20Agent) – High-leverage compensation coach for market-based offer optimization.
+- [📊 **Profit.AI**](./Career%20&%20Income%20Automation%20AI%20Agents/Freelance%20Project%20Profitability%20Predictor) – Strategic freelance project analytics.
+
+#### 🌐 Phase 4: The Personal Brand (Showcase)
 - [🌐 **Personal Brand AI**](./Career%20&%20Income%20Automation%20AI%20Agents/Personal%20Branding%20Agent) – Digital identity strategist to architect authority-driven presence.
+
+---
 
 ### 🔬 Research & Analysis Systems
 *Scientific intelligence for synthesizing complex information signals.*

@@ -156,66 +156,14 @@ CATEGORIES_RAW = {
             "desc": "SRE incident diagnosis & error classification."
         },
         {
+            "name": "\ud83d\udcca Alert-Insight",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Data%20&%20Automation%20Agents/Monitoring%20alert%20explanation%20agent",
+            "desc": "Monitoring alert translation & root-cause diagnostic."
+        },
+        {
             "name": "\ud83c\udfd7\ufe0f Auto-Strategist",
             "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Data%20&%20Automation%20Agents/Automation%20recommendation%20agent",
             "desc": "Process mining & high-ROI automation strategist."
-        }
-    ],
-    "\ud83d\udcb0 Career & Income Automation Systems": [
-        {
-            "name": "\ud83d\udcca Profit.AI",
-            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Career%20&%20Income%20Automation%20AI%20Agents/Freelance%20Project%20Profitability%20Predictor",
-            "desc": "Predicts project profitability for freelancers based on scope, time, and expenses."
-        },
-        {
-            "name": "\ud83d\udcbc Resume Forge",
-            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Career%20&%20Income%20Automation%20AI%20Agents/Resume%20Optimizer%20Agent",
-            "desc": "Expert ATS optimization & resume synchronization engine."
-        },
-        {
-            "name": "✉\ufe0f Cover Letter AI",
-            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Career%20&%20Income%20Automation%20AI%20Agents/Cover%20Letter%20Generator%20Agent",
-            "desc": "Generates high-conversion, personalized cover letters tailored to specific job descriptions."
-        },
-        {
-            "name": "\ud83d\udd0e Job Finder Agent",
-            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Career%20&%20Income%20Automation%20AI%20Agents/Job%20Finder%20Agent",
-            "desc": "Real-time job search and AI match scoring engine for CareerOS workflow."
-        },
-        {
-            "name": "\ud83e\udd16 Auto Apply Agent",
-            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Career%20&%20Income%20Automation%20AI%20Agents/Auto%20Apply%20Agent",
-            "desc": "Advanced multi-agent orchestrator for automated resume optimization and cover letter drafting."
-        },
-        {
-            "name": "\ud83c\udfa4 Interview Simulator",
-            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Career%20&%20Income%20Automation%20AI%20Agents/Interview%20Simulator%20Agent",
-            "desc": "Stateful AI interview simulator with real-time scoring, feedback loops, and ideal-answer benchmarking."
-        },
-        {
-            "name": "\ud83e\udde0 Skill Gap Analyzer",
-            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Career%20&%20Income%20Automation%20AI%20Agents/Skill%20Gap%20Analyzer%20Agent",
-            "desc": "Strategic AI node to identify missing skills and generate personalized career growth scripts."
-        },
-        {
-            "name": "\ud83d\udcd3 Learning Roadmap",
-            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Career%20&%20Income%20Automation%20AI%20Agents/Learning%20Roadmap%20Agent",
-            "desc": "Personalized 90-day learning blueprint to bridge technical gaps and achieve role mastery."
-        },
-        {
-            "name": "\ud83d\udcb0 Freelance Proposal AI",
-            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Career%20&%20Income%20Automation%20AI%20Agents/Freelance%20Proposal%20Agent",
-            "desc": "Strategic high-conversion proposal architect for Upwork, Fiverr, and global gig platforms."
-        },
-        {
-            "name": "\ud83d\udcc8 Salary Negotiation AI",
-            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Career%20&%20Income%20Automation%20AI%20Agents/Salary%20Negotiation%20Agent",
-            "desc": "High-leverage compensation coach to architect win-win negotiation scripts and market-based salary counter-offers."
-        },
-        {
-            "name": "\ud83c\udf10 Personal Brand AI",
-            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Career%20&%20Income%20Automation%20AI%20Agents/Personal%20Branding%20Agent",
-            "desc": "Digital identity strategist to architect authority-driven LinkedIn, GitHub and Portfolio presence."
         }
     ],
     "\ud83e\udde0 Personal Productivity Systems": [
@@ -268,6 +216,71 @@ CATEGORIES_RAW = {
             "name": "\ud83d\udd25 StreakForge",
             "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Personal%20Productivity%20Agents/Habit%20tracking%20agent",
             "desc": "Persistence density metrics & habit tracking."
+        }
+    ],
+    "\ud83e\udd16 Work & Life Automation Systems": [
+        {
+            "name": "\u26a1 Smart Task Planner",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Work%20&%20Life%20Automation%20AI%20Agents/Smart%20Task%20Planner%20Agent",
+            "desc": "ProductivityOS: High-Performance Daily Strategy & Time-Blocking."
+        }
+    ],
+    "\ud83d\udcbc Career & Income Automation Systems": [],
+    "\ud83d\udcbc CareerOS: The AI Operating System for Career & Income Automation": [
+        {
+            "name": "\ud83d\udcbc Resume Forge",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Career%20&%20Income%20Automation%20AI%20Agents/Resume%20Optimizer%20Agent",
+            "desc": "Expert ATS optimization & resume synchronization engine."
+        },
+        {
+            "name": "\u2709\ufe0f Cover Letter AI",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Career%20&%20Income%20Automation%20AI%20Agents/Cover%20Letter%20Generator%20Agent",
+            "desc": "Strategic, job-specific tailored cover letter architect."
+        },
+        {
+            "name": "\ud83d\udd0e Job Finder Agent",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Career%20&%20Income%20Automation%20AI%20Agents/Job%20Finder%20Agent",
+            "desc": "Real-time job extraction and AI match scoring hub."
+        },
+        {
+            "name": "\ud83e\udd16 Auto Apply Agent",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Career%20&%20Income%20Automation%20AI%20Agents/Auto%20Apply%20Agent",
+            "desc": "Advanced multi-agent orchestrator for automated application prep."
+        },
+        {
+            "name": "\ud83c\udf99\ufe0f Interview Simulator",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Career%20&%20Income%20Automation%20AI%20Agents/Interview%20Simulator%20Agent",
+            "desc": "High-fidelity interactive interview prep and evaluation hub."
+        },
+        {
+            "name": "\ud83e\udde0 Skill Gap Analyzer",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Career%20&%20Income%20Automation%20AI%20Agents/Skill%20Gap%20Analyzer%20Agent",
+            "desc": "Strategic AI node to identify missing skills and generate learning paths."
+        },
+        {
+            "name": "\ud83d\udcda Learning Roadmap",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Career%20&%20Income%20Automation%20AI%20Agents/Learning%20Roadmap%20Agent",
+            "desc": "Personalized 90-day mastery blueprint for target career roles."
+        },
+        {
+            "name": "\ud83d\udcb0 Freelance Proposal AI",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Career%20&%20Income%20Automation%20AI%20Agents/Freelance%20Proposal%20Agent",
+            "desc": "Expert high-conversion proposal architect for global gig platforms."
+        },
+        {
+            "name": "\ud83d\udcc8 Salary Negotiation AI",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Career%20&%20Income%20Automation%20AI%20Agents/Salary%20Negotiation%20Agent",
+            "desc": "High-leverage compensation coach for market-based offer optimization."
+        },
+        {
+            "name": "\ud83d\udcca Profit.AI",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Career%20&%20Income%20Automation%20AI%20Agents/Freelance%20Project%20Profitability%20Predictor",
+            "desc": "Strategic freelance project analytics."
+        },
+        {
+            "name": "\ud83c\udf10 Personal Brand AI",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Career%20&%20Income%20Automation%20AI%20Agents/Personal%20Branding%20Agent",
+            "desc": "Digital identity strategist to architect authority-driven presence."
         }
     ],
     "\ud83d\udd2c Research & Analysis Systems": [
@@ -463,7 +476,59 @@ CATEGORIES_RAW = {
             "desc": "Pre-audit readiness scanner identifying critical evidence gaps and mandatory remediations."
         }
     ],
-    "\ud83c\udfa8 Advanced & Creative Systems": [
+    "\ud83d\udcb0 Finance & Decision Making Systems": [
+        {
+            "name": "\ud83d\udcca BudgetForge AI",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Finance%20%20&%20%20Decision%20Making%20Agents/Budget%20planning%20agent",
+            "desc": "Intelligent capital allocation & goal-aligned budgeting."
+        },
+        {
+            "name": "\ud83c\udf0a FlowForge AI",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Finance%20%20&%20%20Decision%20Making%20Agents/Cash%20flow%20forecasting%20agent",
+            "desc": "Autonomous liquidity architect & predictive cash flow modeling."
+        },
+        {
+            "name": "\ud83c\udff7\ufe0f PriceForge AI",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Finance%20%20&%20%20Decision%20Making%20Agents/Pricing%20strategy%20agent",
+            "desc": "Strategic economic architect & value-based pricing optimization."
+        },
+        {
+            "name": "\ud83d\udcc9 OptiForge AI",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Finance%20%20&%20%20Decision%20Making%20Agents/Cost%20optimization%20agent",
+            "desc": "Autonomous efficiency architect & predictive cost optimization."
+        },
+        {
+            "name": "\ud83d\udcc8 RevForge AI",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Finance%20%20&%20%20Decision%20Making%20Agents/Revenue%20breakdown%20agent",
+            "desc": "Strategic revenue architect & structural performance auditor."
+        },
+        {
+            "name": "\ud83d\udd75\ufe0f FinLens AI",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Finance%20%20&%20%20Decision%20Making%20Agents/Financial%20report%20explainer%20agent",
+            "desc": "JARVIS-grade neural auditor & predictive report explainer."
+        },
+        {
+            "name": "\ud83d\udd2e SimuForge AI",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Finance%20%20&%20%20Decision%20Making%20Agents/Scenario%20analysis%20agent",
+            "desc": "Futuristic scenario engine & neural projection architect."
+        },
+        {
+            "name": "\ud83e\udde0 RiskVault AI",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Finance%20%20&%20%20Decision%20Making%20Agents/Investment%20risk%20agent",
+            "desc": "Graph-based neural auditor & predictive investment risk engine."
+        },
+        {
+            "name": "\ud83e\ude99 SentimentCore AI",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Finance%20%20&%20%20Decision%20Making%20Agents/Crypto%20market%20sentiment%20agent",
+            "desc": "Apple-level neural brain & predictive crypto sentiment architect."
+        },
+        {
+            "name": "\ud83e\uddec StrategyLens AI",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Finance%20%20&%20%20Decision%20Making%20Agents/Trading%20strategy%20explanation%20agent",
+            "desc": "Unicorn-grade neural auditor & predictive trading logic explainer."
+        }
+    ],
+    "\ud83c\udfa8 Advanced & Creative Agents": [
         {
             "name": "\ud83d\udca0 Orchestra.AI",
             "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Advanced%20&%20Creative%20Agents/Multi-agent%20collaboration%20system",
@@ -485,7 +550,7 @@ CATEGORIES_RAW = {
             "desc": "High-fidelity human-in-the-loop authority & audit gateway."
         },
         {
-            "name": "\ud83d\udca0 HealDesk.AI",
+            "name": "\ud83e\ude79 HealDesk.AI",
             "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Advanced%20&%20Creative%20Agents/Error%20recovery%20agent",
             "desc": "Autonomous anomaly detection & self-healing recovery engine."
         },
@@ -748,7 +813,7 @@ def main():
     st.markdown('''
     <div class="hero">
         <h1>Autonomous Operations.</h1>
-        <p>A unified orchestration layer for 99 deterministic AI agents architected for the next-generation economic engine.</p>
+        <p>A unified orchestration layer for 78 deterministic AI agents architected for the next-generation economic engine.</p>
     </div>
     ''', unsafe_allow_html=True)
 

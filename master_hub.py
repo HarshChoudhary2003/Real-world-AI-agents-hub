@@ -228,6 +228,11 @@ CATEGORIES_RAW = {
             "name": "\ud83d\udcc5 Calendar Scheduler",
             "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Work%20&%20Life%20Automation%20AI%20Agents/Calendar%20Scheduling%20Agent",
             "desc": "Autonomous meeting architect & time-node optimizer."
+        },
+        {
+            "name": "\ud83c\udfaf Focus Coach",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Work%20&%20Life%20Automation%20AI%20Agents/Focus%20Coach%20Agent",
+            "desc": "ProductivityOS: Flow-State Orchestration & Pomodoro Strategy."
         }
     ],
     "\ud83d\udcbc Career & Income Automation Systems": [],

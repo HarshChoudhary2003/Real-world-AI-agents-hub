@@ -119,6 +119,7 @@ This is the largest registry of **specialized, production-hardened AI agents** d
 *Context-aware intelligence for daily orchestration and life-design.*
 - [⚡ **Smart Task Planner**](./Work%20&%20Life%20Automation%20AI%20Agents/Smart%20Task%20Planner%20Agent) – ProductivityOS: High-Performance Daily Strategy & Time-Blocking.
 - [📅 **Calendar Scheduler**](./Work%20&%20Life%20Automation%20AI%20Agents/Calendar%20Scheduling%20Agent) – Autonomous meeting architect & time-node optimizer.
+- [🎯 **Focus Coach**](./Work%20&%20Life%20Automation%20AI%20Agents/Focus%20Coach%20Agent) – ProductivityOS: Flow-State Orchestration & Pomodoro Strategy.
 
 ### 💼 Career & Income Automation Systems
 *Advanced pipeline for job search, application, and technical preparation.*

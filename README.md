@@ -118,6 +118,7 @@ This is the largest registry of **specialized, production-hardened AI agents** d
 ### 🤖 Work & Life Automation Systems
 *Context-aware intelligence for daily orchestration and life-design.*
 - [⚡ **Smart Task Planner**](./Work%20&%20Life%20Automation%20AI%20Agents/Smart%20Task%20Planner%20Agent) – ProductivityOS: High-Performance Daily Strategy & Time-Blocking.
+- [📅 **Calendar Scheduler**](./Work%20&%20Life%20Automation%20AI%20Agents/Calendar%20Scheduling%20Agent) – Autonomous meeting architect & time-node optimizer.
 
 ### 💼 Career & Income Automation Systems
 *Advanced pipeline for job search, application, and technical preparation.*

@@ -243,6 +243,11 @@ CATEGORIES_RAW = {
             "name": "\ud83d\udce7 Email Assistant",
             "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Work%20&%20Life%20Automation%20AI%20Agents/Email%20Assistant%20Agent",
             "desc": "ProductivityOS: AI Email Architect & Tactical Communication engine."
+        },
+        {
+            "name": "\ud83d\udcca Daily Reflection",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Work%20&%20Life%20Automation%20AI%20Agents/Daily%20Reflection%20Agent",
+            "desc": "ProductivityOS: Self-Improving AI System & Habit-Loop Optimizer."
         }
     ],
     "\ud83d\udcbc Career & Income Automation Systems": [],

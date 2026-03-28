@@ -263,6 +263,11 @@ CATEGORIES_RAW = {
             "name": "\ud83d\udd25 Habit Builder",
             "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Work%20&%20Life%20Automation%20AI%20Agents/Habit%20Builder%20Agent",
             "desc": "ProductivityOS: Behavior Change Architecture & Dopamine-Led Consistency."
+        },
+        {
+            "name": "\u2696\ufe0f Decision Intelligence",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Work%20&%20Life%20Automation%20AI%20Agents/Decision%20Agent",
+            "desc": "ProductivityOS: Strategic Choice Architecture & Risk Synthesis."
         }
     ],
     "\ud83d\udcbc Career & Income Automation Systems": [],

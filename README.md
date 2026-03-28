@@ -126,6 +126,7 @@ This is the largest registry of **specialized, production-hardened AI agents** d
 - [📊 **Daily Reflection**](./Work%20&%20Life%20Automation%20AI%20Agents/Daily%20Reflection%20Agent) – ProductivityOS: Self-Improving AI System & Habit-Loop Optimizer.
 - [📚 **Knowledge Summarizer**](./Work%20&%20Life%20Automation%20AI%20Agents/Knowledge%20Summarizer%20Agent) – ProductivityOS: High-Fidelity Knowledge Synthesis & Learning Accelerator.
 - [🔥 **Habit Builder**](./Work%20&%20Life%20Automation%20AI%20Agents/Habit%20Builder%20Agent) – ProductivityOS: Behavior Change Architecture & Dopamine-Led Consistency.
+- [⚖️ **Decision Intelligence**](./Work%20&%20Life%20Automation%20AI%20Agents/Decision%20Agent) – ProductivityOS: Strategic Choice Architecture & Risk Synthesis.
 
 ### 💼 Career & Income Automation Systems
 *Advanced pipeline for job search, application, and technical preparation.*

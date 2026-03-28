@@ -238,6 +238,11 @@ CATEGORIES_RAW = {
             "name": "\ud83d\udcdd Meeting Notes Agent",
             "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Work%20&%20Life%20Automation%20AI%20Agents/Meeting%20Notes%20Agent",
             "desc": "ProductivityOS: Strategic Meeting Deconstruction & Action Tracking."
+        },
+        {
+            "name": "\ud83d\udce7 Email Assistant",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Work%20&%20Life%20Automation%20AI%20Agents/Email%20Assistant%20Agent",
+            "desc": "ProductivityOS: AI Email Architect & Tactical Communication engine."
         }
     ],
     "\ud83d\udcbc Career & Income Automation Systems": [],

@@ -121,6 +121,7 @@ This is the largest registry of **specialized, production-hardened AI agents** d
 - [📅 **Calendar Scheduler**](./Work%20&%20Life%20Automation%20AI%20Agents/Calendar%20Scheduling%20Agent) – Autonomous meeting architect & time-node optimizer.
 - [🎯 **Focus Coach**](./Work%20&%20Life%20Automation%20AI%20Agents/Focus%20Coach%20Agent) – ProductivityOS: Flow-State Orchestration & Pomodoro Strategy.
 - [📝 **Meeting Notes Agent**](./Work%20&%20Life%20Automation%20AI%20Agents/Meeting%20Notes%20Agent) – ProductivityOS: Strategic Meeting Deconstruction & Action Tracking.
+- [📧 **Email Assistant**](./Work%20&%20Life%20Automation%20AI%20Agents/Email%20Assistant%20Agent) – ProductivityOS: AI Email Architect & Tactical Communication engine.
 
 ### 💼 Career & Income Automation Systems
 *Advanced pipeline for job search, application, and technical preparation.*

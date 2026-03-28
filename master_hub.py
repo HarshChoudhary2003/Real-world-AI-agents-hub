@@ -220,6 +220,11 @@ CATEGORIES_RAW = {
     ],
     "\ud83e\udd16 Work & Life Automation Systems": [
         {
+            "name": "\ud83c\udfaf Goal Breakdown Architect",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Work%20&%20Life%20Automation%20AI%20Agents/Goal%20Breakdown%20Agent",
+            "desc": "ProductivityOS: Precision Strategic Planning & Roadmap Deconstruction."
+        },
+        {
             "name": "\u26a1 Smart Task Planner",
             "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Work%20&%20Life%20Automation%20AI%20Agents/Smart%20Task%20Planner%20Agent",
             "desc": "ProductivityOS: High-Performance Daily Strategy & Time-Blocking."

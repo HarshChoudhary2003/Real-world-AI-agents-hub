@@ -253,6 +253,11 @@ CATEGORIES_RAW = {
             "name": "\ud83d\udcca Daily Reflection",
             "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Work%20&%20Life%20Automation%20AI%20Agents/Daily%20Reflection%20Agent",
             "desc": "ProductivityOS: Self-Improving AI System & Habit-Loop Optimizer."
+        },
+        {
+            "name": "\ud83d\udcda Knowledge Summarizer",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Work%20&%20Life%20Automation%20AI%20Agents/Knowledge%20Summarizer%20Agent",
+            "desc": "ProductivityOS: High-Fidelity Knowledge Synthesis & Learning Accelerator."
         }
     ],
     "\ud83d\udcbc Career & Income Automation Systems": [],

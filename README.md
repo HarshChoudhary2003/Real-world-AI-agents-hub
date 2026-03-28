@@ -124,6 +124,7 @@ This is the largest registry of **specialized, production-hardened AI agents** d
 - [📝 **Meeting Notes Agent**](./Work%20&%20Life%20Automation%20AI%20Agents/Meeting%20Notes%20Agent) – ProductivityOS: Strategic Meeting Deconstruction & Action Tracking.
 - [📧 **Email Assistant**](./Work%20&%20Life%20Automation%20AI%20Agents/Email%20Assistant%20Agent) – ProductivityOS: AI Email Architect & Tactical Communication engine.
 - [📊 **Daily Reflection**](./Work%20&%20Life%20Automation%20AI%20Agents/Daily%20Reflection%20Agent) – ProductivityOS: Self-Improving AI System & Habit-Loop Optimizer.
+- [📚 **Knowledge Summarizer**](./Work%20&%20Life%20Automation%20AI%20Agents/Knowledge%20Summarizer%20Agent) – ProductivityOS: High-Fidelity Knowledge Synthesis & Learning Accelerator.
 
 ### 💼 Career & Income Automation Systems
 *Advanced pipeline for job search, application, and technical preparation.*

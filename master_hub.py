@@ -258,6 +258,11 @@ CATEGORIES_RAW = {
             "name": "\ud83d\udcda Knowledge Summarizer",
             "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Work%20&%20Life%20Automation%20AI%20Agents/Knowledge%20Summarizer%20Agent",
             "desc": "ProductivityOS: High-Fidelity Knowledge Synthesis & Learning Accelerator."
+        },
+        {
+            "name": "\ud83d\udd25 Habit Builder",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Work%20&%20Life%20Automation%20AI%20Agents/Habit%20Builder%20Agent",
+            "desc": "ProductivityOS: Behavior Change Architecture & Dopamine-Led Consistency."
         }
     ],
     "\ud83d\udcbc Career & Income Automation Systems": [],

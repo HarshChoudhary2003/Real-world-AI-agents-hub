@@ -144,6 +144,49 @@ def main():
         st.markdown("<p class='subtext'>The AI Operating System for Developers.</p>", unsafe_allow_html=True)
         st.markdown("---")
 
+        # --- NEXT-LEVEL UPGRADE: API & Model Management ---
+        st.subheader("🔮 Intelligence Hub")
+        
+        main_ai = st.selectbox(
+            "Main AI Provider",
+            ["OpenAI", "Anthropic", "Google Gemini", "Groq (Llama-3)"],
+            index=0
+        )
+
+        # Dynamic Model mapping
+        if main_ai == "OpenAI":
+            model_options = ["gpt-4o-mini", "gpt-4o", "gpt-3.5-turbo"]
+            key_env = "OPENAI_API_KEY"
+            key_placeholder = "sk-..."
+        elif main_ai == "Anthropic":
+            model_options = ["claude-3-5-sonnet-20240620", "claude-3-opus-20240229"]
+            key_env = "ANTHROPIC_API_KEY"
+            key_placeholder = "sk-ant-..."
+        elif main_ai == "Google Gemini":
+            model_options = ["gemini/gemini-pro", "gemini/gemini-1.5-flash"]
+            key_env = "GEMINI_API_KEY"
+            key_placeholder = "AIza..."
+        else:
+            model_options = ["groq/llama3-70b-8192", "groq/llama3-8b-8192"]
+            key_env = "GROQ_API_KEY"
+            key_placeholder = "gsk_..."
+
+        model = st.selectbox("Intelligence Layer", model_options)
+        
+        # API Key Input
+        user_api_key = st.text_input(
+            f"🔑 {main_ai} API Key",
+            type="password",
+            placeholder=key_placeholder,
+            help=f"Enter your {main_ai} key. If empty, we'll try to find it in your system environment."
+        )
+
+        # Inject key into environment if provided
+        if user_api_key:
+            os.environ[key_env] = user_api_key
+
+        st.markdown("---")
+        
         # Framework Selector Upgrade
         st.subheader("🛠️ Framework Selector")
         framework = st.selectbox(
@@ -152,13 +195,6 @@ def main():
             index=3
         )
         
-        # Model Selection
-        model = st.selectbox(
-            "Intelligence Layer",
-            ["gpt-4o-mini", "gpt-4o", "claude-3-5-sonnet-20240620", "gemini/gemini-pro"],
-            index=0
-        )
-
         st.markdown("---")
         st.info("💡 **Tip:** Be specific about your feature set for better architectural decisions.")
 

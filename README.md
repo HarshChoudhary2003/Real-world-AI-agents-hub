@@ -193,6 +193,7 @@ This is the largest registry of **specialized, production-hardened AI agents** d
 - [🐛 **DevOS Debugger**](./AI%20Agents%20for%20Developers%20&%20Builders/Debugging%20Agent) – Universal code debugger for multi-language logic analysis & automated bug isolation.
 - [📊 **DevOS Auditor**](./AI%20Agents%20for%20Developers%20&%20Builders/Code%20Reviewer%20Agent) – Elite code reviewer for architectural audits, security scans, and strategic refactoring.
 - [🏗️ **DevOS System Designer**](./AI%20Agents%20for%20Developers%20&%20Builders/System%20Design%20Agent) – Staff-level system architect for distributed systems modeling, scaling strategies, and cost analysis.
+- [⚙️ **DevOS Backend Hub**](./AI%20Agents%20for%20Developers%20&%20Builders/API%20Builder%20Agent) – Universal API microservice builder for rapid backend implementation and cloud-scale architectures.
 
 ### 🗄️ HR, Legal & Compliance Systems
 *Deterministic talent acquisition and operational risk frameworks.*

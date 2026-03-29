@@ -487,6 +487,11 @@ CATEGORIES_RAW = {
             "name": "\ud83c\udfd7\ufe0f DevOS System Designer",
             "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/AI%20Agents%20for%20Developers%20&%20Builders/System%20Design%20Agent",
             "desc": "Staff-level system architect for distributed systems modeling, scaling strategies, and cost analysis."
+        },
+        {
+            "name": "\u2699\ufe0f DevOS Backend Hub",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/AI%20Agents%20for%20Developers%20&%20Builders/API%20Builder%20Agent",
+            "desc": "Universal API microservice builder for rapid backend implementation and cloud-scale architectures."
         }
     ],
     "\ud83d\uddc4\ufe0f HR, Legal & Compliance Systems": [

@@ -467,6 +467,11 @@ CATEGORIES_RAW = {
             "name": "\ud83c\udfd7\ufe0f ArchForge AI",
             "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/AI%20%20&%20Engineering%20Agents/System%20architecture%20explainer%20agent",
             "desc": "Topological data-flow extraction & implicitly derived trade-off analytical engine."
+        },
+        {
+            "name": "\ud83d\udcbb DevOS Architect",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/AI%20Agents%20for%20Developers%20&%20Builders/Code%20Generator%20Agent",
+            "desc": "Universal code architect for multi-file project generation & rapid prototyping."
         }
     ],
     "\ud83d\uddc4\ufe0f HR, Legal & Compliance Systems": [

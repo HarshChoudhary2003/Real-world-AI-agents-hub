@@ -472,6 +472,11 @@ CATEGORIES_RAW = {
             "name": "\ud83d\udcbb DevOS Architect",
             "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/AI%20Agents%20for%20Developers%20&%20Builders/Code%20Generator%20Agent",
             "desc": "Universal code architect for multi-file project generation & rapid prototyping."
+        },
+        {
+            "name": "\ud83d\udc1b DevOS Debugger",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/AI%20Agents%20for%20Developers%20&%20Builders/Debugging%20Agent",
+            "desc": "Universal code debugger for multi-language logic analysis & automated bug isolation."
         }
     ],
     "\ud83d\uddc4\ufe0f HR, Legal & Compliance Systems": [

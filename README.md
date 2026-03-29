@@ -190,6 +190,7 @@ This is the largest registry of **specialized, production-hardened AI agents** d
 - [🧪 **TestForge AI**](./AI%20%20&%20Engineering%20Agents/Test%20case%20generation%20agent) – Rigorous test suite & edge case regression validation framework.
 - [🏗️ **ArchForge AI**](./AI%20%20&%20Engineering%20Agents/System%20architecture%20explainer%20agent) – Topological data-flow extraction & implicitly derived trade-off analytical engine.
 - [💻 **DevOS Architect**](./AI%20Agents%20for%20Developers%20&%20Builders/Code%20Generator%20Agent) – Universal code architect for multi-file project generation & rapid prototyping.
+- [🐛 **DevOS Debugger**](./AI%20Agents%20for%20Developers%20&%20Builders/Debugging%20Agent) – Universal code debugger for multi-language logic analysis & automated bug isolation.
 
 ### 🗄️ HR, Legal & Compliance Systems
 *Deterministic talent acquisition and operational risk frameworks.*

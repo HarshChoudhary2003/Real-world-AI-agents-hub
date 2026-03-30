@@ -497,6 +497,11 @@ CATEGORIES_RAW = {
             "name": "\ud83e\uddea DevOS Quality Hub",
             "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/AI%20Agents%20for%20Developers%20&%20Builders/Test%20Case%20Generator%20Agent",
             "desc": "Elite automated testing suites, edge case diagnostics, and bug forensics agent."
+        },
+        {
+            "name": "\ud83d\udcd8 DevOS Code Explainer",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/AI%20Agents%20for%20Developers%20&%20Builders/Code%20Explainer%20Agent",
+            "desc": "AI teaching assistant for instant code understanding, line-by-line breakdown, and interview prep."
         }
     ],
     "\ud83d\uddc4\ufe0f HR, Legal & Compliance Systems": [

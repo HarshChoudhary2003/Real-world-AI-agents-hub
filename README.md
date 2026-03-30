@@ -4,7 +4,7 @@
 <br>
 
 <!-- Typing Dynamic -->
-<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=800&size=36&pause=1000&color=1d4ed8&center=true&vCenter=true&width=1000&lines=🔱+Defining+the+Post-SaaS+Economy;🦾+124+Production-Ready+AI+Agents;⚡+Enterprise-Grade+Multi-Agent+Orchestration;💎+Architected+for+Infinite+Scalability" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=800&size=36&pause=1000&color=1d4ed8&center=true&vCenter=true&width=1000&lines=🔱+Defining+the+Post-SaaS+Economy;🦾+125+Production-Ready+AI+Agents;⚡+Enterprise-Grade+Multi-Agent+Orchestration;💎+Architected+for+Infinite+Scalability" alt="Typing SVG" />
 
 <br>
 
@@ -59,7 +59,7 @@ This is the largest registry of **specialized, production-hardened AI agents** d
 
 ---
 
-## 🌍 The Agent Ecosystem (124+ Specialized Systems)
+## 🌍 The Agent Ecosystem (125+ Specialized Systems)
 
 *Click on any agent to access its specialized core and dashboard.*
 
@@ -195,6 +195,7 @@ This is the largest registry of **specialized, production-hardened AI agents** d
 - [🏗️ **DevOS System Designer**](./AI%20Agents%20for%20Developers%20&%20Builders/System%20Design%20Agent) – Staff-level system architect for distributed systems modeling, scaling strategies, and cost analysis.
 - [⚙️ **DevOS Backend Hub**](./AI%20Agents%20for%20Developers%20&%20Builders/API%20Builder%20Agent) – Universal API microservice builder for rapid backend implementation and cloud-scale architectures.
 - [🧪 **DevOS Quality Hub**](./AI%20Agents%20for%20Developers%20&%20Builders/Test%20Case%20Generator%20Agent) – Elite automated testing suites, edge case diagnostics, and bug forensics agent.
+- [📘 **DevOS Code Explainer**](./AI%20Agents%20for%20Developers%20&%20Builders/Code%20Explainer%20Agent) – AI teaching assistant for instant code understanding, line-by-line breakdown, and interview prep.
 
 ### 🗄️ HR, Legal & Compliance Systems
 *Deterministic talent acquisition and operational risk frameworks.*
@@ -328,9 +329,9 @@ We are building a global collective of the top 0.1% AI engineers.
 
 - [x] **v1.0** - Foundation: Personal Productivity Suite (10 Agents)
 - [x] **v2.0** - Expansion: Writing, Research & Growth Suites (30 Agents)
-- [x] **v3.0** - **Enterprise Ops & Engineering (Active: 124 Agents)**
+- [x] **v3.0** - **Enterprise Ops & Engineering (Active: 125 Agents)**
 - [x] **v4.0** - Intelligence benchmarks & Agent Marketplace
-- [x] **v5.0** - The Multi-Agent Swarm Colony (124+ Agents)
+- [x] **v5.0** - The Multi-Agent Swarm Colony (125+ Agents)
 - [ ] **v6.0** - Autonomous Production Swarms & Dynamic Infrastructure Integration
 
 ---

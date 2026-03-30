@@ -512,6 +512,11 @@ CATEGORIES_RAW = {
             "name": "\ud83d\ude80 DevOS Deploy Hub",
             "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/AI%20Agents%20for%20Developers%20&%20Builders/Deployment%20Agent",
             "desc": "Full DevOps automation: Dockerfile, docker-compose, GitHub Actions CI/CD, Kubernetes manifests, and cost estimation."
+        },
+        {
+            "name": "\ud83d\udca1 DevOS Project Generator",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/AI%20Agents%20for%20Developers%20&%20Builders/Project%20Generator%20Agent",
+            "desc": "Viral-worthy project blueprints with architecture, tech stack, weekly roadmap, and GitHub/LinkedIn launch hooks."
         }
     ],
     "\ud83d\uddc4\ufe0f HR, Legal & Compliance Systems": [

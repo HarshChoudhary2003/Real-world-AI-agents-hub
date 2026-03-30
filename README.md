@@ -4,7 +4,7 @@
 <br>
 
 <!-- Typing Dynamic -->
-<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=800&size=36&pause=1000&color=1d4ed8&center=true&vCenter=true&width=1000&lines=🔱+Defining+the+Post-SaaS+Economy;🦾+127+Production-Ready+AI+Agents;⚡+Enterprise-Grade+Multi-Agent+Orchestration;💎+Architected+for+Infinite+Scalability" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=800&size=36&pause=1000&color=1d4ed8&center=true&vCenter=true&width=1000&lines=🔱+Defining+the+Post-SaaS+Economy;🦾+128+Production-Ready+AI+Agents;⚡+Enterprise-Grade+Multi-Agent+Orchestration;💎+Architected+for+Infinite+Scalability" alt="Typing SVG" />
 
 <br>
 
@@ -59,7 +59,7 @@ This is the largest registry of **specialized, production-hardened AI agents** d
 
 ---
 
-## 🌍 The Agent Ecosystem (127+ Specialized Systems)
+## 🌍 The Agent Ecosystem (128+ Specialized Systems)
 
 *Click on any agent to access its specialized core and dashboard.*
 
@@ -198,6 +198,7 @@ This is the largest registry of **specialized, production-hardened AI agents** d
 - [📘 **DevOS Code Explainer**](./AI%20Agents%20for%20Developers%20&%20Builders/Code%20Explainer%20Agent) – AI teaching assistant for instant code understanding, line-by-line breakdown, and interview prep.
 - [✨ **DevOS Refactor Hub**](./AI%20Agents%20for%20Developers%20&%20Builders/Code%20Refactor%20Agent) – Principal Engineer-grade code refactoring with before/after diffs, complexity analysis, and style guide enforcement.
 - [🚀 **DevOS Deploy Hub**](./AI%20Agents%20for%20Developers%20&%20Builders/Deployment%20Agent) – Full DevOps automation: Dockerfile, docker-compose, GitHub Actions CI/CD, Kubernetes manifests, and cost estimation.
+- [💡 **DevOS Project Generator**](./AI%20Agents%20for%20Developers%20&%20Builders/Project%20Generator%20Agent) – Viral-worthy project blueprints with architecture, tech stack, weekly roadmap, and GitHub/LinkedIn launch hooks.
 
 ### 🗄️ HR, Legal & Compliance Systems
 *Deterministic talent acquisition and operational risk frameworks.*
@@ -331,9 +332,9 @@ We are building a global collective of the top 0.1% AI engineers.
 
 - [x] **v1.0** - Foundation: Personal Productivity Suite (10 Agents)
 - [x] **v2.0** - Expansion: Writing, Research & Growth Suites (30 Agents)
-- [x] **v3.0** - **Enterprise Ops & Engineering (Active: 127 Agents)**
+- [x] **v3.0** - **Enterprise Ops & Engineering (Active: 128 Agents)**
 - [x] **v4.0** - Intelligence benchmarks & Agent Marketplace
-- [x] **v5.0** - The Multi-Agent Swarm Colony (127+ Agents)
+- [x] **v5.0** - The Multi-Agent Swarm Colony (128+ Agents)
 - [ ] **v6.0** - Autonomous Production Swarms & Dynamic Infrastructure Integration
 
 ---

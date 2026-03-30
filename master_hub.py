@@ -502,6 +502,11 @@ CATEGORIES_RAW = {
             "name": "\ud83d\udcd8 DevOS Code Explainer",
             "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/AI%20Agents%20for%20Developers%20&%20Builders/Code%20Explainer%20Agent",
             "desc": "AI teaching assistant for instant code understanding, line-by-line breakdown, and interview prep."
+        },
+        {
+            "name": "\u2728 DevOS Refactor Hub",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/AI%20Agents%20for%20Developers%20&%20Builders/Code%20Refactor%20Agent",
+            "desc": "Principal Engineer-grade refactoring with before/after diffs, complexity analysis, and style guide enforcement."
         }
     ],
     "\ud83d\uddc4\ufe0f HR, Legal & Compliance Systems": [

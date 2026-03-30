@@ -492,6 +492,11 @@ CATEGORIES_RAW = {
             "name": "\u2699\ufe0f DevOS Backend Hub",
             "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/AI%20Agents%20for%20Developers%20&%20Builders/API%20Builder%20Agent",
             "desc": "Universal API microservice builder for rapid backend implementation and cloud-scale architectures."
+        },
+        {
+            "name": "\ud83e\uddea DevOS Quality Hub",
+            "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/AI%20Agents%20for%20Developers%20&%20Builders/Test%20Case%20Generator%20Agent",
+            "desc": "Elite automated testing suites, edge case diagnostics, and bug forensics agent."
         }
     ],
     "\ud83d\uddc4\ufe0f HR, Legal & Compliance Systems": [

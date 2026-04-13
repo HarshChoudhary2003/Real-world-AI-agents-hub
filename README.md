@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0ea5e9&height=280&section=header&text=Real-world%20AI%20Agents%20Hub&fontSize=70&fontAlign=50&fontAlignY=38&desc=Architecting%20100%20Advanced%20Enterprise%20AI%20Agents&descAlign=50&descAlignY=62&animation=fadeIn" width="100%" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0ea5e9&height=280&section=header&text=Real-world%20AI%20Agents%20Hub&fontSize=70&fontAlign=50&fontAlignY=38&desc=Architecting%20128%20Advanced%20Enterprise%20AI%20Agents&descAlign=50&descAlignY=62&animation=fadeIn" width="100%" />
 
 <br>
 
@@ -59,7 +59,7 @@ This is the largest registry of **specialized, production-hardened AI agents** d
 
 ---
 
-## 🌍 The Agent Ecosystem (128+ Specialized Systems)
+## 🌍 The Agent Ecosystem (128 Specialized Systems)
 
 *Click on any agent to access its specialized core and dashboard.*
 
@@ -128,10 +128,8 @@ This is the largest registry of **specialized, production-hardened AI agents** d
 - [🔥 **Habit Builder**](./Work%20&%20Life%20Automation%20AI%20Agents/Habit%20Builder%20Agent) – ProductivityOS: Behavior Change Architecture & Dopamine-Led Consistency.
 - [⚖️ **Decision Intelligence**](./Work%20&%20Life%20Automation%20AI%20Agents/Decision%20Agent) – ProductivityOS: Strategic Choice Architecture & Risk Synthesis.
 
-### 💼 Career & Income Automation Systems
-*Advanced pipeline for job search, application, and technical preparation.*
-### 💼 CareerOS: The AI Operating System for Career & Income Automation
-*A unified 10-agent ecosystem designed to automate the entire professional lifecycle—from skill mapping to salary negotiation.*
+### 💼 CareerOS: Career & Income Systems
+*A unified ecosystem designed to automate the professional lifecycle—from skill mapping to salary negotiation.*
 
 #### 🎯 Phase 1: The Career Pipeline (Search & Apply)
 - [💼 **Resume Forge**](./Career%20&%20Income%20Automation%20AI%20Agents/Resume%20Optimizer%20Agent) – Expert ATS optimization & resume synchronization engine.
@@ -247,12 +245,34 @@ We don't just write scripts. We build **Autonomous Entities** that follow a stri
 
 ```mermaid
 graph TD
-    A[Trigger / Ingestion] --> B{Neural Brain}
-    B -->|Reasoning| C[Tool Execution]
-    B -->|Planning| D[Memory Context]
-    C & D --> E[Structured Output]
-    E --> F[Premium Dashboard]
+    subgraph "External World"
+        A[Trigger / Ingestion]
+    end
+    
+    subgraph "Agent Core"
+        B{Neural Brain}
+        D[Memory Context]
+        C[Tool Execution]
+    end
+    
+    subgraph "Output Layer"
+        E[Structured Output]
+        F[Premium Dashboard]
+    end
+
+    A --> B
+    B <--> D
+    B --> C
+    C --> B
+    B --> E
+    E --> F
+    
+    style B fill:#0ea5e9,stroke:#fff,stroke-width:2px
+    style F fill:#22c55e,stroke:#fff,stroke-width:2px
 ```
+
+> [!TIP]
+> **View the full technical breakdown in [ARCHITECTURE.md](./ARCHITECTURE.md)**
 
 ---
 
@@ -291,10 +311,17 @@ pip install -r requirements.txt
 cp .env.example .env # Add your OPENAI_API_KEY, ANTHROPIC_API_KEY, etc.
 ```
 
-### 3. Launch the Master Brain
+### 3. Launch the Agent OS Hub
 ```bash
-cd "Personal Productivity Agents"
-streamlit run Master_Dashboard.py
+# Launch the centralized hub to browse all 128 agents
+streamlit run master_hub.py
+```
+
+### 4. Direct Agent Launch
+```bash
+# Example: Launching the Daily Priority Agent
+cd "Personal Productivity Agents/daily-priority-agent"
+streamlit run app.py
 ```
 
 ---

@@ -270,8 +270,7 @@ CATEGORIES_RAW = {
             "desc": "ProductivityOS: Strategic Choice Architecture & Risk Synthesis."
         }
     ],
-    "\ud83d\udcbc Career & Income Automation Systems": [],
-    "\ud83d\udcbc CareerOS: The AI Operating System for Career & Income Automation": [
+    "\ud83d\udcbc CareerOS: Career & Income Systems": [
         {
             "name": "\ud83d\udcbc Resume Forge",
             "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/Career%20&%20Income%20Automation%20AI%20Agents/Resume%20Optimizer%20Agent",
@@ -506,7 +505,7 @@ CATEGORIES_RAW = {
         {
             "name": "\u2728 DevOS Refactor Hub",
             "url": "https://github.com/HarshChoudhary2003/Real-world-AI-agents-hub/tree/main/AI%20Agents%20for%20Developers%20&%20Builders/Code%20Refactor%20Agent",
-            "desc": "Principal Engineer-grade refactoring with before/after diffs, complexity analysis, and style guide enforcement."
+            "desc": "Principal Engineer-grade code refactoring with before/after diffs, complexity analysis, and style guide enforcement."
         },
         {
             "name": "\ud83d\ude80 DevOS Deploy Hub",
@@ -677,7 +676,8 @@ CATEGORIES_RAW = {
     ],
     "1. Initialize Runtime": [],
     "2. Configure Credentials": [],
-    "3. Launch the Master Brain": []
+    "3. Launch the Agent OS Hub": [],
+    "4. Direct Agent Launch": []
 }
 
 # Sanitize data for surrogate-sensitive environments
